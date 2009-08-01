@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Contracts: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'scaffold' %>
+  <%= stylesheet_link_tag 'main' %>
+  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag 'swfobject' %>
+  <%= calendar_date_select_includes "silver" %>
+  
+  <script type="text/javascript">
+  
+  	Event.observe(window, 'load',
+      	function() { 
+      		
+<% unless current_user.nil? %>
+      		if($('navigation_<%= @navkey %>')){
+					$('navigation_<%= @navkey %>').addClassName('navselected');
+			}
+			
+      		$$('.navigation_button').each(function (el) {
+    			return $(el).observe('mouseover', function() {
+					this.addClassName('navmouseover');
+    			});	
+			});
+			
+			$$('.navigation_button').each(function (el) {
+    			return $(el).observe('mouseout', function() {
+        			this.removeClassName('navmouseover');
+    			});	
+			});
+			
+<% end %>
+		
+			$('main_title_div').observe('mouseover', function() {
+				this.addClassName('main_title_div_mouseover');
+			});
+			
+			$('main_title_div').observe('mouseout', function() {
+    			this.removeClassName('main_title_div_mouseover');
+			});
+      	}
+    );
+    
+    swfobject.registerObject("timeline_obj", "9.0.115", "expressInstall.swf");
+    swfobject.addParam("wmode", "transparent");
+    
+    
+  </script>
+
+</head>
+<body>
+
+<div id="main_div">
+	
+	<div id="welcome_div">
+<% unless current_user.nil? %>
+		<div style="float: left;">
+			Welcome <%= current_user.login %>
+		</div>
+	
+<% end %>
+		<div id="login_form_div">
+<% if current_user.nil? %>
+	<% form_tag session_path do -%>
+ 		<div id="new_session_login">
+	  		<div class="login_form_label">
+	   			Login
+	    	</div>
+	    	<div class="login_form_value">
+	    		<%= text_field_tag 'login', @login, {:class => "base_form_field", :size => "15"} %>
+	    	</div>
+	  	</div>
+	  	<div id="new_session_password">
+		  	<div class="login_form_label">
+		   		Password
+		    </div>
+		    <div class="login_form_value">
+		    	<%= password_field_tag 'password', nil,  {:class => "base_form_field", :size => "15"} %>
+		    </div>
+	  	</div>
+				  
+		<!-- Uncomment this if you want this functionality
+		<%= label_tag 'remember_me', 'Remember me' %>
+		<%= check_box_tag 'remember_me', '1', @remember_me %>
+		-->
+					
+		<%= submit_tag 'Log in' %>
+		<%= link_to_remote 'sign up', {:url => signup_path, :method => :get}, :class => 'listing_link' %>
+		<div style="clear: both;"><!-- clearing div --></div>
+					
+	<% end -%>
+<% else %>
+		<div id="logout_div"><%= link_to "Log Out", logout_path %></div>
+<% end %>
+		</div>
+	</div>
+	
+	
+	<div id="main_title_div" class="main_title" onclick="click_navigation('<%= root_path %>', false)">
+		<h1>Stateli Personal Finance</h1>
+	</div>
+	
+	<div id="navigation" style="display:<%= current_user.nil? ? "none" : "block"%>">
+		<div id="navigation_spacer_left" class="navigation_spacer">&nbsp;</div>
+		
+		<div id="navigation_accounts" class="navigation_button" onclick="click_navigation('<%= listing_path %>', <%=(current_user.nil?) %>)">
+			List Accounts
+		</div>
+		<div id="navigation_pending" class="navigation_button" onclick="click_navigation('<%= transactions_pending_path %>',<%= current_user.nil? %>)">
+			Pending
+		</div>
+		<div id="navigation_new_account" <%= onclick_to_remote :url => account_new_path, :method => :get %> class="navigation_button">
+			<span class="navigation_button_link">New Account</span>
+		</div>
+		<div id="navigation_add_bill" <%= onclick_to_remote :url => contract_credit_path, :method => :get %> class="navigation_button">
+			<span class="navigation_button_link">Add Bill</span>
+		</div>
+		
+		<div id="navigation_add_income" <%= onclick_to_remote :url => contract_debit_path, :method => :get %> class="navigation_button">
+			<span class="navigation_button_link">Add Income</span>
+		</div>
+		<div id="navigation_journal_flex" class="navigation_button" onclick="click_navigation('<%= journal_flex_path %>',<%= current_user.nil? %>)">
+			Flex Journal
+		</div>
+		<div id="navigation_total_flex" class="navigation_button" onclick="click_navigation('<%= total_flex_path %>',<%= current_user.nil? %>)">
+			Flex Total
+		</div>
+		<div id="navigation_spacer_right" class="navigation_spacer">&nbsp;</div>
+		<div style="clear: both;"><!-- clearing div --></div>
+	</div>
+	
+	<div id="navigation_disabled" style="display:<%= current_user.nil? ? "block" : "none"%>">
+		<div id="navigation_spacer_left_disabled" class="navigation_spacer_disabled">&nbsp;</div>
+		
+		<div id="navigation_accounts_disabled" class="navigation_button_disabled">
+			List Accounts
+		</div>
+		<div id="navigation_pending_disabled" class="navigation_button_disabled">
+			Pending
+		</div>
+		<div id="navigation_new_account_disabled" class="navigation_button_disabled">
+			New Account
+		</div>
+		<div id="navigation_add_bill_disabled" class="navigation_button_disabled">
+			Add Bill
+		</div>
+		<div id="navigation_add_income_disabled" class="navigation_button_disabled">
+			Add Income
+		</div>
+		<div id="navigation_journal_flex_disabled" class="navigation_button_disabled">
+			Flex Journal
+		</div>
+		<div id="navigation_total_flex_disabled" class="navigation_button_disabled">
+			Flex Total
+		</div>
+		<div id="navigation_spacer_right_disabled" class="navigation_spacer_disabled">&nbsp;</div>
+		<div style="clear: both;"><!-- clearing div --></div>
+	</div>
+	
+
+
+	
+	
+
+	<div id="flashdiv"><%= flash[:notice] %></div>
+	
+	<div id="listing_form_div" class="form_div" style="display:none">
+		<%= link_to_remote 'Cancel', {:url => cancel_popup_path, :method => :get}, :class => "form_link"%>
+		<div id="listing_form">&nbsp;</div>
+	</div>
+	
+	<%= yield %>
+	
+</div>
+
+</body>
+</html>

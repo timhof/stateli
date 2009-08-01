@@ -1,0 +1,13 @@
+
+
+<div id="account_journal" class="template_div">
+	<div class="page_title_div">
+		<h1>Journal for <span class="account_name"><%= @account.name%> <%= render :partial => 'account_options', :locals => {:acc => @account} %></span></h1>
+	</div>
+	<div class="type_div">
+		<h2>Entries</h2>
+	  	<%= render :partial => 'account_journal_header' %>
+  		<%= render :partial => 'account_journal_details', :collection => @transactions %>
+  		<div style="clear: both;"><!-- clearing div --></div>
+	<div>
+</div>

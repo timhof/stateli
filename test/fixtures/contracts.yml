@@ -1,0 +1,29 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  description: MyString
+  date_start: 2009-06-22
+  date_end: 2009-06-22
+  type: MyString
+  user_id: 1
+  autopay: 1
+  autopay_account_id: 1
+  full_date: 2009-06-22
+  day_of_month: 1
+  day_of_month_alt: 1
+  weekday: 1
+
+two:
+  name: MyString
+  description: MyString
+  date_start: 2009-06-22
+  date_end: 2009-06-22
+  type: MyString
+  user_id: 1
+  autopay: 1
+  autopay_account_id: 1
+  full_date: 2009-06-22
+  day_of_month: 1
+  day_of_month_alt: 1
+  weekday: 1

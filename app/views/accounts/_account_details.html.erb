@@ -1,0 +1,10 @@
+<tr>
+    <td><%=h account_details.name %></td>
+    <td><%=h account_details.description %></td>
+    <td><%=h account_details.type %></td>
+    <td><%=h account_details.balance %></td>
+    <td><%=h account_details.active ? 'Y' : 'N' %></td>
+    <td><%= link_to 'Show', account_path(account_details) %></td>
+    <td><%= link_to 'Edit', edit_account_path(account_details) %></td>
+    <td><%= link_to 'Destroy', account_path(account_details), :confirm => 'Are you sure?', :method => :delete %></td>
+ </tr>

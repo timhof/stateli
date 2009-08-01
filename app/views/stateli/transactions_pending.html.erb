@@ -1,0 +1,18 @@
+
+<div id="account_pending" class="template_div">
+	<div class="page_title_div">
+		<h1>Pending Transactions</h1>
+	</div>
+	
+	<div id="transactions_pending_credit" class="type_div" style="display:<%= @transactions_credit.size > 0 ? "block" : "none" %>;">
+		<h2>Payments</h2>
+	  	<%= render :partial => 'pending_header' %>
+	  	<%= render :partial => 'pending_details', :collection => @transactions_credit %>
+	</div>
+	
+	<div id="transactions_pending_debit" class="type_div" style="display:<%= @transactions_debit.size > 0 ? "block" : "none" %>;pi">
+		<h2>Income</h2>
+	 	<%= render :partial => 'pending_header' %>
+	  	<%= render :partial => 'pending_details', :collection => @transactions_debit %>
+	</div>
+</div>

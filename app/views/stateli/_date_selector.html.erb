@@ -1,0 +1,9 @@
+
+<%= form_for_obj.text_field date_field, {:onfocus => "click_date_text('#{text_field_id}')", :value => Date.today.to_s, :size => 10, :class => "base_form_field"} %>
+        
+        <div id="<%= text_field_id %>_calendar_div" class="popup_calendar_div" style="display:none;text-align:right;">
+		    <%= calendar_date_select_tag "#{text_field_id}_calendar", Date.today,
+	        :embedded => true,
+	        :year_range => 3.years.ago..0.years.ago,
+	        :onchange => "select_date('#{text_field_id}')" %>
+        </div>

@@ -1,0 +1,60 @@
+
+<% form_for(:contract, contract_edit, :url => contract_path(contract_edit)) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :date_start %><br />
+    <%= f.date_select :date_start %>
+  </p>
+  <p>
+    <%= f.label :date_end %><br />
+    <%= f.date_select :date_end %>
+  </p>
+  <p>
+    <%= f.label :type %><br />
+    <%= f.select(:type, [['One-Time', 'once'], ['Weekly', 'ContractWeekly'], ['Bi-Monthly', 'ContractBimonthly'], ['Monthly', 'ContractMonthly'], ['Yearly', 'ContractYearly']], {}, {:onchange => "changeContractType()"})%>
+  </p>
+  <p>
+    <%= f.label :autopay %><br />
+    <%= f.check_box :autopay %>
+  </p>
+  <p>
+    <%= f.label :autopay_account_id %><br />
+    <%= collection_select(:contract, :autopay_account_id, Account.all, :id, :name) %> 
+  </p>
+  <p id="contract_full_date_div">
+    <%= f.label :full_date %><br />
+    <%= f.date_select :full_date %>
+  </p>
+   <p id="contract_day_of_month_div" style="display:none">
+    <%= f.label :day_of_month %><br />
+     <%= f.select(:day_of_month, [[1, 1],[2, 2],[3, 3],[4, 4]])%>
+  </p>
+  <p id="contract_day_of_month_alt_div" style="display:none">
+    <%= f.label :day_of_month_alt %><br />
+     <%= f.select(:day_of_month_alt, [[1, 1],[2, 2],[3, 3],[4, 4]])%>
+  </p>
+  <p id="contract_weekday_div" style="display:none">
+    <%= f.label :weekday %><br />
+    <%= f.select (:weekday, [['Monday', '0'], ['Tuesday', '1'], ['Wednesday', '2'], ['Thursday', '3'], ['Friday', '4'], ['Saturday', '5'], ['Sunday', '6']] )%>
+  </p>
+  <p>
+    <%= f.label :active %><br />
+    <%= f.check_box :active %>
+  </p>
+   <p>
+    <%= f.label :amount %><br />
+    <%= f.text_field :amount %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>

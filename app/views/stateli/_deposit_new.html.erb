@@ -1,0 +1,21 @@
+
+
+<% remote_form_for(:transaction, @transaction, :url => execute_deposit_path(@account)) do |f| %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :amount %><br />
+    <%= f.text_field :amount %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+  
+<% end %>

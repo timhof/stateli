@@ -1,0 +1,32 @@
+
+
+<div id="account_details" class="template_div">
+	<div class="page_title_div">
+		<h1>Detail for <span class="account_name"><%= @title%></span></h1>
+	</div>
+	
+	<div class="detail_div">
+		<div class="detail_label">
+		  Name
+		</div>
+		<div class="detail_value">
+		  <%=h @account.name %>
+		</div>
+		
+		<div class="detail_label">
+		  Description
+		</div>
+		<div class="detail_value">
+		  <%=h @account.description %>
+		</div>
+		
+		
+		<div class="detail_label">
+		  Balance
+		</div>
+		<div class="detail_value">
+		  <%=h real_currency @account.balance %>
+		</div>
+		
+	</div>
+</div>

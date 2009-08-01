@@ -1,0 +1,124 @@
+
+	  <%= f.error_messages %>
+	
+	  <div id="new_contract_name" class="form_element">
+	  	<div class="form_label">
+	   		Name
+	    </div>
+	    <div class="form_value">
+	    	<%= f.text_field :name, :class => "base_form_field" %>
+	    </div>
+	  </div>
+	  
+	  <div id="new_contract_description" class="form_element">
+	  	<div class="form_label">
+	    	Description
+	    </div>
+	    <div class="form_value">
+	    	<%= f.text_field :description, :class => "base_form_field" %>
+	    </div>
+	  </div>
+	  
+	  <div id="new_contract_type" class="form_element">
+	  	<div class="form_label">
+	    	Type
+	    </div>
+	    <div class="form_value">
+	    	<%= f.select(:type, [['One-Time', 'ContractOnce'], ['Weekly', 'ContractWeekly'], ['Bi-Monthly', 'ContractBimonthly'], ['Monthly', 'ContractMonthly'], ['Yearly', 'ContractYearly']], {}, {:onchange => "changeContractType()", :class => "base_form_field"})%>
+	  	</div>
+	  </div>
+	 
+	  <div id="new_contract_date_start" class="form_element" style="display:none">
+	  	<div class="form_label">
+	    	Start Date
+	  	</div>
+	    <div class="form_value">
+	  		<%= render :partial => 'date_selector', :locals => {:form_for_obj => f, :text_field_id => "contract_date_start", :date_field => "date_start"}; %>
+	    </div>
+	  </div>
+	  
+	  <div id="new_contract_date_end" class="form_element" style="display:none">
+	  	<div class="form_label">
+	    	End Date
+	  	</div>
+	    <div class="form_value">
+	  		<%= render :partial => 'date_selector', :locals => {:form_for_obj => f, :text_field_id => "contract_date_end", :date_field => "date_end"}; %>
+	    </div>
+	  </div>
+	  
+	  <div id="new_contract_full_date" class="form_element">
+	  	<div class="form_label">
+	    	Date
+	  	</div>
+	    <div class="form_value">
+	  		<%= render :partial => 'date_selector', :locals => {:form_for_obj => f, :text_field_id => "contract_full_date", :date_field => "full_date"}; %>
+	    </div>
+	  </div>
+	  
+	  <div id="new_contract_day_of_month" class="form_element" style="display:none">
+	  	<div class="form_label">
+	    	Day of Month
+	    </div>
+	    <div class="form_value">
+	    	<%= f.select(:day_of_month, [[1,1],[2,2],[3,3],[4,4],[5,5],[6,6],[7,7],[8,8],[9,9],[10,10],[11,11],[12,12],[13,13],[14,14],[15,15],[16,16],[17,17],[18,18],[19,19],[20,20],[21,21],[22,22],[23,23],[24,24],[25,25],[26,26],[27,27],[28,28],[29,29],[30,30],[31,31]], {}, :class => "base_form_field")%>
+	    </div>
+	  </div>
+	  
+	  <div id="new_contract_day_of_month_alt" class="form_element" style="display:none">
+	  	<div class="form_label">
+	    	Day of Month
+	    </div>
+	    <div class="form_value">
+	    	<%= f.select(:day_of_month_alt, [[1,1],[2,2],[3,3],[4,4],[5,5],[6,6],[7,7],[8,8],[9,9],[10,10],[11,11],[12,12],[13,13],[14,14],[15,15],[16,16],[17,17],[18,18],[19,19],[20,20],[21,21],[22,22],[23,23],[24,24],[25,25],[26,26],[27,27],[28,28],[29,29],[30,30],[31,31]], {}, :class => "base_form_field")%>
+	    </div>
+	  </div>
+	  
+	  <div id="new_contract_weekday" class="form_element" style="display:none">
+	  	<div class="form_label">
+	    	Weekday
+	    </div>
+	    <div class="form_value">
+	    	<%= f.select (:weekday, [['Monday', '0'], ['Tuesday', '1'], ['Wednesday', '2'], ['Thursday', '3'], ['Friday', '4'], ['Saturday', '5'], ['Sunday', '6']], {}, :class => "base_form_field" )%>
+	    </div>
+	  </div>
+	  
+	  <div id="new_contract_autopay" class="form_element">
+	  	<div class="form_label">
+	    	Autopay
+	    </div>
+	    <div class="form_value">
+	    	<%= f.check_box (:autopay, {:onchange => "changeContractAutopay()", :class => "base_form_field"})%>
+	    </div>
+	  </div>
+	  
+	  <div id="new_contract_autopay_account" class="form_element" style="display:none">
+	  	<div class="form_label">
+	    	Account
+	    </div>
+	    <div class="form_value">
+	    	<%= collection_select(:contract, :autopay_account_id, Account.all, :id, :name, {}, :class => "base_form_field") %>
+	    </div> 
+	  </div>
+	  
+	  <div id="new_contract_active" class="form_element">
+	  	<div class="form_label">
+	    	Active
+	    </div>
+	    <div class="form_value">
+	    	<%= f.check_box :active, :class => "base_form_field" %>
+	    </div>
+	  </div>
+	  
+	  <div id="new_contract_amount" class="form_element">
+	  	<div class="form_label">
+	    	Amount
+	    </div>
+	    <div class="form_value">
+	    	<%= f.text_field :amount, :class => "base_form_field" %>
+	    </div>
+	  </div>
+	  
+	  <div id="new_contract_submit" class="submit_button_div">
+	    <%= f.submit 'Create', :class => "submit_button base_form_field"%>
+	  </div>
+	  

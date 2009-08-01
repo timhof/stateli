@@ -1,0 +1,7 @@
+
+
+page.hide_popup_form
+page[:flashdiv].replace_html flash[:notice]
+page[:login].value = @user.login
+page[:login].value = @user.password
+flash.discard

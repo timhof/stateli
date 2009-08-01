@@ -1,0 +1,7 @@
+1. Transfer
+3. Update Pending RJS on add new Bill/Income
+5. Dollar rounding.
+6. paging
+7. Sign up form.
+
+

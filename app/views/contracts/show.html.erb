@@ -1,0 +1,63 @@
+<p>
+  <b>Name:</b>
+  <%=h @contract.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @contract.description %>
+</p>
+
+<p>
+  <b>Date start:</b>
+  <%=h @contract.date_start %>
+</p>
+
+<p>
+  <b>Date end:</b>
+  <%=h @contract.date_end %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @contract.type %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @contract.user_id %>
+</p>
+
+<p>
+  <b>Autopay:</b>
+  <%=h @contract.autopay %>
+</p>
+
+<p>
+  <b>Autopay account:</b>
+  <%=h @contract.autopay_account_id %>
+</p>
+
+<p>
+  <b>Full date:</b>
+  <%=h @contract.full_date %>
+</p>
+
+<p>
+  <b>Day of month:</b>
+  <%=h @contract.day_of_month %>
+</p>
+
+<p>
+  <b>Day of month alt:</b>
+  <%=h @contract.day_of_month_alt %>
+</p>
+
+<p>
+  <b>Weekday:</b>
+  <%=h @contract.weekday %>
+</p>
+
+
+<%= link_to 'Edit', edit_contract_path(@contract) %> |
+<%= link_to 'Back', contracts_path %>

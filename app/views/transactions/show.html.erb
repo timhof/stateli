@@ -1,0 +1,58 @@
+<p>
+  <b>Name:</b>
+  <%=h @transaction.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @transaction.description %>
+</p>
+
+<p>
+  <b>Scheduled date:</b>
+  <%=h @transaction.scheduled_date %>
+</p>
+
+<p>
+  <b>Executed date:</b>
+  <%=h @transaction.executed_date %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%=h @transaction.amount %>
+</p>
+
+<p>
+  <b>Completed:</b>
+  <%=h @transaction.completed %>
+</p>
+
+<p>
+  <b>Account id source:</b>
+  <%=h @transaction.account_id_source %>
+</p>
+
+<p>
+  <b>Account id dest:</b>
+  <%=h @transaction.account_id_dest %>
+</p>
+
+<p>
+  <b>Contract:</b>
+  <%=h @transaction.contract_id %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @transaction.type %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @transaction.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_transaction_path(@transaction) %> |
+<%= link_to 'Back', transactions_path %>

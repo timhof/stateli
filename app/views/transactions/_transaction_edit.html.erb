@@ -1,0 +1,52 @@
+
+<% form_for(:transaction, @transaction, :url => transaction_path(@transaction), :html => {:method => 'put'}) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :scheduled_date %><br />
+    <%= f.date_select :scheduled_date %>
+  </p>
+  <p>
+    <%= f.label :executed_date %><br />
+    <%= f.date_select :executed_date %>
+  </p>
+  <p>
+    <%= f.label :amount %><br />
+    <%= f.text_field :amount %>
+  </p>
+  <p>
+    <%= f.label :completed %><br />
+    <%= f.text_field :completed %>
+  </p>
+   <%= f.label :autopay %><br />
+    <%= f.check_box :autopay %>
+   <p>
+    <%= f.label :account_id_source %><br />
+	<%= collection_select(:transaction, :account_id_source, Account.all, :id, :name) %> 
+  </p>
+  <p>
+    <%= f.label :account_id_dest %><br />
+    <%= collection_select(:transaction, :account_id_dest, Account.all, :id, :name) %> 
+  </p>
+  <p>
+    <%= f.label :contract_id %><br />
+    <%= f.text_field :contract_id %>
+  </p>
+  <p>
+    <%= f.label :type %><br />
+    <%= f.select( :type, [['Withdrawl', 'TransactionCredit'], ['Payment', 'TransactionCredit'], ['Income', 'TransactionDebit'], ['Transfer', 'TransactionTransfer']]) %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', transactions_path %>

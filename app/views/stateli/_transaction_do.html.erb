@@ -1,0 +1,41 @@
+
+<% remote_form_for(:transaction, @transaction, :url => transaction_complete_path(@transaction), :html => {:method => 'put'}) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= h @transaction.name %>
+  </p>
+  <p>
+    <%= h @transaction.description %>
+  </p>
+  <p>
+    <%= @transaction.scheduled_date %>
+  </p>
+  <p>
+    <%= f.label :amount %><br />
+    <%= f.text_field :amount %>
+  </p>
+  
+  <% if @transaction.type == 'TransactionCredit' %>
+  
+  <p>
+    <%= f.label :account_id_source %><br />
+	<%= collection_select(:transaction, :account_id_source, Account.all, :id, :name) %> 
+  </p>
+  
+  <% elsif @transaction.type == 'TransactionDebit' %>
+   
+  <p>
+    <%= f.label :account_id_dest %><br />
+    <%= collection_select(:transaction, :account_id_dest, Account.all, :id, :name) %> 
+  </p>
+  
+  <% end %>
+  
+  <p>
+    <%= @transaction.contract.blank? ? "&nbsp;" : @transaction.contract.name %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>

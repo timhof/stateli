@@ -1,0 +1,6 @@
+<h1><%= h @contract.name %> Transactions</h1>
+
+<table>
+  <%= render :partial => 'transaction_header' %>
+  <%= render :partial => 'transaction_details', :collection => @contract.transactions %>
+</table>

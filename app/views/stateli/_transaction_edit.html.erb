@@ -1,0 +1,88 @@
+
+<% remote_form_for(:transaction, @transaction, :url => transaction_update_path(@transaction), :html => {:method => 'put'}) do |f| %>
+  <%= f.error_messages %>
+
+  <div class="form_element">
+  	<div class="form_label">
+    	Name
+    </div>
+    <div class="form_value">
+   	 <%= f.text_field :name %>
+    </div>
+  </div>
+  
+  <div class="form_element">
+  	<div class="form_label">
+    	Description
+    </div>
+    <div class="form_value">
+    	<%= f.text_field :description %>
+    </div>
+  </div>
+  
+  <div class="form_element">
+  	<div class="form_label">
+  		Date Scheduled
+    </div>
+    <div class="form_value">
+    	<%= render :partial => 'date_selector', :locals => {:form_for_obj => f, :text_field_id => "transaction_scheduled_date", :date_field => "scheduled_date"}; %>
+    </div>
+  </div>
+  
+  <div class="form_element">
+  	<div class="form_label">
+    	Amount
+    </div>
+    <div class="form_value">
+    	<%= f.text_field :amount %>
+    </div>
+  </div>
+  
+  <div class="form_element">
+  	<div class="form_label">
+   		Autopay
+    </div>
+    <div class="form_value">
+    	<%= f.check_box :autopay %>
+    </div>
+  </div>
+    
+    
+<% if @transaction.type == 'TransactionCredit' %>
+
+   <div class="form_element">
+  	<div class="form_label">
+    	Account
+    </div>
+    <div class="form_value">
+		<%= collection_select(:transaction, :account_id_source, Account.all, :id, :name) %> 
+    </div>
+  </div>
+ <% end %>
+ 
+ <% if @transaction.type == 'TransactionDebit' %>
+  <div class="form_element">
+  	<div class="form_label">
+    	Account
+    </div>
+    <div class="form_value">
+   		<%= collection_select(:transaction, :account_id_dest, Account.all, :id, :name) %> 
+  	</div>
+  </div>
+ <% end %>
+ 
+  <% unless @transaction.contract.blank? %>
+  <div class="form_element">
+  	<div class="form_label">
+  		Contract
+    </div>
+    <div class="form_value">
+    	<%= @transaction.contract.name %>
+    </div>
+  </div>
+  <% end %>
+  
+  <div class="submit_button_div">
+    <%= f.submit 'Update' %>
+  </div>
+<% end %>

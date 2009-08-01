@@ -1,0 +1,5 @@
+
+
+page.hide_popup_form
+page[:flashdiv].replace_html flash[:notice]
+flash.discard
