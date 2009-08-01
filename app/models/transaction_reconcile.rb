@@ -1,0 +1,2 @@
+class TransactionReconcile < Transaction
+end

@@ -1,0 +1,29 @@
+
+<% form_for(@account) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+ <p>
+    <%= f.label :type %><br />
+    <%= f.select (:type, [['Checking', 'AccountDebit'], ['Savings', 'AccountDebit'], ['Trading', 'AccountDebit'], ['Credit', 'AccountCredit']] )%>
+  </p>
+  <p>
+  <p>
+    <%= f.label :balance %><br />
+    <%= f.text_field :balance %>
+  </p>
+  <p>
+    <%= f.label :active %><br />
+    <%= f.check_box :active %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>

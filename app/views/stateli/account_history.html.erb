@@ -1,0 +1,35 @@
+
+
+<div id="account_journal" class="template_div">
+	<div class="page_title_div">
+		<h1>Account History for <span class="account_name"><%= @account.name%></span></h1>
+	</div>
+	
+	<% if @transactions_debit.size > 0 %>
+	<div class="type_div">
+		<h2>Debit Transactions</h2>
+	  	<%= render :partial => 'account_history_header' %>
+  		<%= render :partial => 'account_history_details', :collection => @transactions_debit %>
+		<div style="clear: both;"><!-- clearing div --></div>
+  	<div>
+	<% end %>
+	
+	<% if @transactions_credit.size > 0 %>
+	<div class="type_div">
+		<h2>Credit Transactions</h2>
+	  	<%= render :partial => 'account_history_header' %>
+  		<%= render :partial => 'account_history_details', :collection => @transactions_credit %>
+		<div style="clear: both;"><!-- clearing div --></div>
+  	<div>
+	<% end %>
+	
+	<% if @transactions_reconcile.size > 0 %>
+	<div class="type_div">
+		<h2>Reconcile Transactions</h2>
+	  	<%= render :partial => 'account_history_header' %>
+  		<%= render :partial => 'account_history_details', :collection => @transactions_reconcile %>
+  		<div style="clear: both;"><!-- clearing div --></div>
+	<div>
+	<% end %>
+	
+</div>

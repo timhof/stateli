@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" creationComplete="index.send()" layout="vertical">
+
+<mx:Script>
+	<![CDATA[
+		import mx.collections.ArrayCollection;
+		import mx.utils.ArrayUtil;
+		import mx.rpc.events.ResultEvent;
+		import mx.rpc.xml.SimpleXMLDecoder;
+		import mx.controls.Alert;
+		import mx.charts.series.LineSeries;
+		
+		import lib.TimelineEvent;
+		import lib.JournalAccount;
+		import lib.Account;
+		import lib.Transaction;
+		
+		[Bindable]
+		private var journalAccount:JournalAccount;
+		
+		private function timelineHandler(event:ResultEvent):void{
+	
+			var xmlStr:String = event.result.toString();
+			var xmlDoc:XMLDocument = new XMLDocument(xmlStr);
+			var decoder:SimpleXMLDecoder = new SimpleXMLDecoder(true);
+			var resultObj:Object = decoder.decodeXML(xmlDoc);
+	
+			var transactionAC:ArrayCollection = new ArrayCollection(Array(resultObj.records.transaction));
+
+			journalAccount = getJournalAccount(transactionAC);
+			
+			var newlineseries:LineSeries = new LineSeries();
+			newlineseries.yField = "balance";
+			newlineseries.displayName = journalAccount.account.name;
+			newlineseries.xField = "date_executed";
+			newlineseries.dataProvider = journalAccount.transactions;
+			
+			var tmp:Array = mychart.series;
+			tmp.push(newlineseries);
+			mychart.series = tmp;
+
+		}
+		
+		public function getJournalAccount(transactionAC:ArrayCollection):JournalAccount{
+		
+			var account:Account = new Account("Total", "Total");
+	
+			var transactionList = getTransactionList(transactionAC);
+					
+			var ja:JournalAccount = new JournalAccount(account, transactionList);
+
+			return ja;
+		}
+		
+		public function getTransactionList(transactionAC:ArrayCollection):ArrayCollection{
+			var newAC:ArrayCollection = new ArrayCollection();
+		 
+			for(var countTrans:int = 0; countTrans < transactionAC.length; countTrans++){
+				var p:Object = transactionAC.getItemAt(countTrans, 0);
+				
+				if(p.length){
+					for(var countTrans2:int = 0; countTrans2 < p.length; countTrans2++){
+						var tr:Transaction = new Transaction(p[countTrans2]["name"], p[countTrans2]["description"], p[countTrans2]["executed_date"], p[countTrans2]["account_balance"]);
+						newAC.addItem(tr);
+					}
+				}
+				else{
+					var tr:Transaction = new Transaction(p["name"], p["description"], p["executed_date"], p["account_balance"]);
+					newAC.addItem(tr);
+				}
+			}
+			
+			return newAC;
+		}
+		
+		public function myParseFunction(t:String):Date { 
+			trace(t);
+			var yearMonthDay:Array = t.split("-");
+	
+            var newDate:Date = new Date(yearMonthDay[0], yearMonthDay[1]-1, yearMonthDay[2]);
+            return newDate;
+        }
+		
+	]]>
+</mx:Script>
+
+<mx:HTTPService url="total_flex.xml" id="index" result="timelineHandler(event)" resultFormat="e4x" />
+
+<mx:Stroke id = "s1" color="blue" weight="2"/>
+
+<mx:Panel height="100%" width="100%">
+    
+        <mx:LineChart id="mychart" height="100%" width="100%"
+            paddingRight="5" paddingLeft="5" 
+            showDataTips="true">
+            
+            <mx:horizontalAxis>
+                <mx:DateTimeAxis dataUnits="days" parseFunction="myParseFunction"/>
+            </mx:horizontalAxis>
+			 <mx:verticalAxis>
+                <mx:LinearAxis baseAtZero="false" />
+            </mx:verticalAxis>
+       
+        </mx:LineChart>
+	
+        <mx:Legend dataProvider="{mychart}"/>
+    </mx:Panel>
+</mx:Application>
+

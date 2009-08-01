@@ -1,0 +1,9 @@
+<tr>
+    <td><%=h account_listing_details.name %></td>
+    <td><%=h account_listing_details.balance %></td>
+    <td><%= link_to 'History', history_path(account_listing_details.id) %></td>
+    <td><%= link_to 'Pending', pending_path(account_listing_details.id) %></td>
+    <td><%= link_to 'Deposit', deposit_path(account_listing_details.id) %></td>
+    <td><%= link_to 'Withdrawl', withdraw_path(account_listing_details.id) %></td>
+    
+</tr>

@@ -1,0 +1,77 @@
+
+
+<div id="transaction_details" class="template_div">
+	<div class="page_title_div">
+		<h1>Detail for <span class="account_name"><%= @title%></span></h1>
+	</div>
+	
+	<div class="detail_div">
+		
+		<div class="detail_label">
+		  Name
+		</div>
+		<div class="detail_value">
+		  <%=h @transaction.name %>
+		</div>
+		
+		<div class="detail_label">
+		  Description
+		</div>
+		<div class="detail_value">
+		  <%=h @transaction.description %>
+		</div>
+		
+		<div class="detail_label">
+		  Date Scheduled
+		</div>
+		<div class="detail_value">
+		  <%=h @transaction.scheduled_date %>
+		</div>
+		
+		<% if @transaction.completed %>
+		<div class="detail_label">
+		  Date Completed
+		</div>
+		<div class="detail_value">
+		  <%=h @transaction.executed_date %>
+		</div>
+		<% end %>
+		
+		<div class="detail_label">
+		  Amount
+		</div>
+		<div class="detail_value">
+		  <%=h real_currency @transaction.amount %>
+		</div>
+
+    	<% unless @transaction.sourceAccount.blank? || @transaction.type != 'TransactionCredit' %>
+		<div class="detail_label">
+		  <b>Source Account
+		</div>
+		<div class="detail_value">
+		  <%=h @transaction.sourceAccount.name %> <%= render :partial => 'account_options', :locals => {:acc => @transaction.sourceAccount} %>
+   
+		  
+		</div>
+		<% end %>
+		
+		<% unless @transaction.destinationAccount.blank? || @transaction.type != 'TransactionDebit' %>
+		<div class="detail_label">
+		  Destination Account
+		</div>
+		<div class="detail_value">
+		  <%=h @transaction.destinationAccount.name %> <%= render :partial => 'account_options', :locals => {:acc => @transaction.destinationAccount} %>
+		</div>
+		<% end %>
+		
+		<% unless @transaction.contract.blank? %>
+		<div class="detail_label">
+		  Contract
+		</div>
+		<div class="detail_value">
+		  <%=h @transaction.contract.name %> <%= render :partial => 'contract_options', :locals => {:contract => @transaction.contract} %>
+		</div>
+		<% end %>
+	
+	</div>
+</div>

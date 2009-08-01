@@ -1,0 +1,83 @@
+
+
+
+
+SOV
+
+Create a new application: MPM - Category - SOV
+This application will query the MTRX.CATEGORY_SPENDING_MM_MP and MTRX.CATEGORY_SPENDING_MM_TNS tables to generate a report which will display the current year and previous year spending for the "Top 10" Companies in the selected Categories.
+
+Each record in the MTRX.CATEGORY_SPENDING tables contains the total spending for a Company/Company/Year/Week.
+The CAT_CODE value in this table is PCC3.
+ 
+Check with Cheng Zhao if you need help in understand the Category relationships.
+
+Source Panel:
+
+	TimeSpan
+	Customized Category Selection (See MPM - Category - Category Trend)
+	
+Reports (See attached file for example report layouts):
+
+	Top 10 Report
+	
+		This report will display the Current Year (CY) spending, Previous Year (LY) spending, and the Percentage Change (% Diff) for the 10 Companies with the most Spending.
+		An additional "Other" row will be displayed which will contain the total spending for all other companies.
+		The "Total" row will contain the total spending for all companies.
+		
+		CY = Total Spending in selected Time Range, selected Categories
+		LY = Total Spending in the the Previous Year (StartYear-1, StartWeek ---- EndYear-1, EndWeek)
+		% Diff = ((CY - LY) / LY
+		
+		Each Spending value should be a clickable link. When the user clicks on a Spending value the Company Trend report for that Company will be displayed.
+		
+	Company Trend
+		
+		This report will display the Weekly Spending for the selected Company.
+		This report will be displayed when the user clicks on a Company's spending value in "Top 10 Report".
+		
+
+		
+		
+		
+Flex Pie Chart
+
+Create a new Flex Tag which will be used to display a Pie Chart.
+The input to this tag will be a list of Beans where each Bean in this list will contain the following fields:
+	ID:String
+	Code:String
+	Name:String
+	Value:double
+	Percentage:double
+	Color:String
+You should create this Bean class and hardcode the beans to test your tag.
+The Tag will create a Pie Chart which contains one wedge for each Bean.
+In addition to the list of beans, the tag will also take a "Selected ID" parameter. The "Selected ID" parameter will specify which wedge of the Pie Chart should be exploded.
+
+
+PredefinedDaypart3 Tag
+
+Create a new tag: PredefinedDaypart3.
+This tag will display the Pre-defined selections from DaypartSelection2 for each Media (Broadcast, Cable).
+Each Media (Broadcast and Cable) will also display a "Show Flexible" link.
+When the user clicks on the "Show Flexible" link the "Flexible Popup" will appear.
+The "Flexible Popup" will display the DaypartSelection2 tag without the Pre-defined option. 
+When the user makes a selection in the "Flexible Popup":
+	a.	Weekdays and Dayparts checkboxes for the Media that was clicked will be hidden
+	b.	Flexible Daypart description (M-F 5:00AM-6:59AM) will displayed.
+	c.	A "Hide Flexible" link will also be displayed. 
+		When the user clicks this link the display will revert to Predefined Dayparts.
+		
+		
+LT Summary
+
+1.	Add an additional "Sub Row" drop-down box.
+	This selection will be used together with the "Rows" and "Columns" drop-down box.
+	The user may now choose which values will be displayed in the Sub Rows in addition to the Rows and Columns.
+	Each drop-down box (Rows, Sub Rows, Columns) should have the following selections:
+		Quarter
+		Network
+		Daypart
+
+2.	Create a new Detail report which will contain Rows, Sub Rows, and Columns based on the users selections.
+	See the attached file for example layout of report

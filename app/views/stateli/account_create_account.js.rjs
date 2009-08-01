@@ -1,0 +1,24 @@
+
+
+page.hide_popup_form
+
+unless @account.blank?
+	if @account.type == 'AccountDebit'
+		
+		page << "if($('account_listing_debit')){"
+		page.insert_html :bottom, "account_listing_debit", :partial => 'account_listing_details', :locals => {:account_listing_details => @account}
+		page[:account_listing_debit].show
+		page << "}"
+		
+	elsif @account.type == 'AccountCredit'
+		
+		page << "if($('account_listing_credit')){"
+		page.insert_html :bottom, "account_listing_credit", :partial => 'account_listing_details', :locals => {:account_listing_details => @account}
+		page[:account_listing_credit].show
+		page << "}"
+		
+	end
+	
+	page[:flashdiv].replace_html flash[:notice]
+	flash.discard
+end

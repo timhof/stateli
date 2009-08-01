@@ -1,0 +1,19 @@
+
+  <tr>
+    <td><%=h transaction_details.name %></td>
+    <td><%=h transaction_details.description %></td>
+    <td><%=h transaction_details.scheduled_date %></td>
+    <td><%=h transaction_details.overdue? ? "Y" : "N" %></td>
+    <td><%=h transaction_details.executed_date %></td>
+    <td><%=h transaction_details.amount %></td>
+    <td><%=h transaction_details.completed ? "Y" : "N" %></td>
+    <td><%=h transaction_details.sourceAccount.blank? ? "&nbsp;" : transaction_details.sourceAccount.name %></td>
+    <td><%=h transaction_details.destinationAccount.blank? ? "&nbsp;" : transaction_details.destinationAccount.name %></td>
+    <td><%=h transaction_details.contract_id %></td>
+    <td><%=h transaction_details.type %></td>
+    <td><%=h transaction_details.user.login %></td>
+    <td><%= link_to 'Show', transaction_path(transaction_details) %></td>
+    <td><%= link_to 'Edit', edit_transaction_path(transaction_details) %></td>
+    <td><%= link_to 'Destroy', transaction_path(transaction_details), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+

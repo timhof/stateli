@@ -1,0 +1,3 @@
+class AccountDebit < Account
+
+end

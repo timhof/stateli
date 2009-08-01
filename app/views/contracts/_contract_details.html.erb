@@ -1,0 +1,19 @@
+
+  <tr>
+    <td><%=h contract_details.name %></td>
+    <td><%=h contract_details.description %></td>
+    <td><%=h contract_details.date_start %></td>
+    <td><%=h contract_details.date_end %></td>
+    <td><%=h contract_details.type %></td>
+    <td><%=h contract_details.autopay ? 'Y' : 'N' %></td>
+    <td><%=h contract_details.autopayAccount.blank? ? "&nbsp;" : contract_details.autopayAccount.name%></td>
+    <td><%=h contract_details.full_date %></td>
+    <td><%=h contract_details.day_of_month %></td>
+    <td><%=h contract_details.day_of_month_alt %></td>
+    <td><%=h contract_details.weekday %></td>
+    <td><%=h contract_details.active ? 'Y' : 'N' %></td>
+    <td><%=h contract_details.amount %></td>
+    <td><%= link_to 'Show', contract_path(contract_details) %></td>
+    <td><%= link_to 'Edit', edit_contract_path(contract_details) %></td>
+    <td><%= link_to 'Destroy', contract_path(contract_details), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>

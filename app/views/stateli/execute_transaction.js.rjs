@@ -1,0 +1,7 @@
+
+
+page.hide_popup_form
+page["account_listing_data_balance_#{@account.id}"].replace_html "#{@account.balance}"
+page["account_listing_data_#{@account.id}"].visual_effect(:highlight, :duration => 1)
+page[:flashdiv].replace_html flash[:notice]
+flash.discard

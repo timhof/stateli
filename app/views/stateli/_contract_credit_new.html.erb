@@ -1,0 +1,7 @@
+
+<% remote_form_for(@contract, :url => build_contract_credit_path) do |f| %>
+
+	<%= render :partial => 'contract_new', :locals => {:f => f}; %>
+	
+<% end %>
+

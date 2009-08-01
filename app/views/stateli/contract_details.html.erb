@@ -1,0 +1,55 @@
+
+
+<div id="contract_details" class="template_div">
+	<div class="page_title_div">
+		<h1>Detail for <span class="account_name"><%= @title%></span></h1>
+	</div>
+	
+	<div class="detail_div">
+		<div class="detail_label">
+		  Name
+		</div>
+		<div class="detail_value">
+		  <%=h @contract.name %>
+		</div>
+		
+		<div class="detail_label">
+		  Description
+		</div>
+		<div class="detail_value">
+		  <%=h @contract.description %>
+		</div>
+		
+		<div class="detail_label">
+		  Start Date
+		</div>
+		<div class="detail_value">
+		  <%=h @contract.date_start %>
+		</div>
+		
+		<div class="detail_label">
+		  End Date
+		</div>
+		<div class="detail_value">
+		  <%=h @contract.date_end %>
+		</div>
+		<div class="detail_label">
+		  Amount
+		</div>
+		<div class="detail_value">
+		  <%=h @contract.amount %>
+		</div>
+		
+		<% if @contract.autopay %>
+		<div class="detail_label">
+		  Autopay Account
+		</div>
+		<div class="detail_value">
+		  <%=h @contract.autopayAccount.name %> <%= render :partial => 'account_options', :locals => {:acc => @contract.autopayAccount} %>
+   
+		</div>
+		<% end %>
+		
+		
+	</div>
+</div>

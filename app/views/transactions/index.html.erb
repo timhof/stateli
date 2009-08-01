@@ -1,0 +1,38 @@
+<h1>Listing transactions</h1>
+
+<p>All Transactions</p>
+<table>
+  <%= render :partial => 'transaction_header' %>
+  <%= render :partial => 'transaction_details', :collection => @transactions %>
+</table>
+
+
+<p>Debit Transactions</p>
+<table>
+  <%= render :partial => 'transaction_header' %>
+  <%= render :partial => 'transaction_details', :collection => @transactionsDebit %>
+</table>
+
+
+<p>Credit Transactions</p>
+<table>
+  <%= render :partial => 'transaction_header' %>
+  <%= render :partial => 'transaction_details', :collection => @transactionsCredit %>
+</table>
+
+<p>Transfer Transactions</p>
+<table>
+  <%= render :partial => 'transaction_header' %>
+  <%= render :partial => 'transaction_details', :collection => @transactionsTransfer %>
+</table>
+
+<p>Reconcile Transactions</p>
+<table>
+  <%= render :partial => 'transaction_header' %>
+  <%= render :partial => 'transaction_details', :collection => @transactionsReconcile %>
+</table>
+
+<br />
+
+<%= link_to 'New transaction', new_transaction_path %>
+<%= link_to 'Delete All Transactions', clean_transactions_path %>

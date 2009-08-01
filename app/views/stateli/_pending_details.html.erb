@@ -1,0 +1,29 @@
+
+ 
+ <% completed = pending_details.completed
+ 	overdue = pending_details.overdue?
+ 	autopay = pending_details.autopay %>
+ 	
+	<div class="data_row <%= overdue ? "overdue" : "" %>" id="pending_detail_<%= pending_details.id%>">
+    <div class="pending_data data_cell"><%=h pending_details.name %></div>
+    <div class="pending_data data_cell"><%=h pending_details.description %></div>
+    <div class="pending_data_currency data_cell"><%=h real_currency pending_details.amount %></div>
+    <div class="pending_data data_cell"><%=h pending_details.scheduled_date %></div>
+    <div class="pending_data data_cell"><%= pending_details.contract.blank? ? "&nbsp;" : pending_details.contract.name%></div>
+    
+    
+     <div class="pending_data data_cell">
+    <% if pending_details.type == 'TransactionCredit'%>
+    	<%= pending_details.sourceAccount.blank? ? "&nbsp;" : pending_details.sourceAccount.name%>
+    <% elsif pending_details.type == 'TransactionDebit'%>
+    	<%= pending_details.destinationAccount.blank? ? "&nbsp;" : pending_details.destinationAccount.name%>
+    <% end %>
+    </div>
+		
+	<div class="pending_data data_cell">
+	
+	<%= render :partial => 'transaction_options', :locals => {:trans => pending_details} %>
+	</div>
+	
+  </div>
+

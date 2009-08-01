@@ -1,0 +1,4 @@
+class AccountCredit < Account
+
+
+end

@@ -1,0 +1,19 @@
+
+ 
+ <% completed = account_pending_details.completed
+ 	overdue = account_pending_details.overdue?
+ 	autopay = account_pending_details.autopay %>
+ 	
+	<div class="data_row <%= overdue ? "overdue" : "" %>" id="pending_detail_<%= account_pending_details.id%>">
+    <div class="account_pending_data data_cell"><%=h account_pending_details.name %></div>
+    <div class="account_pending_data data_cell"><%=h account_pending_details.description %></div>
+    <div class="account_pending_data_currency data_cell"><%=h real_currency account_pending_details.amount %></div>
+    <div class="account_pending_data data_cell"><%=h account_pending_details.scheduled_date %></div>
+    <div class="account_pending_data data_cell"><%= account_pending_details.contract.blank? ? "&nbsp;" : account_pending_details.contract.name%></div>
+	<div class="account_pending_data data_cell">
+	
+	<%= render :partial => 'transaction_options', :locals => {:acc => @account, :trans => account_pending_details} %>
+	</div>
+	
+  </div>
+

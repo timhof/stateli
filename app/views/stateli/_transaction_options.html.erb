@@ -1,0 +1,13 @@
+  <span class="option_link_span">
+	<%= link_to 'shw', transaction_details_path(trans.id), {:class => "listing_link", :title => "View Transaction Details"} %>
+    <% unless trans.completed %>
+		<%= link_to_remote 'ed', {:url => transaction_edit_path( trans.id), :method => :get}, {:class => "listing_link", :title => "Edit Transaction Details"} %>
+    	<%= link_to_remote 'del', {:url => transaction_destroy_path(trans.id), :method => :delete, :confirm => 'Are you sure?'}, {:class => "listing_link", :title => "Delete Transaction"} %>
+    <%   if trans.autopay %>
+		<%= link_to_remote 'cnf', {:url => transaction_autopay_path(trans), :method => :put, :confirm => 'Are you sure?'}, {:class => "listing_link", :title => "Confirm Autopay"} %>
+    <%   else %>
+		<%= link_to_remote 'cmp', {:url => transaction_do_path(trans), :method => :get}, {:class => "listing_link", :title => "Complete Transaction"} %>
+		
+    <%   end %>
+    <% end %>
+  </span>

@@ -1,0 +1,18 @@
+
+
+<div id="account_listing" class="template_div">
+	<div class="page_title_div">
+		<h1>Accounts</h1>
+	</div>
+	
+	<div id="account_listing_debit" class="type_div" style="display: <%= @accountsDebit.size > 0 ? "block" : "none"%>">
+	  	<%= render :partial => 'account_listing_header' %>
+	  	<%= render :partial => 'account_listing_details', :collection => @accountsDebit %>
+	</div>
+	
+	<div id="account_listing_credit" class="type_div" style="display: <%= @accountsCredit.size > 0 ? "block" : "none"%>">
+		<h2>Credit</h2>
+	 	<%= render :partial => 'account_listing_header' %>
+	  	<%= render :partial => 'account_listing_details', :collection => @accountsCredit %>
+	</div>
+</div>

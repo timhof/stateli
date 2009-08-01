@@ -1,0 +1,31 @@
+
+
+<div id="login_form_div" class="form_div">
+	<% form_tag session_path do -%>
+ 	  <div id="new_session_login" class="form_element">
+	  	<div class="form_label">
+	   		Login
+	    </div>
+	    <div class="form_value">
+	    	<%= text_field_tag 'login', @login, :class => "base_form_field" %>
+	    </div>
+	  </div>
+	  <div id="new_session_password" class="form_element">
+	  	<div class="form_label">
+	   		Password
+	    </div>
+	    <div class="form_value">
+	    	<%= password_field_tag 'password', nil, :class => "base_form_field" %>
+	    </div>
+	  </div>
+	  
+		<!-- Uncomment this if you want this functionality
+		<p><%= label_tag 'remember_me', 'Remember me' %>
+		<%= check_box_tag 'remember_me', '1', @remember_me %></p>
+		-->
+		
+		<p><%= submit_tag 'Log in' %></p>
+		<p><%= link_to_remote "sign up", signup_path %></p>
+		
+		<% end -%>
+</div>
