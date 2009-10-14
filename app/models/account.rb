@@ -3,12 +3,13 @@ class Account < ActiveRecord::Base
 	before_create :setPreviousBalance
 	after_create :addTransaction
 	
-	belongs_to :user
+	before_update :setPreviousBalance
+	after_update :addTransaction
 	
 	named_scope :active_only, :conditions => { :active => true } 
 	named_scope :user_only, lambda { |user_id| { :conditions => { :user_id => user_id } }}
 	
-	attr_accessor :previous_balance, :has_overdue_transactions
+	attr_accessor :previous_balance, :has_overdue_transactions, :has_pending_transactions
 	
 	validates_presence_of :name, :balance
 	validates_numericality_of :balance
@@ -16,33 +17,55 @@ class Account < ActiveRecord::Base
 	def self.activeAccounts(userId)
 		accounts = user_only(userId).active_only.find(:all)
 		accounts.each do |acc|
-			acc.set_overdue_transactions(Date.today, Date.today)
+			acc.set_overdue_transactions()
 		end
 	end
 	
-	def set_overdue_transactions(start_date, end_date)
+	def set_overdue_transactions()
 		@has_overdue_transactions = Transaction.account_has_overdue(self.id)
+		@has_pending_transactions = Transaction.account_has_incomplete(self.id)
 	end
 
 	def completed_transactions_by_date(start_date, end_date)
+		@transactions = Transaction.completed_by_account_date(self.id, start_date, end_date)
+		Account.set_account_balances(@transactions);
+	end
+	
+	def uncompleted_transactions_by_date(start_date, end_date)
 		
-		@transactions = Transaction.completed_by_date(self.id, self.user_id, start_date, end_date)
+		@transactions = Transaction.uncompleted_by_account_date(self.id, start_date, end_date)
+		Account.set_account_balances(@transactions);
+	end
+	
+	def completed_transactions()
+		
+		@transactions = Transaction.completed_by_account(self.id)
+		Account.set_account_balances(@transactions);
+	end
+	
+	def uncompleted_transactions()
+		
+		@transactions = Transaction.uncompleted_by_account(self.id)
+		Account.set_account_balances(@transactions);
+	end
+	
+	
+	def self.set_account_balances(transactions)
+		
 		balance = 0
-		@transactions.each do |trans|
+		transactions.each do |trans|
 			logger.info "amount: #{trans.amount}"
 			next if trans.amount.nil?
 			if trans.type == 'TransactionCredit'
 				balance = balance - trans.amount
-			elsif trans.type == 'TransactionDebit'
-				balance = balance + trans.amount
 			else
-				balance = trans.amount
+				balance = balance + trans.amount
 			end
 			trans.account_balance = balance
 		end
 	end
 	
-	def completed_transactions(start_date, end_date)
+	def completed_transaction_hash(start_date, end_date)
 		
 		credit_transactions = Transaction.account_credit_completed(self.id)
 		debit_transactions = Transaction.account_debit_completed(self.id)
@@ -54,26 +77,19 @@ class Account < ActiveRecord::Base
 		
 	end
 	
-	def uncompleted_transactions(start_date, end_date)
+	def uncompleted_transaction_hash(start_date, end_date)
 		
-		credit_transactions = Transaction.account_credit_uncompleted(self.id)
-		debit_transactions = Transaction.account_debit_uncompleted(self.id)
-		reconcile_transactions = Transaction.account_reconcile_uncompleted(self.id)
-		logger.info "#{credit_transactions.size} Uncompleted CREDIT Transactions"
-		logger.info "#{debit_transactions.size} Uncompleted DEBIT Transactions"
-		logger.info "#{reconcile_transactions.size} Uncompleted RECONCILE Transactions"
-		transactions = {:credit => credit_transactions, :debit => debit_transactions, :reconcile => reconcile_transactions}	
-		
-	end
-	
-	def self.uncompleted_transactions_all_accounts(userId, start_date, end_date)
-		
-		credit_transactions = Transaction.credit_uncompleted_by_date(userId, start_date, end_date)
-		debit_transactions = Transaction.debit_uncompleted_by_date(userId, start_date, end_date)
-
+		credit_transactions = Transaction.account_credit_uncompleted_by_account_date(self.id, start_date, end_date)
+		debit_transactions = Transaction.account_debit_uncompleted_by_account_date(self.id, start_date, end_date)
 		logger.info "#{credit_transactions.size} Uncompleted CREDIT Transactions"
 		logger.info "#{debit_transactions.size} Uncompleted DEBIT Transactions"
 		transactions = {:credit => credit_transactions, :debit => debit_transactions}	
+		
+	end
+	
+	def self.uncompleted_transactions_all_accounts_by_date(userId, start_date, end_date)
+		
+		transactions = Transaction.uncompleted_by_date_user(userId, start_date, end_date)
 		
 	end
 	

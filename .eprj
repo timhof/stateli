@@ -4,6 +4,8 @@
     <dict>
         <key>fileTriggers</key>
         <dict>
+            <key>APP</key>
+            <string>public\javascripts\application.js</string>
             <key>APPLI</key>
             <string>app\views\layouts\application.html.erb</string>
             <key>BUILD</key>
@@ -14,6 +16,8 @@
             <string>app\views\stateli\account_listing.html.erb</string>
             <key>ROUTE</key>
             <string>config\routes.rb</string>
+            <key>STAT</key>
+            <string>app\controllers\stateli_controller.rb</string>
             <key>STATE</key>
             <string>app\controllers\stateli_controller.rb</string>
             <key>_account_his</key>
@@ -40,14 +44,40 @@
             <string>app\views\stateli\_account_pending_header.html.erb</string>
             <key>_trans</key>
             <string>app\views\stateli\_transaction_options.html.erb</string>
+            <key>a</key>
+            <string>app\models\account.rb</string>
+            <key>about</key>
+            <string>..\timothyimhof\app\views\navigation\about.html.erb</string>
+            <key>ac</key>
+            <string>app\models\account.rb</string>
             <key>account</key>
+            <string>app\models\account.rb</string>
+            <key>account.r</key>
             <string>app\models\account.rb</string>
             <key>account_detai</key>
             <string>app\views\stateli\account_details.html.erb</string>
             <key>account_detail</key>
             <string>app\views\stateli\_account_listing_details.html.erb</string>
+            <key>account_details</key>
+            <string>app\views\stateli\account_details.html.erb</string>
+            <key>account_histor</key>
+            <string>app\views\stateli\account_history.html.erb</string>
             <key>account_history</key>
             <string>app\views\stateli\account_history.html.erb</string>
+            <key>account_jour</key>
+            <string>app\views\stateli\account_journal.html.erb</string>
+            <key>account_journ</key>
+            <string>app\views\stateli\account_journal_flex.html.erb</string>
+            <key>account_journal</key>
+            <string>app\views\stateli\account_journal.html.erb</string>
+            <key>account_list</key>
+            <string>app\views\stateli\account_listing.html.erb</string>
+            <key>account_listin</key>
+            <string>app\views\stateli\account_listing.html.erb</string>
+            <key>account_listin_head</key>
+            <string>app\views\stateli\_account_listing_header.html.erb</string>
+            <key>account_listing</key>
+            <string>app\views\stateli\account_listing.html.erb</string>
             <key>account_new</key>
             <string>app\views\stateli\_account_new.html.erb</string>
             <key>account_op</key>
@@ -58,26 +88,66 @@
             <string>app\views\stateli\_account_options.html.erb</string>
             <key>account_option</key>
             <string>app\views\stateli\_account_options.html.erb</string>
+            <key>account_pend</key>
+            <string>app\views\stateli\account_pending_flex.html.erb</string>
             <key>account_pending</key>
-            <string>app\views\stateli\account_pending.html.erb</string>
+            <string>app\views\stateli\_account_pending_details.html.erb</string>
+            <key>account_pending_det</key>
+            <string>app\views\stateli\_account_pending_details.html.erb</string>
+            <key>account_up</key>
+            <string>app\views\stateli\account_update.js.rjs</string>
+            <key>account_upd</key>
+            <string>app\views\stateli\account_update.js.rjs</string>
+            <key>account_updat</key>
+            <string>app\views\stateli\account_update.js.rjs</string>
+            <key>account_update</key>
+            <string>app\views\stateli\account_update.js.rjs</string>
+            <key>accountjour</key>
+            <string>app\flex\accountJournal.mxml</string>
+            <key>accountpend</key>
+            <string>app\flex\accountPending.mxml</string>
+            <key>accountpending</key>
+            <string>app\flex\accountPending.mxml</string>
+            <key>acount_jour</key>
+            <string>app\views\stateli\account_journal.html.erb</string>
             <key>ap</key>
-            <string>app\helpers\application_helper.rb</string>
-            <key>app</key>
             <string>app\views\layouts\application.html.erb</string>
+            <key>apl</key>
+            <string>app\views\layouts\application.html.erb</string>
+            <key>app</key>
+            <string>app\controllers\application_controller.rb</string>
+            <key>appi</key>
+            <string>public\javascripts\application.js</string>
             <key>appl</key>
             <string>app\views\layouts\application.html.erb</string>
             <key>appli</key>
-            <string>app\views\layouts\application.html.erb</string>
+            <string>app\helpers\application_helper.rb</string>
             <key>applic</key>
             <string>app\helpers\application_helper.rb</string>
             <key>applica</key>
             <string>public\javascripts\application.js</string>
             <key>applicat</key>
             <string>app\views\layouts\application.html.erb</string>
+            <key>application</key>
+            <string>public\javascripts\application.js</string>
             <key>application_hel</key>
             <string>app\helpers\application_helper.rb</string>
+            <key>applit</key>
+            <string>app\views\layouts\application.html.erb</string>
             <key>appll</key>
             <string>app\views\layouts\application.html.erb</string>
+            <key>avai</key>
+            <string>..\tutor\app\views\navigation\availability.html.erb</string>
+            <key>bank</key>
+            <string>public\stylesheets\bank.css</string>
+            <key>bank.</key>
+            <string>public\stylesheets\bank.css</string>
+            <key>bank.c</key>
+            <string>public\stylesheets\bank.css</string>
+            <key>bank.cs</key>
+            <string>public\stylesheets\bank.css</string>
+            <key>bank.css</key>
+            <string>public\stylesheets\bank.css</string>
             <key>bui</key>
             <string>app\views\stateli\build_contract.js.rjs</string>
             <key>build</key>
@@ -85,7 +155,7 @@
             <key>contract.rb</key>
             <string>app\models\contract.rb</string>
             <key>contract_</key>
-            <string>app\views\stateli\_contract_credit_new.html.erb</string>
+            <string>app\views\stateli\contract_listing.html.erb</string>
             <key>contract_cre</key>
             <string>app\views\stateli\_contract_credit_new.html.erb</string>
             <key>contract_credit</key>
@@ -93,39 +163,67 @@
             <key>contract_credit_ne</key>
             <string>app\views\stateli\_contract_credit_new.html.erb</string>
             <key>contract_de</key>
-            <string>app\views\contracts\_contract_details.html.erb</string>
+            <string>app\views\stateli\contract_details.html.erb</string>
             <key>contract_det</key>
+            <string>app\views\stateli\contract_details.html.erb</string>
+            <key>contract_deta</key>
             <string>app\views\stateli\contract_details.html.erb</string>
             <key>contract_detail</key>
             <string>app\views\stateli\contract_details.html.erb</string>
             <key>contract_details</key>
-            <string>app\views\stateli\contract_details.html.erb</string>
+            <string>app\views\stateli\_contract_listing_details.html.erb</string>
+            <key>contract_listin</key>
+            <string>app\views\stateli\_contract_listing_details.html.erb</string>
+            <key>contract_listing</key>
+            <string>app\views\stateli\_contract_listing_details.html.erb</string>
+            <key>contract_liti</key>
+            <string>app\views\stateli\_contract_listing_details.html.erb</string>
             <key>contract_new</key>
             <string>app\views\stateli\_contract_new.html.erb</string>
+            <key>cub</key>
+            <string>..\tutor\public\stylesheets\cuba.css</string>
             <key>date</key>
             <string>app\views\stateli\_date_selector.html.erb</string>
             <key>details</key>
             <string>app\views\stateli\_account_history_details.html.erb</string>
             <key>do</key>
             <string>app\views\stateli\_transaction_do.html.erb</string>
+            <key>e</key>
+            <string>app\views\stateli\error500.html.erb</string>
             <key>edit</key>
             <string>app\views\stateli\_transaction_edit.html.erb</string>
+            <key>en</key>
+            <string>config\environment.rb</string>
+            <key>env</key>
+            <string>..\timothyimhof\config\environment.rb</string>
             <key>envi</key>
             <string>config\environment.rb</string>
+            <key>expen</key>
+            <string>app\views\stateli\expense_listing.html.erb</string>
+            <key>expens</key>
+            <string>app\views\stateli\expense_listing.html.erb</string>
+            <key>fle</key>
+            <string>app\views\stateli\account_journal_flex.html.erb</string>
             <key>flex</key>
-            <string>app\views\stateli\account_total_flex.html.erb</string>
+            <string>app\views\stateli\account_journal_flex.html.erb</string>
+            <key>footer</key>
+            <string>public\images\bank_footer.gif</string>
             <key>helper</key>
             <string>app\helpers\application_helper.rb</string>
             <key>histo</key>
             <string>app\views\stateli\_account_history_details.html.erb</string>
             <key>histor</key>
-            <string>app\views\stateli\_account_history_details.html.erb</string>
+            <string>app\views\stateli\account_history.html.erb</string>
             <key>history</key>
-            <string>app\views\stateli\_account_history_details.html.erb</string>
+            <string>app\views\stateli\account_history.html.erb</string>
+            <key>home</key>
+            <string>..\timothyimhof\app\views\navigation\home.html.erb</string>
             <key>i</key>
             <string>app\views\transactions\index.html.erb</string>
             <key>in</key>
             <string>app\views\stateli\index.html.erb</string>
+            <key>income</key>
+            <string>app\views\stateli\income_listing.html.erb</string>
             <key>inde</key>
             <string>app\views\stateli\index.html.erb</string>
             <key>index</key>
@@ -135,7 +233,7 @@
             <key>indx</key>
             <string>app\views\stateli\index.html.erb</string>
             <key>jour</key>
-            <string>app\views\stateli\_account_journal_details.html.erb</string>
+            <string>app\flex\lib\JournalAccount.as</string>
             <key>journ</key>
             <string>app\views\stateli\_account_journal_details.html.erb</string>
             <key>journa</key>
@@ -145,25 +243,77 @@
             <key>lisint</key>
             <string>app\views\stateli\_account_listing_details.html.erb</string>
             <key>listing</key>
-            <string>app\views\stateli\account_listing.html.erb</string>
+            <string>app\views\stateli\contract_listing.html.erb</string>
+            <key>listing_de</key>
+            <string>app\views\stateli\_account_listing_details.html.erb</string>
+            <key>lost</key>
+            <string>lib\lost_handler.rb</string>
+            <key>main</key>
+            <string>public\stylesheets\main.css</string>
+            <key>mxm</key>
+            <string>app\flex\accountJournal.mxml</string>
+            <key>mxml</key>
+            <string>app\flex\accountPending.mxml</string>
+            <key>na</key>
+            <string>..\timothyimhof\app\views\layouts\navigation.html.erb</string>
+            <key>nav</key>
+            <string>..\timothyimhof\app\views\layouts\navigation.html.erb</string>
+            <key>navi</key>
+            <string>..\timothyimhof\app\views\layouts\navigation.html.erb</string>
+            <key>navig</key>
+            <string>..\timothyimhof\app\controllers\navigation_controller.rb</string>
+            <key>naviga</key>
+            <string>..\timothyimhof\app\views\layouts\navigation.html.erb</string>
+            <key>navigat</key>
+            <string>..\timothyimhof\app\views\layouts\navigation.html.erb</string>
+            <key>navigatio</key>
+            <string>..\timothyimhof\app\views\layouts\navigation.html.erb</string>
+            <key>navigation</key>
+            <string>..\oriented_objects\app\controllers\navigations_controller.rb</string>
             <key>new</key>
             <string>app\views\sessions\new.html.erb</string>
+            <key>oo</key>
+            <string>..\timothyimhof\public\stylesheets\oostyle.css</string>
+            <key>oos</key>
+            <string>..\timothyimhof\public\stylesheets\oostyle.css</string>
+            <key>oost</key>
+            <string>..\timothyimhof\public\stylesheets\oostyle.css</string>
+            <key>oosty</key>
+            <string>..\timothyimhof\public\stylesheets\oostyle.css</string>
             <key>option</key>
             <string>app\views\stateli\_transaction_options.html.erb</string>
             <key>options</key>
             <string>app\views\accounts\_account_options.html.erb</string>
             <key>pend</key>
             <string>app\views\stateli\_account_pending_details.html.erb</string>
+            <key>pendin</key>
+            <string>app\views\stateli\_pending_details.html.erb</string>
             <key>pending</key>
-            <string>app\flex\JournalPending.mxml</string>
+            <string>app\views\stateli\transactions_pending.html.erb</string>
             <key>pending_</key>
             <string>app\views\stateli\_account_pending_details.html.erb</string>
-            <key>pending_details</key>
+            <key>pending_det</key>
+            <string>app\views\stateli\_pending_details.html.erb</string>
+            <key>pending_deta</key>
+            <string>app\views\stateli\_pending_details.html.erb</string>
+            <key>pending_detail</key>
             <string>app\views\stateli\_account_pending_details.html.erb</string>
+            <key>pending_details</key>
+            <string>app\views\stateli\_pending_details.html.erb</string>
+            <key>pending_he</key>
+            <string>app\views\stateli\_pending_header.html.erb</string>
             <key>pending_head</key>
             <string>app\views\stateli\_pending_header.html.erb</string>
+            <key>pie</key>
+            <string>..\tutor\public\stylesheets\pieces.css</string>
+            <key>piec</key>
+            <string>..\tutor\public\stylesheets\pieces.css</string>
             <key>register</key>
             <string>app\views\stateli\register.js.rjs</string>
+            <key>resume</key>
+            <string>..\timothyimhof\app\views\navigation\resume.html.erb</string>
+            <key>rou</key>
+            <string>..\tutor\config\routes.rb</string>
             <key>rout</key>
             <string>config\routes.rb</string>
             <key>route</key>
@@ -174,9 +324,13 @@
             <string>app\views\stateli\transaction_update.js.rjs</string>
             <key>schem</key>
             <string>db\schema.rb</string>
+            <key>schema</key>
+            <string>db\schema.rb</string>
             <key>sess</key>
             <string>app\controllers\sessions_controller.rb</string>
             <key>session_con</key>
+            <string>app\controllers\sessions_controller.rb</string>
+            <key>session_contr</key>
             <string>app\controllers\sessions_controller.rb</string>
             <key>sig</key>
             <string>vendor\plugins\restful_authentication\generators\authenticated\templates\signup.html.erb</string>
@@ -188,33 +342,59 @@
             <string>app\controllers\stateli_controller.rb</string>
             <key>sta</key>
             <string>app\controllers\stateli_controller.rb</string>
+            <key>stali</key>
+            <string>app\controllers\stateli_controller.rb</string>
             <key>stat</key>
             <string>app\controllers\stateli_controller.rb</string>
             <key>state</key>
             <string>app\controllers\stateli_controller.rb</string>
             <key>stateli</key>
             <string>app\controllers\stateli_controller.rb</string>
+            <key>statelicon</key>
+            <string>app\controllers\stateli_controller.rb</string>
+            <key>statelih</key>
+            <string>app\flex\lib\StateliHelper.as</string>
+            <key>statelihel</key>
+            <string>app\flex\lib\StateliHelper.as</string>
             <key>stati</key>
             <string>app\controllers\stateli_controller.rb</string>
             <key>statil</key>
             <string>app\controllers\stateli_controller.rb</string>
             <key>statli</key>
             <string>app\controllers\stateli_controller.rb</string>
+            <key>styl</key>
+            <string>..\timothyimhof\public\stylesheets\oostyle.css</string>
+            <key>su</key>
+            <string>..\tutor\public\stylesheets\suess.css</string>
+            <key>sue</key>
+            <string>..\tutor\public\stylesheets\suess.css</string>
+            <key>totalpending</key>
+            <string>app\flex\totalPending.mxml</string>
             <key>trans</key>
-            <string>app\views\transactions\_transaction_details.html.erb</string>
+            <string>app\flex\lib\Transaction.as</string>
+            <key>transa</key>
+            <string>app\models\transaction.rb</string>
             <key>transac</key>
-            <string>app\views\transactions\_transaction_details.html.erb</string>
+            <string>app\models\transaction.rb</string>
             <key>transact</key>
             <string>app\views\transactions\_transaction_details.html.erb</string>
             <key>transactio</key>
             <string>app\views\stateli\transaction_details.html.erb</string>
             <key>transaction</key>
-            <string>app\views\stateli\_transaction_options.html.erb</string>
+            <string>app\views\transactions\_transaction_details.html.erb</string>
+            <key>transaction.r</key>
+            <string>app\models\transaction.rb</string>
+            <key>transaction.rb</key>
+            <string>app\models\transaction.rb</string>
             <key>transaction_de</key>
             <string>app\views\stateli\transaction_details.html.erb</string>
             <key>transaction_det</key>
             <string>app\views\stateli\transaction_details.html.erb</string>
+            <key>transaction_deta</key>
+            <string>app\views\stateli\transaction_details.html.erb</string>
             <key>transaction_detai</key>
+            <string>app\views\stateli\transaction_details.html.erb</string>
+            <key>transaction_details</key>
             <string>app\views\stateli\transaction_details.html.erb</string>
             <key>transaction_do</key>
             <string>app\views\stateli\_transaction_do.html.erb</string>
@@ -230,8 +410,16 @@
             <string>app\views\stateli\_transaction_options.html.erb</string>
             <key>transaction_p</key>
             <string>app\views\stateli\transactions_pending.html.erb</string>
+            <key>transactions</key>
+            <string>app\views\stateli\transactions_pending.html.erb</string>
+            <key>transactions_pend</key>
+            <string>app\views\stateli\transactions_pending.html.erb</string>
+            <key>update_pend</key>
+            <string>app\views\stateli\update_pending.js.rjs</string>
             <key>users_con</key>
             <string>app\controllers\users_controller.rb</string>
+            <key>xml</key>
+            <string>app\flex\accountJournal.mxml</string>
         </dict>
     </dict>
 </plist>

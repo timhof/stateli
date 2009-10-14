@@ -16,14 +16,12 @@ module ApplicationHelper
 	
 	def hide_popup_form
 		page[:listing_form].replace_html ""
-		page << "if($('listing_form_div').visible()){"
-			page[:listing_form_div].visual_effect(:blindUp, :duration => 1)
-		page << "}"
+
 		page[:listing_form_div].hide
 		page.select("a.listing_link").each { |div| div.show}
-		page << "if($('welcome_div')){"
-			page[:navigation].show
+		page << "if($('logout_div')){"
 			page[:navigation_disabled].hide
+			page[:navigation].show
 		page << "}"
 		
 		page << "if($('login_form_div')){"

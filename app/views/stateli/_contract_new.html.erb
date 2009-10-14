@@ -18,6 +18,24 @@
 	    	<%= f.text_field :description, :class => "base_form_field" %>
 	    </div>
 	  </div>
+	 
+	  <div id="new_contract_amount" class="form_element">
+	  	<div class="form_label">
+	    	Amount
+	    </div>
+	    <div class="form_value">
+	    	<%= f.text_field :amount, :class => "base_form_field", :size => 6 %>
+	    </div>
+	  </div>
+	  
+	  <div id="new_contract_autopay" class="form_element">
+	  	<div class="form_label">
+	    	Autopay
+	    </div>
+	    <div class="form_value">
+	    	<%= f.check_box (:autopay, {:onchange => "changeContractAutopay()", :class => "base_form_field"})%>
+	    </div>
+	  </div>
 	  
 	  <div id="new_contract_type" class="form_element">
 	  	<div class="form_label">
@@ -82,15 +100,6 @@
 	    </div>
 	  </div>
 	  
-	  <div id="new_contract_autopay" class="form_element">
-	  	<div class="form_label">
-	    	Autopay
-	    </div>
-	    <div class="form_value">
-	    	<%= f.check_box (:autopay, {:onchange => "changeContractAutopay()", :class => "base_form_field"})%>
-	    </div>
-	  </div>
-	  
 	  <div id="new_contract_autopay_account" class="form_element" style="display:none">
 	  	<div class="form_label">
 	    	Account
@@ -109,14 +118,6 @@
 	    </div>
 	  </div>
 	  
-	  <div id="new_contract_amount" class="form_element">
-	  	<div class="form_label">
-	    	Amount
-	    </div>
-	    <div class="form_value">
-	    	<%= f.text_field :amount, :class => "base_form_field" %>
-	    </div>
-	  </div>
 	  
 	  <div id="new_contract_submit" class="submit_button_div">
 	    <%= f.submit 'Create', :class => "submit_button base_form_field"%>

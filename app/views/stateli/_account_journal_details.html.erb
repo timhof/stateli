@@ -1,11 +1,11 @@
 
   <div class="data_row">
-    <div class="account_journal_data data_cell"><%=h account_journal_details.executed_date %></div>
-    <div class="account_journal_data data_cell"><%=h account_journal_details.name %></div>
-    <div class="account_journal_data_currency data_cell"><%= account_journal_details.type == 'TransactionCredit' ? (real_currency account_journal_details.amount) : "&nbsp;" %></div>
-    <div class="account_journal_data_currency data_cell"><%= account_journal_details.type == 'TransactionDebit' ? (real_currency account_journal_details.amount) : "&nbsp;" %></div>
-    <div class="account_journal_data_currency data_cell"><%= h real_currency account_journal_details.account_balance %></div>
-	<div class="account_journal_data data_cell">
+    <div class="account_journal_data_date data_cell"><%=h account_journal_details.executed_date.strftime("%m/%d/%y") %></div>
+    <div class="account_journal_data_name data_cell"><%=h account_journal_details.name %></div>
+    <div class="account_journal_data_amount_credit data_cell"><%= account_journal_details.type == 'TransactionCredit' ? (real_currency account_journal_details.amount) : "&nbsp;" %></div>
+    <div class="account_journal_data_amount_debit data_cell"><%= account_journal_details.type == 'TransactionDebit' ? (real_currency account_journal_details.amount) : "&nbsp;" %></div>
+    <div class="account_journal_data_balance data_cell"><%= h real_currency account_journal_details.account_balance %></div>
+	<div class="account_journal_data_options data_cell">
 		<%= render :partial => 'transaction_options', :locals => {:acc => @account, :trans => account_journal_details} %>
   	</div>
   </div>

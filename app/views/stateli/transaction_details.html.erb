@@ -2,7 +2,7 @@
 
 <div id="transaction_details" class="template_div">
 	<div class="page_title_div">
-		<h1>Detail for <span class="account_name"><%= @title%></span></h1>
+		<span class="transaction_name"><%= @title%></span> Details
 	</div>
 	
 	<div class="detail_div">
@@ -25,7 +25,7 @@
 		  Date Scheduled
 		</div>
 		<div class="detail_value">
-		  <%=h @transaction.scheduled_date %>
+		  <%=h @transaction.scheduled_date.strftime("%m/%d/%y") %>
 		</div>
 		
 		<% if @transaction.completed %>
@@ -33,7 +33,7 @@
 		  Date Completed
 		</div>
 		<div class="detail_value">
-		  <%=h @transaction.executed_date %>
+		  <%=h @transaction.executed_date.strftime("%m/%d/%y") %>
 		</div>
 		<% end %>
 		
@@ -49,9 +49,7 @@
 		  <b>Source Account
 		</div>
 		<div class="detail_value">
-		  <%=h @transaction.sourceAccount.name %> <%= render :partial => 'account_options', :locals => {:acc => @transaction.sourceAccount} %>
-   
-		  
+		  <span id="account_name_<%= @transaction.sourceAccount.id %>" class="account_name"><%=h @transaction.sourceAccount.name %> <%= render :partial => 'account_options', :locals => {:acc => @transaction.sourceAccount} %></span>
 		</div>
 		<% end %>
 		
@@ -60,7 +58,7 @@
 		  Destination Account
 		</div>
 		<div class="detail_value">
-		  <%=h @transaction.destinationAccount.name %> <%= render :partial => 'account_options', :locals => {:acc => @transaction.destinationAccount} %>
+		  <span id="account_name_<%= @transaction.destinationAccount.id %>" class="account_name"><%=h @transaction.destinationAccount.name %></span> <%= render :partial => 'account_options', :locals => {:acc => @transaction.destinationAccount} %>
 		</div>
 		<% end %>
 		

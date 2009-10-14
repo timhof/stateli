@@ -7,6 +7,15 @@ class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
-  # Scrub sensitive parameters from your log
-  # filter_parameter_logging :password
+  
+  def rescue_404
+    rescue_action_in_public(ActionController::RoutingError)
+  end
+      
+  
+    
+  def local_request?
+    return false
+  end
+  
 end

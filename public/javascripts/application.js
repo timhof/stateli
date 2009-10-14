@@ -1,6 +1,8 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 
+
+
 function click_navigation(button_url, guest){
 	if(!guest){
 		window.location.href = button_url;
@@ -98,7 +100,12 @@ function click_date_text(text_field_id){
 	
 	
 }
-	
+
+function post_hide_calendar(){
+	$$('.base_form_field').each(function(inp){
+		inp.enable();
+	});
+}
 function select_date(text_field_id){
 	$$('.base_form_field').each(function(inp){
 		inp.enable();
@@ -111,5 +118,59 @@ function select_date(text_field_id){
 	
 	$(text_field_id).setValue(year + "-" + (month < 10 ? "0" : "") + month + "-" + (day < 10 ? "0" : "") + day);
 	$(text_field_id + '_calendar_div').hide();
+}
+
+function select_date_span(text_field_id){
+	$$('.base_form_field').each(function(inp){
+		inp.enable();
+	});
+	
+	var date = new Date($F(text_field_id + '_calendar'));
+	year = date.getFullYear();
+	month = date.getMonth() + 1;
+	day = date.getDate();
+	
+	$(text_field_id).setValue(year + "-" + (month < 10 ? "0" : "") + month + "-" + (day < 10 ? "0" : "") + day);
+	$(text_field_id + '_calendar_div').hide();
+	$('ajax_submit_button').click();
+}
+
+function select_date_span_flex(text_field_id_change, start_date_text_field_id, end_date_text_field_id){
+	$$('.base_form_field').each(function(inp){
+		inp.enable();
+	});
+	
+	var date = new Date($F(text_field_id_change + '_calendar'));
+	year = date.getFullYear();
+	month = date.getMonth() + 1;
+	day = date.getDate();
+	
+	$(text_field_id_change).setValue(year + "-" + (month < 10 ? "0" : "") + month + "-" + (day < 10 ? "0" : "") + day);
+	$(text_field_id_change + '_calendar_div').hide();
+	updateDateRange($(start_date_text_field_id).value, $(end_date_text_field_id).value);
+}
+
+function updateDateRange(startDateStr, endDateStr){
+	
+	var flexObj = swfobject.getObjectById("timeline_obj");
+  	flexObj.updateDateRange(startDateStr, endDateStr);
+}
+
+function getFlexApp(appName){
+  	if (navigator.appName.indexOf ("Microsoft") !=-1){
+    	return window[appName];
+  	}
+  	else{
+    	return document[appName];
+	}
+}
+function toggleInstruction(instruction){
+  	var inst_div = $(instruction + '_instruction');
+  	if(inst_div.visible()){
+  		inst_div.hide();
+  	}
+  	else{
+  		inst_div.show();
+  	}
 }
 

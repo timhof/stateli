@@ -1,0 +1,38 @@
+
+<%	js_onchange_start_function = "select_date_span('#{start_text_field_id}')"
+	js_onchange_end_function = "select_date_span('#{end_text_field_id}')"
+	if @navkey == 'flex'
+		js_onchange_start_function = "select_date_span_flex('#{start_text_field_id}', '#{start_text_field_id}', '#{end_text_field_id}')"
+		js_onchange_end_function = "select_date_span_flex('#{end_text_field_id}', '#{start_text_field_id}', '#{end_text_field_id}')"
+	end %>
+	
+<div id="date_span_div">
+
+<% form_remote_tag ({:method => 'get', :url => form_url}) do %>
+
+	<%= text_field_tag :start_date, @start_date.to_s, {:onfocus => "click_date_text('#{start_text_field_id}')", :size => 10, :class => "base_form_field"} %>
+        
+    <div id="<%= start_text_field_id %>_calendar_div" class="popup_calendar_div" style="display:none;text-align:right;">
+	    <%= calendar_date_select_tag "#{start_text_field_id}_calendar", @start_date,
+		    :embedded => true,
+	        :year_range => 0.years.from_now..10.years.from_now,
+	        :clear_button => false,
+	        :onchange => js_onchange_start_function %>
+    </div>
+    -
+    <%= text_field_tag :end_date, @end_date.to_s, {:onfocus => "click_date_text('#{end_text_field_id}')", :size => 10, :class => "base_form_field"} %>
+        
+    <div id="<%= end_text_field_id %>_calendar_div" class="popup_calendar_div" style="display:none;text-align:right;">
+	    <%= calendar_date_select_tag "#{end_text_field_id}_calendar", @end_date,
+		    :embedded => true,
+	        :year_range => 0.years.from_now..10.years.from_now,
+	        :clear_button => false,
+	        :onchange => js_onchange_end_function %>
+    </div>
+    <div style="display:none;">
+    	<%= submit_tag "Add item with Ajax", :id => "ajax_submit_button"%>
+    </div>
+    <div style="clear: both;"><!-- clearing div --></div>
+<% end %>
+
+</div>

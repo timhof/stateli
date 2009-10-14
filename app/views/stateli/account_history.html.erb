@@ -2,34 +2,39 @@
 
 <div id="account_journal" class="template_div">
 	<div class="page_title_div">
-		<h1>Account History for <span class="account_name"><%= @account.name%></span></h1>
+	
+		<div>
+			<span id="account_name_<%= @account.id %>" class="account_name"><%= @account.name%></span> 
+			<%= render :partial => 'account_options', :locals => {:acc => @account} %>
+   	 	</div>
+		<div>History</div>
 	</div>
 	
-	<% if @transactions_debit.size > 0 %>
-	<div class="type_div">
-		<h2>Debit Transactions</h2>
+	<div class="type_div" style="<%= @transactions_debit.size > 0 ? "block" : "none" %>">
+		Debit Transactions
 	  	<%= render :partial => 'account_history_header' %>
-  		<%= render :partial => 'account_history_details', :collection => @transactions_debit %>
+	  	<div id="history_debit_transactions">
+  			<%= render :partial => 'account_history_details', :collection => @transactions_debit %>
+  		</div>
 		<div style="clear: both;"><!-- clearing div --></div>
   	<div>
-	<% end %>
-	
-	<% if @transactions_credit.size > 0 %>
-	<div class="type_div">
-		<h2>Credit Transactions</h2>
+
+	<div class="type_div" style="<%= @transactions_credit.size > 0 ? "block" : "none" %>">
+		Credit Transactions
 	  	<%= render :partial => 'account_history_header' %>
-  		<%= render :partial => 'account_history_details', :collection => @transactions_credit %>
+	  	<div id="history_credit_transactions">
+  			<%= render :partial => 'account_history_details', :collection => @transactions_credit %>
+  		</div>
 		<div style="clear: both;"><!-- clearing div --></div>
   	<div>
-	<% end %>
 	
-	<% if @transactions_reconcile.size > 0 %>
-	<div class="type_div">
-		<h2>Reconcile Transactions</h2>
+	<div class="type_div" style="<%= @transactions_reconcile.size > 0 ? "block" : "none" %>">
+		Reconcile Transactions
 	  	<%= render :partial => 'account_history_header' %>
-  		<%= render :partial => 'account_history_details', :collection => @transactions_reconcile %>
+	  	<div id="history_reconcile_transactions">
+  			<%= render :partial => 'account_history_details', :collection => @transactions_reconcile %>
+  		</div>
   		<div style="clear: both;"><!-- clearing div --></div>
 	<div>
-	<% end %>
 	
 </div>

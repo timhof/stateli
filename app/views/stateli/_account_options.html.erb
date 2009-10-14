@@ -1,12 +1,15 @@
 
 		<%= link_to 'shw', account_details_path(acc.id), {:class => 'listing_link', :title => 'View Account Details'} %>
-   		<%= link_to 'hst', history_path(acc.id), {:class => 'listing_link', :title => 'History'} %>
-   		
-   		<% if acc.has_overdue_transactions %>
+    	<%= link_to_remote 'dpst', {:url => deposit_path(acc.id), :method => :get}, {:class => 'listing_link', :title => 'Deposit'} %>
+		<%= link_to_remote 'wthdw', {:url => withdraw_path(acc.id), :method => :get}, {:class => 'listing_link', :title => 'Withdraw'} %>
+		<%= link_to_remote 'ed', {:url => account_edit_path(acc.id), :method => :get}, {:class => "listing_link", :title => "Edit Account Info"} %>
+    	<%= link_to 'jrnl', journal_path(acc.id), {:class => 'listing_link', :title => 'Journal'} %>
+<% if acc.has_pending_transactions %>
+	<% if acc.has_overdue_transactions %>
    			<span class="overdue"><%= link_to 'pndg', pending_path(acc.id), {:class => 'listing_link', :title => 'View Pending Transactions'} %></span>
    		<% else %>
     	<%= link_to 'pndg', pending_path(acc.id), {:class => 'listing_link', :title => 'View Pending Transactions'} %>
-    	<% end%>
-    	<%= link_to_remote 'dpst', {:url => deposit_path(acc.id), :method => :get}, {:class => 'listing_link', :title => 'Deposit'} %>
-		<%= link_to_remote 'wthdw', {:url => withdraw_path(acc.id), :method => :get}, {:class => 'listing_link', :title => 'Withdraw'} %>
-    	<%= link_to 'jrnl', journal_path(acc.id), {:class => 'listing_link', :title => 'Journal'} %>
+    <% end%>
+<% else %>
+			<span class="listing_link">pndg</span>
+<% end %>

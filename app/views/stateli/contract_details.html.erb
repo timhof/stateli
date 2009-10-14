@@ -2,7 +2,7 @@
 
 <div id="contract_details" class="template_div">
 	<div class="page_title_div">
-		<h1>Detail for <span class="account_name"><%= @title%></span></h1>
+		<span class="contract_name"><%= @title%></span> Contract Details
 	</div>
 	
 	<div class="detail_div">
@@ -24,14 +24,14 @@
 		  Start Date
 		</div>
 		<div class="detail_value">
-		  <%=h @contract.date_start %>
+		  <%=h @contract.date_start.strftime("%m/%d/%y") %>
 		</div>
 		
 		<div class="detail_label">
 		  End Date
 		</div>
 		<div class="detail_value">
-		  <%=h @contract.date_end %>
+		  <%=h @contract.date_end.strftime("%m/%d/%y") %>
 		</div>
 		<div class="detail_label">
 		  Amount
@@ -45,7 +45,7 @@
 		  Autopay Account
 		</div>
 		<div class="detail_value">
-		  <%=h @contract.autopayAccount.name %> <%= render :partial => 'account_options', :locals => {:acc => @contract.autopayAccount} %>
+		   <span id="account_name_<%= @contract.autopayAccount.id %>" class="account_name"><%=h @contract.autopayAccount.name %></span> <%= render :partial => 'account_options', :locals => {:acc => @contract.autopayAccount} %>
    
 		</div>
 		<% end %>

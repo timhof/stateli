@@ -1,9 +1,11 @@
 
 <div id="contract_listing_<%= contract_listing_details.id %>" class="data_row">
-	<div class="contract_listing_data_name contract_listing_data data_cell"><%=h contract_listing_details.name %></div>
-   	<div id="contract_listing_data_balance_<%= contract_listing_details.id %>" class="contract_listing_data_balance contract_listing_data data_cell"><%=h contract_listing_details.start_date %></div>
-   	<div id="contract_listing_data_balance_<%= contract_listing_details.id %>" class="contract_listing_data_balance contract_listing_data data_cell"><%=h contract_listing_details.end_date %></div>
-   	<div class="contract_listing_data_options contract_listing_data listing_link data_cell">
-   		&nbsp;
+	<div class="contract_listing_name contract_listing_data data_cell"><%=h contract_listing_details.name %></div>
+   	<div id="contract_listing_date_start_<%= contract_listing_details.id %>" class="contract_listing_date_start contract_listing_data data_cell"><%=h contract_listing_details.date_start %></div>
+   	<div id="contract_listing_date_end_<%= contract_listing_details.id %>" class="contract_listing_date_end contract_listing_data data_cell"><%=h contract_listing_details.date_end %></div>
+   	<div id="contract_listing_type_<%= contract_listing_details.id %>" class="contract_listing_type contract_listing_data data_cell"><%=h contract_listing_details.type_display %></div>
+   	<div id="contract_listing_amount_<%= contract_listing_details.id %>" class="contract_listing_amount contract_listing_data data_cell"><%=h real_currency contract_listing_details.amount %></div>
+   	<div class="contract_listing_options contract_listing_data listing_link data_cell">
+   		<%= render :partial => 'contract_options', :locals => {:contract => contract_listing_details} %>
     </div>
 </div>

@@ -1,0 +1,35 @@
+
+<% remote_form_for(:account, @account, :url => account_update_path(@account), :html => {:method => 'put'}) do |f| %>
+  <%= f.error_messages %>
+
+  <div class="form_element">
+  	<div class="form_label">
+    	Name
+    </div>
+    <div class="form_value">
+   	 <%= f.text_field :name %>
+    </div>
+  </div>
+  
+  <div class="form_element">
+  	<div class="form_label">
+    	Description
+    </div>
+    <div class="form_value">
+    	<%= f.text_field :description %>
+    </div>
+  </div>
+  
+  <div class="form_element">
+  	<div class="form_label">
+    	Balance
+    </div>
+    <div class="form_value">
+    	<%= f.text_field :balance %>
+    </div>
+  </div>
+  
+  <div class="submit_button_div">
+    <%= f.submit 'Update' %>
+  </div>
+<% end %>

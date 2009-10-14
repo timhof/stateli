@@ -4,13 +4,40 @@
 	padding: 0;
 	margin: 0;
 }
+
 body {
 
 	font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 	color: #191919;
-	background-color: #ffffff;
+	text-align: center;
+	font-size: 12px;
 }
 
+
+
+ol {
+	padding-left: 20px;
+}
+
+ol li {
+	padding-left: 10px;
+}
+ul li {
+	padding-left: 10px;
+	list-style: none;
+}
+
+.instruction h2{
+	padding: 5px 0 10px 0;
+}
+
+.instruction a {
+
+}
+
+select {
+	width: 80px;
+}
 
 a {
 	color: #f75d3d;
@@ -19,140 +46,45 @@ a:visited {
 	color: #f75d3d;
 }
 a:hover {
-	color: #9a9a9a;
+	color: #3e3df7;
+	background: #FFFFFF;
 }
-label {
-	width: 100px;
-	display: block;
-	float: left;
-	text-align: right;
-	font-weight: bold;
-	padding-right: 20px;
+
+#outer_frame {
+	width: 95%;
+	border-style: solid;
+	margin: 1px auto 2px auto;
+	border-width: 2px 2px 1px 2px;
+	border-color: #4f73aa;
 }
 
 #main_div {
-	width: 800px;
-	margin-left: 100px;
-}
-
-.main_title {
-	width: 800px;
-	text-align:center;
-	height: 75px;
-	line-height: 75px;
+	width: 95%;
+	margin: 1px auto 1px auto;
 	border-style: solid;
-	border-width: 0 1px 0 1px;
-	background-image: url(../images/mainDiv.gif);
-	color: #1b6475;
-
+	border-width: 1px 2px 1px 2px;
+	border-color: #4f73aa;
 }
 
-.main_title_div_mouseover {
-	color: #d7f73d;
-	border-color: #191919;
-	cursor: pointer;
-	
-}
-
-#navigation {
-	width: 100%;
+#welcome_div {
+	width: 95%;
+	margin: 2px auto;
+	padding: 2px 2px 0 2px;
+	height: 20px;
+	line-height: 18px;
 	clear: both;
-	text-align: center;
-	border: 1px solid;
-	border-color: #3e7bf7;
+	text-align: left;
+	color: #3e3df7;
 	font-weight: bold;
-	color: #F4F0E5;
-}
-
-#navigation_disabled {
-	width: 100%;
-	text-align: center;
-	border: 1px solid;
-	border-color: #999999;
-	font-weight: bold;
-	color: #F4F0E5;
 	overflow: hidden;
-}
-
-#navigation_spacer_left{
-	border-width: 0;
-	width: 11px;
-}
-
-#navigation_spacer_right{
-	border-width: 0 0 0 1px;
-	width: 11px;
-}
-
-.navigation_spacer{
-	height: 25px;
-	float: left;
-	border-style: solid;
-	background-color: #3e7bf7;
-	background-image: url(../images/navigationPadding.gif);
-}
-
-#navigation_spacer_left_disabled{
-	border-width: 0 0 0 0;
-	width: 11px;
-}
-
-#navigation_spacer_right_disabled{
-	border-width: 0 0 0 1px;
-	width: 11px;
-}
-
-.navigation_spacer_disabled{
-	height: 25px;
-	float: left;
-	border-style: solid;
-	background-color: #999999;
-	background-image: url(../images/navigationDisabled.gif);
-}
-
-
-
-.navigation_button {
-	height: 25px;
-	width: 110px;
-	float: left;
-	line-height: 25px;
-	text-align: center;
-	border-style: solid;
-	border-width: 0 0 0 1px;
-	background-color: #3e3df7;
-	background-image: url(../images/navigationButton.gif);
-	color: #FFFFFF;
-}
-
-.navigation_button_disabled {
-	height: 25px;
-	width: 110px;
-	float: left;
-	line-height: 25px;
-	text-align: center;
-	border-style: solid;
-	border-width: 0 0 0 1px;
-	background-color: #999999;
-	background-image: url(../images/navigationDisabled.gif);
-	color: #FFFFFF;
-}
-
-#listing_form_div {
-	border: 3px solid;
-	z-index: 1;
 }
 
 #new_session_login {
 	float:left;
-	height: 25px;
-	line-height: 25px;
 }
 
 #new_session_password {
 	float:left;
-	height: 25px;
-	line-height: 25px;
 }
 
 #logout_div {
@@ -170,21 +102,102 @@ label {
 }
 
 .login_form_value {
-	padding-right: 10px;
-	padding-top: 5px;
+	padding-right: 5px;
 	float: left;
 }
 
-.template_div {
-	width: 800px;
-	border-width: 0 1px 1px 1px;
-	border-style: solid;
-	border-color: #666666;
-	text-align: center;
-	background-color: #ffffff;
-	min-height: 500px;
+.main_title {
+	width: 100%;
+	text-align:center;
+	height: 75px;
+	line-height: 75px;
+	background-image: url(../images/mainDiv.gif);
+	color: #666666;
+	font-size: 14px;
 }
 
+.main_title_div_mouseover {
+	cursor: pointer;
+}
+
+#navigation{
+	width: 100%;
+	background-image: url(../images/navigationButton.gif);
+}
+
+#navigation_disabled{
+	width: 100%;
+	background-image: url(../images/navigationDisabled.gif);
+}
+
+.navigation_button {
+	height: 25px;
+	width: 15%;
+	line-height: 25px;
+	text-align: center;
+	border-style: solid;
+	border-width: 0 1px 0 0;
+	color: #FFFFFF;
+}
+
+.navigation_button_left {
+	border-width: 0 1px 0 1px;	
+}
+
+ul.navigation_tab {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border: 0;
+	font-weight: bold;
+	color: #F4F0E5;
+	position: relative;
+	left: 5%;
+}
+
+ul.navigation_tab li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+}
+
+.drop_down {
+	display: block;
+	z-index: 999;
+}
+
+.sub_navigation_button {
+	height: 25px;
+	width: 150px;
+	line-height: 25px;
+	text-align: left;
+	border-width: 0;
+	background-color: #3e3df7;
+	background-image: url(../images/navigationButton.gif);
+	color: #FFFFFF;
+}
+
+#listing_form_div {
+	border: 3px solid;
+	z-index: 1;
+}
+
+
+.template_div {
+	width: 100%;
+	text-align: center;
+	background-color: #ffffff;
+	min-height: 350px;
+	clear: both;
+	padding-bottom: 50px;
+}
+
+.table_div {
+	text-align: center;
+	width: 800px;
+	margin: 0 auto;
+}
 .header_row {
 	width: 100%;
 	clear: both;
@@ -278,41 +291,135 @@ label {
 
 }
 
-.account_journal_header{ 
-	width: 131.33px;
+.account_journal_header_date{ 
+	width: 100px;
 	float: left;
 }
 
-.account_journal_data{
-	width: 131.33px;
+.account_journal_header_name{ 
+	width: 160px;
 	float: left;
 }
 
-.account_journal_data_currency{
-	width: 111.33px;
+.account_journal_header_amount_credit{ 
+	width: 135px;
 	float: left;
+}
+
+.account_journal_header_amount_debit{ 
+	width: 135px;
+	float: left;
+}
+
+.account_journal_header_balance{ 
+	width: 135px;
+	float: left;
+}
+
+.account_journal_header_options{ 
+	width: 123px;
+	float: left;
+}
+
+.account_journal_data_date{ 
+	width: 100px;
+	float: left;
+}
+
+.account_journal_data_name{ 
+	width: 160px;
+	float: left;
+}
+
+.account_journal_data_amount_credit{ 
+	width: 115px;
 	text-align: right;
 	padding-right: 20px;
+	float: left;
+}
+
+.account_journal_data_amount_debit{ 
+	width: 115px;
+	text-align: right;
+	padding-right: 20px;
+	float: left;
+}
+
+.account_journal_data_balance{ 
+	width: 115px;
+	text-align: right;
+	padding-right: 20px;
+	float: left;
+}
+
+.account_journal_data_options{ 
+	width: 123px;
+	float: left;
 }
 
 #account_pending {
 	
 }
 
-.account_pending_header{ 
-	width: 131.33px;
+.account_pending_header_name{
+	width: 140px;
 	float: left;
 }
 
-.account_pending_data{
-	width: 131.33px;
+.account_pending_header_description{
+	width: 140px;
 	float: left;
 }
 
-.account_pending_data_currency{
-	width: 111.33px;
+.account_pending_header_amount{
+	width: 120px;
+	float: left;
+}
+
+.account_pending_header_date{
+	width: 120px;
+	float: left;
+}
+
+.account_pending_header_contract{
+	width: 140px;
+	float: left;
+}
+
+.account_pending_header_options{
+	width: 128px;
+	float: left;
+}
+
+.account_pending_data_name{
+	width: 140px;
+	float: left;
+}
+
+.account_pending_data_description{
+	width: 140px;
+	float: left;
+}
+
+.account_pending_data_amount{
+	width: 100px;
 	text-align: right;
 	padding-right: 20px;
+	float: left;
+}
+
+.account_pending_data_date{
+	width: 120px;
+	float: left;
+}
+
+.account_pending_data_contract{
+	width: 140px;
+	float: left;
+}
+
+.account_pending_data_options{
+	width: 128px;
 	float: left;
 }
 
@@ -320,20 +427,75 @@ label {
 	
 }
 
-.pending_header{ 
-	width: 112.25px;
+.pending_header_name{ 
+	width: 120px;
 	float: left;
 }
 
-.pending_data{
-	width: 112.25px;
+.pending_header_description{ 
+	width: 120px;
 	float: left;
 }
 
-.pending_data_currency{
-	width: 92.25px;
+.pending_header_amount{ 
+	width: 115px;
+	float: left;
+}
+
+.pending_header_date{ 
+	width: 80px;
+	float: left;
+}
+
+.pending_header_contract{ 
+	width: 120px;
+	float: left;
+}
+
+.pending_header_account{ 
+	width: 120px;
+	float: left;
+}
+
+.pending_header_options{ 
+	width: 111px;
+	float: left;
+}
+	
+.pending_data_name{ 
+	width: 120px;
+	float: left;
+}
+
+.pending_data_description{ 
+	width: 120px;
+	float: left;
+}
+
+.pending_data_amount{ 
+	width: 95px;
 	text-align: right;
 	padding-right: 20px;
+	float: left;
+}
+
+.pending_data_date{ 
+	width: 80px;
+	float: left;
+}
+
+.pending_data_contract{ 
+	width: 120px;
+	float: left;
+}
+
+.pending_data_account{ 
+	width: 120px;
+	float: left;
+}
+
+.pending_data_options{ 
+	width: 111px;
 	float: left;
 }
 
@@ -356,14 +518,29 @@ label {
 }
 
 .page_title_div {
-	text-align:center;
-	height: 75px;
-	line-height: 75px;
+	text-align: center;
+	height: 60px;
+	line-height: 25px;
 	border-style: solid;
-	border-width: 0 0 1px 0;
+	border-width: 0px;
+}
+
+#date_span_div {
+	text-align: center;
+	border-style: solid;
+	border-width: 0px;
+	clear:both;
 }
 
 .account_name {
+	color: #3e3df7;
+}
+
+.contract_name {
+	color: #3e3df7;
+}
+
+.transaction_name {
 	color: #3e3df7;
 }
 
@@ -532,28 +709,53 @@ label {
 }
 
 .navmouseover {
-	background-image: url(../images/navigationButtonSelected.gif);
-	color: #1b6475;
+	background-image: url(../images/navigationPadding.gif);
 	cursor: pointer;
 }
 
+.subnavselected {
+	background-image: url(../images/navigationPadding.gif);
+	color: #FFFFFF;
+}
+
+.subnavmouseover {
+	background-image: url(../images/navigationPadding.gif);
+	color: #FFFFFF;
+	cursor: pointer;
+}
 
 #flashdiv {
 	position: absolute;
 	color: green;
 }
 
-#welcome_div {
-	width: 795px;
-	height: 25px;
-	line-height: 25px;
-	clear: both;
+.instruction {
 	text-align: left;
-	padding-left: 5px;
-	border-style: solid;
-	border-width: 0 1px 0 1px;
-	color: #3e3df7;
+	padding-left: 100px;
+	display:none;
+}
+
+#introduction {
+	padding: 20px 0 20px 0;
+}
+
+.intro{
+	text-align: center;
+}
+
+.stateli {
 	font-weight: bold;
-	background-image: url(../images/welcome.gif);
-	overflow: hidden;
+	color: #4f73aa;
+}
+
+#footer {
+	width: 95%;
+	height: 50px;
+	line-height: 50px;
+	margin: 2px auto 1px auto;
+	border-style: solid;
+	border-width: 1px 2px 2px 2px;
+	border-color: #4f73aa;
+	font-size: 10px;
+	text-align: right;
 }

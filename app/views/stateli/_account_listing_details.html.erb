@@ -1,8 +1,9 @@
 
 <div id="account_listing_<%= account_listing_details.id %>" class="data_row">
-	<div class="account_listing_data_name account_listing_data data_cell"><%=h account_listing_details.name %></div>
-   	<div id="account_listing_data_balance_<%= account_listing_details.id %>" class="account_listing_data_balance account_listing_data data_cell"><%=h real_currency account_listing_details.balance %></div>
+	<div class="account_listing_data_name account_listing_data data_cell"><span id="account_name_<%= account_listing_details.id %>" class="account_name"><%=h account_listing_details.name %></span></div>
+   	<div id="account_listing_data_balance_<%= account_listing_details.id %>" class="account_listing_data_balance account_listing_data data_cell"><span id="account_balance_<%= account_listing_details.id %>"><%=h real_currency account_listing_details.balance %></span></div>
    	<div class="account_listing_data_options account_listing_data listing_link data_cell">
    		<%= render :partial => 'account_options', :locals => {:acc => account_listing_details} %>
     </div>
+    <div style="clear:both"></div>
 </div>

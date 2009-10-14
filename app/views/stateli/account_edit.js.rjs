@@ -1,0 +1,5 @@
+
+
+unless @account.blank?
+	page.show_popup_form('account_edit')
+end

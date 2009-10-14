@@ -2,7 +2,8 @@
 
 <div id="account_details" class="template_div">
 	<div class="page_title_div">
-		<h1>Detail for <span class="account_name"><%= @title%></span></h1>
+		<span id="account_name_<%= @account.id %>" class="account_name"><%= @account.name%></span> 
+		<%= render :partial => 'account_options', :locals => {:acc => @account} %>
 	</div>
 	
 	<div class="detail_div">
@@ -24,7 +25,7 @@
 		<div class="detail_label">
 		  Balance
 		</div>
-		<div class="detail_value">
+		<div id="account_balance_<%= @account.id %>"class="detail_value">
 		  <%=h real_currency @account.balance %>
 		</div>
 		
