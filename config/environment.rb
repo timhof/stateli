@@ -6,6 +6,7 @@ RAILS_GEM_VERSION = '2.3.2' unless defined? RAILS_GEM_VERSION
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 
+
 Rails::Initializer.run do |config|
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
@@ -40,5 +41,11 @@ Rails::Initializer.run do |config|
   # config.i18n.default_locale = :de
   
   config.load_paths += %W( #{RAILS_ROOT}/app/builders )
+  
+  config.action_controller.consider_all_requests_local = false
+  config.action_controller.perform_caching = true
 
 end
+
+
+require 'lost_handler'

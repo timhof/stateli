@@ -4,7 +4,7 @@
     <td><%=h contract_details.description %></td>
     <td><%=h contract_details.date_start %></td>
     <td><%=h contract_details.date_end %></td>
-    <td><%=h contract_details.type %></td>
+    <td><%=h contract_details.type_display %></td>
     <td><%=h contract_details.autopay ? 'Y' : 'N' %></td>
     <td><%=h contract_details.autopayAccount.blank? ? "&nbsp;" : contract_details.autopayAccount.name%></td>
     <td><%=h contract_details.full_date %></td>

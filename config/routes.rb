@@ -13,17 +13,22 @@ ActionController::Routing::Routes.draw do |map|
   map.account_new '/new_account', :controller => "stateli", :action => "account_new_account", :conditions => {:method => :get}
   map.account_create '/new_account', :controller => "stateli", :action => "account_create_account", :conditions => {:method => :post}
    map.account_details '/account_details/:id', :controller => "stateli", :action => "account_details"
+    map.account_edit '/update_account/:account_id', :controller => "stateli", :action => "account_edit", :conditions => {:method => :get}
+  map.account_update '/update_account/:account_id', :controller => "stateli", :action => "account_update", :conditions => {:method => :put}
+  
   
   map.execute_deposit '/account/:id/deposit', :controller => "stateli", :action => "execute_deposit", :conditions => {:method => :post}
   map.deposit '/account/:id/deposit', :controller => "stateli", :action => "account_deposit", :conditions => {:method => :get}
   map.execute_withdraw '/account/:id/withdraw', :controller => "stateli", :action => "execute_withdraw", :conditions => {:method => :post}
   map.withdraw '/account/:id/withdraw', :controller => "stateli", :action => "account_withdraw", :conditions => {:method => :get}
-  map.journal '/account/:id/journal', :controller => "stateli", :action => "account_journal", :conditions => {:method => :get}
-  map.journal_flex '/journal_flex.:format', :controller => "stateli", :action => "account_journal_flex", :conditions => {:method => :get}
-  map.pending_flex '/pending_flex.:format', :controller => "stateli", :action => "account_pending_flex", :conditions => {:method => :get}
-   map.total_flex '/total_flex.:format', :controller => "stateli", :action => "account_total_flex", :conditions => {:method => :get}
-   map.total_pending_flex '/total_pending_flex.:format', :controller => "stateli", :action => "account_total_pending_flex", :conditions => {:method => :get}
+  map.journal '/account/:id/journal', :controller => "stateli", :action => "account_journal"
+  map.account_journal_flex '/account_journal_flex.:format', :controller => "stateli", :action => "account_journal_flex", :conditions => {:method => :get}
+  map.account_pending_flex '/account_pending_flex.:format', :controller => "stateli", :action => "account_pending_flex", :conditions => {:method => :get}
+   map.total_journal_flex '/total_journal_flex.:format', :controller => "stateli", :action => "total_journal_flex", :conditions => {:method => :get}
+   map.total_pending_flex '/total_pending_flex.:format', :controller => "stateli", :action => "total_pending_flex", :conditions => {:method => :get}
   
+  map.expense_listing '/expense_listing', :controller => "stateli", :action => "expense_listing"
+  map.income_listing '/income_listing', :controller => "stateli", :action => "income_listing"
   map.contract_credit '/contract_credit', :controller => "stateli", :action => "contract_credit", :conditions => {:method => :get}
   map.build_contract_credit '/contract_credit', :controller => "stateli", :action => "build_contract_credit", :conditions => {:method => :post}
   map.contract_debit '/contract_debit', :controller => "stateli", :action => "contract_debit", :conditions => {:method => :get}
@@ -96,9 +101,6 @@ ActionController::Routing::Routes.draw do |map|
 
   # See how all your routes lay out with "rake routes"
 
-  # Install the default routes as the lowest priority.
-  # Note: These default routes make all actions in every controller accessible via GET requests. You should
-  # consider removing the them or commenting them out if you're using named routes and resources.
-  map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
+
+  map.connect '*path', :controller => 'application', :action => 'rescue_404' unless ::ActionController::Base.consider_all_requests_local 
 end

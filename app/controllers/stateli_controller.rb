@@ -25,7 +25,7 @@ class StateliController < ApplicationController
 
   def account_history
   	@account = Account.find(params[:id])
-  	transaction_hash = @account.completed_transactions(Date.today, Date.today)
+  	transaction_hash = @account.completed_transaction_hash(Date.today, Date.today)
   	@transactions_credit = transaction_hash[:credit]
   	@transactions_debit = transaction_hash[:debit]
   	@transactions_reconcile = transaction_hash[:reconcile]
@@ -42,10 +42,19 @@ class StateliController < ApplicationController
   
   def account_pending
   	@account = Account.find(params[:id])
-  	transaction_hash = @account.uncompleted_transactions(Date.today, Date.today)
+  	@account.set_overdue_transactions()
+  	@start_date = params[:start_date]
+  	if @start_date.nil?
+  		@start_date = Date.today
+  	end
+  	@end_date = params[:end_date]
+  	if @end_date.nil?
+  		@end_date = Date.today >> 12
+  	end
+  	
+  	transaction_hash = @account.uncompleted_transaction_hash(@start_date, @end_date)
   	@transactions_credit = transaction_hash[:credit]
   	@transactions_debit = transaction_hash[:debit]
-  	@transactions_reconcile = transaction_hash[:reconcile]
   	
   	@navkey = "accounts"
 	@navsubkey = "listing"
@@ -53,27 +62,47 @@ class StateliController < ApplicationController
   	respond_to do |format|
       format.html # entries.html.erb
       format.xml  { render :xml => @accounts }
+      format.js {render :action => "update_pending"}
     end
     
   end
   
   def transactions_pending
-  	transaction_hash = Account.uncompleted_transactions_all_accounts(@current_user.id, Date.today, Date.today)
-  	@transactions_credit = transaction_hash[:credit]
-  	@transactions_debit = transaction_hash[:debit]
+  	
+  	@start_date = params[:start_date]
+  	if @start_date.nil?
+  		@start_date = Date.today
+  	end
+  	@end_date = params[:end_date]
+  	if @end_date.nil?
+  		@end_date = Date.today >> 12
+  	end
+  	
+  	@transactions = Account.uncompleted_transactions_all_accounts_by_date(@current_user.id, @start_date, @end_date)
   	
   	@navkey = "pending"
 	
   	respond_to do |format|
       format.html # entries.html.erb
-      format.xml  { render :xml => @accounts }
+      format.xml  { render :xml => @transactions }
+      format.js { render :action => "update_transactions_pending" }
     end
     
   end
   
    def account_journal
   	@account = Account.find(params[:id])
-  	transactions_asc = @account.completed_transactions_by_date(Date.today, Date.today)
+  	@account.set_overdue_transactions()
+  	@start_date = params[:start_date]
+  	if @start_date.nil?
+  		@start_date = Date.today >> -12
+  	end
+  	@end_date = params[:end_date]
+  	if @end_date.nil?
+  		@end_date = Date.today
+  	end
+  	transactions_asc = @account.completed_transactions_by_date(@start_date, @end_date)
+  	
   	@transactions = transactions_asc.reverse
   	@navkey = "accounts"
 	@navsubkey = "listing"
@@ -81,6 +110,7 @@ class StateliController < ApplicationController
   	respond_to do |format|
       format.html # entries.html.erb
       format.xml  { render :xml => @accounts }
+      format.js { render :action => "update_journal" }
     end
     
   end
@@ -89,60 +119,127 @@ class StateliController < ApplicationController
   	
   	accountsDebit = AccountDebit.activeAccounts(@current_user.id)
     logger.info "#{accountsDebit.size} Debit Accounts"
-	accountsCredit = AccountCredit.activeAccounts(@current_user.id)
-	logger.info "#{accountsCredit.size} Credit Accounts"
 	
-	@navkey = "charts"
-	@navsubkey = "journal"
-	
+	@start_date = params[:start_date]
+  	if @start_date.nil?
+  		@start_date = Date.today >> -12
+  	end
+  	@end_date = params[:end_date]
+  	if @end_date.nil?
+  		@end_date = Date.today
+  	end
+  	
 	debit_account_array = [];
   	accountsDebit.each do |acc|
-  		transactions = acc.completed_transactions_by_date(Date.today, Date.today)
+  		transactions = acc.completed_transactions
+  		logger.info "#{transactions.size} Transactions"
   		account_hash = {:account => acc, :transactions => transactions}
   		debit_account_array << account_hash
   	end
   	
-  	credit_account_array = [];
-  	accountsCredit.each do |acc|
-  		transactions = acc.completed_transactions_by_date(Date.today, Date.today)
-  		account_hash = {:account => acc, :transactions => transactions}
-  		credit_account_array << account_hash
-  	end
-  	
-  	@navkey = "journal_flex"
+  	@navkey = "flex"
   	
   	respond_to do |format|
       format.html # entries.html.erb
-      format.xml  { render :xml => {:credits => credit_account_array, :debits => debit_account_array} }
+      format.xml  { render :xml => {:debits => debit_account_array, :startdate => @start_date.to_s, :enddate => @end_date.to_s} }
     end
     
   end
   
-  def account_total_flex
-
-	transactions = Transaction.all_completed_by_date(@current_user.id, Date.today, Date.today)
-
-	balance = 0
-	transactions.each do |trans|
+  def account_pending_flex
+  	
+  	accountsDebit = AccountDebit.activeAccounts(@current_user.id)
+    logger.info "#{accountsDebit.size} Debit Accounts"
+	
+	if @start_date.nil?
+  		@start_date = Date.today
+  	end
+  	@end_date = params[:end_date]
+  	if @end_date.nil?
+  		@end_date = Date.today >> 12
+  	end
+	
+	debit_account_array = [];
+  	accountsDebit.each do |acc|
 		
-		next if trans.amount.nil?
-		if trans.type == 'TransactionCredit'
-			balance = balance - trans.amount
-		elsif trans.type == 'TransactionDebit'
-			balance = balance + trans.amount
-		else
-			balance = balance + trans.amount
-		end
-		logger.info "amount: #{trans.amount} balance: #{balance}"
-		trans.account_balance = balance
+		transactions = acc.uncompleted_transactions()
+		
+		trans = get_pending_psuedo_transaction(transactions, acc.user_id, Date.today >> 120)
+		transactions << trans
+		
+		account_hash = {:account => acc, :transactions => transactions}
+		debit_account_array << account_hash
+	
+	end
+ 
+  	@navkey = "flex"
+  	
+  	respond_to do |format|
+      format.html # entries.html.erb
+      format.xml  { render :xml => {:debits => debit_account_array, :startdate => @start_date.to_s, :enddate => @end_date.to_s} }
+    end
+    
+  end
+  
+  def get_pending_psuedo_transaction(transaction_list, user_id, pending_end_date)
+  	
+	end_balance = 0
+	transaction_list.each do |trans|
+		end_balance = end_balance + trans.amount
 	end
 	
-	@navkey = "charts"
-	@navsubkey = "total"
+	trans = Transaction.new
+	trans.scheduled_date = pending_end_date.to_s
+	trans.executed_date = pending_end_date.to_s
+	trans.completed = false
+	trans.user_id = user_id
+	trans.name = "end"
+	trans.description = "end"
+	trans.amount = 0
+	trans.account_balance = end_balance
+	return trans
+		
+  end
+  
+  def total_journal_flex
+
+	@start_date = params[:start_date]
+  	if @start_date.nil?
+  		@start_date = Date.today >> -12
+  	end
+  	@end_date = params[:end_date]
+  	if @end_date.nil?
+  		@end_date = Date.today
+  	end
+  	
+	transactions = Transaction.completed_by_user(@current_user.id)
+
+	@navkey = "flex"
 	
   	respond_to do |format|
       format.html # entries.html.erb
-      format.xml  { render :xml => transactions}
+      format.xml  { render :xml => {:records => transactions, :startdate => @start_date.to_s, :enddate => @end_date.to_s} }
+    end
+    
+  end
+  
+  def total_pending_flex
+	
+	if @start_date.nil?
+  		@start_date = Date.today
+  	end
+  	@end_date = params[:end_date]
+  	if @end_date.nil?
+  		@end_date = Date.today >> 12
+  	end
+	
+  	transactions = Transaction.uncompleted_by_user(@current_user.id)
+		
+	@navkey = "flex"
+	
+  	respond_to do |format|
+      format.html # entries.html.erb
+      format.xml  { render :xml => {:records => transactions, :startdate => @start_date.to_s, :enddate => @end_date.to_s} }
     end
     
   end
@@ -242,6 +339,41 @@ class StateliController < ApplicationController
     end
   end
   
+  def account_edit
+    @account = Account.find(params[:account_id])
+  end
+
+  def account_update
+  	@account = Account.find(params[:account_id])
+	@account.user_id = @current_user.id
+	
+	@start_date = params[:start_date]
+  	if @start_date.nil?
+  		@start_date = Date.today >> -12
+  	end
+  	@end_date = params[:end_date]
+  	if @end_date.nil?
+  		@end_date = Date.today
+  	end
+  	
+	
+    respond_to do |format|
+      if @account.update_attributes(params[:account])
+      	
+      	transactions_asc = @account.completed_transactions_by_date(@start_date, @end_date)
+  		@journal_transactions = transactions_asc.reverse
+  	
+        flash[:notice] = 'Account was successfully updated.'
+        format.html { redirect_to(account_path(params[:account_id])) }
+        format.xml  { head :ok }
+        format.js
+      else
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @account.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+  
   def autopay
  
     @transaction = Transaction.find(params[:transaction_id])
@@ -272,6 +404,31 @@ class StateliController < ApplicationController
     end
   end
   
+  def expense_listing
+    @contracts = Contract.activeCreditContracts(@current_user.id)
+	logger.info "#{@contracts.size} Credit Contracts"
+	
+	@navkey = "expenses"
+	@navsubkey = "listing"
+	
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @contracts }
+    end
+  end
+  
+  def income_listing
+    @contracts = Contract.activeDebitContracts(@current_user.id)
+    logger.info "#{@contracts.size} Debit Contracts"
+    
+	@navkey = "income"
+	@navsubkey = "listing"
+	
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @contracts }
+    end
+  end
   
   def contract_credit
   	@contract = Contract.new

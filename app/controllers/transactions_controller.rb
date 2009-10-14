@@ -6,27 +6,8 @@ class TransactionsController < ApplicationController
   # GET /transactions.xml
   def index
     @transactions = Transaction.user_only(@current_user.id).find(:all)
-    @transactionsDebit = TransactionDebit.user_only(@current_user.id).find(:all)
-	@transactionsCredit = TransactionCredit.user_only(@current_user.id).find(:all)
-	@transactionsTransfer = TransactionTransfer.user_only(@current_user.id).find(:all)
-	@transactionReconcile = TransactionReconcile.user_only(@current_user.id).find(:all)
-	
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @transactions }
-    end
-  end
-
-  def pending
-  	
-  	@transactions = Transaction.pendingTransactions(@current_user.id)
-    @transactionsDebit = TransactionDebit.pendingTransactions(@current_user.id)
-	@transactionsCredit = TransactionCredit.pendingTransactions(@current_user.id)
-	@transactionsTransfer = TransactionTransfer.pendingTransactions(@current_user.id)
-	@transactionReconcile = TransactionReconcile.pendingTransactions(@current_user.id)
-	
-	respond_to do |format|
-      format.html # pending.html.erb
       format.xml  { render :xml => @transactions }
     end
   end

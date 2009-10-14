@@ -1,19 +1,20 @@
-
-
 <div id="contract_listing" class="template_div">
 	<div class="page_title_div">
 		<h1>Contracts</h1>
 	</div>
 	
-	<div id="contract_listing_debit" class="type_div" style="display: <%= @contractsDebit.size > 0 ? "block" : "none"%>">
-		<h2>Debit</h2>
-	  	<%= render :partial => 'contract_listing_header' %>
-	  	<%= render :partial => 'contract_listing_details', :collection => @contractsDebit %>
-	</div>
-	
-	<div id="contract_listing_credit" class="type_div" style="display: <%= @contractsCredit.size > 0 ? "block" : "none"%>">
-		<h2>Credit</h2>
-	 	<%= render :partial => 'contract_listing_header' %>
-	  	<%= render :partial => 'contract_listing_details', :collection => @contractsCredit %>
+	<div class="table_div">
+		
+		<div id="contract_listing_debit" class="type_div" style="display: <%= @contractsDebit.size > 0 ? "block" : "none"%>">
+			<h2>Debit</h2>
+			<%= render :partial => 'contract_listing_header' %>
+		  	<%= render :partial => 'contract_listing_details', :collection => @contractsDebit %>
+		</div>
+		
+		<div id="contract_listing_credit" class="type_div" style="display: <%= @contractsCredit.size > 0 ? "block" : "none"%>">
+			<h2>Credit</h2>
+			<%= render :partial => 'contract_listing_header' %>
+		  	<%= render :partial => 'contract_listing_details', :collection => @contractsCredit %>
+		</div>
 	</div>
 </div>

@@ -1,0 +1,10 @@
+<div id="contract_listing" class="template_div">
+
+	<div class="table_div">
+		
+		<div id="contract_listing_credit" class="type_div" style="display: <%= @contracts.size > 0 ? "block" : "none"%>">
+			<%= render :partial => 'contract_listing_header' %>
+		  	<%= render :partial => 'contract_listing_details', :collection => @contracts %>
+		</div>
+	</div>
+</div>

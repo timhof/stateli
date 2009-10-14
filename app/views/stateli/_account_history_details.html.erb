@@ -2,7 +2,7 @@
   <div class="data_row">
     <div class="account_history_data data_cell"><%=h account_history_details.name %></div>
     <div class="account_history_data_currency data_cell"><%=h real_currency account_history_details.amount %></div>
-    <div class="account_history_data data_cell"><%=h account_history_details.executed_date %></div>
+    <div class="account_history_data data_cell"><%=h account_history_details.executed_date.strftime("%m/%d/%y") %></div>
     <div class="account_history_data data_cell">
     	<%= account_history_details.contract.blank? ? "&nbsp;" : account_history_details.contract.name%>
     </div>

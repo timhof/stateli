@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<mx:Application 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	xmlns:custom="*"
+	layout="absolute"
+	creationComplete="srv.send()" width="424" height="603">
+
+	<mx:Script>
+		<![CDATA[
+			[Bindable] public var minDate:Date;
+			[Bindable] public var maxDate:Date;
+			
+			private function resetDates():void {
+				minDate = null;
+				maxDate = null;
+				
+				//startDateField.text = "MIN";
+				//endDateField.text = "MAX";
+				
+				series1.setStyle("radius", 5);			
+				series2.setStyle("radius", 5);			
+				series3.setStyle("radius", 5);			
+			}
+		]]>
+	</mx:Script>
+	<mx:HTTPService id="srv" url="http://aspexamples.adobe.com/chart_examples/networth-xml.aspx"/>
+
+      <!-- Define chart effect. -->  
+      <mx:SeriesInterpolate id="rearrangeData" 
+         duration="1000" 
+         minimumElementDuration="100" 
+         elementOffset="0"
+      />
+
+	<mx:Panel title="Plot Chart" height="601" layout="absolute">
+     <mx:PlotChart id="myChart" 
+     	dataProvider="{srv.lastResult.data.result}"
+     	showDataTips="true">
+
+     	<mx:annotationElements>
+     		<custom:RangeSelector/>     			
+     	</mx:annotationElements>
+
+        <mx:series>
+           <mx:PlotSeries id="series1"           		
+                xField="date"
+                yField="cash"
+                displayName="Plot 1"
+	            showDataEffect="rearrangeData"
+           />
+           <mx:PlotSeries id="series2"
+                xField="date"
+                yField="stocks"
+                displayName="Plot 2"
+	            showDataEffect="rearrangeData"
+           />
+           <mx:PlotSeries id="series3"
+                xField="date"
+                yField="retirement"
+                displayName="Plot 3"
+	            showDataEffect="rearrangeData"
+           />
+        </mx:series>
+        
+        <mx:horizontalAxis>
+        	<mx:DateTimeAxis id="hAxis"
+        		dataUnits="days"
+        	 	minimum="{minDate}"
+        	 	maximum="{maxDate}"/>
+        </mx:horizontalAxis>
+     </mx:PlotChart>
+     <mx:Legend dataProvider="{myChart}" x="16" y="406"/>
+     <mx:Button x="146" y="480" label="Reset" id="resetButton" click="resetDates()"/>
+     <mx:Label x="144" text="{minDate}" y="420" id="startDateField" width="220"/>
+     <mx:Label x="145" y="450" text="{maxDate}" id="endDateField" width="220"/>
+     <mx:Label x="107" y="420" text="From"/>
+     <mx:Label x="122" y="450" text="To"/>
+  </mx:Panel>
+</mx:Application>

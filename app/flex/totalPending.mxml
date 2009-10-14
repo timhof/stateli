@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" creationComplete="index.send()" layout="vertical" initialize="initApp()">
+
+<mx:Script>
+	<![CDATA[
+		import mx.collections.ArrayCollection;
+		import mx.utils.ArrayUtil;
+		import mx.rpc.events.ResultEvent;
+		import mx.rpc.xml.SimpleXMLDecoder;
+		import mx.controls.Alert;
+		import mx.charts.series.LineSeries;
+		
+		import lib.JournalAccount;
+		import lib.Account;
+		import lib.Transaction;
+		import lib.StateliHelper;
+		
+		[Bindable]
+		private var journalAccount:JournalAccount;
+		
+		private function timelineHandler(event:ResultEvent):void{
+	
+			var xmlStr:String = event.result.toString();
+			var xmlDoc:XMLDocument = new XMLDocument(xmlStr);
+			var decoder:SimpleXMLDecoder = new SimpleXMLDecoder(true);
+			var resultObj:Object = decoder.decodeXML(xmlDoc);
+	
+			var startDateStr:String = resultObj.hash.startdate;
+			var endDateStr:String = resultObj.hash.enddate;
+			
+			var transactionAC:ArrayCollection = new ArrayCollection(Array(resultObj.hash.records.transaction));
+
+			journalAccount = StateliHelper.getTotalJournalAccount(transactionAC);
+			
+			updateDateRange(startDateStr, endDateStr);
+			
+			var temp:Array = new Array();
+			temp.push(StateliHelper.getAccountLineSeries(journalAccount, true));
+			mychart.series = temp;
+
+		}
+		
+		  public function updateDateRange(startDateStr:String, endDateStr:String):void{
+        	
+		  	StateliHelper.filterAccountTransactions(journalAccount, startDateStr, endDateStr, true);	
+			dateAxis.minimum = StateliHelper.myParseFunction(startDateStr);	
+			dateAxis.maximum = StateliHelper.myParseFunction(endDateStr);	
+		}
+		
+        public function initApp():void{
+  
+  			if (ExternalInterface.available){
+    			ExternalInterface.addCallback("updateDateRange", updateDateRange);  
+    		}
+		}
+		
+	]]>
+</mx:Script>
+
+<mx:HTTPService url="total_pending_flex.xml" id="index" result="timelineHandler(event)" resultFormat="e4x" />
+
+<mx:Stroke id = "s1" color="blue" weight="2"/>
+
+<mx:Panel height="100%" width="100%">
+    
+        <mx:LineChart id="mychart" height="100%" width="100%"
+            paddingRight="5" paddingLeft="5" 
+            showDataTips="true">
+            
+            <mx:horizontalAxis>
+                <mx:DateTimeAxis id="dateAxis" dataUnits="days" parseFunction="StateliHelper.myParseFunction"/>
+            </mx:horizontalAxis>
+			 <mx:verticalAxis>
+                <mx:LinearAxis baseAtZero="false" />
+            </mx:verticalAxis>
+       
+        </mx:LineChart>
+	
+        <mx:Legend dataProvider="{mychart}"/>
+    </mx:Panel>
+</mx:Application>
+

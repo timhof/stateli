@@ -8,14 +8,39 @@ class Contract < ActiveRecord::Base
 	belongs_to :autopayAccount, :foreign_key => 'autopay_account_id', :class_name => 'Account'
 	
 	named_scope :user_only, lambda { |user_id| { :conditions => { :user_id => user_id } }}
+	named_scope :active_only, :conditions => { :active => true } 
+	named_scope :credit_only, :conditions => { :transaction_type => 'TransactionCredit' } 
+	named_scope :debit_only, :conditions => { :transaction_type => 'TransactionDebit' } 
+
+	def self.activeCreditContracts(userId)
+		contracts = user_only(userId).active_only.credit_only.find(:all)
+		
+	end
 	
-	#Validate day_of_month, day_of_month_alt (1-31)
-	#Validate weekday (0-6)
+	def self.activeDebitContracts(userId)
+		contracts = user_only(userId).active_only.debit_only.find(:all)
+	end
 	
 	def addTransactions
 		
 		#Add all Transactions from start_date to end_date
 		
+	end
+	
+	def type_display
+		
+		if(self.type == 'ContractOnce')
+			td = "One Time"
+		elsif(self.type == 'ContractWeekly')
+			td = "Weekly"
+		elsif(self.type == 'ContractBimonthly')
+			td = "Bi-monthly"
+		elsif(self.type == 'ContractMonthly')
+			td = "Monthly"
+		elsif(self.type == 'ContractYearly')
+			td = "Yearly"
+		end
+		return td
 	end
 	
 	def addTransactionsMode(date_start, date_end, day_of_month, mode, transaction_type)
@@ -149,4 +174,23 @@ class Contract < ActiveRecord::Base
     	transaction.autopay = self.autopay
     	transaction.save
 	end
+	
+	def has_completed_transactions
+		self.transactions.each do |trans|
+			if trans.completed
+				return true
+			end
+		end
+		return false
+	end
+	
+	def delete_incomplete_transactions
+		self.transactions.each do |trans|
+			unless trans.completed
+				trans.delete
+			end
+		end
+		return false
+	end
+	
 end

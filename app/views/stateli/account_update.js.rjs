@@ -1,0 +1,23 @@
+
+page.hide_popup_form
+
+#_account_listing_details, account_details, account_journal, account_pending, contract_details, transaction_details
+page["account_name_#{@account.id}"].replace_html @account.name
+
+#_account_listing_details, account_details
+page << "if($('account_balance_#{@account.id}')){"
+page["account_balance_#{@account.id}"].replace_html @account.balance
+page << "}"
+
+#_account_listing_details
+if @navKey == 'accounts'
+	page["account_listing_data_balance_#{@account.id}"].replace_html "#{@account.balance}"
+	page["account_listing_data_#{@account.id}"].visual_effect(:highlight, :duration => 1)
+end
+
+#account_journal
+page << "if($('journal_details')){"
+page[:journal_details].replace_html :partial =>"account_journal_details", :collection => @journal_transactions
+page << "}"
+
+page[:flashdiv].replace_html flash[:notice]

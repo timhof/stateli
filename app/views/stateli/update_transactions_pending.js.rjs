@@ -1,0 +1,15 @@
+
+
+page[:transactions_pending_details_credit].replace_html :partial => 'pending_details', :collection => @transactions_credit
+page[:transactions_pending_details_debit].replace_html :partial => 'pending_details', :collection => @transactions_debit
+
+if @transactions_credit.length > 0
+	page[:transactions_pending_credit].show
+else
+	page[:transactions_pending_credit].hide
+end
+if @transactions_debit.length > 0
+	page[:transactions_pending_debit].show
+else
+	page[:transactions_pending_debit].hide
+end
