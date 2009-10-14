@@ -76,11 +76,7 @@
     			});
 			});
 			
-			$$('.drop_down').each(function (el) {
-    			return $($(el).parentNode).observe('mouseout', function() {
-    				el.hide();
-    			});
-			});
+
 			
 			$('main_title_div').observe('mouseover', function() {
 				this.addClassName('main_title_div_mouseover');
