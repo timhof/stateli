@@ -70,15 +70,16 @@
 			});
 		
 <% end %>
+			
 			$$('.drop_down').each(function (el) {
-    			return $($(el).parentNode).observe('mouseover', function() {
-    				el.show();
+    			return $($(el).parentNode).observe('mouseout', function() {
+    				$(el).hide();
     			});
 			});
 			
 			$$('.drop_down').each(function (el) {
-    			return $($(el).parentNode).observe('mouseout', function() {
-    				el.hide();
+    			return $($(el).parentNode).observe('mouseover', function() {
+    				$(el).show();
     			});
 			});
 			
@@ -118,6 +119,12 @@
 
 	<div id="welcome_div">
 <% unless current_user.nil? %>
+		<div id="welcome_left">
+			&nbsp;
+		</div>
+		<div id="welcome_right">
+			&nbsp;
+		</div>
 		<div style="float: left;">
 			Welcome <%= current_user.login %>
 		</div>
@@ -162,15 +169,21 @@
 	</div>
 	
 	<div id="navigation" style="display:<%= current_user.nil? ? "none" : "block"%>">
+		<div id="navigation_left">
+			&nbsp;
+		</div>
+		<div id="navigation_right">
+			&nbsp;
+		</div>
 		<ul class="navigation_tab">
 			<li id="navigation_accounts" class="navigation_button">
 				Accounts
 				<ul class="drop_down" style="display:none">
 					<li id="sub_navigation_account_listing" class="sub_navigation_button" onclick="click_navigation('<%= listing_path %>', <%=(current_user.nil?) %>)">
-						&nbsp;Accounts
+						&nbsp;View Current
 					</li>
 					<li id="sub_navigation_new_account" <%= onclick_to_remote :url => account_new_path, :method => :get %> class="sub_navigation_button">
-						&nbsp;New
+						&nbsp;Create New
 					</li>
 				</ul>
 			</li>
@@ -180,8 +193,8 @@
 			<li id="navigation_expenses" class="navigation_button">
 				Expenses
 				<ul class="drop_down" style="display:none">
-					<li id="sub_navigation_expense_listing" class="sub_navigation_button" onclick="click_navigation('<%= expense_listing_path %>',<%= current_user.nil? %>)">
-						&nbsp;View Expenses
+					<li id="sub_navigation_expense_listing" class="sub_navigation_button" onclick="click_navigation('<%= expense_listing_path %>', <%= current_user.nil? %>)">
+						&nbsp;View Current
 					</li>
 					<li id="sub_navigation_add_expense" class="sub_navigation_button" <%= onclick_to_remote :url => contract_credit_path, :method => :get %>>
 						&nbsp;Create New
@@ -192,7 +205,7 @@
 				Income
 				<ul class="drop_down" style="display:none">
 					<li id="sub_navigation_income_listing" class="sub_navigation_button" onclick="click_navigation('<%= income_listing_path %>',<%= current_user.nil? %>)">
-						&nbsp;View Income
+						&nbsp;View Current
 					</li>
 					<li id="sub_navigation_add_income" class="sub_navigation_button" <%= onclick_to_remote :url => contract_debit_path, :method => :get %>>
 						&nbsp;Create New

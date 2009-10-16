@@ -60,8 +60,8 @@ a:hover {
 	border-style: solid;
 }
 
+
 #welcome_div {
-	padding: 0 1% 0 1%;
 	height: 25px;
 	line-height: 25px;
 	clear: both;
@@ -70,6 +70,18 @@ a:hover {
 	font-weight: bold;
 	overflow: hidden;
 	background-image: url(../images/bank_header_navigation.gif);
+	margin: 1% 1% 0 1%;
+}
+
+#welcome_left {
+	float: left;
+	background-image: url(../images/bank_header_navigation_left.gif);
+}
+
+#welcome_right {
+	float: right;
+	width: 10px;
+	background-image: url(../images/bank_header_navigation_right.gif);
 }
 
 #new_session_login {
@@ -134,9 +146,26 @@ a:hover {
 }
 
 #navigation{
-	width: 100%;
+	width: 98%;
 	min-width: 600px;
 	background-image: url(../images/bank_header_navigation.gif);
+	background-position: 0 -77px;
+	background-repeat: none;
+	height: 25px;
+	margin: 0 1%;
+}
+
+#navigation_left {
+	float: left;
+	background-image: url(../images/bank_header_navigation_left.gif);
+	background-position: 0 -77px;
+	height: 25px;
+}
+
+#navigation_right {
+	float: right;
+	width: 10px;
+	background-image: url(../images/bank_header_navigation_right.gif);
 	background-position: 0 -77px;
 	height: 25px;
 }
@@ -148,7 +177,7 @@ a:hover {
 }
 
 .navigation_button {
-	height: 25px;
+	height: 100%;
     width: 100px;
 	line-height: 21px;
 	text-align: center;
@@ -163,11 +192,10 @@ ul.navigation_tab {
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	border: 0;
 	font-weight: bold;
 	color: #F4F0E5;
 	position: relative;
-	left: 45%;
+	left: 40%;
 }
 
 ul.navigation_tab li {
@@ -180,7 +208,8 @@ ul.navigation_tab li {
 .drop_down {
 	display: block;
 	z-index: 999;
-	margin-top: 2px;
+	width: 100%;
+	margin: 0px;
 }
 
 .sub_navigation_button {

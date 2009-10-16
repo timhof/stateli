@@ -310,6 +310,8 @@
             <string>..\tutor\public\stylesheets\pieces.css</string>
             <key>register</key>
             <string>app\views\stateli\register.js.rjs</string>
+            <key>resu</key>
+            <string>..\timothyimhof\app\views\navigation\resume.html.erb</string>
             <key>resume</key>
             <string>..\timothyimhof\app\views\navigation\resume.html.erb</string>
             <key>rou</key>
