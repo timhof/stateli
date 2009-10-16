@@ -33268,3 +33268,771 @@ Rendering template within layouts/application
 Rendering stateli/index
   [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
 Completed in 62ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 06:44:20) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+Completed in 156ms (View: 156, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-10-15 06:44:31) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"E1avBUVho2SLWwRLB6wRkmvMlfBd6OvEj7EKQXg3VbQ=", "login"=>"timhof", "password"=>"abacus"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'timhof') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 125ms (DB: 0) | 302 Found [http://127.0.0.1/session]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 06:44:32) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 172ms (View: 172, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing TransactionsController#index (for 127.0.0.1 at 2009-10-15 06:44:41) [GET]
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTransaction Load (16.0ms)[0m   [0mSELECT * FROM "transactions" WHERE ("transactions"."user_id" = 1) [0m
+Rendering template within layouts/application
+Rendering transactions/index
+Rendered transactions/_transaction_header (0.0ms)
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (78.0ms)
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 57) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 57) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (16.0ms)
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 58) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (0.0ms)
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 59) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 59) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (16.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (15.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (16.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 59) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 59) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 58) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (15.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (16.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (16.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 58) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 59) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 59) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (15.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (16.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (16.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered transactions/_transaction_details (0.0ms)
+Rendered transactions/_transaction_header (0.0ms)
+Rendered transactions/_transaction_header (0.0ms)
+Rendered transactions/_transaction_header (0.0ms)
+Rendered transactions/_transaction_header (0.0ms)
+Completed in 454ms (View: 282, DB: 32) | 200 OK [http://127.0.0.1/transactions]
+
+
+Processing TransactionsController#edit (for 127.0.0.1 at 2009-10-15 06:44:51) [GET]
+  Parameters: {"id"=>"117570"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE ("transactions"."id" = 117570) [0m
+Rendering template within layouts/application
+Rendering transactions/edit
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendered transactions/_transaction_edit (140.0ms)
+Completed in 235ms (View: 156, DB: 0) | 200 OK [http://127.0.0.1/transactions/117570/edit]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 06:45:20) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-10-15 06:45:28) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"JHWO/8ZwtHcgfF6SERc4l8GgvP3RoBFmoxO3awi8EOo=", "login"=>"timhof", "password"=>"abacus"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'timhof') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 33ms (DB: 0) | 302 Found [http://127.0.0.1/session]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 06:45:28) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 06:47:50) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 63, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 06:51:28) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 156ms (View: 63, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 07:13:01) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (15.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 62ms (View: 31, DB: 15) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 07:18:15) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 46ms (View: 46, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 07:18:34) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 07:20:07) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 07:20:40) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 62ms (View: 46, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 07:22:14) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 07:23:03) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 20:35:07) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+Completed in 156ms (View: 156, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-10-15 20:35:12) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"Z4wQHiBIjJWUslnH8PsvYM3jrt+5GB1sGf+5fD3/E+k=", "login"=>"timhof", "password"=>"abacus"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'timhof') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 125ms (DB: 0) | 302 Found [http://127.0.0.1/session]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 20:35:12) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 187ms (View: 187, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 20:44:10) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 20:45:58) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 62ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 20:46:58) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 20:47:07) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 46ms (View: 46, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 20:47:36) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 62ms (View: 46, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 20:48:00) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 20:52:28) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 62ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 20:52:58) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 20:53:24) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 20:56:01) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 20:57:24) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 46ms (View: 46, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 20:59:23) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 20:59:42) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:10:25) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 141ms (View: 141, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:11:10) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 63, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:11:52) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 46ms (View: 46, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:12:21) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:12:59) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 63, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:13:34) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:13:35) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:13:48) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:14:19) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:19:57) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 78ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:20:37) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 109ms (View: 109, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:20:49) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:21:36) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 62ms (View: 46, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:21:38) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 46ms (View: 46, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:22:05) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:22:30) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:23:13) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 63, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:24:19) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 125ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:25:27) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:25:28) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 46ms (View: 46, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:25:56) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:26:13) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:26:23) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:26:35) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:26:43) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:26:50) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:27:11) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:29:00) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:29:46) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:30:19) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:33:59) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-10-15 21:34:11) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"FSpot/vIf8xKA6SrIFJ+xoUAyG5ReA10Bn9Hp75tE8w=", "login"=>"timhof", "password"=>"abacus"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'timhof') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 31ms (DB: 0) | 302 Found [http://127.0.0.1/session]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:34:11) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:35:29) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 46ms (View: 46, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:35:48) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:36:00) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 63, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:37:03) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:37:19) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:37:28) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:37:52) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:38:18) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:38:37) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 62ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:39:00) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 110ms (View: 110, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:40:09) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:41:08) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:41:48) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:42:14) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:42:53) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:43:37) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-15 21:43:58) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 05:45:08) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 62ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 05:45:34) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 05:46:02) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 63, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 05:46:06) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 63, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 05:47:00) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 62ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 05:47:10) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 63, DB: 0) | 200 OK [http://127.0.0.1/]
