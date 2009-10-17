@@ -6,7 +6,7 @@ module ApplicationHelper
 		page[:listing_form_div].show
 	
 		page.select("a.listing_link").each { |div| div.hide}
-		page[:navigation].hide
+		page[:navigation_enabled].hide
 		page[:navigation_disabled].show
 		page[:flashdiv].replace_html ""
 		page << "if($('login_form_div')){"
@@ -21,7 +21,7 @@ module ApplicationHelper
 		page.select("a.listing_link").each { |div| div.show}
 		page << "if($('logout_div')){"
 			page[:navigation_disabled].hide
-			page[:navigation].show
+			page[:navigation_enabled].show
 		page << "}"
 		
 		page << "if($('login_form_div')){"

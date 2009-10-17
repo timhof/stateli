@@ -118,13 +118,13 @@
 <div id="main_div">
 
 	<div id="welcome_div">
-<% unless current_user.nil? %>
 		<div id="welcome_left">
 			&nbsp;
 		</div>
 		<div id="welcome_right">
 			&nbsp;
 		</div>
+<% unless current_user.nil? %>
 		<div style="float: left;">
 			Welcome <%= current_user.login %>
 		</div>
@@ -168,14 +168,14 @@
 		StateLi Personal Finance
 	</div>
 	
-	<div id="navigation" style="display:<%= current_user.nil? ? "none" : "block"%>">
+	<div id="navigation">
 		<div id="navigation_left">
 			&nbsp;
 		</div>
 		<div id="navigation_right">
 			&nbsp;
 		</div>
-		<ul class="navigation_tab">
+		<ul id="navigation_enabled" class="navigation_tab" style="display:<%= current_user.nil? ? "none" : "block"%>">
 			<li id="navigation_accounts" class="navigation_button">
 				Accounts
 				<ul class="drop_down" style="display:none">
@@ -231,11 +231,7 @@
 			</li>
 			<li style="clear:both;"></li>
 		</ul>
-		<div style="clear:both"></div>
-	</div>
-	
-	<div id="navigation_disabled" style="display:<%= current_user.nil? ? "block" : "none"%>">
-		<ul class="navigation_tab">
+		<ul id="navigation_disabled" class="navigation_tab" style="display:<%= current_user.nil? ? " block" : "none"%>">
 			<li class="navigation_button navigation_button_disabled">
 				Accounts
 			</li>
@@ -265,7 +261,15 @@
 	<%= yield %>
 	
 	<div id="footer">
-		an <a href="http://www.orientedobjects.com">Oriented Objects Inc.</a> Production.&nbsp;&nbsp;&nbsp;
+		<div id="footer_left">
+			&nbsp;
+		</div>
+		<div id="footer_right">
+			&nbsp;
+		</div>
+		<div id="footer_text">
+		<a href="http://www.timothyimhof.com">Timothy Imhof</a> 2009.&nbsp;&nbsp;&nbsp;
+		</div>
 	</div>
 </div>
 	

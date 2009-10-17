@@ -157,6 +157,7 @@ a:hover {
 
 #navigation_left {
 	float: left;
+	width: 10px;
 	background-image: url(../images/bank_header_navigation_left.gif);
 	background-position: 0 -77px;
 	height: 25px;
@@ -173,7 +174,7 @@ a:hover {
 #navigation_disabled{
 	width: 100%;
 	background-image: url(../images/bank_header_navigation.gif);
-	background-position: 0 -233px;
+	background-position: 0 -77px;
 }
 
 .navigation_button {
@@ -221,7 +222,7 @@ ul.navigation_tab li {
 	border-style: dotted;
 	background-color: #3e3df7;
 	background-image: url(../images/bank_header_navigation.gif);
-	background-position: 0 -155px;
+	background-position: 0 -103px;
 	color: #FFFFFF;
 }
 
@@ -810,7 +811,7 @@ ul.navigation_tab li {
 
 .subnavselected {
 	background-image: url(../images/bank_header_navigation.gif);
-	background-position: 0 -207px;
+	background-position: 0 -103px;
 	color: #375672;
 }
 
@@ -848,11 +849,31 @@ ul.navigation_tab li {
 }
 
 #footer {
-	width: 100%;
+	width: 98%;
+	margin: 0 1%;
 	height: 50px;
-	line-height: 50px;
+	line-height: 70px;
 	background-image: url(../images/bank_header_navigation.gif);
 	background-position: 0 -460px;
 	font-size: 85%;
 	text-align: right;
+}
+
+#footer_text{
+	position
+}
+#footer_left {
+	float: left;
+	width: 10px;
+	background-image: url(../images/bank_header_navigation_left.gif);
+	background-position: 0 -460px;
+	height: 50px;
+}
+
+#footer_right {
+	float: right;
+	width: 10px;
+	background-image: url(../images/bank_header_navigation_right.gif);
+	background-position: 0 -460px;
+	height: 50px;
 }

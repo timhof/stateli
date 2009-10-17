@@ -34036,3 +34036,2010 @@ Rendering template within layouts/application
 Rendering stateli/index
   [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
 Completed in 63ms (View: 63, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 06:42:53) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+Completed in 7016ms (View: 7000, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 06:44:10) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 06:44:35) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 06:45:36) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-10-16 06:45:40) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"KLBAqfGQXonfms05DnxOrl0cL2yeFBTaLlsgHACCgMg=", "login"=>"timhof", "password"=>"abacus"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'timhof') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 250ms (DB: 0) | 302 Found [http://127.0.0.1/session]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 06:45:40) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 156ms (View: 140, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 06:46:33) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 06:46:35) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 06:47:28) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 06:51:32) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 06:52:02) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 62ms (View: 46, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 06:53:04) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 06:55:34) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 06:56:56) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 46ms (View: 46, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 06:57:39) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 06:58:12) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 46ms (View: 46, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 06:58:46) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 06:59:09) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 62ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 06:59:34) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 06:59:36) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 07:01:12) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 109ms (View: 109, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 07:02:12) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 07:02:53) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 63, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 07:02:55) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 07:03:18) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 62ms (View: 46, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 07:07:10) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 63, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 07:07:45) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 07:08:23) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-10-16 07:10:09) [GET]
+Redirected to http://127.0.0.1:3000/
+Completed in 31ms (DB: 0) | 302 Found [http://127.0.0.1/logout]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 07:10:09) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 07:11:33) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 07:11:51) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 07:12:17) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 08:03:49) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 08:03:51) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 08:04:18) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 08:05:36) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-10-16 08:05:42) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"i8DPD+6B93sT49xvOmv4TCKnsLNJvQRd9OQ6R9eyPG0=", "login"=>"timhof", "password"=>"abacus"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'timhof') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 46ms (DB: 0) | 302 Found [http://127.0.0.1/session]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 08:05:43) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 08:06:36) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-10-16 08:06:58) [GET]
+Redirected to http://127.0.0.1:3000/
+Completed in 109ms (DB: 0) | 302 Found [http://127.0.0.1/logout]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 08:06:58) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 08:07:56) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 08:08:37) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 21:39:11) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+Completed in 172ms (View: 157, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-10-16 21:39:23) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"L62hTuWiELW3XQSwJfK83Pj5aX+qyIGjLxANnA2u/T8=", "login"=>"timhof", "password"=>"abacus"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'timhof') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 125ms (DB: 0) | 302 Found [http://127.0.0.1/session]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 21:39:23) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 172ms (View: 172, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 21:40:14) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 62ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 21:41:25) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 46ms (View: 46, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 21:41:37) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 21:42:05) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 21:42:54) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 21:45:11) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#account_listing (for 127.0.0.1 at 2009-10-16 21:45:56) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mAccountDebit Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE (("accounts"."user_id" = 1 AND "accounts"."active" = 't')) AND ( ("accounts"."type" = 'AccountDebit' ) ) [0m
+  [4;36;1mSQL (32.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 57 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 57 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 57 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 57 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 58 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 58 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 58 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 58 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 59 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 59 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 59 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 59 and type = 'TransactionDebit')) [0m
+4 Debit Accounts
+  [4;36;1mAccountCredit Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE (("accounts"."user_id" = 1 AND "accounts"."active" = 't')) AND ( ("accounts"."type" = 'AccountCredit' ) ) [0m
+0 Credit Accounts
+Rendering template within layouts/application
+Rendering stateli/account_listing
+Rendered stateli/_account_listing_header (16.0ms)
+Rendered stateli/_account_options (16.0ms)
+Rendered stateli/_account_listing_details (63.0ms)
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_account_listing_details (0.0ms)
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_account_listing_details (0.0ms)
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_account_listing_details (0.0ms)
+Rendered stateli/_account_listing_header (0.0ms)
+Completed in 735ms (View: 141, DB: 48) | 200 OK [http://127.0.0.1/listing]
+
+
+Processing StateliController#account_pending (for 127.0.0.1 at 2009-10-16 21:46:01) [GET]
+  Parameters: {"id"=>"56"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mTransaction Load (0.0ms)[0m   [0mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) ORDER BY scheduled_date[0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) ORDER BY scheduled_date[0m
+0 Uncompleted CREDIT Transactions
+4 Uncompleted DEBIT Transactions
+Rendering template within layouts/application
+Rendering stateli/account_pending
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_date_span_selector_pending (844.0ms)
+Rendered stateli/_account_pending_header (0.0ms)
+Rendered stateli/_account_pending_header (0.0ms)
+  [4;35;1mContract Load (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (16.0ms)
+Rendered stateli/_account_pending_details (141.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (16.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+Completed in 1157ms (View: 1032, DB: 0) | 200 OK [http://127.0.0.1/account/56/pending]
+
+
+Processing StateliController#account_pending (for 127.0.0.1 at 2009-10-16 21:46:09) [GET]
+  Parameters: {"id"=>"56"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mTransaction Load (0.0ms)[0m   [0mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) ORDER BY scheduled_date[0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) ORDER BY scheduled_date[0m
+0 Uncompleted CREDIT Transactions
+4 Uncompleted DEBIT Transactions
+Rendering template within layouts/application
+Rendering stateli/account_pending
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_date_span_selector_pending (0.0ms)
+Rendered stateli/_account_pending_header (0.0ms)
+Rendered stateli/_account_pending_header (0.0ms)
+  [4;35;1mContract Load (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (47.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (16.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+Completed in 172ms (View: 63, DB: 0) | 200 OK [http://127.0.0.1/account/56/pending]
+
+
+Processing StateliController#account_journal (for 127.0.0.1 at 2009-10-16 21:46:20) [GET]
+  Parameters: {"id"=>"56"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mTransaction Load (0.0ms)[0m   [0mSELECT * FROM "transactions" WHERE (((executed_date >= '2008-10-16' and executed_date <= '2009-10-16') AND (account_id_dest = 56 or account_id_source = 56)) AND (completed = 't')) ORDER BY executed_date ASC[0m
+amount: 4295.75
+amount: 2716.88
+amount: -0.630000000000109
+amount: 0.539999999999964
+amount: -0.279999999999745
+amount: -2.0
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: -1376.9
+amount: 0.5
+amount: 0.0799999999999272
+amount: -0.0499999999992724
+amount: -0.0100000000002183
+amount: -0.0100000000002183
+amount: 0.0200000000004366
+amount: -0.0200000000004366
+amount: 0.0200000000004366
+amount: 0.0599999999994907
+amount: -0.0200000000004366
+amount: -0.0299999999988358
+Rendering template within layouts/application
+Rendering stateli/account_journal
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_date_span_selector_journal (16.0ms)
+Rendered stateli/_account_journal_header (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (31.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (16.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (94.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Completed in 359ms (View: 234, DB: 0) | 200 OK [http://127.0.0.1/account/56/journal]
+
+
+Processing StateliController#account_pending (for 127.0.0.1 at 2009-10-16 21:46:23) [GET]
+  Parameters: {"id"=>"56"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) ORDER BY scheduled_date[0m
+  [4;35;1mTransaction Load (0.0ms)[0m   [0mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) ORDER BY scheduled_date[0m
+0 Uncompleted CREDIT Transactions
+4 Uncompleted DEBIT Transactions
+Rendering template within layouts/application
+Rendering stateli/account_pending
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_date_span_selector_pending (0.0ms)
+Rendered stateli/_account_pending_header (0.0ms)
+Rendered stateli/_account_pending_header (0.0ms)
+  [4;36;1mContract Load (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (63.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+Completed in 189ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/account/56/pending]
+
+
+Processing StateliController#account_edit (for 127.0.0.1 at 2009-10-16 21:46:38) [GET]
+  Parameters: {"account_id"=>"56", "authenticity_token"=>"L62hTuWiELW3XQSwJfK83Pj5aX+qyIGjLxANnA2u/T8="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendering stateli/account_edit
+Rendered stateli/_account_edit (16.0ms)
+Completed in 94ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/update_account/56?authenticity_token=L62hTuWiELW3XQSwJfK83Pj5aX%2BqyIGjLxANnA2u%2FT8%3D]
+
+
+Processing StateliController#cancel_popup (for 127.0.0.1 at 2009-10-16 21:46:43) [GET]
+  Parameters: {"authenticity_token"=>"L62hTuWiELW3XQSwJfK83Pj5aX+qyIGjLxANnA2u/T8="}
+Rendering stateli/cancel_popup
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/cancel?authenticity_token=L62hTuWiELW3XQSwJfK83Pj5aX%2BqyIGjLxANnA2u%2FT8%3D]
+
+
+Processing StateliController#account_details (for 127.0.0.1 at 2009-10-16 21:46:48) [GET]
+  Parameters: {"id"=>"56"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendering template within layouts/application
+Rendering stateli/account_details
+Rendered stateli/_account_options (0.0ms)
+Completed in 203ms (View: 125, DB: 0) | 200 OK [http://127.0.0.1/account_details/56]
+
+
+Processing StateliController#account_deposit (for 127.0.0.1 at 2009-10-16 21:46:54) [GET]
+  Parameters: {"authenticity_token"=>"L62hTuWiELW3XQSwJfK83Pj5aX+qyIGjLxANnA2u/T8=", "id"=>"56"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendering stateli/account_deposit
+Rendered stateli/_deposit_new (0.0ms)
+Completed in 94ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/account/56/deposit?authenticity_token=L62hTuWiELW3XQSwJfK83Pj5aX%2BqyIGjLxANnA2u%2FT8%3D]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 21:47:06) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-10-16 21:47:14) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"KNlD3m9856XsqnHVsm0DslsnQ6agknlyiNzryh4UQAo=", "login"=>"timhof", "password"=>"abacus"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'timhof') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 46ms (DB: 0) | 302 Found [http://127.0.0.1/session]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-16 21:47:14) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#account_listing (for 127.0.0.1 at 2009-10-16 21:47:17) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mAccountDebit Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE (("accounts"."user_id" = 1 AND "accounts"."active" = 't')) AND ( ("accounts"."type" = 'AccountDebit' ) ) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 57 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 57 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 57 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 57 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 58 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 58 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 58 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 58 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 59 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 59 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 59 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 59 and type = 'TransactionDebit')) [0m
+4 Debit Accounts
+  [4;36;1mAccountCredit Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE (("accounts"."user_id" = 1 AND "accounts"."active" = 't')) AND ( ("accounts"."type" = 'AccountCredit' ) ) [0m
+0 Credit Accounts
+Rendering template within layouts/application
+Rendering stateli/account_listing
+Rendered stateli/_account_listing_header (0.0ms)
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_account_listing_details (0.0ms)
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_account_listing_details (0.0ms)
+Rendered stateli/_account_options (16.0ms)
+Rendered stateli/_account_listing_details (16.0ms)
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_account_listing_details (0.0ms)
+Rendered stateli/_account_listing_header (0.0ms)
+Completed in 219ms (View: 32, DB: 0) | 200 OK [http://127.0.0.1/listing]
+
+
+Processing StateliController#account_pending (for 127.0.0.1 at 2009-10-16 21:47:19) [GET]
+  Parameters: {"id"=>"56"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mTransaction Load (0.0ms)[0m   [0mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) ORDER BY scheduled_date[0m
+  [4;36;1mTransaction Load (16.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) ORDER BY scheduled_date[0m
+0 Uncompleted CREDIT Transactions
+4 Uncompleted DEBIT Transactions
+Rendering template within layouts/application
+Rendering stateli/account_pending
+Rendered stateli/_account_options (16.0ms)
+Rendered stateli/_date_span_selector_pending (0.0ms)
+Rendered stateli/_account_pending_header (0.0ms)
+Rendered stateli/_account_pending_header (0.0ms)
+  [4;35;1mContract Load (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (46.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+Completed in 172ms (View: 78, DB: 16) | 200 OK [http://127.0.0.1/account/56/pending]
+
+
+Processing StateliController#account_deposit (for 127.0.0.1 at 2009-10-16 21:47:27) [GET]
+  Parameters: {"authenticity_token"=>"KNlD3m9856XsqnHVsm0DslsnQ6agknlyiNzryh4UQAo=", "id"=>"56"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendering stateli/account_deposit
+Rendered stateli/_deposit_new (0.0ms)
+Completed in 78ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/account/56/deposit?authenticity_token=KNlD3m9856XsqnHVsm0DslsnQ6agknlyiNzryh4UQAo%3D]
+
+
+Processing StateliController#cancel_popup (for 127.0.0.1 at 2009-10-16 21:48:10) [GET]
+  Parameters: {"authenticity_token"=>"KNlD3m9856XsqnHVsm0DslsnQ6agknlyiNzryh4UQAo="}
+Rendering stateli/cancel_popup
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/cancel?authenticity_token=KNlD3m9856XsqnHVsm0DslsnQ6agknlyiNzryh4UQAo%3D]
+
+
+Processing StateliController#account_pending (for 127.0.0.1 at 2009-10-16 21:49:59) [GET]
+  Parameters: {"id"=>"56"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mTransaction Load (0.0ms)[0m   [0mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) ORDER BY scheduled_date[0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) ORDER BY scheduled_date[0m
+0 Uncompleted CREDIT Transactions
+4 Uncompleted DEBIT Transactions
+Rendering template within layouts/application
+Rendering stateli/account_pending
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_date_span_selector_pending (0.0ms)
+Rendered stateli/_account_pending_header (0.0ms)
+Rendered stateli/_account_pending_header (0.0ms)
+  [4;35;1mContract Load (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (47.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+Completed in 172ms (View: 79, DB: 0) | 200 OK [http://127.0.0.1/account/56/pending]
+
+
+Processing StateliController#account_deposit (for 127.0.0.1 at 2009-10-16 21:50:03) [GET]
+  Parameters: {"authenticity_token"=>"KNlD3m9856XsqnHVsm0DslsnQ6agknlyiNzryh4UQAo=", "id"=>"56"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendering stateli/account_deposit
+Rendered stateli/_deposit_new (0.0ms)
+Completed in 94ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/account/56/deposit?authenticity_token=KNlD3m9856XsqnHVsm0DslsnQ6agknlyiNzryh4UQAo%3D]
+
+
+Processing StateliController#cancel_popup (for 127.0.0.1 at 2009-10-16 21:50:06) [GET]
+  Parameters: {"authenticity_token"=>"KNlD3m9856XsqnHVsm0DslsnQ6agknlyiNzryh4UQAo="}
+Rendering stateli/cancel_popup
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/cancel?authenticity_token=KNlD3m9856XsqnHVsm0DslsnQ6agknlyiNzryh4UQAo%3D]
+
+
+Processing StateliController#account_pending (for 127.0.0.1 at 2009-10-16 21:50:32) [GET]
+  Parameters: {"id"=>"56"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mTransaction Load (0.0ms)[0m   [0mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) ORDER BY scheduled_date[0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) ORDER BY scheduled_date[0m
+0 Uncompleted CREDIT Transactions
+4 Uncompleted DEBIT Transactions
+Rendering template within layouts/application
+Rendering stateli/account_pending
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_date_span_selector_pending (0.0ms)
+Rendered stateli/_account_pending_header (0.0ms)
+Rendered stateli/_account_pending_header (0.0ms)
+  [4;35;1mContract Load (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (47.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+Completed in 172ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/account/56/pending]
+
+
+Processing StateliController#account_listing (for 127.0.0.1 at 2009-10-16 21:50:35) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccountDebit Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE (("accounts"."user_id" = 1 AND "accounts"."active" = 't')) AND ( ("accounts"."type" = 'AccountDebit' ) ) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 57 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 57 and type = 'TransactionDebit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 57 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 57 and type = 'TransactionDebit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 58 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 58 and type = 'TransactionDebit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 58 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 58 and type = 'TransactionDebit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 59 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 59 and type = 'TransactionDebit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 59 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 59 and type = 'TransactionDebit')) [0m
+4 Debit Accounts
+  [4;35;1mAccountCredit Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE (("accounts"."user_id" = 1 AND "accounts"."active" = 't')) AND ( ("accounts"."type" = 'AccountCredit' ) ) [0m
+0 Credit Accounts
+Rendering template within layouts/application
+Rendering stateli/account_listing
+Rendered stateli/_account_listing_header (0.0ms)
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_account_listing_details (0.0ms)
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_account_listing_details (16.0ms)
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_account_listing_details (0.0ms)
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_account_listing_details (0.0ms)
+Rendered stateli/_account_listing_header (0.0ms)
+Completed in 125ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/listing]
+
+
+Processing StateliController#account_edit (for 127.0.0.1 at 2009-10-16 21:50:39) [GET]
+  Parameters: {"account_id"=>"56", "authenticity_token"=>"KNlD3m9856XsqnHVsm0DslsnQ6agknlyiNzryh4UQAo="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendering stateli/account_edit
+Rendered stateli/_account_edit (0.0ms)
+Completed in 78ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/update_account/56?authenticity_token=KNlD3m9856XsqnHVsm0DslsnQ6agknlyiNzryh4UQAo%3D]
+
+
+Processing StateliController#cancel_popup (for 127.0.0.1 at 2009-10-16 21:50:41) [GET]
+  Parameters: {"authenticity_token"=>"KNlD3m9856XsqnHVsm0DslsnQ6agknlyiNzryh4UQAo="}
+Rendering stateli/cancel_popup
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/cancel?authenticity_token=KNlD3m9856XsqnHVsm0DslsnQ6agknlyiNzryh4UQAo%3D]
+
+
+Processing StateliController#account_details (for 127.0.0.1 at 2009-10-16 21:50:43) [GET]
+  Parameters: {"id"=>"56"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendering template within layouts/application
+Rendering stateli/account_details
+Rendered stateli/_account_options (0.0ms)
+Completed in 79ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/account_details/56]
+
+
+Processing StateliController#transactions_pending (for 127.0.0.1 at 2009-10-16 21:50:49) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTransaction Load (0.0ms)[0m   [0mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND ("transactions"."user_id" = 1)) ORDER BY scheduled_date ASC[0m
+Rendering template within layouts/application
+Rendering stateli/transactions_pending
+Rendered stateli/_date_span_selector_pending (16.0ms)
+Rendered stateli/_pending_header (0.0ms)
+  [4;36;1mContract Load (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (62.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (16.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (0.0ms)
+Completed in 204ms (View: 125, DB: 0) | 200 OK [http://127.0.0.1/pending_transactions]
+
+
+Processing StateliController#account_journal_flex (for 127.0.0.1 at 2009-10-16 21:50:52) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mAccountDebit Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE (("accounts"."user_id" = 1 AND "accounts"."active" = 't')) AND ( ("accounts"."type" = 'AccountDebit' ) ) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 57 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 57 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 57 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 57 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 58 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 58 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 58 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 58 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 59 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 59 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 59 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 59 and type = 'TransactionDebit')) [0m
+4 Debit Accounts
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE ((account_id_dest = 56 or account_id_source = 56) AND (completed = 't')) ORDER BY executed_date ASC[0m
+amount: 4295.75
+amount: 2716.88
+amount: -0.630000000000109
+amount: 0.539999999999964
+amount: -0.279999999999745
+amount: -2.0
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: -1376.9
+amount: 0.5
+amount: 0.0799999999999272
+amount: -0.0499999999992724
+amount: -0.0100000000002183
+amount: -0.0100000000002183
+amount: 0.0200000000004366
+amount: -0.0200000000004366
+amount: 0.0200000000004366
+amount: 0.0599999999994907
+amount: -0.0200000000004366
+amount: -0.0299999999988358
+24 Transactions
+  [4;35;1mTransaction Load (0.0ms)[0m   [0mSELECT * FROM "transactions" WHERE ((account_id_dest = 57 or account_id_source = 57) AND (completed = 't')) ORDER BY executed_date ASC[0m
+amount: 516.8
+1 Transactions
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE ((account_id_dest = 58 or account_id_source = 58) AND (completed = 't')) ORDER BY executed_date ASC[0m
+amount: 75331.06
+amount: 0.600000000005821
+amount: -54827.66
+3 Transactions
+  [4;35;1mTransaction Load (0.0ms)[0m   [0mSELECT * FROM "transactions" WHERE ((account_id_dest = 59 or account_id_source = 59) AND (completed = 't')) ORDER BY executed_date ASC[0m
+amount: 59796.4
+amount: 1000.0
+amount: 3353.6
+3 Transactions
+Rendering template within layouts/application
+Rendering stateli/account_journal_flex
+Rendered stateli/_date_span_selector_journal (0.0ms)
+Completed in 265ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/account_journal_flex]
+
+
+Processing StateliController#account_journal_flex to xml (for 127.0.0.1 at 2009-10-16 21:50:53) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mAccountDebit Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE (("accounts"."user_id" = 1 AND "accounts"."active" = 't')) AND ( ("accounts"."type" = 'AccountDebit' ) ) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 57 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 57 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 57 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 57 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 58 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 58 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 58 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 58 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 59 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 59 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 59 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 59 and type = 'TransactionDebit')) [0m
+4 Debit Accounts
+  [4;36;1mTransaction Load (5.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE ((account_id_dest = 56 or account_id_source = 56) AND (completed = 't')) ORDER BY executed_date ASC[0m
+amount: 4295.75
+amount: 2716.88
+amount: -0.630000000000109
+amount: 0.539999999999964
+amount: -0.279999999999745
+amount: -2.0
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: -1376.9
+amount: 0.5
+amount: 0.0799999999999272
+amount: -0.0499999999992724
+amount: -0.0100000000002183
+amount: -0.0100000000002183
+amount: 0.0200000000004366
+amount: -0.0200000000004366
+amount: 0.0200000000004366
+amount: 0.0599999999994907
+amount: -0.0200000000004366
+amount: -0.0299999999988358
+24 Transactions
+  [4;35;1mTransaction Load (2.0ms)[0m   [0mSELECT * FROM "transactions" WHERE ((account_id_dest = 57 or account_id_source = 57) AND (completed = 't')) ORDER BY executed_date ASC[0m
+amount: 516.8
+1 Transactions
+  [4;36;1mTransaction Load (1.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE ((account_id_dest = 58 or account_id_source = 58) AND (completed = 't')) ORDER BY executed_date ASC[0m
+amount: 75331.06
+amount: 0.600000000005821
+amount: -54827.66
+3 Transactions
+  [4;35;1mTransaction Load (1.0ms)[0m   [0mSELECT * FROM "transactions" WHERE ((account_id_dest = 59 or account_id_source = 59) AND (completed = 't')) ORDER BY executed_date ASC[0m
+amount: 59796.4
+amount: 1000.0
+amount: 3353.6
+3 Transactions
+Completed in 212ms (View: 60, DB: 12) | 200 OK [http://127.0.0.1/account_journal_flex.xml]
+
+
+Processing StateliController#transactions_pending (for 127.0.0.1 at 2009-10-16 21:50:58) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTransaction Load (1.0ms)[0m   [0mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND ("transactions"."user_id" = 1)) ORDER BY scheduled_date ASC[0m
+Rendering template within layouts/application
+Rendering stateli/transactions_pending
+Rendered stateli/_date_span_selector_pending (4.0ms)
+Rendered stateli/_pending_header (0.0ms)
+  [4;36;1mContract Load (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (2.0ms)
+Rendered stateli/_pending_details (62.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (1.0ms)
+Rendered stateli/_pending_details (4.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (4.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (2.0ms)
+Rendered stateli/_pending_details (4.0ms)
+Completed in 266ms (View: 184, DB: 1) | 200 OK [http://127.0.0.1/pending_transactions]
+
+
+Processing StateliController#account_listing (for 127.0.0.1 at 2009-10-16 21:51:16) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mAccountDebit Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE (("accounts"."user_id" = 1 AND "accounts"."active" = 't')) AND ( ("accounts"."type" = 'AccountDebit' ) ) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 57 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 57 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 57 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 57 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 58 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 58 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 58 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 58 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 59 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 59 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 59 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 59 and type = 'TransactionDebit')) [0m
+4 Debit Accounts
+  [4;36;1mAccountCredit Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE (("accounts"."user_id" = 1 AND "accounts"."active" = 't')) AND ( ("accounts"."type" = 'AccountCredit' ) ) [0m
+0 Credit Accounts
+Rendering template within layouts/application
+Rendering stateli/account_listing
+Rendered stateli/_account_listing_header (0.0ms)
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_account_listing_details (16.0ms)
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_account_listing_details (0.0ms)
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_account_listing_details (0.0ms)
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_account_listing_details (0.0ms)
+Rendered stateli/_account_listing_header (0.0ms)
+Completed in 140ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/listing]
+
+
+Processing StateliController#account_pending (for 127.0.0.1 at 2009-10-16 21:51:18) [GET]
+  Parameters: {"id"=>"56"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mTransaction Load (0.0ms)[0m   [0mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) ORDER BY scheduled_date[0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) ORDER BY scheduled_date[0m
+0 Uncompleted CREDIT Transactions
+4 Uncompleted DEBIT Transactions
+Rendering template within layouts/application
+Rendering stateli/account_pending
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_date_span_selector_pending (0.0ms)
+Rendered stateli/_account_pending_header (0.0ms)
+Rendered stateli/_account_pending_header (0.0ms)
+  [4;35;1mContract Load (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (47.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+Completed in 266ms (View: 172, DB: 0) | 200 OK [http://127.0.0.1/account/56/pending]
+
+
+Processing StateliController#transactions_pending (for 127.0.0.1 at 2009-10-16 21:51:31) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND ("transactions"."user_id" = 1)) ORDER BY scheduled_date ASC[0m
+Rendering template within layouts/application
+Rendering stateli/transactions_pending
+Rendered stateli/_date_span_selector_pending (0.0ms)
+Rendered stateli/_pending_header (0.0ms)
+  [4;35;1mContract Load (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (63.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (16.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (0.0ms)
+Completed in 157ms (View: 79, DB: 0) | 200 OK [http://127.0.0.1/pending_transactions]
+
+
+Processing StateliController#account_listing (for 127.0.0.1 at 2009-10-16 21:53:37) [GET]
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccountDebit Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE (("accounts"."user_id" = 1 AND "accounts"."active" = 't')) AND ( ("accounts"."type" = 'AccountDebit' ) ) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 57 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 57 and type = 'TransactionDebit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 57 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 57 and type = 'TransactionDebit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 58 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 58 and type = 'TransactionDebit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 58 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 58 and type = 'TransactionDebit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 59 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 59 and type = 'TransactionDebit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 59 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 59 and type = 'TransactionDebit')) [0m
+4 Debit Accounts
+  [4;35;1mAccountCredit Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE (("accounts"."user_id" = 1 AND "accounts"."active" = 't')) AND ( ("accounts"."type" = 'AccountCredit' ) ) [0m
+0 Credit Accounts
+Rendering template within layouts/application
+Rendering stateli/account_listing
+Rendered stateli/_account_listing_header (0.0ms)
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_account_listing_details (16.0ms)
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_account_listing_details (0.0ms)
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_account_listing_details (0.0ms)
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_account_listing_details (0.0ms)
+Rendered stateli/_account_listing_header (0.0ms)
+Completed in 141ms (View: 32, DB: 16) | 200 OK [http://127.0.0.1/listing]
+
+
+Processing StateliController#account_pending (for 127.0.0.1 at 2009-10-16 21:53:41) [GET]
+  Parameters: {"id"=>"56"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) ORDER BY scheduled_date[0m
+  [4;35;1mTransaction Load (0.0ms)[0m   [0mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) ORDER BY scheduled_date[0m
+0 Uncompleted CREDIT Transactions
+4 Uncompleted DEBIT Transactions
+Rendering template within layouts/application
+Rendering stateli/account_pending
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_date_span_selector_pending (0.0ms)
+Rendered stateli/_account_pending_header (0.0ms)
+Rendered stateli/_account_pending_header (0.0ms)
+  [4;36;1mContract Load (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (47.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (15.0ms)
+Completed in 265ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/account/56/pending]
+
+
+Processing StateliController#account_pending (for 127.0.0.1 at 2009-10-16 21:53:44) [GET]
+  Parameters: {"id"=>"56"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) ORDER BY scheduled_date[0m
+  [4;35;1mTransaction Load (0.0ms)[0m   [0mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) ORDER BY scheduled_date[0m
+0 Uncompleted CREDIT Transactions
+4 Uncompleted DEBIT Transactions
+Rendering template within layouts/application
+Rendering stateli/account_pending
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_date_span_selector_pending (16.0ms)
+Rendered stateli/_account_pending_header (0.0ms)
+Rendered stateli/_account_pending_header (0.0ms)
+  [4;36;1mContract Load (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (15.0ms)
+Rendered stateli/_account_pending_details (46.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+Completed in 156ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/account/56/pending]
+
+
+Processing StateliController#transactions_pending (for 127.0.0.1 at 2009-10-16 21:53:54) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTransaction Load (0.0ms)[0m   [0mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND ("transactions"."user_id" = 1)) ORDER BY scheduled_date ASC[0m
+Rendering template within layouts/application
+Rendering stateli/transactions_pending
+Rendered stateli/_date_span_selector_pending (0.0ms)
+Rendered stateli/_pending_header (0.0ms)
+  [4;36;1mContract Load (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (156.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (15.0ms)
+Completed in 250ms (View: 171, DB: 0) | 200 OK [http://127.0.0.1/pending_transactions]
+
+
+Processing StateliController#account_listing (for 127.0.0.1 at 2009-10-16 21:54:04) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mAccountDebit Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE (("accounts"."user_id" = 1 AND "accounts"."active" = 't')) AND ( ("accounts"."type" = 'AccountDebit' ) ) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 57 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 57 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 57 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 57 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 58 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 58 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 58 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 58 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 59 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 59 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 59 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 59 and type = 'TransactionDebit')) [0m
+4 Debit Accounts
+  [4;36;1mAccountCredit Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE (("accounts"."user_id" = 1 AND "accounts"."active" = 't')) AND ( ("accounts"."type" = 'AccountCredit' ) ) [0m
+0 Credit Accounts
+Rendering template within layouts/application
+Rendering stateli/account_listing
+Rendered stateli/_account_listing_header (0.0ms)
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_account_listing_details (0.0ms)
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_account_listing_details (0.0ms)
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_account_listing_details (0.0ms)
+Rendered stateli/_account_options (16.0ms)
+Rendered stateli/_account_listing_details (16.0ms)
+Rendered stateli/_account_listing_header (0.0ms)
+Completed in 141ms (View: 32, DB: 0) | 200 OK [http://127.0.0.1/listing]
+
+
+Processing StateliController#account_pending (for 127.0.0.1 at 2009-10-16 21:54:05) [GET]
+  Parameters: {"id"=>"56"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mTransaction Load (0.0ms)[0m   [0mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) ORDER BY scheduled_date[0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) ORDER BY scheduled_date[0m
+0 Uncompleted CREDIT Transactions
+4 Uncompleted DEBIT Transactions
+Rendering template within layouts/application
+Rendering stateli/account_pending
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_date_span_selector_pending (0.0ms)
+Rendered stateli/_account_pending_header (0.0ms)
+Rendered stateli/_account_pending_header (0.0ms)
+  [4;35;1mContract Load (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (47.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+Completed in 172ms (View: 63, DB: 0) | 200 OK [http://127.0.0.1/account/56/pending]
+
+
+Processing StateliController#account_pending (for 127.0.0.1 at 2009-10-16 21:54:42) [GET]
+  Parameters: {"id"=>"56"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (16.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mTransaction Load (0.0ms)[0m   [0mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) ORDER BY scheduled_date[0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) ORDER BY scheduled_date[0m
+0 Uncompleted CREDIT Transactions
+4 Uncompleted DEBIT Transactions
+Rendering template within layouts/application
+Rendering stateli/account_pending
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_date_span_selector_pending (0.0ms)
+Rendered stateli/_account_pending_header (0.0ms)
+Rendered stateli/_account_pending_header (0.0ms)
+  [4;35;1mContract Load (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (47.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (16.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+Completed in 172ms (View: 63, DB: 32) | 200 OK [http://127.0.0.1/account/56/pending]
+
+
+Processing StateliController#account_pending (for 127.0.0.1 at 2009-10-16 21:55:05) [GET]
+  Parameters: {"id"=>"56"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mTransaction Load (0.0ms)[0m   [0mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) ORDER BY scheduled_date[0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) ORDER BY scheduled_date[0m
+0 Uncompleted CREDIT Transactions
+4 Uncompleted DEBIT Transactions
+Rendering template within layouts/application
+Rendering stateli/account_pending
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_date_span_selector_pending (15.0ms)
+Rendered stateli/_account_pending_header (0.0ms)
+Rendered stateli/_account_pending_header (0.0ms)
+  [4;35;1mContract Load (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (1016.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (15.0ms)
+Completed in 1297ms (View: 1203, DB: 0) | 200 OK [http://127.0.0.1/account/56/pending]
+
+
+Processing StateliController#account_pending (for 127.0.0.1 at 2009-10-16 21:55:10) [GET]
+  Parameters: {"id"=>"56"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mTransaction Load (0.0ms)[0m   [0mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) ORDER BY scheduled_date[0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) ORDER BY scheduled_date[0m
+0 Uncompleted CREDIT Transactions
+4 Uncompleted DEBIT Transactions
+Rendering template within layouts/application
+Rendering stateli/account_pending
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_date_span_selector_pending (0.0ms)
+Rendered stateli/_account_pending_header (0.0ms)
+Rendered stateli/_account_pending_header (0.0ms)
+  [4;35;1mContract Load (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (46.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (16.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_pending_details (0.0ms)
+Completed in 172ms (View: 78, DB: 16) | 200 OK [http://127.0.0.1/account/56/pending]
+
+
+Processing StateliController#transactions_pending (for 127.0.0.1 at 2009-10-16 21:55:15) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND ("transactions"."user_id" = 1)) ORDER BY scheduled_date ASC[0m
+Rendering template within layouts/application
+Rendering stateli/transactions_pending
+Rendered stateli/_date_span_selector_pending (0.0ms)
+Rendered stateli/_pending_header (0.0ms)
+  [4;35;1mContract Load (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (140.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (16.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (0.0ms)
+Completed in 234ms (View: 156, DB: 0) | 200 OK [http://127.0.0.1/pending_transactions]
+
+
+Processing StateliController#transactions_pending (for 127.0.0.1 at 2009-10-16 21:55:37) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-16' and scheduled_date <= '2010-10-16') AND (completed = 'f')) AND ("transactions"."user_id" = 1)) ORDER BY scheduled_date ASC[0m
+Rendering template within layouts/application
+Rendering stateli/transactions_pending
+Rendered stateli/_date_span_selector_pending (0.0ms)
+Rendered stateli/_pending_header (0.0ms)
+  [4;35;1mContract Load (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (62.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (16.0ms)
+Completed in 172ms (View: 94, DB: 0) | 200 OK [http://127.0.0.1/pending_transactions]
+
+
+Processing StateliController#income_listing (for 127.0.0.1 at 2009-10-16 21:55:50) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mContract Load (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ((("contracts"."active" = 't' AND "contracts"."transaction_type" = 'TransactionDebit')) AND ("contracts"."user_id" = 1)) [0m
+1 Debit Contracts
+Rendering template within layouts/application
+Rendering stateli/income_listing
+Rendered stateli/_contract_listing_header (78.0ms)
+Rendered stateli/_contract_options (0.0ms)
+Rendered stateli/_contract_listing_details (31.0ms)
+Completed in 203ms (View: 141, DB: 0) | 200 OK [http://127.0.0.1/income_listing]
+
+
+Processing StateliController#income_listing (for 127.0.0.1 at 2009-10-16 21:57:41) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mContract Load (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ((("contracts"."active" = 't' AND "contracts"."transaction_type" = 'TransactionDebit')) AND ("contracts"."user_id" = 1)) [0m
+1 Debit Contracts
+Rendering template within layouts/application
+Rendering stateli/income_listing
+Rendered stateli/_contract_listing_header (0.0ms)
+Rendered stateli/_contract_options (0.0ms)
+Rendered stateli/_contract_listing_details (0.0ms)
+Completed in 94ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/income_listing]
+
+
+Processing StateliController#income_listing (for 127.0.0.1 at 2009-10-16 21:58:07) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mContract Load (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ((("contracts"."active" = 't' AND "contracts"."transaction_type" = 'TransactionDebit')) AND ("contracts"."user_id" = 1)) [0m
+1 Debit Contracts
+Rendering template within layouts/application
+Rendering stateli/income_listing
+Rendered stateli/_contract_listing_header (0.0ms)
+Rendered stateli/_contract_options (0.0ms)
+Rendered stateli/_contract_listing_details (16.0ms)
+Completed in 78ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/income_listing]
+
+
+Processing StateliController#income_listing (for 127.0.0.1 at 2009-10-16 21:58:28) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mContract Load (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ((("contracts"."active" = 't' AND "contracts"."transaction_type" = 'TransactionDebit')) AND ("contracts"."user_id" = 1)) [0m
+1 Debit Contracts
+Rendering template within layouts/application
+Rendering stateli/income_listing
+Rendered stateli/_contract_listing_header (0.0ms)
+Rendered stateli/_contract_options (0.0ms)
+Rendered stateli/_contract_listing_details (16.0ms)
+Completed in 78ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/income_listing]
+
+
+Processing StateliController#contract_details (for 127.0.0.1 at 2009-10-16 21:58:33) [GET]
+  Parameters: {"id"=>"46"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mContract Load (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+Rendering template within layouts/application
+Rendering stateli/contract_details
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_account_options (0.0ms)
+Completed in 125ms (View: 63, DB: 0) | 200 OK [http://127.0.0.1/contract_details/46]
+
+
+Processing StateliController#account_journal (for 127.0.0.1 at 2009-10-16 21:58:37) [GET]
+  Parameters: {"id"=>"56"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;36;1mTransaction Load (15.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((executed_date >= '2008-10-16' and executed_date <= '2009-10-16') AND (account_id_dest = 56 or account_id_source = 56)) AND (completed = 't')) ORDER BY executed_date ASC[0m
+amount: 4295.75
+amount: 2716.88
+amount: -0.630000000000109
+amount: 0.539999999999964
+amount: -0.279999999999745
+amount: -2.0
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: -1376.9
+amount: 0.5
+amount: 0.0799999999999272
+amount: -0.0499999999992724
+amount: -0.0100000000002183
+amount: -0.0100000000002183
+amount: 0.0200000000004366
+amount: -0.0200000000004366
+amount: 0.0200000000004366
+amount: 0.0599999999994907
+amount: -0.0200000000004366
+amount: -0.0299999999988358
+Rendering template within layouts/application
+Rendering stateli/account_journal
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_date_span_selector_journal (15.0ms)
+Rendered stateli/_account_journal_header (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (16.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (16.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (15.0ms)
+Rendered stateli/_account_journal_details (15.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Completed in 203ms (View: 78, DB: 15) | 200 OK [http://127.0.0.1/account/56/journal]
+
+
+Processing StateliController#account_journal (for 127.0.0.1 at 2009-10-16 22:00:06) [GET]
+  Parameters: {"id"=>"56"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mTransaction Load (15.0ms)[0m   [0mSELECT * FROM "transactions" WHERE (((executed_date >= '2008-10-16' and executed_date <= '2009-10-16') AND (account_id_dest = 56 or account_id_source = 56)) AND (completed = 't')) ORDER BY executed_date ASC[0m
+amount: 4295.75
+amount: 2716.88
+amount: -0.630000000000109
+amount: 0.539999999999964
+amount: -0.279999999999745
+amount: -2.0
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: -1376.9
+amount: 0.5
+amount: 0.0799999999999272
+amount: -0.0499999999992724
+amount: -0.0100000000002183
+amount: -0.0100000000002183
+amount: 0.0200000000004366
+amount: -0.0200000000004366
+amount: 0.0200000000004366
+amount: 0.0599999999994907
+amount: -0.0200000000004366
+amount: -0.0299999999988358
+Rendering template within layouts/application
+Rendering stateli/account_journal
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_date_span_selector_journal (0.0ms)
+Rendered stateli/_account_journal_header (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (15.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (16.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (15.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Completed in 281ms (View: 62, DB: 15) | 200 OK [http://127.0.0.1/account/56/journal]
+
+
+Processing StateliController#account_journal (for 127.0.0.1 at 2009-10-16 22:00:22) [GET]
+  Parameters: {"id"=>"56"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;36;1mTransaction Load (16.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((executed_date >= '2008-10-16' and executed_date <= '2009-10-16') AND (account_id_dest = 56 or account_id_source = 56)) AND (completed = 't')) ORDER BY executed_date ASC[0m
+amount: 4295.75
+amount: 2716.88
+amount: -0.630000000000109
+amount: 0.539999999999964
+amount: -0.279999999999745
+amount: -2.0
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: -1376.9
+amount: 0.5
+amount: 0.0799999999999272
+amount: -0.0499999999992724
+amount: -0.0100000000002183
+amount: -0.0100000000002183
+amount: 0.0200000000004366
+amount: -0.0200000000004366
+amount: 0.0200000000004366
+amount: 0.0599999999994907
+amount: -0.0200000000004366
+amount: -0.0299999999988358
+Rendering template within layouts/application
+Rendering stateli/account_journal
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_date_span_selector_journal (16.0ms)
+Rendered stateli/_account_journal_header (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (15.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (16.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Completed in 188ms (View: 63, DB: 16) | 200 OK [http://127.0.0.1/account/56/journal]
+
+
+Processing StateliController#account_journal (for 127.0.0.1 at 2009-10-16 22:01:00) [GET]
+  Parameters: {"id"=>"56"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (16.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;35;1mTransaction Load (0.0ms)[0m   [0mSELECT * FROM "transactions" WHERE (((executed_date >= '2008-10-16' and executed_date <= '2009-10-16') AND (account_id_dest = 56 or account_id_source = 56)) AND (completed = 't')) ORDER BY executed_date ASC[0m
+amount: 4295.75
+amount: 2716.88
+amount: -0.630000000000109
+amount: 0.539999999999964
+amount: -0.279999999999745
+amount: -2.0
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: -1376.9
+amount: 0.5
+amount: 0.0799999999999272
+amount: -0.0499999999992724
+amount: -0.0100000000002183
+amount: -0.0100000000002183
+amount: 0.0200000000004366
+amount: -0.0200000000004366
+amount: 0.0200000000004366
+amount: 0.0599999999994907
+amount: -0.0200000000004366
+amount: -0.0299999999988358
+Rendering template within layouts/application
+Rendering stateli/account_journal
+Rendered stateli/_account_options (16.0ms)
+Rendered stateli/_date_span_selector_journal (0.0ms)
+Rendered stateli/_account_journal_header (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (15.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (16.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Completed in 188ms (View: 63, DB: 16) | 200 OK [http://127.0.0.1/account/56/journal]
+
+
+Processing StateliController#account_journal (for 127.0.0.1 at 2009-10-16 22:01:27) [GET]
+  Parameters: {"id"=>"56"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-16') AND (completed = 'f')) AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 56 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 56 and type = 'TransactionDebit')) [0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((executed_date >= '2008-10-16' and executed_date <= '2009-10-16') AND (account_id_dest = 56 or account_id_source = 56)) AND (completed = 't')) ORDER BY executed_date ASC[0m
+amount: 4295.75
+amount: 2716.88
+amount: -0.630000000000109
+amount: 0.539999999999964
+amount: -0.279999999999745
+amount: -2.0
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: 2716.88
+amount: -1376.9
+amount: 0.5
+amount: 0.0799999999999272
+amount: -0.0499999999992724
+amount: -0.0100000000002183
+amount: -0.0100000000002183
+amount: 0.0200000000004366
+amount: -0.0200000000004366
+amount: 0.0200000000004366
+amount: 0.0599999999994907
+amount: -0.0200000000004366
+amount: -0.0299999999988358
+Rendering template within layouts/application
+Rendering stateli/account_journal
+Rendered stateli/_account_options (0.0ms)
+Rendered stateli/_date_span_selector_journal (0.0ms)
+Rendered stateli/_account_journal_header (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (15.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (79.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (15.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (16.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (15.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_account_journal_details (0.0ms)
+Completed in 265ms (View: 140, DB: 0) | 200 OK [http://127.0.0.1/account/56/journal]
+
+
+Processing StateliController#account_details (for 127.0.0.1 at 2009-10-16 22:01:38) [GET]
+  Parameters: {"id"=>"56"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendering template within layouts/application
+Rendering stateli/account_details
+Rendered stateli/_account_options (15.0ms)
+Completed in 78ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/account_details/56]
+
+
+Processing StateliController#transaction_details (for 127.0.0.1 at 2009-10-16 22:02:47) [GET]
+  Parameters: {"id"=>"117588"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE ("transactions"."id" = 117588) [0m
+Rendering template within layouts/application
+Rendering stateli/transaction_details
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Completed in 468ms (View: 390, DB: 0) | 200 OK [http://127.0.0.1/transaction_details/117588]
