@@ -1,4 +1,4 @@
 
 
-	page.show_popup_form('signup')
+page.show_popup_form('signup')
 	

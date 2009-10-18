@@ -105,7 +105,7 @@
 	    	Account
 	    </div>
 	    <div class="form_value">
-	    	<%= collection_select(:contract, :autopay_account_id, Account.all, :id, :name, {}, :class => "base_form_field") %>
+	    	<%= collection_select(:contract, :autopay_account_id, Account.all, :id, :name, {}, {:class => "base_form_field", :style => "width:200px"}) %>
 	    </div> 
 	  </div>
 	  

@@ -1,3 +1,4 @@
 
+page[:flashdiv].hide
 
 page[:journal_details].replace_html :partial => 'account_journal_details', :collection => @transactions

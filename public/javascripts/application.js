@@ -110,7 +110,6 @@ function select_date(text_field_id){
 	$$('.base_form_field').each(function(inp){
 		inp.enable();
 	});
-	
 	var date = new Date($F(text_field_id + '_calendar'));
 	year = date.getFullYear();
 	month = date.getMonth() + 1;

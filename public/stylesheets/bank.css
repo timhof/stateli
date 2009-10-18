@@ -229,8 +229,7 @@ ul.navigation_tab li {
 #listing_form_div {
 	border: 3px solid;
 	z-index: 1;
-	background-image: url(../images/bank_header_navigation.gif);
-	background-position: 0 -259px;
+	background-image: url(../images/listing_form.gif);
 }
 
 
@@ -654,9 +653,9 @@ ul.navigation_tab li {
 }
 
 .popup_calendar_div {
-	position: absolute;
 	top: 50px;
 	left: 415px;	
+	z-index: 999;
 }
 .submit_button_div {
 	margin: 3px;

@@ -2,4 +2,5 @@
 
 page.hide_popup_form
 page[:flashdiv].replace_html flash[:notice]
+page[:flashdiv].visual_effect(:fade, :duration => 2)
 flash.discard

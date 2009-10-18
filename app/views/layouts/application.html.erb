@@ -30,10 +30,11 @@
 
   	Event.observe(document, 'mousedown', function(el) {
   		if(!is_over_calendar){
-			$$('.popup_calendar_div').each(function (el) {
-	    		el.hide();	
-	    		post_hide_calendar();
-			});
+  			//alert("notovercalendar");
+			//$$('.popup_calendar_div').each(function (el) {
+	    	//	el.hide();	
+	    	//	post_hide_calendar();
+			//});
 		}
 	});
   	
@@ -91,17 +92,7 @@
     			this.removeClassName('main_title_div_mouseover');
 			});
 			
-			$$('.popup_calendar_div').each(function (el) {
-    			return $(el).observe('mouseover', function(el) {
-    				mouseover_calendar();
-    			});
-			});
 			
-			$$('.popup_calendar_div').each(function (el) {
-    			return $(el).observe('mouseout', function(el) {
-    				mouseout_calendar();
-				});
-			});
     });
     
 <% if @navkey == 'flex' %>

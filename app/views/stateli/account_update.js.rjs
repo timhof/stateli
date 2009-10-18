@@ -21,3 +21,4 @@ page[:journal_details].replace_html :partial =>"account_journal_details", :colle
 page << "}"
 
 page[:flashdiv].replace_html flash[:notice]
+page[:flashdiv].visual_effect(:fade, :duration => 2)
