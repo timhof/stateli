@@ -8,7 +8,7 @@
 		<div id="transactions_pending_credit" class="type_div" style="display:<%= @transactions.size > 0 ? "block" : "none" %>;">
 
 		  	<%= render :partial => 'pending_header' %>
-		  	<div>
+		  	<div id="transactions_pending_details_credit">
 		  		<%= render :partial => 'pending_details', :collection => @transactions %>
 		  	</div>
 		</div>
