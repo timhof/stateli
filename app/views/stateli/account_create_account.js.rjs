@@ -20,5 +20,7 @@ unless @account.blank?
 	end
 	
 	page[:flashdiv].replace_html flash[:notice]
+	page[:flashdiv].visual_effect(:fade, :duration => 2)
+
 	flash.discard
 end
