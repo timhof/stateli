@@ -30,11 +30,10 @@
 
   	Event.observe(document, 'mousedown', function(el) {
   		if(!is_over_calendar){
-  			//alert("notovercalendar");
-			//$$('.popup_calendar_div').each(function (el) {
-	    	//	el.hide();	
-	    	//	post_hide_calendar();
-			//});
+			$$('.popup_calendar_div').each(function (el) {
+	    		el.hide();	
+	    		post_hide_calendar();
+			});
 		}
 	});
   	

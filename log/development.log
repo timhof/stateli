@@ -37975,3 +37975,127 @@ ADDING 2019-01-01
 VALID DATE: 2/1/2019
 Rendering stateli/build_contract
 Completed in 1031ms (View: 0, DB: 64) | 200 OK [http://127.0.0.1/contract_credit]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-18 16:13:01) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+Completed in 266ms (View: 266, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-10-18 16:13:07) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"EHsUbm48IbAMSjp0Q/W38x8SZc3rWrUt+H4Jdc1nPoA=", "login"=>"timhof", "password"=>"abacus"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'timhof') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 203ms (DB: 0) | 302 Found [http://127.0.0.1/session]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-18 16:13:07) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 234ms (View: 218, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#transactions_pending (for 127.0.0.1 at 2009-10-18 16:13:09) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTransaction Load (0.0ms)[0m   [0mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-18' and scheduled_date <= '2010-10-18') AND (completed = 'f')) AND ("transactions"."user_id" = 1)) ORDER BY scheduled_date ASC[0m
+Rendering template within layouts/application
+Rendering stateli/transactions_pending
+Rendered stateli/_date_span_selector_pending (735.0ms)
+Rendered stateli/_pending_header (0.0ms)
+  [4;36;1mContract Load (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (15.0ms)
+Rendered stateli/_pending_details (140.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (16.0ms)
+Rendered stateli/_pending_details (16.0ms)
+Completed in 1109ms (View: 922, DB: 0) | 200 OK [http://127.0.0.1/pending_transactions]
+
+
+Processing StateliController#transactions_pending (for 127.0.0.1 at 2009-10-18 16:13:23) [GET]
+  Parameters: {"start_date"=>"2009-09-04", "commit"=>"Add item with Ajax", "end_date_calendar"=>"October 18, 2010", "authenticity_token"=>"EHsUbm48IbAMSjp0Q/W38x8SZc3rWrUt+H4Jdc1nPoA=", "start_date_calendar"=>"September 4, 2009", "end_date"=>"2010-10-18"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTransaction Load (0.0ms)[0m   [0mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-09-04' and scheduled_date <= '2010-10-18') AND (completed = 'f')) AND ("transactions"."user_id" = 1)) ORDER BY scheduled_date ASC[0m
+Rendering stateli/update_transactions_pending
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.length) on line #7 of app/views/stateli/update_transactions_pending.js.rjs:
+4: page[:transactions_pending_details_credit].replace_html :partial => 'pending_details', :collection => @transactions_credit
+5: page[:transactions_pending_details_debit].replace_html :partial => 'pending_details', :collection => @transactions_debit
+6: 
+7: if @transactions_credit.length > 0
+8: 	page[:transactions_pending_credit].show
+9: else
+10: 	page[:transactions_pending_credit].hide
+
+    app/views/stateli/update_transactions_pending.js.rjs:7:in `_run_rjs_app47views47stateli47update_transactions_pending46js46rjs'
+    app/views/stateli/update_transactions_pending.js.rjs:1:in `_run_rjs_app47views47stateli47update_transactions_pending46js46rjs'
+    app/controllers/stateli_controller.rb:88:in `transactions_pending'
+    app/controllers/stateli_controller.rb:85:in `transactions_pending'
+
+Rendering template within layouts/application
+Rendering stateli/error500 (500)
+
+
+Processing StateliController#transactions_pending (for 127.0.0.1 at 2009-10-18 16:14:16) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTransaction Load (0.0ms)[0m   [0mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-18' and scheduled_date <= '2010-10-18') AND (completed = 'f')) AND ("transactions"."user_id" = 1)) ORDER BY scheduled_date ASC[0m
+Rendering template within layouts/application
+Rendering stateli/transactions_pending
+Rendered stateli/_date_span_selector_pending (16.0ms)
+Rendered stateli/_pending_header (0.0ms)
+  [4;36;1mContract Load (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (46.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (16.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (0.0ms)
+Completed in 172ms (View: 94, DB: 0) | 200 OK [http://127.0.0.1/pending_transactions]
+
+
+Processing StateliController#transactions_pending (for 127.0.0.1 at 2009-10-18 16:14:21) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTransaction Load (0.0ms)[0m   [0mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-18' and scheduled_date <= '2010-10-18') AND (completed = 'f')) AND ("transactions"."user_id" = 1)) ORDER BY scheduled_date ASC[0m
+Rendering template within layouts/application
+Rendering stateli/transactions_pending
+Rendered stateli/_date_span_selector_pending (16.0ms)
+Rendered stateli/_pending_header (0.0ms)
+  [4;36;1mContract Load (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (141.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 46) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 56) [0m
+Rendered stateli/_transaction_options (0.0ms)
+Rendered stateli/_pending_details (15.0ms)
+Completed in 250ms (View: 172, DB: 0) | 200 OK [http://127.0.0.1/pending_transactions]
