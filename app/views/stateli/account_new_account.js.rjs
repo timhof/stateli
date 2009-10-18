@@ -1,7 +1,6 @@
 
 
 	page.show_popup_form('account_new')
-	page[:flashdiv].show
 	if flash[:notice]
 		page[:flashdiv].replace_html flash[:notice]
 	end

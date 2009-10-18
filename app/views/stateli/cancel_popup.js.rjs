@@ -1,2 +1,3 @@
 
 page.hide_popup_form
+page[:flashdiv].hide

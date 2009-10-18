@@ -36606,3 +36606,916 @@ Rendering stateli/account_create_account
 Rendered stateli/_account_options (1.0ms)
 Rendered stateli/_account_listing_details (7.0ms)
 Completed in 270ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/new_account]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-18 05:52:11) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 218ms (View: 215, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#contract_credit (for 127.0.0.1 at 2009-10-18 05:52:14) [GET]
+  Parameters: {"authenticity_token"=>"/qQ5rBIF6zivy0gJq+OJGn8Yd39sLuxV+NGvvYpOfWs="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering stateli/contract_credit
+Rendered stateli/_date_selector (922.0ms)
+Rendered stateli/_date_selector (3.0ms)
+Rendered stateli/_date_selector (2.0ms)
+  [4;36;1mAccount Load (2.0ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (1002.0ms)
+Rendered stateli/_contract_credit_new (1009.0ms)
+Completed in 1160ms (View: 1029, DB: 2) | 200 OK [http://127.0.0.1/contract_credit?authenticity_token=%2FqQ5rBIF6zivy0gJq%2BOJGn8Yd39sLuxV%2BNGvvYpOfWs%3D]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-18 05:53:29) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 52ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#contract_credit (for 127.0.0.1 at 2009-10-18 05:53:35) [GET]
+  Parameters: {"authenticity_token"=>"/qQ5rBIF6zivy0gJq+OJGn8Yd39sLuxV+NGvvYpOfWs="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering stateli/contract_credit
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (56.0ms)
+Rendered stateli/_contract_credit_new (62.0ms)
+Completed in 132ms (View: 74, DB: 1) | 200 OK [http://127.0.0.1/contract_credit?authenticity_token=%2FqQ5rBIF6zivy0gJq%2BOJGn8Yd39sLuxV%2BNGvvYpOfWs%3D]
+
+
+Processing StateliController#cancel_popup (for 127.0.0.1 at 2009-10-18 05:53:47) [GET]
+  Parameters: {"authenticity_token"=>"/qQ5rBIF6zivy0gJq+OJGn8Yd39sLuxV+NGvvYpOfWs="}
+Rendering stateli/cancel_popup
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/cancel?authenticity_token=%2FqQ5rBIF6zivy0gJq%2BOJGn8Yd39sLuxV%2BNGvvYpOfWs%3D]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-18 05:53:48) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 56ms (View: 50, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#contract_credit (for 127.0.0.1 at 2009-10-18 05:53:50) [GET]
+  Parameters: {"authenticity_token"=>"/qQ5rBIF6zivy0gJq+OJGn8Yd39sLuxV+NGvvYpOfWs="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering stateli/contract_credit
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (1.0ms)
+  [4;36;1mAccount Load (2.0ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (56.0ms)
+Rendered stateli/_contract_credit_new (61.0ms)
+Completed in 132ms (View: 72, DB: 2) | 200 OK [http://127.0.0.1/contract_credit?authenticity_token=%2FqQ5rBIF6zivy0gJq%2BOJGn8Yd39sLuxV%2BNGvvYpOfWs%3D]
+
+
+Processing StateliController#cancel_popup (for 127.0.0.1 at 2009-10-18 05:54:11) [GET]
+  Parameters: {"authenticity_token"=>"/qQ5rBIF6zivy0gJq+OJGn8Yd39sLuxV+NGvvYpOfWs="}
+Rendering stateli/cancel_popup
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/cancel?authenticity_token=%2FqQ5rBIF6zivy0gJq%2BOJGn8Yd39sLuxV%2BNGvvYpOfWs%3D]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-18 05:54:11) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 56ms (View: 51, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#contract_credit (for 127.0.0.1 at 2009-10-18 05:54:17) [GET]
+  Parameters: {"authenticity_token"=>"/qQ5rBIF6zivy0gJq+OJGn8Yd39sLuxV+NGvvYpOfWs="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering stateli/contract_credit
+Rendered stateli/_date_selector (5.0ms)
+Rendered stateli/_date_selector (3.0ms)
+Rendered stateli/_date_selector (4.0ms)
+  [4;35;1mAccount Load (4.0ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (123.0ms)
+Rendered stateli/_contract_credit_new (135.0ms)
+Completed in 245ms (View: 156, DB: 4) | 200 OK [http://127.0.0.1/contract_credit?authenticity_token=%2FqQ5rBIF6zivy0gJq%2BOJGn8Yd39sLuxV%2BNGvvYpOfWs%3D]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-18 05:56:12) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 52ms (View: 47, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#contract_credit (for 127.0.0.1 at 2009-10-18 05:56:19) [GET]
+  Parameters: {"authenticity_token"=>"/qQ5rBIF6zivy0gJq+OJGn8Yd39sLuxV+NGvvYpOfWs="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering stateli/contract_credit
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+  [4;36;1mAccount Load (2.0ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (147.0ms)
+Rendered stateli/_contract_credit_new (157.0ms)
+Completed in 287ms (View: 171, DB: 2) | 200 OK [http://127.0.0.1/contract_credit?authenticity_token=%2FqQ5rBIF6zivy0gJq%2BOJGn8Yd39sLuxV%2BNGvvYpOfWs%3D]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-18 05:56:32) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 53ms (View: 48, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#contract_credit (for 127.0.0.1 at 2009-10-18 05:56:38) [GET]
+  Parameters: {"authenticity_token"=>"/qQ5rBIF6zivy0gJq+OJGn8Yd39sLuxV+NGvvYpOfWs="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering stateli/contract_credit
+Rendered stateli/_date_selector (3.0ms)
+Rendered stateli/_date_selector (3.0ms)
+Rendered stateli/_date_selector (2.0ms)
+  [4;35;1mAccount Load (2.0ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (63.0ms)
+Rendered stateli/_contract_credit_new (68.0ms)
+Completed in 138ms (View: 79, DB: 2) | 200 OK [http://127.0.0.1/contract_credit?authenticity_token=%2FqQ5rBIF6zivy0gJq%2BOJGn8Yd39sLuxV%2BNGvvYpOfWs%3D]
+
+
+Processing StateliController#build_contract_credit (for 127.0.0.1 at 2009-10-18 05:57:34) [POST]
+  Parameters: {"contract_date_start_calendar"=>"October 18, 2009", "commit"=>"Create", "authenticity_token"=>"/qQ5rBIF6zivy0gJq+OJGn8Yd39sLuxV+NGvvYpOfWs=", "contract_full_date_calendar"=>"October 18, 2009", "contract_date_end_calendar"=>"October 18, 2009", "contract"=>{"name"=>"mortgage", "full_date"=>"2009-10-18", "amount"=>"2678.34", "day_of_month_alt"=>"1", "autopay"=>"1", "type"=>"ContractMonthly", "day_of_month"=>"1", "date_start"=>"2009-10-18", "description"=>"Mortgage Payment", "active"=>"1", "autopay_account_id"=>"56", "weekday"=>"0", "date_end"=>"2009-10-18"}}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+BUILDING CREDIT CONTRACT
+WARNING: Can't mass-assign these protected attributes: type
+CONTRACT TYPE: ContractMonthly
+SETTING DATE FIELDS
+FINISHED SETTING DATE FIELDS
+  [4;35;1mContractMonthly Create (1.0ms)[0m   [0mINSERT INTO "contracts" ("name", "full_date", "created_at", "updated_at", "amount", "autopay", "day_of_month_alt", "transaction_type", "type", "user_id", "day_of_month", "description", "date_start", "date_end", "autopay_account_id", "weekday", "active") VALUES('mortgage', '2009-10-18', '2009-10-18 09:57:34', '2009-10-18 09:57:34', 2678.34, 't', 1, 'TransactionCredit', 'ContractMonthly', 1, 1, 'Mortgage Payment', '2009-10-18', '2009-10-18', 56, 0, 't')[0m
+START DATE: 2009-10-18
+VALID DATE: 10/1/2009
+VALID DATE: 11/1/2009
+Rendering stateli/build_contract
+Completed in 355ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/contract_credit]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-18 06:08:43) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 239ms (View: 234, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-10-18 06:08:47) [GET]
+Redirected to http://127.0.0.1:3000/
+Completed in 39ms (DB: 0) | 302 Found [http://127.0.0.1/logout]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-18 06:08:47) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#signup (for 127.0.0.1 at 2009-10-18 06:08:51) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+Rendering stateli/signup
+Rendered stateli/_signup (6.0ms)
+Completed in 62ms (View: 20, DB: 0) | 200 OK [http://127.0.0.1/signup?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#register (for 127.0.0.1 at 2009-10-18 06:09:06) [POST]
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0=", "user"=>{"password_confirmation"=>"abacus", "password"=>"abacus", "login"=>"guest", "email"=>"guest1026@gmail.com"}}
+  [4;35;1mUser Exists (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'guest') LIMIT 1[0m
+  [4;36;1mUser Exists (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'guest1026@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "remember_token", "login", "email") VALUES('', '6a23ed39b449696321b8098ba6ce8345b9ef8b70', '2009-10-18 10:09:06', 'c75e003f4f514ed46b5a333ba16c6cc091327958', NULL, '2009-10-18 10:09:06', NULL, 'guest', 'guest1026@gmail.com')[0m
+Rendering stateli/register
+Completed in 218ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/register]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-10-18 06:09:08) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0=", "login"=>"guest", "password"=>"abacus"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'guest') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 46ms (DB: 1) | 302 Found [http://127.0.0.1/session]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-18 06:09:08) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 52ms (View: 48, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#account_new_account (for 127.0.0.1 at 2009-10-18 06:09:10) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering stateli/account_new_account
+Rendered stateli/_account_new (7.0ms)
+Completed in 75ms (View: 19, DB: 1) | 200 OK [http://127.0.0.1/new_account?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#account_create_account (for 127.0.0.1 at 2009-10-18 06:09:21) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0=", "account"=>{"name"=>"Chase Checking", "type"=>"AccountDebit", "description"=>"Chase Checking Account", "active"=>"1", "balance"=>"4568.23"}}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: type
+FORMAT: #<ActionController::MimeResponds::Responder:0x7ef85678>
+OLD BALANCE: 4568.23
+  [4;36;1mAccountDebit Create (0.0ms)[0m   [0;1mINSERT INTO "accounts" ("name", "created_at", "updated_at", "type", "user_id", "description", "balance", "active") VALUES('Chase Checking', '2009-10-18 10:09:21', '2009-10-18 10:09:21', 'AccountDebit', 8, 'Chase Checking Account', 4568.23, 't')[0m
+OLD BALANCE: 0 NEW BALANCE: 4568.23
+  [4;35;1mTransactionReconcile Create (0.0ms)[0m   [0mINSERT INTO "transactions" ("name", "executed_date", "created_at", "scheduled_date", "completed", "updated_at", "amount", "account_id_source", "autopay", "type", "user_id", "description", "account_id_dest", "contract_id") VALUES('Account Reconciliation', '2009-10-18', '2009-10-18 10:09:21', '2009-10-18', 't', '2009-10-18 10:09:21', 4568.23, 67, 'f', 'TransactionReconcile', 8, 'Account Reconciliation', 67, NULL)[0m
+Rendering stateli/account_create_account
+Rendered stateli/_account_options (3.0ms)
+Rendered stateli/_account_listing_details (14.0ms)
+Completed in 386ms (View: 28, DB: 1) | 200 OK [http://127.0.0.1/new_account]
+
+
+Processing StateliController#account_new_account (for 127.0.0.1 at 2009-10-18 06:09:24) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering stateli/account_new_account
+Rendered stateli/_account_new (3.0ms)
+Completed in 64ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/new_account?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#account_create_account (for 127.0.0.1 at 2009-10-18 06:09:39) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0=", "account"=>{"name"=>"ING Direct Orange", "type"=>"AccountDebit", "description"=>"ING Direct Savings Account", "active"=>"1", "balance"=>"45678.34"}}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: type
+FORMAT: #<ActionController::MimeResponds::Responder:0x7f13e49c>
+OLD BALANCE: 45678.34
+  [4;36;1mAccountDebit Create (1.0ms)[0m   [0;1mINSERT INTO "accounts" ("name", "created_at", "updated_at", "type", "user_id", "description", "balance", "active") VALUES('ING Direct Orange', '2009-10-18 10:09:39', '2009-10-18 10:09:39', 'AccountDebit', 8, 'ING Direct Savings Account', 45678.34, 't')[0m
+OLD BALANCE: 0 NEW BALANCE: 45678.34
+  [4;35;1mTransactionReconcile Create (0.0ms)[0m   [0mINSERT INTO "transactions" ("name", "executed_date", "created_at", "scheduled_date", "completed", "updated_at", "amount", "account_id_source", "autopay", "type", "user_id", "description", "account_id_dest", "contract_id") VALUES('Account Reconciliation', '2009-10-18', '2009-10-18 10:09:39', '2009-10-18', 't', '2009-10-18 10:09:39', 45678.34, 68, 'f', 'TransactionReconcile', 8, 'Account Reconciliation', 68, NULL)[0m
+Rendering stateli/account_create_account
+Rendered stateli/_account_options (1.0ms)
+Rendered stateli/_account_listing_details (7.0ms)
+Completed in 257ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/new_account]
+
+
+Processing StateliController#account_new_account (for 127.0.0.1 at 2009-10-18 06:09:43) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering stateli/account_new_account
+Rendered stateli/_account_new (5.0ms)
+Completed in 68ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/new_account?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#account_create_account (for 127.0.0.1 at 2009-10-18 06:09:59) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0=", "account"=>{"name"=>"TDAmeritrade", "type"=>"AccountDebit", "description"=>"TDAmeritrade Trading Account", "active"=>"1", "balance"=>"98765.34"}}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: type
+FORMAT: #<ActionController::MimeResponds::Responder:0x7f2caff4>
+OLD BALANCE: 98765.34
+  [4;36;1mAccountDebit Create (1.0ms)[0m   [0;1mINSERT INTO "accounts" ("name", "created_at", "updated_at", "type", "user_id", "description", "balance", "active") VALUES('TDAmeritrade', '2009-10-18 10:09:59', '2009-10-18 10:09:59', 'AccountDebit', 8, 'TDAmeritrade Trading Account', 98765.34, 't')[0m
+OLD BALANCE: 0 NEW BALANCE: 98765.34
+  [4;35;1mTransactionReconcile Create (0.0ms)[0m   [0mINSERT INTO "transactions" ("name", "executed_date", "created_at", "scheduled_date", "completed", "updated_at", "amount", "account_id_source", "autopay", "type", "user_id", "description", "account_id_dest", "contract_id") VALUES('Account Reconciliation', '2009-10-18', '2009-10-18 10:09:59', '2009-10-18', 't', '2009-10-18 10:09:59', 98765.34, 69, 'f', 'TransactionReconcile', 8, 'Account Reconciliation', 69, NULL)[0m
+Rendering stateli/account_create_account
+Rendered stateli/_account_options (1.0ms)
+Rendered stateli/_account_listing_details (8.0ms)
+Completed in 228ms (View: 13, DB: 2) | 200 OK [http://127.0.0.1/new_account]
+
+
+Processing StateliController#contract_credit (for 127.0.0.1 at 2009-10-18 06:10:04) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering stateli/contract_credit
+Rendered stateli/_date_selector (467.0ms)
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+  [4;35;1mAccount Load (2.0ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (526.0ms)
+Rendered stateli/_contract_credit_new (532.0ms)
+Completed in 627ms (View: 552, DB: 2) | 200 OK [http://127.0.0.1/contract_credit?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#build_contract_credit (for 127.0.0.1 at 2009-10-18 06:10:52) [POST]
+  Parameters: {"contract_date_start_calendar"=>"October 18, 2009", "commit"=>"Create", "authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0=", "contract_full_date_calendar"=>"October 18, 2009", "contract_date_end_calendar"=>"October 18, 2009", "contract"=>{"name"=>"Mortgage", "full_date"=>"2009-10-18", "amount"=>"2765.23", "day_of_month_alt"=>"1", "autopay"=>"1", "type"=>"ContractMonthly", "day_of_month"=>"1", "date_start"=>"2009-10-18", "description"=>"Mortgage Payment", "active"=>"1", "autopay_account_id"=>"56", "weekday"=>"0", "date_end"=>"2009-10-18"}}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+BUILDING CREDIT CONTRACT
+WARNING: Can't mass-assign these protected attributes: type
+CONTRACT TYPE: ContractMonthly
+SETTING DATE FIELDS
+FINISHED SETTING DATE FIELDS
+  [4;35;1mContractMonthly Create (0.0ms)[0m   [0mINSERT INTO "contracts" ("name", "full_date", "created_at", "updated_at", "amount", "autopay", "day_of_month_alt", "transaction_type", "type", "user_id", "day_of_month", "description", "date_start", "date_end", "autopay_account_id", "weekday", "active") VALUES('Mortgage', '2009-10-18', '2009-10-18 10:10:52', '2009-10-18 10:10:52', 2765.23, 't', 1, 'TransactionCredit', 'ContractMonthly', 8, 1, 'Mortgage Payment', '2009-10-18', '2009-10-18', 56, 0, 't')[0m
+START DATE: 2009-10-18
+VALID DATE: 10/1/2009
+VALID DATE: 11/1/2009
+Rendering stateli/build_contract
+Completed in 676ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/contract_credit]
+
+
+Processing StateliController#contract_credit (for 127.0.0.1 at 2009-10-18 06:10:57) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering stateli/contract_credit
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+  [4;35;1mAccount Load (3.0ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (54.0ms)
+Rendered stateli/_contract_credit_new (56.0ms)
+Completed in 127ms (View: 65, DB: 3) | 200 OK [http://127.0.0.1/contract_credit?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#build_contract_credit (for 127.0.0.1 at 2009-10-18 06:11:17) [POST]
+  Parameters: {"contract_date_start_calendar"=>"October 18, 2009", "commit"=>"Create", "authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0=", "contract_full_date_calendar"=>"October 18, 2009", "contract_date_end_calendar"=>"October 18, 2009", "contract"=>{"name"=>"LIRR", "full_date"=>"2009-10-18", "amount"=>"359.67", "day_of_month_alt"=>"1", "autopay"=>"1", "type"=>"ContractMonthly", "day_of_month"=>"1", "date_start"=>"2009-10-18", "description"=>"Monthly Train Ticket", "active"=>"1", "autopay_account_id"=>"56", "weekday"=>"0", "date_end"=>"2009-10-18"}}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+BUILDING CREDIT CONTRACT
+WARNING: Can't mass-assign these protected attributes: type
+CONTRACT TYPE: ContractMonthly
+SETTING DATE FIELDS
+FINISHED SETTING DATE FIELDS
+  [4;35;1mContractMonthly Create (1.0ms)[0m   [0mINSERT INTO "contracts" ("name", "full_date", "created_at", "updated_at", "amount", "autopay", "day_of_month_alt", "transaction_type", "type", "user_id", "day_of_month", "description", "date_start", "date_end", "autopay_account_id", "weekday", "active") VALUES('LIRR', '2009-10-18', '2009-10-18 10:11:17', '2009-10-18 10:11:17', 359.67, 't', 1, 'TransactionCredit', 'ContractMonthly', 8, 1, 'Monthly Train Ticket', '2009-10-18', '2009-10-18', 56, 0, 't')[0m
+START DATE: 2009-10-18
+VALID DATE: 10/1/2009
+VALID DATE: 11/1/2009
+Rendering stateli/build_contract
+Completed in 235ms (View: 4, DB: 2) | 200 OK [http://127.0.0.1/contract_credit]
+
+
+Processing StateliController#contract_debit (for 127.0.0.1 at 2009-10-18 06:11:20) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering stateli/contract_debit
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (1.0ms)
+Rendered stateli/_date_selector (2.0ms)
+  [4;35;1mAccount Load (2.0ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (53.0ms)
+Rendered stateli/_contract_debit_new (55.0ms)
+Completed in 223ms (View: 165, DB: 2) | 200 OK [http://127.0.0.1/contract_debit?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#build_contract_debit (for 127.0.0.1 at 2009-10-18 06:11:42) [POST]
+  Parameters: {"contract_date_start_calendar"=>"October 18, 2009", "commit"=>"Create", "authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0=", "contract_full_date_calendar"=>"October 18, 2009", "contract_date_end_calendar"=>"October 18, 2009", "contract"=>{"name"=>"L5M", "full_date"=>"2009-10-18", "amount"=>"3672.34", "day_of_month_alt"=>"15", "autopay"=>"1", "type"=>"ContractBimonthly", "day_of_month"=>"1", "date_start"=>"2009-10-18", "description"=>"L5M Direct Deposit", "active"=>"1", "autopay_account_id"=>"56", "weekday"=>"0", "date_end"=>"2009-10-18"}}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+BUILDING DEBIT CONTRACT
+WARNING: Can't mass-assign these protected attributes: type
+CONTRACT TYPE: ContractBimonthly
+SETTING DATE FIELDS
+FINISHED SETTING DATE FIELDS
+  [4;35;1mContractBimonthly Create (1.0ms)[0m   [0mINSERT INTO "contracts" ("name", "full_date", "created_at", "updated_at", "amount", "autopay", "day_of_month_alt", "transaction_type", "type", "user_id", "day_of_month", "description", "date_start", "date_end", "autopay_account_id", "weekday", "active") VALUES('L5M', '2009-10-18', '2009-10-18 10:11:42', '2009-10-18 10:11:42', 3672.34, 't', 15, 'TransactionDebit', 'ContractBimonthly', 8, 1, 'L5M Direct Deposit', '2009-10-18', '2009-10-18', 56, 0, 't')[0m
+START DATE: 2009-10-18
+VALID DATE: 10/1/2009
+VALID DATE: 11/1/2009
+START DATE: 2009-10-18
+VALID DATE: 10/15/2009
+VALID DATE: 11/15/2009
+Rendering stateli/build_contract
+Completed in 189ms (View: 4, DB: 1) | 200 OK [http://127.0.0.1/contract_debit]
+
+
+Processing StateliController#account_listing (for 127.0.0.1 at 2009-10-18 06:11:48) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;35;1mAccountDebit Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE (("accounts"."user_id" = 8 AND "accounts"."active" = 't')) AND ( ("accounts"."type" = 'AccountDebit' ) ) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-18') AND (completed = 'f')) AND (account_id_source = 67 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-18') AND (completed = 'f')) AND (account_id_dest = 67 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 67 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 67 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-18') AND (completed = 'f')) AND (account_id_source = 68 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-18') AND (completed = 'f')) AND (account_id_dest = 68 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 68 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 68 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-18') AND (completed = 'f')) AND (account_id_source = 69 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE (((scheduled_date < '2009-10-18') AND (completed = 'f')) AND (account_id_dest = 69 and type = 'TransactionDebit')) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_source = 69 and type = 'TransactionCredit')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "transactions" WHERE ((completed = 'f') AND (account_id_dest = 69 and type = 'TransactionDebit')) [0m
+3 Debit Accounts
+  [4;36;1mAccountCredit Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE (("accounts"."user_id" = 8 AND "accounts"."active" = 't')) AND ( ("accounts"."type" = 'AccountCredit' ) ) [0m
+0 Credit Accounts
+Rendering template within layouts/application
+Rendering stateli/account_listing
+Rendered stateli/_account_listing_header (1.0ms)
+Rendered stateli/_account_options (1.0ms)
+Rendered stateli/_account_listing_details (8.0ms)
+Rendered stateli/_account_options (2.0ms)
+Rendered stateli/_account_listing_details (2.0ms)
+Rendered stateli/_account_options (1.0ms)
+Rendered stateli/_account_listing_details (2.0ms)
+Rendered stateli/_account_listing_header (0.0ms)
+Completed in 141ms (View: 31, DB: 5) | 200 OK [http://127.0.0.1/listing]
+
+
+Processing StateliController#transactions_pending (for 127.0.0.1 at 2009-10-18 06:11:51) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-18' and scheduled_date <= '2010-10-18') AND (completed = 'f')) AND ("transactions"."user_id" = 8)) ORDER BY scheduled_date ASC[0m
+Rendering template within layouts/application
+Rendering stateli/transactions_pending
+Rendered stateli/_date_span_selector_pending (20.0ms)
+Rendered stateli/_pending_header (1.0ms)
+Completed in 140ms (View: 71, DB: 0) | 200 OK [http://127.0.0.1/pending_transactions]
+
+
+Processing StateliController#contract_credit (for 127.0.0.1 at 2009-10-18 06:11:57) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering stateli/contract_credit
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (1.0ms)
+  [4;36;1mAccount Load (2.0ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (54.0ms)
+Rendered stateli/_contract_credit_new (56.0ms)
+Completed in 127ms (View: 68, DB: 2) | 200 OK [http://127.0.0.1/contract_credit?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#cancel_popup (for 127.0.0.1 at 2009-10-18 06:18:23) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+Rendering stateli/cancel_popup
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/cancel?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#transactions_pending (for 127.0.0.1 at 2009-10-18 06:18:25) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-18' and scheduled_date <= '2010-10-18') AND (completed = 'f')) AND ("transactions"."user_id" = 8)) ORDER BY scheduled_date ASC[0m
+Rendering template within layouts/application
+Rendering stateli/transactions_pending
+Rendered stateli/_date_span_selector_pending (3.0ms)
+Rendered stateli/_pending_header (0.0ms)
+Completed in 81ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/pending_transactions]
+
+
+Processing StateliController#contract_credit (for 127.0.0.1 at 2009-10-18 06:18:31) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering stateli/contract_credit
+Rendered stateli/_date_selector (3.0ms)
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (139.0ms)
+Rendered stateli/_contract_credit_new (141.0ms)
+Completed in 214ms (View: 154, DB: 2) | 200 OK [http://127.0.0.1/contract_credit?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#cancel_popup (for 127.0.0.1 at 2009-10-18 06:20:06) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+Rendering stateli/cancel_popup
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/cancel?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#transactions_pending (for 127.0.0.1 at 2009-10-18 06:20:07) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-18' and scheduled_date <= '2010-10-18') AND (completed = 'f')) AND ("transactions"."user_id" = 8)) ORDER BY scheduled_date ASC[0m
+Rendering template within layouts/application
+Rendering stateli/transactions_pending
+Rendered stateli/_date_span_selector_pending (3.0ms)
+Rendered stateli/_pending_header (0.0ms)
+Completed in 83ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/pending_transactions]
+
+
+Processing StateliController#contract_credit (for 127.0.0.1 at 2009-10-18 06:20:13) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering stateli/contract_credit
+Rendered stateli/_date_selector (3.0ms)
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+  [4;36;1mAccount Load (2.0ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (52.0ms)
+Rendered stateli/_contract_credit_new (54.0ms)
+Completed in 132ms (View: 65, DB: 2) | 200 OK [http://127.0.0.1/contract_credit?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#transactions_pending (for 127.0.0.1 at 2009-10-18 06:20:58) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-18' and scheduled_date <= '2010-10-18') AND (completed = 'f')) AND ("transactions"."user_id" = 8)) ORDER BY scheduled_date ASC[0m
+Rendering template within layouts/application
+Rendering stateli/transactions_pending
+Rendered stateli/_date_span_selector_pending (4.0ms)
+Rendered stateli/_pending_header (0.0ms)
+Completed in 180ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/pending_transactions]
+
+
+Processing StateliController#contract_credit (for 127.0.0.1 at 2009-10-18 06:21:01) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering stateli/contract_credit
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+  [4;36;1mAccount Load (2.0ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (53.0ms)
+Rendered stateli/_contract_credit_new (55.0ms)
+Completed in 126ms (View: 67, DB: 2) | 200 OK [http://127.0.0.1/contract_credit?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#cancel_popup (for 127.0.0.1 at 2009-10-18 06:21:44) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+Rendering stateli/cancel_popup
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/cancel?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#transactions_pending (for 127.0.0.1 at 2009-10-18 06:21:45) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-18' and scheduled_date <= '2010-10-18') AND (completed = 'f')) AND ("transactions"."user_id" = 8)) ORDER BY scheduled_date ASC[0m
+Rendering template within layouts/application
+Rendering stateli/transactions_pending
+Rendered stateli/_date_span_selector_pending (4.0ms)
+Rendered stateli/_pending_header (0.0ms)
+Completed in 81ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/pending_transactions]
+
+
+Processing StateliController#transactions_pending (for 127.0.0.1 at 2009-10-18 06:22:20) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-18' and scheduled_date <= '2010-10-18') AND (completed = 'f')) AND ("transactions"."user_id" = 8)) ORDER BY scheduled_date ASC[0m
+Rendering template within layouts/application
+Rendering stateli/transactions_pending
+Rendered stateli/_date_span_selector_pending (3.0ms)
+Rendered stateli/_pending_header (0.0ms)
+Completed in 85ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/pending_transactions]
+
+
+Processing StateliController#contract_credit (for 127.0.0.1 at 2009-10-18 06:22:25) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering stateli/contract_credit
+Rendered stateli/_date_selector (1.0ms)
+Rendered stateli/_date_selector (1.0ms)
+Rendered stateli/_date_selector (2.0ms)
+  [4;36;1mAccount Load (2.0ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (53.0ms)
+Rendered stateli/_contract_credit_new (55.0ms)
+Completed in 126ms (View: 66, DB: 2) | 200 OK [http://127.0.0.1/contract_credit?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#transactions_pending (for 127.0.0.1 at 2009-10-18 06:23:29) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-18' and scheduled_date <= '2010-10-18') AND (completed = 'f')) AND ("transactions"."user_id" = 8)) ORDER BY scheduled_date ASC[0m
+Rendering template within layouts/application
+Rendering stateli/transactions_pending
+Rendered stateli/_date_span_selector_pending (3.0ms)
+Rendered stateli/_pending_header (0.0ms)
+Completed in 84ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/pending_transactions]
+
+
+Processing StateliController#contract_credit (for 127.0.0.1 at 2009-10-18 06:23:36) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering stateli/contract_credit
+Rendered stateli/_date_selector (3.0ms)
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+  [4;36;1mAccount Load (2.0ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (55.0ms)
+Rendered stateli/_contract_credit_new (56.0ms)
+Completed in 129ms (View: 68, DB: 2) | 200 OK [http://127.0.0.1/contract_credit?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#transactions_pending (for 127.0.0.1 at 2009-10-18 06:25:44) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;36;1mTransaction Load (1.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-18' and scheduled_date <= '2010-10-18') AND (completed = 'f')) AND ("transactions"."user_id" = 8)) ORDER BY scheduled_date ASC[0m
+Rendering template within layouts/application
+Rendering stateli/transactions_pending
+Rendered stateli/_date_span_selector_pending (4.0ms)
+Rendered stateli/_pending_header (0.0ms)
+Completed in 83ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/pending_transactions]
+
+
+Processing StateliController#contract_credit (for 127.0.0.1 at 2009-10-18 06:25:46) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering stateli/contract_credit
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (1.0ms)
+  [4;36;1mAccount Load (2.0ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (133.0ms)
+Rendered stateli/_contract_credit_new (134.0ms)
+Completed in 211ms (View: 147, DB: 2) | 200 OK [http://127.0.0.1/contract_credit?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#build_contract_credit (for 127.0.0.1 at 2009-10-18 06:28:05) [POST]
+  Parameters: {"contract_date_start_calendar"=>"October 18, 2009", "commit"=>"Create", "authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0=", "contract_full_date_calendar"=>"October 18, 2009", "contract_date_end_calendar"=>"October 18, 2009", "contract"=>{"name"=>"", "full_date"=>"2009-10-18", "amount"=>"", "day_of_month_alt"=>"1", "autopay"=>"0", "type"=>"ContractOnce", "day_of_month"=>"1", "date_start"=>"2009-10-18", "description"=>"", "active"=>"1", "autopay_account_id"=>"56", "weekday"=>"0", "date_end"=>"2009-10-18"}}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+BUILDING CREDIT CONTRACT
+WARNING: Can't mass-assign these protected attributes: type
+CONTRACT TYPE: ContractOnce
+SETTING DATE FIELDS
+FINISHED SETTING DATE FIELDS
+  [4;36;1mContractOnce Create (1.0ms)[0m   [0;1mINSERT INTO "contracts" ("name", "full_date", "created_at", "updated_at", "amount", "autopay", "day_of_month_alt", "transaction_type", "type", "user_id", "day_of_month", "description", "date_start", "date_end", "autopay_account_id", "weekday", "active") VALUES('', '2009-10-18', '2009-10-18 10:28:05', '2009-10-18 10:28:05', NULL, 'f', 1, 'TransactionCredit', 'ContractOnce', 8, 1, '', '2009-10-18', '2009-10-18', -1, 0, 't')[0m
+START DATE: 2009-10-18
+ADDING 2009-10-18
+Rendering stateli/build_contract
+Completed in 286ms (View: 4, DB: 2) | 200 OK [http://127.0.0.1/contract_credit]
+
+
+Processing StateliController#contract_credit (for 127.0.0.1 at 2009-10-18 06:28:10) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering stateli/contract_credit
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (1.0ms)
+Rendered stateli/_date_selector (2.0ms)
+  [4;36;1mAccount Load (2.0ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (54.0ms)
+Rendered stateli/_contract_credit_new (55.0ms)
+Completed in 125ms (View: 66, DB: 3) | 200 OK [http://127.0.0.1/contract_credit?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#transactions_pending (for 127.0.0.1 at 2009-10-18 06:30:23) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-18' and scheduled_date <= '2010-10-18') AND (completed = 'f')) AND ("transactions"."user_id" = 8)) ORDER BY scheduled_date ASC[0m
+Rendering template within layouts/application
+Rendering stateli/transactions_pending
+Rendered stateli/_date_span_selector_pending (4.0ms)
+Rendered stateli/_pending_header (0.0ms)
+Completed in 209ms (View: 27, DB: 1) | 200 OK [http://127.0.0.1/pending_transactions]
+
+
+Processing StateliController#contract_credit (for 127.0.0.1 at 2009-10-18 06:30:26) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering stateli/contract_credit
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+  [4;36;1mAccount Load (2.0ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (53.0ms)
+Rendered stateli/_contract_credit_new (54.0ms)
+Completed in 126ms (View: 66, DB: 2) | 200 OK [http://127.0.0.1/contract_credit?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#transactions_pending (for 127.0.0.1 at 2009-10-18 06:33:57) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-18' and scheduled_date <= '2010-10-18') AND (completed = 'f')) AND ("transactions"."user_id" = 8)) ORDER BY scheduled_date ASC[0m
+Rendering template within layouts/application
+Rendering stateli/transactions_pending
+Rendered stateli/_date_span_selector_pending (4.0ms)
+Rendered stateli/_pending_header (0.0ms)
+Completed in 93ms (View: 24, DB: 0) | 200 OK [http://127.0.0.1/pending_transactions]
+
+
+Processing StateliController#contract_credit (for 127.0.0.1 at 2009-10-18 06:34:02) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering stateli/contract_credit
+Rendered stateli/_date_selector (3.0ms)
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (1.0ms)
+  [4;36;1mAccount Load (2.0ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (56.0ms)
+Rendered stateli/_contract_credit_new (59.0ms)
+Completed in 134ms (View: 72, DB: 2) | 200 OK [http://127.0.0.1/contract_credit?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#cancel_popup (for 127.0.0.1 at 2009-10-18 06:41:33) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+Rendering stateli/cancel_popup
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/cancel?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#transactions_pending (for 127.0.0.1 at 2009-10-18 06:41:36) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-18' and scheduled_date <= '2010-10-18') AND (completed = 'f')) AND ("transactions"."user_id" = 8)) ORDER BY scheduled_date ASC[0m
+Rendering template within layouts/application
+Rendering stateli/transactions_pending
+Rendered stateli/_date_span_selector_pending (3.0ms)
+Rendered stateli/_pending_header (0.0ms)
+Completed in 96ms (View: 24, DB: 1) | 200 OK [http://127.0.0.1/pending_transactions]
+
+
+Processing StateliController#contract_credit (for 127.0.0.1 at 2009-10-18 06:41:41) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering stateli/contract_credit
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (1.0ms)
+  [4;36;1mAccount Load (2.0ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (137.0ms)
+Rendered stateli/_contract_credit_new (138.0ms)
+Completed in 211ms (View: 151, DB: 3) | 200 OK [http://127.0.0.1/contract_credit?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#transactions_pending (for 127.0.0.1 at 2009-10-18 06:44:32) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;36;1mTransaction Load (0.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-18' and scheduled_date <= '2010-10-18') AND (completed = 'f')) AND ("transactions"."user_id" = 8)) ORDER BY scheduled_date ASC[0m
+Rendering template within layouts/application
+Rendering stateli/transactions_pending
+Rendered stateli/_date_span_selector_pending (3.0ms)
+Rendered stateli/_pending_header (1.0ms)
+Completed in 83ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/pending_transactions]
+
+
+Processing StateliController#contract_credit (for 127.0.0.1 at 2009-10-18 06:44:39) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering stateli/contract_credit
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+  [4;36;1mAccount Load (2.0ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (54.0ms)
+Rendered stateli/_contract_credit_new (56.0ms)
+Completed in 160ms (View: 67, DB: 2) | 200 OK [http://127.0.0.1/contract_credit?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#transactions_pending (for 127.0.0.1 at 2009-10-18 06:45:24) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;36;1mTransaction Load (1.0ms)[0m   [0;1mSELECT * FROM "transactions" WHERE (((scheduled_date >= '2009-10-18' and scheduled_date <= '2010-10-18') AND (completed = 'f')) AND ("transactions"."user_id" = 8)) ORDER BY scheduled_date ASC[0m
+Rendering template within layouts/application
+Rendering stateli/transactions_pending
+Rendered stateli/_date_span_selector_pending (95.0ms)
+Rendered stateli/_pending_header (0.0ms)
+Completed in 174ms (View: 104, DB: 2) | 200 OK [http://127.0.0.1/pending_transactions]
+
+
+Processing StateliController#contract_credit (for 127.0.0.1 at 2009-10-18 06:45:31) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering stateli/contract_credit
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (1.0ms)
+  [4;36;1mAccount Load (2.0ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (53.0ms)
+Rendered stateli/_contract_credit_new (55.0ms)
+Completed in 128ms (View: 66, DB: 3) | 200 OK [http://127.0.0.1/contract_credit?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-18 06:46:49) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 216ms (View: 211, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-18 06:46:55) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 57ms (View: 51, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#contract_credit (for 127.0.0.1 at 2009-10-18 06:46:58) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering stateli/contract_credit
+Rendered stateli/_date_selector (544.0ms)
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+  [4;35;1mAccount Load (2.0ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (605.0ms)
+Rendered stateli/_contract_credit_new (612.0ms)
+Completed in 798ms (View: 632, DB: 2) | 200 OK [http://127.0.0.1/contract_credit?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-18 06:48:21) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 51ms (View: 46, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#contract_credit (for 127.0.0.1 at 2009-10-18 06:48:37) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering stateli/contract_credit
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+  [4;36;1mAccount Load (2.0ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (134.0ms)
+Rendered stateli/_contract_credit_new (135.0ms)
+Completed in 207ms (View: 148, DB: 3) | 200 OK [http://127.0.0.1/contract_credit?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-18 06:49:56) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 66ms (View: 61, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#contract_credit (for 127.0.0.1 at 2009-10-18 06:50:02) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering stateli/contract_credit
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+  [4;35;1mAccount Load (2.0ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (53.0ms)
+Rendered stateli/_contract_credit_new (55.0ms)
+Completed in 126ms (View: 67, DB: 3) | 200 OK [http://127.0.0.1/contract_credit?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-18 06:50:55) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 64ms (View: 60, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-18 06:51:32) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 65ms (View: 59, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#contract_credit (for 127.0.0.1 at 2009-10-18 06:51:37) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering stateli/contract_credit
+Rendered stateli/_date_selector (3.0ms)
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+  [4;35;1mAccount Load (2.0ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (59.0ms)
+Rendered stateli/_contract_credit_new (61.0ms)
+Completed in 134ms (View: 74, DB: 2) | 200 OK [http://127.0.0.1/contract_credit?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-18 06:52:09) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 64ms (View: 58, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#contract_credit (for 127.0.0.1 at 2009-10-18 06:52:17) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering stateli/contract_credit
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+  [4;36;1mAccount Load (2.0ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (54.0ms)
+Rendered stateli/_contract_credit_new (56.0ms)
+Completed in 128ms (View: 66, DB: 3) | 200 OK [http://127.0.0.1/contract_credit?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-18 06:55:27) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 65ms (View: 61, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#contract_credit (for 127.0.0.1 at 2009-10-18 06:55:32) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering stateli/contract_credit
+Rendered stateli/_date_selector (4.0ms)
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+  [4;35;1mAccount Load (2.0ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (136.0ms)
+Rendered stateli/_contract_credit_new (138.0ms)
+Completed in 214ms (View: 150, DB: 2) | 200 OK [http://127.0.0.1/contract_credit?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#index (for 127.0.0.1 at 2009-10-18 06:55:47) [GET]
+Rendering template within layouts/application
+Rendering stateli/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 66ms (View: 61, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing StateliController#contract_credit (for 127.0.0.1 at 2009-10-18 06:55:50) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering stateli/contract_credit
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+  [4;36;1mAccount Load (2.0ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (53.0ms)
+Rendered stateli/_contract_credit_new (55.0ms)
+Completed in 126ms (View: 66, DB: 2) | 200 OK [http://127.0.0.1/contract_credit?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#cancel_popup (for 127.0.0.1 at 2009-10-18 06:56:25) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+Rendering stateli/cancel_popup
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/cancel?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]
+
+
+Processing StateliController#expense_listing (for 127.0.0.1 at 2009-10-18 06:56:30) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;36;1mContract Load (1.0ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ((("contracts"."active" = 't' AND "contracts"."transaction_type" = 'TransactionCredit')) AND ("contracts"."user_id" = 8)) [0m
+3 Credit Contracts
+Rendering template within layouts/application
+Rendering stateli/expense_listing
+Rendered stateli/_contract_listing_header (23.0ms)
+Rendered stateli/_contract_options (1.0ms)
+Rendered stateli/_contract_listing_details (32.0ms)
+Rendered stateli/_contract_options (0.0ms)
+Rendered stateli/_contract_listing_details (1.0ms)
+Rendered stateli/_contract_options (0.0ms)
+Rendered stateli/_contract_listing_details (7.0ms)
+Completed in 166ms (View: 85, DB: 1) | 200 OK [http://127.0.0.1/expense_listing]
+
+
+Processing StateliController#contract_debit (for 127.0.0.1 at 2009-10-18 06:56:37) [GET]
+  Parameters: {"authenticity_token"=>"nt/dKOu/oTiw4gDgVefqe6o/IJgLEYVk/oTzsKcV6y0="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering stateli/contract_debit
+Rendered stateli/_date_selector (3.0ms)
+Rendered stateli/_date_selector (2.0ms)
+Rendered stateli/_date_selector (2.0ms)
+  [4;36;1mAccount Load (2.0ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendered stateli/_contract_new (52.0ms)
+Rendered stateli/_contract_debit_new (55.0ms)
+Completed in 133ms (View: 73, DB: 3) | 200 OK [http://127.0.0.1/contract_debit?authenticity_token=nt%2FdKOu%2FoTiw4gDgVefqe6o%2FIJgLEYVk%2FoTzsKcV6y0%3D]

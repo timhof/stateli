@@ -1,10 +1,11 @@
 
 page.hide_popup_form
 
-unless @account_changed
+if @account_changed
+	page[:flashdiv].hide
+else
 	page["pending_detail_#{@transaction.id}"].visual_effect(:slideUp)
 	page[:flashdiv].replace_html flash[:notice]
-	page[:flashdiv].visual_effect(:appear)
-	page[:flashdiv].visual_effect(:fade)
+	page[:flashdiv].visual_effect(:fade, :duration => 2)
 	flash.discard
 end

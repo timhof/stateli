@@ -9,6 +9,7 @@ module ApplicationHelper
 		page[:navigation_enabled].hide
 		page[:navigation_disabled].show
 		page[:flashdiv].replace_html ""
+		page[:flashdiv].show
 		page << "if($('login_form_div')){"
 			page[:login_form_div].hide
 		page << "}"
