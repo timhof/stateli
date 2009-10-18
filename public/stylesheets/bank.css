@@ -51,8 +51,6 @@ a:hover {
 #main_div {
 	height: 100%;
 	width: 100%;
-	border-style: solid;
-	border-width: 1px;
 }
 
 #main_image_div img {
