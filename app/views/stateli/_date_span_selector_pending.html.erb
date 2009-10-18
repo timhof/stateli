@@ -12,7 +12,7 @@
 
 	<%= text_field_tag :start_date, @start_date.to_s, {:onfocus => "click_date_text('#{start_text_field_id}')", :size => 10, :class => "base_form_field"} %>
         
-    <div id="<%= start_text_field_id %>_calendar_div" class="popup_calendar_div" style="display:none;text-align:right;">
+    <div id="<%= start_text_field_id %>_calendar_div" class="popup_calendar_div" style="display:none;text-align:right;" onmouseover="mouseover_calendar()" onmouseout="mouseout_calendar()">
 	    <%= calendar_date_select_tag "#{start_text_field_id}_calendar", @start_date,
 		    :embedded => true,
 	        :year_range => 0.years.from_now..10.years.from_now,
@@ -22,7 +22,7 @@
     -
     <%= text_field_tag :end_date, @end_date.to_s, {:onfocus => "click_date_text('#{end_text_field_id}')", :size => 10, :class => "base_form_field"} %>
         
-    <div id="<%= end_text_field_id %>_calendar_div" class="popup_calendar_div" style="display:none;text-align:right;">
+    <div id="<%= end_text_field_id %>_calendar_div" class="popup_calendar_div" style="display:none;text-align:right;" onmouseover="mouseover_calendar()" onmouseout="mouseout_calendar()">
 	    <%= calendar_date_select_tag "#{end_text_field_id}_calendar", @end_date,
 		    :embedded => true,
 	        :year_range => 0.years.from_now..10.years.from_now,
