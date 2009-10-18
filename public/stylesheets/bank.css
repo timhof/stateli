@@ -651,9 +651,9 @@ ul.navigation_tab li {
 }
 
 .popup_calendar_div {
+	position: absolute;
 	top: 50px;
 	left: 415px;	
-	z-index: 999;
 }
 .submit_button_div {
 	margin: 3px;
