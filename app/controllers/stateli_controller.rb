@@ -543,9 +543,9 @@ class StateliController < ApplicationController
 	@transaction.completed = true;
 						
 	if @transaction.type == 'TransactionCredit'
-		@account = Account.find(params[:account_id_source])
+		@account = Account.find(params[:transaction][:account_id_source])
 	elsif @transaction.type == 'TransactionDebit'
-		@account = Account.find(params[:account_id_dest])
+		@account = Account.find(params[:transaction][:account_id_dest])
 	end
 	
     respond_to do |format|
