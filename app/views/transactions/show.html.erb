@@ -1,58 +1,68 @@
-<p>
-  <b>Name:</b>
-  <%=h @transaction.name %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%=h @transaction.description %>
-</p>
-
-<p>
-  <b>Scheduled date:</b>
-  <%=h @transaction.scheduled_date %>
-</p>
-
-<p>
-  <b>Executed date:</b>
-  <%=h @transaction.executed_date %>
-</p>
-
-<p>
-  <b>Amount:</b>
-  <%=h @transaction.amount %>
-</p>
-
-<p>
-  <b>Completed:</b>
-  <%=h @transaction.completed %>
-</p>
-
-<p>
-  <b>Account id source:</b>
-  <%=h @transaction.account_id_source %>
-</p>
-
-<p>
-  <b>Account id dest:</b>
-  <%=h @transaction.account_id_dest %>
-</p>
-
-<p>
-  <b>Contract:</b>
-  <%=h @transaction.contract_id %>
-</p>
-
-<p>
-  <b>Type:</b>
-  <%=h @transaction.type %>
-</p>
-
-<p>
-  <b>User:</b>
-  <%=h @transaction.user_id %>
-</p>
 
 
-<%= link_to 'Edit', edit_transaction_path(@transaction) %> |
-<%= link_to 'Back', transactions_path %>
+<div id="transaction_details" class="template_div">
+	<div class="page_title_div">
+		<span class="transaction_name"><%= @title%></span> Details
+	</div>
+	
+	<div class="detail_div">
+		
+		<div class="detail_label">
+		  Name
+		</div>
+		<div class="detail_value">
+		  <%=h @transaction.name %>
+		</div>
+		
+		<div class="detail_label">
+		  Description
+		</div>
+		<div class="detail_value">
+		  <%=h @transaction.description %>
+		</div>
+		
+		<div class="detail_label">
+		  Date Scheduled
+		</div>
+		<div class="detail_value">
+		  <%=h @transaction.trans_date.strftime("%m/%d/%y") %>
+		</div>
+		
+		<% if @transaction.completed %>
+		<div class="detail_label">
+		  Date Completed
+		</div>
+		<div class="detail_value">
+		  <%=h @transaction.trans_date.strftime("%m/%d/%y") %>
+		</div>
+		<% end %>
+		
+		<div class="detail_label">
+		  Amount
+		</div>
+		<div class="detail_value">
+		  <%=h real_currency @transaction.amount %>
+		</div>
+
+    	<% unless @transaction.account.blank? %>
+		<div class="detail_label">
+		  <b>Account
+		</div>
+		<div class="detail_value">
+		  <span id="account_name_<%= @transaction.account.id %>" class="account_name"><%=h @transaction.account.name %></span>
+		  <%= render :partial => 'accounts/options', :locals => {:acc => @transaction.account} %>
+		</div>
+		<% end %>
+		
+		<% unless @transaction.contract.blank? %>
+		<div class="detail_label">
+		  Contract
+		</div>
+		<div class="detail_value">
+		  <span id="contract_name_<%= @transaction.contract.id %>" class="contract_name"><%=h @transaction.contract.name %></span>
+		  <%= render :partial => 'contracts/options', :locals => {:contract => @transaction.contract} %>
+		</div>
+		<% end %>
+	
+	</div>
+</div>

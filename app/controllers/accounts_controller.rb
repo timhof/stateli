@@ -1,104 +1,268 @@
 class AccountsController < ApplicationController
-	
+  
+  include StateliHelper
+  
   before_filter :login_required
    	
-  # GET /accounts
-  # GET /accounts.xml
   def index
-    @accounts = Account.user_only(@current_user.id).find(:all)
-    @accountsDebit = AccountDebit.user_only(@current_user.id).find(:all)
-	@accountsCredit = AccountCredit.user_only(@current_user.id).find(:all)
-	
+    @accounts = Account.activeAccounts(@current_user.id)
+   
+	@navkey = "accounts"
+	session[SESSION_MAIN_PAGE] = MAIN_PAGE_LISTING_ACCOUNTS
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @accounts }
     end
   end
   
-  # GET /accounts/1
-  # GET /accounts/1.xml
-  def show
-    @account = Account.find(params[:id])
+  def journal
+  	
+  	set_filtered_transactions
+	@transactions = @filtered_transactions
+  	respond_to do |format|
+      format.html # journal.html.erb
+      format.js {render :action =>'update_filter', :layout => false}
+    end
+  end
+  
+  def month_pocket_journal
+  	@account = Account.find(params[:id])
+  	set_filtered_transactions
+  	yrMonth = params[:yrMonth].to_i
+  	if yrMonth == -1
+  		@year =-1
+  		@month = -1
+  	else
+  		@year = yrMonth / 100
+  		@month = yrMonth % 100
+  	end
+  	unless params[:pocket_id] == '-1'
+  		@pocket = Pocket.find_pocket(params[:pocket_id])
+  	end
+  	
+  	logger.info "#{@pocket.id}, #{@yrMonth}, #{@year}, #{@month}"
+  	@transactions = @filtered_transactions.select do |trans|
+  		pocket_id = trans.pocket_id
+  		(@pocket.nil? || pocket_id == @pocket.id) && (@month == -1 || (trans.trans_date.month == @month && trans.trans_date.year == @year))
+  	end
+  end
+  
+  def month_pocket_totals
 
-    respond_to do |format|
-      format.html # show.html.erb
+  	@account = Account.find(params[:id])
+  	set_filtered_transactions
+  	@month_pocket_totals = @account.month_pocket_map(@filtered_transactions)
+  	months_hash = {}
+  	pockets_hash = {}
+  	@month_totals = {}
+  	@pocket_totals = {}
+  	@grand_total = 0
+	@month_pocket_totals.each do |month_pocket_key, total|
+		month_pocket_arr = month_pocket_key.split(/_/)
+		month = month_pocket_arr[0].to_i
+		pocket = month_pocket_arr[1].to_i
+		months_hash[month] = 1
+		pockets_hash[pocket] = 1
+		
+		@month_totals[month] ||= 0
+		@month_totals[month] = @month_totals[month] + total
+		
+		@pocket_totals[pocket] ||= 0
+		@pocket_totals[pocket] = @pocket_totals[pocket] + total
+		
+		@grand_total = @grand_total + total
+		
+	end
+	@months = months_hash.keys.sort
+	@pockets = pockets_hash.keys.sort
+	p @months
+	p @pockets
+	
+  	respond_to do |format|
+      format.html # pocket_totals.html.erb
+      format.js {render :action => 'update_filter', :layout => false}
+    end
+  end
+  
+  def set_filtered_transactions
+  	if params[:filter_commit].eql?('update')
+  		reselect_filters
+  	end
+  	@account = Account.find(params[:id])
+  	@filtered_transactions = @account.transactions.select {|trans| 
+		pocket_id = trans.pocket_id
+		session[:selector].selectedPockets[pocket_id] == '1'
+	}
+  end
+  
+  def reselect_filters
+  	@account = Account.find(params[:id])
+  	logger.info "RESELECTING FILTERS"
+	@account.transactions.each do |trans| 
+		pocket_id = trans.pocket_id
+		if (not params[:pocket_id].nil?) && (params[:pocket_id][pocket_id.to_s] == '1')
+			session[:selector].selectedPockets[pocket_id] = '1'
+		else
+			session[:selector].selectedPockets[pocket_id] = '0'
+		end
+	end
+  end
+  
+  #Displays popup form (Ajax)
+  def withdraw
+  	@account = Account.find(params[:id])
+  	@transaction = Transaction.new
+  	@type = TRANSACTION_CREDIT
+  	respond_to do |format|
+      format.html # new.html.erb
       format.xml  { render :xml => @account }
     end
   end
-
-  # GET /accounts/new
-  # GET /accounts/new.xml
+  
+  #Displays popup form (Ajax)
+  def deposit
+  	@account = Account.find(params[:id])
+  	@transaction = Transaction.new
+  	@type = TRANSACTION_DEBIT
+  	respond_to do |format|
+      format.html # new.html.erb
+      format.xml  { render :xml => @account }
+    end
+  end
+  
+  #Displays popup form (Ajax)
   def new
-    @account = Account.new
-
+  	@account = Account.new
+	@navkey = "account_new"
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @account }
     end
   end
-
-  # GET /accounts/1/edit
+  
+  def create
+  	@account = Account.new(params[:account])
+	
+	@account.user_id = @current_user.id
+	
+    respond_to do |format|
+    	logger.info "FORMAT: #{format}"
+      if @account.save
+        flash[:notice] = 'Account was successfully created.'
+        format.html { redirect_to(accounts_url) }
+      else
+        format.html { render :action => "new" }
+      end
+    end
+  end
+  
+  def execute_transaction
+  	
+  	@account = Account.find(params[:id])
+  	type = params[:type]
+  	logger.info "TYPE: #{type}"
+  	if type == TRANSACTION_CREDIT
+  		@transaction = @account.execute_withdrawal(params[:transaction])
+  	else
+  		@transaction = @account.execute_deposit(params[:transaction])
+	end
+ 	
+    respond_to do |format|
+        flash[:notice] = 'Transactions executed'
+        format.html { redirect_to(account_journal_url(@account)) }
+    end
+  end
+  
   def edit
     @account = Account.find(params[:id])
   end
 
-  # POST /accounts
-  # POST /accounts.xml
-  def create
-   accountType = params[:account][:type]
-	if accountType == 'AccountDebit'
-		 @account = AccountDebit.new(params[:account])
-	elsif accountType == 'AccountCredit'
-		 @account = AccountCredit.new(params[:account])
-	end
-	
-	@account.user_id = @current_user.id
-	
-    respond_to do |format|
-      if @account.save
-        flash[:notice] = 'Account was successfully created.'
-        format.html { redirect_to(account_path(@account)) }
-        format.xml  { render :xml => @account, :status => :created, :location => @account }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @account.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
-
-  # PUT /accounts/1
-  # PUT /accounts/1.xml
   def update
-    @account = Account.find(params[:id])
-
+  	@account = Account.find(params[:id])
 	@account.user_id = @current_user.id
-    
+
     respond_to do |format|
-    	
-      if @account.update_attributes(params[:account])
-        flash[:notice] = 'Account was successfully updated.'
-        
-        format.html { redirect_to(account_path(@account)) }
-        format.xml  { head :ok }
-      else
+      if @account.update_account_attributes(params[:account])
+        flash[:notice] = 'Account updated'
+        format.html { redirect_to(accounts_url) }
+   	  else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @account.errors, :status => :unprocessable_entity }
       end
     end
   end
-
   
+  def show
+    @account = Account.find(params[:id])
+	@title = @account.name
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @account }
+    end
+  end
   
-  # DELETE /accounts/1
-  # DELETE /accounts/1.xml
+  def upload_file
+  	
+  	account = Account.find(params[:id])
+  	account.add_upload_transactions(params[:file], params[:upload_type])
+	account.apply_rules
+	session[:selector].confirm_pocket_data
+	respond_to do |format|
+        flash[:notice] = 'File successfully uploaded'
+        format.html { redirect_to(accounts_url) }
+    end
+  end
+  
+  def apply_rules
+  	account = Account.find(params[:id])
+  	account.apply_rules
+  	respond_to do |format|
+        flash[:notice] = 'Rules applied'
+        format.html { redirect_to(account_journal_url(account.id)) }
+    end
+    session[:selector].confirm_pocket_data
+  end
+  
+  def show_upload
+    @account = Account.find(params[:id])
+  end
+  
+  def delete_all_transactions
+  	@account = Account.find(params[:id])
+  	@account.removeAllTransactions()
+  	respond_to do |format|
+        flash[:notice] = 'Transactions deleted'
+        format.html { redirect_to(accounts_url) }
+    end
+  end
+  
   def destroy
     @account = Account.find(params[:id])
     @account.destroy
-
+	
     respond_to do |format|
       format.html { redirect_to(accounts_url) }
       format.xml  { head :ok }
     end
   end
   
+  private 
+  
+   def get_pending_psuedo_transaction(transaction_list, user_id, pending_end_date)
+  	
+	end_balance = 0.0.to_d
+	transaction_list.each do |trans|
+		end_balance = end_balance + trans.amount
+	end
+	
+	trans = Transaction.new
+	trans.trans_date = pending_end_date.to_s
+	trans.completed = false
+	trans.user_id = user_id
+	trans.name = "end"
+	trans.description = "end"
+	trans.amount = 0.0
+	trans.account_balance = end_balance
+	return trans
+		
+  end
 end

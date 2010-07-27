@@ -1,0 +1,47 @@
+
+
+
+<% form_for @account  do |f| %>
+  <%= f.error_messages %>
+
+  <div id="new_account_name" class="form_element">
+  	<div class="form_label">
+   		Name
+   	</div
+   	<div class="form_value">
+    	<%= f.text_field :name %>
+    </div>
+  </div>
+  <div id="new_account_description" class="form_element">
+  	<div class="form_label">
+   		Description
+   	</div
+   	<div class="form_value">
+    	<%= f.text_field :description %>
+    </div>
+  </div>
+  <div id="new_account_type" class="form_element">
+  	<div class="form_label">
+   		Type
+   	</div>
+  </div>
+  <div id="new_account_balance" class="form_element">
+  	<div class="form_label">
+   		Balance
+   	</div
+   	<div class="form_value">
+   		<%= f.text_field :balance %>
+    </div>
+  </div>
+  <div id="new_account_active" class="form_element" style="display:none;">
+  	<div class="form_label">
+   		Active
+   	</div
+   	<div class="form_value">
+    	<%= f.check_box :active %>
+    </div>
+  </div>
+  <div id="new_account_submit" class="submit_button_div">
+    <%= f.submit 'Create', :class => "submit_button"%>
+  </div>
+<% end %>

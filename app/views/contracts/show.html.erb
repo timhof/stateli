@@ -1,63 +1,55 @@
-<p>
-  <b>Name:</b>
-  <%=h @contract.name %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%=h @contract.description %>
-</p>
-
-<p>
-  <b>Date start:</b>
-  <%=h @contract.date_start %>
-</p>
-
-<p>
-  <b>Date end:</b>
-  <%=h @contract.date_end %>
-</p>
-
-<p>
-  <b>Type:</b>
-  <%=h @contract.type %>
-</p>
-
-<p>
-  <b>User:</b>
-  <%=h @contract.user_id %>
-</p>
-
-<p>
-  <b>Autopay:</b>
-  <%=h @contract.autopay %>
-</p>
-
-<p>
-  <b>Autopay account:</b>
-  <%=h @contract.autopay_account_id %>
-</p>
-
-<p>
-  <b>Full date:</b>
-  <%=h @contract.full_date %>
-</p>
-
-<p>
-  <b>Day of month:</b>
-  <%=h @contract.day_of_month %>
-</p>
-
-<p>
-  <b>Day of month alt:</b>
-  <%=h @contract.day_of_month_alt %>
-</p>
-
-<p>
-  <b>Weekday:</b>
-  <%=h @contract.weekday %>
-</p>
 
 
-<%= link_to 'Edit', edit_contract_path(@contract) %> |
-<%= link_to 'Back', contracts_path %>
+<div id="contract_details" class="template_div">
+	<div class="page_title_div">
+		<span class="contract_name"><%= @title%></span> Contract Details
+	</div>
+	
+	<div class="detail_div">
+		<div class="detail_label">
+		  Name
+		</div>
+		<div class="detail_value">
+		  <%=h @contract.name %>
+		</div>
+		
+		<div class="detail_label">
+		  Description
+		</div>
+		<div class="detail_value">
+		  <%=h @contract.description %>
+		</div>
+		
+		<div class="detail_label">
+		  Start Date
+		</div>
+		<div class="detail_value">
+		  <%=h @contract.date_start.strftime("%m/%d/%y") %>
+		</div>
+		
+		<div class="detail_label">
+		  End Date
+		</div>
+		<div class="detail_value">
+		  <%=h @contract.date_end.strftime("%m/%d/%y") %>
+		</div>
+		<div class="detail_label">
+		  Amount
+		</div>
+		<div class="detail_value">
+		  <%=h @contract.amount %>
+		</div>
+		
+		<% if @contract.autopay %>
+		<div class="detail_label">
+		  Autopay Account
+		</div>
+		<div class="detail_value">
+		   <span id="account_name_<%= @contract.autopayAccount.id %>" class="account_name"><%=h @contract.autopayAccount.name %></span> <%= render :partial => 'accounts/options', :locals => {:acc => @contract.autopayAccount} %>
+   
+		</div>
+		<% end %>
+		
+		
+	</div>
+</div>

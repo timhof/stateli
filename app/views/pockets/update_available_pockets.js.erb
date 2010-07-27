@@ -1,0 +1,10 @@
+
+$('#pocket_table_div').html("<%= escape_javascript(render :partial => 'pockets_table', :locals => {:pockets => @pockets})%>");
+
+$('#pockets_table').dataTable({
+	"iDisplayLength": 25
+} );
+
+$('#pocket_select_div').html("<%= escape_javascript(render :partial => 'pocket_select', :locals => {:pockets => @pockets})%>");
+
+ajaxLinks();

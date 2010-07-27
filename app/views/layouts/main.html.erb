@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Status Track</title>
+  
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.1/build/reset-fonts-grids/reset-fonts-grids.css">
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.1/build/base/base-min.css">
+  <%= stylesheet_link_tag 'scaffold' %>
+  <link type="text/css" rel="stylesheet" media="screen" href="/javascripts/dataTables-1.6/media/css/demo_page.css">
+  <link type="text/css" rel="stylesheet" media="screen" href="/javascripts/dataTables-1.6/media/css/demo_table.css">
+  <link type="text/css" href="/javascripts/development-bundle/themes/base/jquery.ui.all.css" rel="stylesheet" />
+   <link type="text/css" rel="stylesheet" href="/javascripts/markedit/jquery.markedit.css" />
+  
+  <%= javascript_include_tag 'dataTables-1.6/media/js/jquery.js' %>
+  <%= javascript_include_tag 'dataTables-1.6/media/js/jquery.dataTables.js' %>
+  <%= javascript_include_tag 'development-bundle/external/jquery.bgiframe-2.1.1.js' %>
+  <%= javascript_include_tag 'development-bundle/ui/jquery.ui.core.js' %>
+  <%= javascript_include_tag 'development-bundle/ui/jquery.ui.widget.js' %>
+  <%= javascript_include_tag 'development-bundle/ui/jquery.ui.mouse.js' %>
+  <%= javascript_include_tag 'development-bundle/ui/jquery.ui.draggable.js' %>
+  <%= javascript_include_tag 'development-bundle/ui/jquery.ui.position.js' %>
+  <%= javascript_include_tag 'development-bundle/ui/jquery.ui.resizable.js' %>
+  <%= javascript_include_tag 'development-bundle/ui/jquery.ui.dialog.js' %>
+  <%= javascript_include_tag 'jquery.safeEnter.js' %>
+  
+  <%= javascript_include_tag 'markedit/jquery.markedit.js' %>
+  <%= javascript_include_tag 'markedit/showdown.js' %>
+
+
+
+<% if protect_against_forgery? %>
+  	<script type='text/javascript'>
+  	//<![CDATA[
+	        window._auth_token_name = "#{request_forgery_protection_token}";
+	        window._auth_token = "#{form_authenticity_token}";
+    //]]>
+	</script>
+<% end %>
+  <%= javascript_include_tag 'application.js' %>
+  
+</head>
+<body>
+<div id="doc3">
+	<div id="hd" class="header">
+		STATUS TRACK
+	</div>
+	<div id="bd">
+		<div> 
+			<div id="menu">
+				<div class="menu_button">Reports</div>
+				<div class="submenu_div">
+					<div class="submenu_button" onclick="window.location.href='<%=reports_path %>'">List</div>
+<% showReportListOptions = 'reports' == @controller.controller_name && 'index' == @controller.action_name %>
+					<div class="subsubmenu_button" onclick="javascript:show_filters_dialog();" style="display:<%=showReportListOptions ? "inline" : "none" %>;">Filter</div>
+					<div class="subsubmenu_button" onclick="javascript:show_reports_columns_dialog();" style="display:<%=showReportListOptions ? "inline" : "none" %>;">Columns</div>
+					<div class="submenu_button" onclick="window.location.href='<%=new_report_path%>'">Add New</div>
+					<div class="submenu_button" onclick="window.location.href='<%=reports_index_print_path %>'">Print</div>
+					<div class="submenu_button" onclick="window.location.href='<%=summary_report_path %>'">Summary</div>
+				</div>
+				<div class="menu_button">Developers</div>
+				<div class="submenu_div">
+					<div class="submenu_button" onclick="window.location.href='<%=developers_path %>'">List</div>
+					<div class="submenu_button" onclick="window.location.href='<%=new_developer_path %>'">Add New</div>
+				</div>
+				<div class="menu_button">Bugs</div>
+				<div class="submenu_div">
+					<div class="submenu_button" onclick="window.location.href='<%=all_bugs_path %>'">List</div>
+<% showBugListOptions = 'bugs' == @controller.controller_name && 'index' == @controller.action_name %>
+					<div class="subsubmenu_button" onclick="javascript:show_filters_dialog();" style="display:<%=showBugListOptions ? "inline" : "none" %>;">Filter</div>
+				</div>
+				
+				<div class="menu_button">Tasks</div>
+				<div class="submenu_div">
+					<div class="submenu_button" onclick="window.location.href='<%=tasks_path %>'">List</div>
+<% showTaskListOptions = 'tasks' == @controller.controller_name && 'index' == @controller.action_name %>
+					<div class="subsubmenu_button" onclick="javascript:show_filters_dialog();" style="display:<%=showTaskListOptions ? "inline" : "none" %>;">Filter</div>
+				</div>
+				<div class="submenu_button" onclick="window.location.href='<%=new_task_path %>'">Add New</div>
+				<div class="submenu_button" onclick="window.location.href='<%=task_report_path %>'">Summary</div>
+				
+				<div class="menu_button">Issues</div>
+				<div class="submenu_div">
+					<div class="submenu_button" onclick="window.location.href='<%=issues_path %>'">List</div>
+<% showBugListOptions = 'issues' == @controller.controller_name && 'index' == @controller.action_name %>
+				</div>
+				<div class="submenu_button" onclick="window.location.href='<%=new_issue_path %>'">Add New</div>
+			</div>
+	        <div style="width:80%;float:left;"> 
+				<div>
+					<div id="flash_div"><%= flash[:notice] %></div>
+					<div id="template_div">
+						<%= yield %>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+  	$(document).ready(function() {
+		$('.menu_button').mouseover(function(){
+			$(this).addClass('menu_mouseover');
+		});
+		$('.submenu_button').mouseover(function(){
+			$(this).addClass('submenu_mouseover');
+		});
+		$('.subsubmenu_button').mouseover(function(){
+			$(this).addClass('submenu_mouseover');
+		});
+		$('.menu_button').mouseout(function(){
+			$(this).removeClass('menu_mouseover');
+		});
+		$('.submenu_button').mouseout(function(){
+			$(this).removeClass('submenu_mouseover');
+		});
+		$('.subsubmenu_button').mouseout(function(){
+			$(this).removeClass('submenu_mouseover');
+		});
+	
+		$('.button').mouseover(function(){
+			$(this).addClass('button_mouseover');
+		});
+		$('.button').mouseout(function(){
+			$(this).removeClass('button_mouseover');
+		});
+		
+		 $('.editor').markedit();
+  	} );
+</script>

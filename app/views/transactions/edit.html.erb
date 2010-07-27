@@ -1,6 +1,3 @@
-<h1>Editing transaction</h1>
 
-<%= render :partial => 'transaction_edit', :object => @transaction %>
 
-<%= link_to 'Show', transaction_path(@transaction) %> |
-<%= link_to 'Back', transactions_path %>
+<%= render :partial => 'edit', :locals => {:pockets => @pockets} %>

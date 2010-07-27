@@ -1,0 +1,11 @@
+
+		<div class="filter_title_div">
+			<%= title %> [<%=link_to_function 'All', "toggleall('#{checkbox_container_div}', true)" %>][<%=link_to_function 'Clr', "toggleall('#{checkbox_container_div}', false)" %>]
+		</div>
+<%	idNameMap.each do |key, value| 
+		checked = selectedKeys[key] == '1' %>
+		<div class="filter_checkbox_div">
+			<span class="filter_checkbox"><%= check_box_tag "[#{parameterName}][#{key}]", '1', checked %><%=link_to_function value, "click_checkbox_label('#{checkbox_container_div}', '_#{parameterName}_#{key}')" %></span>
+		</div>
+<%	end %>
+		

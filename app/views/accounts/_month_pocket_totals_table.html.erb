@@ -1,0 +1,41 @@
+
+
+		<table id="month_pocket_totals_table" class="listing_table">
+	  		<thead>
+	  			<tr>
+		    		<th>Pocket</th>
+		    	<% months.each do |yrMonth|
+		    		year = yrMonth / 100
+		    		month = yrMonth % 100 %>
+		    		<th><%= Date::MONTHNAMES[month] %><br/><%= year %></th>
+		    	<% end %>
+		    		<th>Total</th>
+		    	</tr>
+	    	</thead>
+	    	<tbody>
+			<% pockets.each do |pocket_id| %>
+				<tr>
+		    		<td class="row_header"><%= link_to session[:selector].pocketIdNameMap[pocket_id], account_month_pocket_journal_path(account.id, pocket_id, -1), {:class => 'listing_link', :title => 'Pocket Journal'} %></td>
+		    	<% months.each do |month| 
+		    		month_pocket_key = "#{month}_#{pocket_id}"
+		    		total = month_pocket_totals[month_pocket_key] %>
+		    		<td>
+		    		
+		    		<%= link_to real_currency(total), account_month_pocket_journal_path(account.id, pocket_id, month), {:class => 'listing_link', :title => 'Month Pocket Journal'} %>
+		    		
+		    		</td>
+		    	<% end %>
+		    	<% total = pocket_totals[pocket_id] %>
+		    		<td><%= link_to real_currency(total), account_month_pocket_journal_path(account.id, pocket_id, -1), {:class => 'listing_link', :title => 'Month Pocket Journal'} %></td>
+		    	</tr>
+	    	<% end %>
+	    		<tr>
+		    		<td class="total_row_header">Total</td>
+		    	<% months.each do |month| 
+		    		total = month_totals[month] %>
+		    		<td class="total_row_cell"><%= h real_currency (total) %></td>
+		    	<% end %>
+		    		<td class="total_row_cell"><%= h real_currency (grand_total) %></td>
+		    	</tr>
+	    	</tbody>
+	    </table>

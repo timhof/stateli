@@ -7,15 +7,19 @@ class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
+  before_filter :init_selector
   
   def rescue_404
     rescue_action_in_public(ActionController::RoutingError)
   end
       
-  
-    
   def local_request?
     return false
+  end
+  
+  private
+  def init_selector
+  	session[:selector] ||= Selector.new
   end
   
 end

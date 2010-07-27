@@ -1,0 +1,6 @@
+
+mainPage = session[StateliHelper::SESSION_MAIN_PAGE]
+page.update_transactions(@transactions, mainPage)
+
+page.hide_popup_form flash[:notice]
+flash.discard

@@ -1,0 +1,2 @@
+
+$('#transaction_pocket_name_<%= @transaction.id %>').html("<%= escape_javascript(@transaction.pocket.nil? ? "N/A" : @transaction.pocket.name) %>");

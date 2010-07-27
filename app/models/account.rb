@@ -1,10 +1,15 @@
 class Account < ActiveRecord::Base
 	
-	before_create :setPreviousBalance
-	after_create :addTransaction
+	require 'bigdecimal'
+  	require 'bigdecimal/util'
+
+	include StateliHelper
 	
-	before_update :setPreviousBalance
-	after_update :addTransaction
+	has_many :transactions, :order => "trans_date desc"
+	has_many :contracts
+	has_many :rules, :order => "rank asc"
+	before_create :initializate_previous_balance
+	after_save :reconcile_balance
 	
 	named_scope :active_only, :conditions => { :active => true } 
 	named_scope :user_only, lambda { |user_id| { :conditions => { :user_id => user_id } }}
@@ -14,83 +19,122 @@ class Account < ActiveRecord::Base
 	validates_presence_of :name, :balance
 	validates_numericality_of :balance
 	
-	def self.activeAccounts(userId)
-		accounts = user_only(userId).active_only.find(:all)
-		accounts.each do |acc|
-			acc.set_overdue_transactions()
+	def update_account_attributes(params)
+
+		self.previous_balance = self.balance
+		
+ 		unless(params[:name].nil?)
+ 			self.name = params[:name]
+ 		end
+ 		unless(params[:description].nil?)
+ 			self.description = params[:description]
+ 		end
+ 		unless(params[:balance].nil?)
+ 			self.balance = params[:balance].to_d
+ 		end
+ 		unless(params[:active].nil?)
+ 			self.active = params[:active]
+ 		end
+ 		
+ 		return self.save
+ 	end
+ 	
+
+	def has_overdue_transactions
+		has_overdue = false
+		transactions.each do |trans|
+			if trans.trans_date < Date.today && !trans.completed
+				has_overdue = true
+			end
 		end
+		return has_overdue
 	end
 	
-	def set_overdue_transactions()
-		@has_overdue_transactions = Transaction.account_has_overdue(self.id)
-		@has_pending_transactions = Transaction.account_has_incomplete(self.id)
+	def has_pending_transactions
+		has_pending = false
+		transactions.each do |trans|
+			if !trans.completed	
+				has_pending = true
+			end
+		end
+		return has_pending
+	end
+	
+	def add_upload_transactions(filename, uploadType=nil)
+		transactionUploader = TransactionUploader.new
+		transactionUploader.type = uploadType
+		new_transactions = transactionUploader.parseTransactions(filename)
+   		new_transactions.each do |trans|
+   			unless has_transaction(trans)
+   				trans.user_id = user_id
+   				trans.account_id = id
+   				trans.save!
+   			end
+   		end
+		reload_transactions
+   	end
+   	
+	def has_transaction(transaction)
+		
+		return transactions.to_a.any? do |trans|
+			trans.trans_date == transaction.trans_date && trans.name == transaction.name && trans.description == transaction.description && trans.amount == transaction.amount
+		end
+	end
+		
+			
+	def reload_transactions
+		
+		puts "RELOADING TRANSACTIONS"
+		self.reload
+		
+		account_balance = 0.0.to_d
+		
+		#get list of completed transactions
+		completed_transactions = self.completed_transactions
+		
+		completed_transactions.reverse_each do |trans|
+			next if trans.amount.nil?
+			account_balance = account_balance + trans.amount.to_d
+			trans.account_balance = account_balance
+			trans.save
+		end
+		
+		self.update_balance(account_balance)
+		self.save
+	end
+	
+	def self.activeAccounts(userId)
+		accounts = user_only(userId).active_only.find(:all)
 	end
 
 	def completed_transactions_by_date(start_date, end_date)
-		@transactions = Transaction.completed_by_account_date(self.id, start_date, end_date)
-		Account.set_account_balances(@transactions);
+		return completed_transactions
 	end
 	
 	def uncompleted_transactions_by_date(start_date, end_date)
-		
-		@transactions = Transaction.uncompleted_by_account_date(self.id, start_date, end_date)
-		Account.set_account_balances(@transactions);
+		return uncompleted_transactions
 	end
 	
-	def completed_transactions()
+	def completed_transactions
 		
-		@transactions = Transaction.completed_by_account(self.id)
-		Account.set_account_balances(@transactions);
-	end
-	
-	def uncompleted_transactions()
-		
-		@transactions = Transaction.uncompleted_by_account(self.id)
-		Account.set_account_balances(@transactions);
-	end
-	
-	
-	def self.set_account_balances(transactions)
-		
-		balance = 0
+		completed_transactions = []
 		transactions.each do |trans|
-			logger.info "amount: #{trans.amount}"
-			next if trans.amount.nil?
-			if trans.type == 'TransactionCredit'
-				balance = balance - trans.amount
-			else
-				balance = balance + trans.amount
+			if trans.completed
+				completed_transactions << trans
 			end
-			trans.account_balance = balance
 		end
+		return completed_transactions
 	end
 	
-	def completed_transaction_hash(start_date, end_date)
+	def uncompleted_transactions
 		
-		credit_transactions = Transaction.account_credit_completed(self.id)
-		debit_transactions = Transaction.account_debit_completed(self.id)
-		reconcile_transactions = Transaction.account_reconcile_completed(self.id)
-		logger.info "#{credit_transactions.size} Completed CREDIT Transactions"
-		logger.info "#{debit_transactions.size} Completed DEBIT Transactions"
-		logger.info "#{reconcile_transactions.size} Completed RECONCILE Transactions"
-		transactions = {:credit => credit_transactions, :debit => debit_transactions, :reconcile => reconcile_transactions}	
-		
-	end
-	
-	def uncompleted_transaction_hash(start_date, end_date)
-		
-		credit_transactions = Transaction.account_credit_uncompleted_by_account_date(self.id, start_date, end_date)
-		debit_transactions = Transaction.account_debit_uncompleted_by_account_date(self.id, start_date, end_date)
-		logger.info "#{credit_transactions.size} Uncompleted CREDIT Transactions"
-		logger.info "#{debit_transactions.size} Uncompleted DEBIT Transactions"
-		transactions = {:credit => credit_transactions, :debit => debit_transactions}	
-		
-	end
-	
-	def self.uncompleted_transactions_all_accounts_by_date(userId, start_date, end_date)
-		
-		transactions = Transaction.uncompleted_by_date_user(userId, start_date, end_date)
-		
+		uncompleted_transactions = []
+		transactions.each do |trans|
+			if !trans.completed
+				uncompleted_transactions << trans
+			end
+		end
+		return uncompleted_transactions
 	end
 	
 	def overdue_transactions(start_date, end_date)
@@ -105,54 +149,125 @@ class Account < ActiveRecord::Base
 		
 	end
 	
-	def deactivate
-		# Set ACTIVE to false
-		# Save Account
-	end
-	
-    def setPreviousBalance
+	def execute_deposit(params)
+  		transaction = Transaction.new(params)
+  		transaction.amount = transaction.amount.to_d
+  		transaction.trans_date = Date.today
     	
-		logger.info "OLD BALANCE: #{balance}"
-		if self.id.nil?
-			@previous_balance = 0
-		else
-			orig = Account.find(self.id)
-    		@previous_balance = orig.balance
-    	end
-    end
+    	self.execute_transaction(transaction)
+    	
+  		 logger.info "Executing #{transaction.type} transactionddfd"
+  		return transaction
+  	end
+  	
+  	def execute_withdrawal(params)
+  		transaction = Transaction.new(params)
+  		transaction.amount = 0 - transaction.amount.to_d
+  		transaction.trans_date = Date.today
     
-	def addTransaction
-		
-		logger.info "OLD BALANCE: #{previous_balance} NEW BALANCE: #{balance}"
-		if @previous_balance != balance
-		
-			balanceDiff = self.balance - @previous_balance
-		
-			transaction = TransactionReconcile.new
-			transaction.name = 'Account Reconciliation'
-		    transaction.description = 'Account Reconciliation'
-		    transaction.scheduled_date = Date.today
-		    transaction.executed_date = Date.today
-		    transaction.amount = balanceDiff
-		    transaction.completed = true
-		    transaction.account_id_source = id
-		    transaction.account_id_dest = id
-		    transaction.user_id = user_id
-	    
-		    transaction.save
-    	end
+      	self.execute_transaction(transaction)
+      	
+  		return transaction
+  	end
+  	
+  	def execute_transaction(transaction)
+  		transaction.completed = true
+    	transaction.user_id = self.user_id
+    	transaction.account = self
+    	puts "Saving Transaction"
+    	if transaction.save!
+      		self.reload_transactions
+  		end
+ 	end
+ 		
+ 	def removeAllTransactions()
+    	transactions.each do |trans|
+    		trans.destroy
+  		end
+  		self.reload_transactions
+ 	end
+ 	
+ 	def apply_rules
+		transactions.each do |trans|
+			rules.each do |rule|
+				if rule.condition_match?(trans)
+					rule.apply_action(trans)
+					break
+				end
+			end
+		end
 	end
 	
-	def updateBalance(transaction)
-		amount = transaction.amount
-		if transaction.type == 'TransactionCredit'
-			amount = 0 - transaction.amount
+	def pocket_map(filtered_transactions)
+	
+		pocket_map = {}
+		filtered_transactions.each do |trans|
+			pocket_id = trans.pocket_id
+			pocket_map[pocket_id] ||= 0
+			pocket_map[pocket_id] = pocket_map[pocket_id] + trans.amount
 		end
-		logger.info "AMOUNT: #{amount}"
-		old_balance = self.balance
-  		new_balance = old_balance + amount
-  		self.balance = new_balance
-  		self.save
-  	end
+		return pocket_map
+	end
+	
+	def month_pocket_map(filtered_transactions)
+		
+		month_pocket_map = {}
+		filtered_transactions.each do |trans|
+			pocket_id = trans.pocket_id
+			if pocket_id.nil?
+				p "NIL POCKET"
+			end
+			date = Date.new(trans.trans_date.year, trans.trans_date.month, 1)
+			month_pocket_key = "#{(trans.trans_date.year*100) + trans.trans_date.month}_#{pocket_id}"
+			month_total_key = "#{(trans.trans_date.year*100) + trans.trans_date.month}_-2"
+			month_pocket_map[month_pocket_key] ||= 0
+			month_pocket_map[month_pocket_key] = month_pocket_map[month_pocket_key] + trans.amount
+		end
+		return month_pocket_map
+	end
+	
+ 	protected
+ 	
+ 		#Called to prevent additional transaction from being created in set_previous_balance.
+ 		#self.previous_balance is set to new_balance.
+ 		#this method should only be called after from execute_transaction.
+ 		#Other updates require a new "reconcile" transaction to be created in set_previous_balance.
+		def update_balance(new_balance)
+			logger.info "UPDATING BALANCE. OLD BALANCE: #{self.balance}, NEW BALANCE: #{new_balance}"
+	  		self.previous_balance = new_balance
+	  		self.balance = new_balance
+	  		self.save
+	  		
+	  	end
+	  	
+	  
+	private
+		#before_create
+	    def initializate_previous_balance
+			self.previous_balance = 0.0.to_d
+	    end
+	    
+		#after_save
+		def reconcile_balance
+			
+			if self.previous_balance != balance
+			
+				puts "OLD BALANCE: #{previous_balance} NEW BALANCE: #{balance}"
+				balanceDiff = self.balance - self.previous_balance
+			
+				transaction = TransactionReconcile.new
+				transaction.name = 'Account Reconciliation'
+			    transaction.description = 'Account Reconciliation'
+			    transaction.trans_date = Date.today
+			    transaction.amount = balanceDiff.to_d
+			    transaction.completed = true
+			    transaction.account_id = id
+			    transaction.user_id = user_id
+		    
+			    transaction.save
+			    
+			    self.reload_transactions
+	    	end
+		end
   	
 end

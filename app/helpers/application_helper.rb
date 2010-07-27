@@ -13,9 +13,11 @@ module ApplicationHelper
 		page << "if($('login_form_div')){"
 			page[:login_form_div].hide
 		page << "}"
+		page << "Form.focusFirstElement($('listing_form_form'))"
+			
 	end
 	
-	def hide_popup_form
+	def hide_popup_form (message=nil)
 		page[:listing_form].replace_html ""
 
 		page[:listing_form_div].hide
@@ -28,7 +30,23 @@ module ApplicationHelper
 		page << "if($('login_form_div')){"
 			page[:login_form_div].show
 		page << "}"
-
+		
+		unless message.nil?
+			page[:flashdiv].replace_html message
+			page[:flashdiv].visual_effect(:fade, :duration => 2)
+			#flash.discard
+		end
+	end
+	
+	def update_transactions (transactions, mainPage)
+		
+		showBalance = mainPage == StateliHelper::MAIN_PAGE_JOURNAL_ACCOUNTS
+		showContract = mainPage != StateliHelper::MAIN_PAGE_JOURNAL_CONTRACTS && mainPage != StateliHelper::MAIN_PAGE_PENDING_CONTRACTS
+		showAccount = mainPage != StateliHelper::MAIN_PAGE_JOURNAL_ACCOUNTS && mainPage != StateliHelper::MAIN_PAGE_PENDING_ACCOUNTS
+	
+		page << "if($('transactions')){"
+		page[:transactions].replace_html :partial =>"transactions/transactions_listing", :locals => {:showBalance => showBalance, :showContract => showContract, :showAccount => showAccount}, :collection => transactions, :as => :transaction
+		page << "}"
 	end
 	
 	def onclick_to_remote(options = {}) 
@@ -39,6 +57,19 @@ module ApplicationHelper
 	end
 	
 	def real_currency(number)
-		number_to_currency(number, :delimiter => ",", :unit => "$ ", :separator => ".")
+		if number.nil?
+			""
+		#elsif number < 0
+		#	number_to_currency(0-number, :delimiter => ",", :unit => "$", :separator => ".", :format => "%u %n")
+		#else
+		#	number_to_currency(number, :delimiter => ",", :unit => "$", :separator => ".", :format => "%u %n")
+		#end
+		else
+		  number_to_currency(number, :delimiter => ",", :unit => "", :separator => ".", :format => "%u %n")
+		end
+	end
+	
+	def parseCurrency(dollar_str)
+		return dollar_str.gsub("$","").gsub(",","").to_f
 	end
 end

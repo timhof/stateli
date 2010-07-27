@@ -1,0 +1,9 @@
+
+$('#transaction_listing_table_div').html("<%= escape_javascript(render :partial => 'transactions/transactions_listing_table', :locals => {:transactions => @transactions, :account => @account, :show_balance => true})%>");
+
+$('#transaction_listing_table').dataTable({
+	"iDisplayLength": 15,
+	"aaSorting": [[1, "desc"]]
+} );
+
+ajaxLinks();

@@ -1,0 +1,11 @@
+<div id="pocket_listing" class="template_div">
+	<div class="table_div" id="pocket_table_div">
+  		<%= render :partial => 'pockets_table', :locals => {:pockets => @pockets} %>
+	</div>
+</div>
+
+<script type="text/javascript">
+  	$(document).ready(function() {
+		$('#pockets_table').dataTable({"iDisplayLength": 25});
+  	} );
+</script>

@@ -1,0 +1,16 @@
+<table id="pockets_table" class="listing_table">
+	<thead>
+  		<tr>
+	    	<th>Name</th>
+	  		<th>Options</td>
+	  			</tr>
+    		</thead>
+			<tbody>
+<% pockets.each do |pocket| %>
+				<tr>
+  					<td><%= pocket.id %> <%= pocket.name %></td>
+  					<td><%= render :partial => 'options', :locals => {:pocket => pocket} %></td>
+  				</tr>
+<% end %>
+			</tbody>
+		</table>

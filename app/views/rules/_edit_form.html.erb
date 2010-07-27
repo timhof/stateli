@@ -1,0 +1,59 @@
+
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Name</div>
+    	<div class="yui-u"><%= f.text_field :name %></div>
+    </div>
+  </div>
+  
+  <% enumValue = EnumValue.new('dfs', 'adfa') %>
+  <% if @rule.new_record? %>
+  
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Rule</div>
+    	<div class="yui-u">	
+    		<%= collection_select(:rule, :type, RuleType.values, :key, :label) %>
+    	</div>
+    </div>
+  </div>
+  
+  <% end %>
+  
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Rule</div>
+    	<div class="yui-u">	
+    		<%= collection_select(:rule, :comp_type, RuleCompType.values, :key, :label) %>
+    		<%= f.text_field :comp_string %>
+    	</div>
+    </div>
+  </div>
+  
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Action</div>
+    	<div class="yui-u">
+    		<%= collection_select(:rule, :comp_action, RuleActionType.values, :key, :label) %>
+    	</div>
+    </div>
+  </div>
+  
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Pocket</div>
+    	<div class="yui-u" id="pocket_select_div">
+			<%= render :partial => 'pockets/pocket_select', :locals => {:pockets => @pockets} %>	
+    	</div>
+    </div>
+  </div>
+  
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Rank</div>
+    	<div class="yui-u"><%= f.text_field :rank %></div>
+    </div>
+  </div>
+  
+  
+ 

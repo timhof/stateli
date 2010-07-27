@@ -1,0 +1,10 @@
+
+<%	form_tag(path, {:class => 'ajaxForm', :id => 'filter_form' }) do %>
+	<div class="yui-b"><div class="yui-g">
+		<div id="pocket_checkbox_container" class="yui-u first">
+<%=		render :partial => 'stateli/checkbox_group', :locals => {:idNameMap => session[:selector].pocketIdNameMap, :selectedKeys =>session[:selector].selectedPockets, :checkbox_container_div => 'pocket_checkbox_container', :parameterName => 'pocket_id', :title => 'Pockets'}%>
+		</div>
+	</div></div>
+	<input type="hidden" id="filter_commit" name="filter_commit" value="update" />
+<% 	end %>
+		

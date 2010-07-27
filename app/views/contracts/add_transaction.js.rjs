@@ -1,0 +1,10 @@
+
+page << "if($('journal_details')){"
+page[:journal_details].replace_html :partial => 'contract_journal_details', :collection => @transactions_journal
+page << "}"
+page << "else if($('pending_details')){"
+page[:pending_details].replace_html :partial => 'contract_pending_details', :collection => @transactions_pending
+page << "}"
+
+page.hide_popup_form flash[:notice]
+flash.discard

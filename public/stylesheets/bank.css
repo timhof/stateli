@@ -1,16 +1,6 @@
 
 * {
-	z-index: 0;
-	padding: 0;
 	margin: 0;
-}
-
-body,html {
-
-	font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-	color: #191919;
-	text-align: center;
-	height: 100%;
 }
 
 ol {
@@ -25,32 +15,17 @@ ul li {
 	list-style: none;
 }
 
-.instruction h2{
-	padding: 5px 0 10px 0;
-}
-
-.instruction a {
-
-}
-
-select {
-	width: 80px;
-}
-
-a {
-	color: #000066;
-}
-a:visited {
-	color: #000066;
-}
 a:hover {
 	color: #000066;
 	background: #FFFFFF;
 }
 
 #main_div {
-	height: 100%;
 	width: 100%;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -4em;
 }
 
 #main_image_div img {
@@ -68,7 +43,7 @@ a:hover {
 	font-weight: bold;
 	overflow: hidden;
 	background-image: url(../images/bank_header_navigation.gif);
-	margin: 1% 1% 0 1%;
+	margin: 0;
 }
 
 #welcome_left {
@@ -143,436 +118,55 @@ a:hover {
 	cursor: pointer;
 }
 
-#navigation{
-	width: 98%;
-	min-width: 600px;
-	background-image: url(../images/bank_header_navigation.gif);
-	background-position: 0 -77px;
-	background-repeat: none;
-	height: 25px;
-	margin: 0 1%;
-}
-
-#navigation_left {
-	float: left;
-	width: 10px;
-	background-image: url(../images/bank_header_navigation_left.gif);
-	background-position: 0 -77px;
-	height: 25px;
-}
-
-#navigation_right {
-	float: right;
-	width: 10px;
-	background-image: url(../images/bank_header_navigation_right.gif);
-	background-position: 0 -77px;
-	height: 25px;
-}
-
-#navigation_disabled{
-	width: 100%;
-	background-image: url(../images/bank_header_navigation.gif);
-	background-position: 0 -77px;
-}
-
-.navigation_button {
-	height: 100%;
-    width: 100px;
-	line-height: 21px;
-	text-align: center;
-	color: #000066;
-}
-
-.navigation_button_disabled {
-	color: #999999;
-}
-
-ul.navigation_tab {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	font-weight: bold;
-	color: #F4F0E5;
-	position: relative;
-	left: 40%;
-}
-
-ul.navigation_tab li {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	float: left;
-}
-
-.drop_down {
-	display: block;
-	z-index: 999;
-	width: 100%;
-	margin: 0px;
-}
-
-.sub_navigation_button {
-	height: 25px;
-	width: 118px;
-	line-height: 25px;
-	text-align: left;
-	border-width: 1px 1px 0 1px; 
-	border-style: dotted;
-	background-color: #3e3df7;
-	background-image: url(../images/bank_header_navigation.gif);
-	background-position: 0 -103px;
-	color: #FFFFFF;
-}
-
-#listing_form_div {
-	border: 3px solid;
-	z-index: 1;
-	background-image: url(../images/listing_form.gif);
-}
-
-
-.template_div {
-	width: 100%;
-	text-align: center;
-	background-color: #ffffff;
-	min-height: 400px;
-	clear: both;
-	padding-bottom: 50px;
-	padding-top: 20px;
-}
-
 .table_div {
 	text-align: center;
-	background-color: #ffffff;
-	width: 800px;
-	margin: 0 auto;
-	padding-top: 10px;
 }
-.header_row {
+
+.listing_table{
+
+	border: 1px solid;
 	width: 100%;
-	clear: both;
+	margin: 0;
 }
 
-
-#account_listing {
-
+.listing_table td{
+	white-space: nowrap;
+	text-align: right;
+	padding: 4px;
 }
 
-.header_cell{ 
+.listing_table td.row_header{
+	white-space: nowrap;
+	text-align: center;
+}
+
+.listing_table td.total_row_header{
+	white-space: nowrap;
+	text-align: center;
 	font-weight: bold;
+}
+
+.listing_table td.total_row_cell{
+	white-space: nowrap;
+	font-weight: bold;
+}
+
+.page_title_div{
+	font-size: 150%;
+	font-weight: bold;	
 	text-align: center;
-	height: 20px;
-	border-style: solid;
-	border-width: 1px;
-	border-color: #666666;
-	background-color: #3e7bf7;
-	background-image: url(../images/bank_header_navigation.gif);
-	background-position: 0 -511px;
-	color: #FFFFFF;
-	
 }
 
-.data_cell{ 
+#page_options_div{
 	text-align: center;
-	border-style: solid;
-	border-width: 1px;
-	border-color: #999999;
-	height: 20px;
-	overflow: hidden;
-}
-
-.account_listing_header{ 
-	float: left;
-	
-}
-
-.account_listing_header_name { 
-	width: 198px;
-}
-
-.account_listing_header_balance { 
-	width: 198px;
-}
-
-.account_listing_header_options { 
-	width: 398px;
-}
-
-.account_listing_data{
-	width: 33.3%;
-	float: left;
-}
-
-.account_listing_data_name { 
-	width: 198px;
-}
-
-.account_listing_data_balance { 
-	width: 130px;
-	text-align: right;
-	padding-right: 68px;
-}
-
-.account_listing_data_options { 
-	width: 398px;
-}
-
-#account_history {
-
-}
-
-.account_history_header{ 
-	width: 158px;
-	float: left;
-}
-
-.account_history_data{
-	width: 158px;
-	float: left;
-}
-
-.account_history_data_currency{
-	width: 138px;
-	float: left;
-	text-align: right;
-	padding-right: 20px;
-}
-
-#account_journal {
-
-}
-
-.account_journal_header_date{ 
-	width: 100px;
-	float: left;
-}
-
-.account_journal_header_name{ 
-	width: 160px;
-	float: left;
-}
-
-.account_journal_header_amount_credit{ 
-	width: 135px;
-	float: left;
-}
-
-.account_journal_header_amount_debit{ 
-	width: 135px;
-	float: left;
-}
-
-.account_journal_header_balance{ 
-	width: 135px;
-	float: left;
-}
-
-.account_journal_header_options{ 
-	width: 123px;
-	float: left;
-}
-
-.account_journal_data_date{ 
-	width: 100px;
-	float: left;
-}
-
-.account_journal_data_name{ 
-	width: 160px;
-	float: left;
-}
-
-.account_journal_data_amount_credit{ 
-	width: 115px;
-	text-align: right;
-	padding-right: 20px;
-	float: left;
-}
-
-.account_journal_data_amount_debit{ 
-	width: 115px;
-	text-align: right;
-	padding-right: 20px;
-	float: left;
-}
-
-.account_journal_data_balance{ 
-	width: 115px;
-	text-align: right;
-	padding-right: 20px;
-	float: left;
-}
-
-.account_journal_data_options{ 
-	width: 123px;
-	float: left;
-}
-
-#account_pending {
-	
-}
-
-.account_pending_header_name{
-	width: 140px;
-	float: left;
-}
-
-.account_pending_header_description{
-	width: 140px;
-	float: left;
-}
-
-.account_pending_header_amount{
-	width: 120px;
-	float: left;
-}
-
-.account_pending_header_date{
-	width: 120px;
-	float: left;
-}
-
-.account_pending_header_contract{
-	width: 140px;
-	float: left;
-}
-
-.account_pending_header_options{
-	width: 128px;
-	float: left;
-}
-
-.account_pending_data_name{
-	width: 140px;
-	float: left;
-}
-
-.account_pending_data_description{
-	width: 140px;
-	float: left;
-}
-
-.account_pending_data_amount{
-	width: 100px;
-	text-align: right;
-	padding-right: 20px;
-	float: left;
-}
-
-.account_pending_data_date{
-	width: 120px;
-	float: left;
-}
-
-.account_pending_data_contract{
-	width: 140px;
-	float: left;
-}
-
-.account_pending_data_options{
-	width: 128px;
-	float: left;
-}
-
-#pending {
-	
-}
-
-.pending_header_name{ 
-	width: 120px;
-	float: left;
-}
-
-.pending_header_description{ 
-	width: 120px;
-	float: left;
-}
-
-.pending_header_amount{ 
-	width: 115px;
-	float: left;
-}
-
-.pending_header_date{ 
-	width: 80px;
-	float: left;
-}
-
-.pending_header_contract{ 
-	width: 120px;
-	float: left;
-}
-
-.pending_header_account{ 
-	width: 120px;
-	float: left;
-}
-
-.pending_header_options{ 
-	width: 111px;
-	float: left;
-}
-	
-.pending_data_name{ 
-	width: 120px;
-	float: left;
-}
-
-.pending_data_amount{ 
-	width: 95px;
-	text-align: right;
-	padding-right: 20px;
-	float: left;
-}
-
-.pending_data_date{ 
-	width: 80px;
-	float: left;
-}
-
-.pending_data_contract{ 
-	width: 120px;
-	float: left;
-}
-
-.pending_data_account{ 
-	width: 120px;
-	float: left;
-}
-
-.pending_data_options{ 
-	width: 111px;
-	float: left;
-}
-
-#account_deposit {
-
-}
-
-#account_withdraw {
-
-}
-
-#account_new {
-
-}
-
-#contract_credit {
-}
-
-#contract_debit {
-}
-
-.page_title_div {
-	text-align: center;
-	height: 60px;
+	height: 25px;
 	line-height: 25px;
 	border-style: solid;
 	border-width: 0px;
+	letter-spacing: 2px;
 }
 
 .date_selection_div {
-	margin-top: 10px;
 }
 
 .flex_spacer_div {
@@ -585,69 +179,15 @@ ul.navigation_tab li {
 	clear:both;
 }
 
-.account_name {
-	color: #3e3df7;
-}
-
-.contract_name {
-	color: #3e3df7;
-}
-
-.transaction_name {
-	color: #3e3df7;
-}
-
 .type_div {
 	clear: both;
+	text-align: center;
+	margin: 0 auto;
 }
 
 .detail_div {
 	text-align: center;
 	clear: both;
-}
-
-.data_row {
-	clear: both;
-}
-
-.header_row {
-	clear: both;
-}
-
-.form_div {
-	width: 500px;
-	position: absolute;
-	left: 250px;
-	top: 100px;
-	background: #D7F73D;
-	padding: 3px;
-	text-align: center;
-}
-
-
-.form_element {
-	margin: 3px;
-	text-align: left;
-	width: 100%;
-}
-
-.form_label {
-	font-weight: bold;
-	text-align: right;
-	width: 245px;
-	float: left;
-	clear: both;
-	padding-right: 5px;
-}
-
-.form_value {
-	
-}
-
-.form_edit_value {
-	text-align: left;
-	width: 245px;
-	padding-left: 5px;
 }
 
 .popup_calendar_div {
@@ -665,37 +205,6 @@ ul.navigation_tab li {
 	color: green;
 }
 
-#new_account_name{
-}
-
-#new_account_description{
-}
-
-#new_account_type{
-}
-
-#new_account_balance{
-}
-
-#new_account_active{
-}
-
-#new_account_submit{
-}
-#new_contract_name {
-}
-#new_contract_description {
-}
-#new_contract_date_start {
-}
-#new_contract_date_end {
-
-}
-#new_contract_type {
-}
-#new_contract_full_date {
-
-}
 #full_date_text{
 	display: none;
 }
@@ -703,51 +212,17 @@ ul.navigation_tab li {
 	display: none;
 }
 
-.contract_listing_data_balance{
-
-}
-
-.contract_listing_header {
-	float: left;
-}
 
 .contract_listing_name {
 	width: 200px;
 }
-
-.contract_listing_date_start {
-	width: 80px;
-}
-
-.contract_listing_date_end {
+.contract_listing_date {
 	width: 80px;
 }
 .contract_listing_type {
 	width: 200px;
 }
-.contract_listing_amount {
-	width: 95px;
-}
 
-.contract_listing_options {
-	width: 100px;
-}
-.contract_listing_data{
-	float: left;
-}
-
-#new_contract_day_of_month {
-}
-#new_contract_day_of_month_alt {
-}
-#new_contract_weekday {
-}
-#new_contract_autopay {
-
-}
-#new_contract_autopay_account {
-
-}
 #new_contract_active {
   display: none;
 }
@@ -786,37 +261,13 @@ ul.navigation_tab li {
 	padding-left: 3%;
 }
 
+
 .option_link_span {
 	
 }
 
-.navselected {
-	
-	color: #f75d3d;
-}
-
-.navmouseover {
-	
-	background-image: url(../images/bank_header_navigation.gif);
-	background-position: 0 -103px;
-	color: #FFFFFF;
-	border-width: 0;
-	border-style: dotted;
-	cursor: pointer;
-	height: 25px;
-}
-
-.subnavselected {
-	background-image: url(../images/bank_header_navigation.gif);
-	background-position: 0 -103px;
-	color: #375672;
-}
-
-.subnavmouseover {
-	background-image: url(../images/bank_header_navigation.gif);
-	background-position: 0 -181px;
-	color: #808080;
-	cursor: pointer;
+.account_selected {
+	background-color: #f75d3d;
 }
 
 #flashdiv {
@@ -824,16 +275,6 @@ ul.navigation_tab li {
 	text-align: center;
 	color: green;
 	width: 100%;
-}
-
-.instruction {
-	text-align: left;
-	padding-left: 100px;
-	display:none;
-}
-
-#introduction {
-	padding: 20px 0 20px 0;
 }
 
 .intro{
@@ -845,11 +286,13 @@ ul.navigation_tab li {
 	color: #4f73aa;
 }
 
+#push{
+	
+	height: 4em;
+}
 #footer {
 	width: 98%;
-	margin: 0 1%;
-	height: 50px;
-	line-height: 70px;
+	height: 4em;
 	background-image: url(../images/bank_header_navigation.gif);
 	background-position: 0 -460px;
 	font-size: 85%;
@@ -857,7 +300,7 @@ ul.navigation_tab li {
 }
 
 #footer_text{
-	position
+	
 }
 #footer_left {
 	float: left;

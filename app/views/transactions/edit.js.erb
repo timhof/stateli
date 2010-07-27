@@ -1,0 +1,25 @@
+
+$('#edit_transaction_dialog').html("<%= escape_javascript(render :partial => 'edit', :locals => {:account => @account, :transaction => @transaction, :pockets => @pockets})%>");
+
+$("#edit_transaction_dialog").dialog({
+	bgiframe: true, 
+	autoOpen: false, 
+	modal: false,
+	width: '850px',
+	buttons: {
+		Cancel: function() {
+			$(this).dialog('close');
+			$('#edit_commit').val('cancel');
+			$('#edit_form').submit();
+		},
+		'OK': function() {
+			$(this).dialog('close');
+			$('#edit_commit').val('update');
+			$('#edit_form').submit();
+		}
+	}
+}); 
+
+$('#edit_transaction_dialog').dialog('open');
+
+ajaxLinks();

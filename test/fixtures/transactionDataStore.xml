@@ -1,0 +1,523 @@
+<?xml version='1.0' encoding='ASCII'?>
+<root>
+  <transactions>
+    <expense>
+      <date>02/04/2010</date>
+      <type>Debit Card Transaction</type>
+      <description>MICHAELS #2062 HUNTINGTO        02/04MICHAELS</description>
+      <amount>32.83</amount>
+      <balance>17862.1</balance>
+    </expense>
+    <expense>
+      <date>02/03/2010</date>
+      <type>ATM Transaction</type>
+      <description>ATM WITHDRAWAL          002158  02/0355 JERICH</description>
+      <amount>60.0</amount>
+      <balance>17894.93</balance>
+    </expense>
+    <expense>
+      <date>02/02/2010</date>
+      <type>Debit Card Transaction</type>
+      <description>SUPER STOP &amp; SH HUNTINGT        02/02SUPER STO</description>
+      <amount>21.69</amount>
+      <balance>17954.93</balance>
+    </expense>
+    <expense>
+      <date>02/01/2010</date>
+      <type>Debit Card Transaction</type>
+      <description>GERI'S HALLMARK HUNTINGT        01/31GERI'S HA</description>
+      <amount>5.4</amount>
+      <balance>17976.62</balance>
+    </expense>
+    <expense>
+      <date>02/01/2010</date>
+      <type>Debit Card Transaction</type>
+      <description>PAYPAL *VISTAPRINT 40293        01/29PAYPAL *V</description>
+      <amount>7.94</amount>
+      <balance>17982.02</balance>
+    </expense>
+    <expense>
+      <date>02/01/2010</date>
+      <type>Account Transfer</type>
+      <description>TRANSFER TO SAV XXXXX1471</description>
+      <amount>25.0</amount>
+      <balance>17989.96</balance>
+    </expense>
+    <expense>
+      <date>02/01/2010</date>
+      <type>Debit Card Transaction</type>
+      <description>BUYBUYBABY#3004 HUNTINGT        01/31BUYBUYBAB</description>
+      <amount>29.46</amount>
+      <balance>18014.96</balance>
+    </expense>
+    <expense>
+      <date>02/01/2010</date>
+      <type>Debit Card Transaction</type>
+      <description>DELIGHTFUL DINNERS L E N        01/29DELIGHTFU</description>
+      <amount>60.75</amount>
+      <balance>18044.42</balance>
+    </expense>
+    <expense>
+      <date>02/01/2010</date>
+      <type>ACH Debit</type>
+      <description>LIPA             ONLINE PAY 0225300573      WEB ID: 9675331001</description>
+      <amount>78.56</amount>
+      <balance>18105.17</balance>
+    </expense>
+    <expense>
+      <date>02/01/2010</date>
+      <type>ACH Debit</type>
+      <description>VERIZON WIRELESS PAYMENTS                   PPD ID: 7223344794</description>
+      <amount>89.23</amount>
+      <balance>18183.73</balance>
+    </expense>
+    <expense>
+      <date>02/01/2010</date>
+      <type>Debit Card Transaction</type>
+      <description>TRADER JOE'S # COMMACK N        01/30TRADER JO</description>
+      <amount>100.7</amount>
+      <balance>18272.96</balance>
+    </expense>
+    <expense>
+      <date>02/01/2010</date>
+      <type>ACH Debit</type>
+      <description>WF HOME MTG      AUTO PAY                   PPD ID: W952318940</description>
+      <amount>2531.35</amount>
+      <balance>18373.66</balance>
+    </expense>
+    <income>
+      <date>02/01/2010</date>
+      <type>ACH Credit</type>
+      <description>LAKE 5 MEDIA INC PAYROLL                    PPD ID: 9005989422</description>
+      <amount>2785.45</amount>
+      <balance>20905.01</balance>
+    </income>
+    <expense>
+      <date>01/28/2010</date>
+      <type>Debit Card Transaction</type>
+      <description>PAYPAL *DRUGSTORE 402935        01/26PAYPAL *D</description>
+      <amount>32.46</amount>
+      <balance>18119.56</balance>
+    </expense>
+    <expense>
+      <date>01/27/2010</date>
+      <type>ATM Transaction</type>
+      <description>ATM WITHDRAWAL          003531  01/27850 3RD A</description>
+      <amount>100.0</amount>
+      <balance>18152.02</balance>
+    </expense>
+    <expense>
+      <date>01/26/2010</date>
+      <type>Debit Card Transaction</type>
+      <description>SUPER STOP &amp; SH HUNTINGT        01/26SUPER STO</description>
+      <amount>18.6</amount>
+      <balance>18252.02</balance>
+    </expense>
+    <expense>
+      <date>01/26/2010</date>
+      <type>Debit Card Transaction</type>
+      <description>PANERA BREAD #4054/Q E N        01/24PANERA BR</description>
+      <amount>19.3</amount>
+      <balance>18270.62</balance>
+    </expense>
+    <expense>
+      <date>01/25/2010</date>
+      <type>Debit Card Transaction</type>
+      <description>BUYBUYBABY#3004 HUNTINGT        01/25BUYBUYBAB</description>
+      <amount>7.59</amount>
+      <balance>18289.92</balance>
+    </expense>
+    <expense>
+      <date>01/25/2010</date>
+      <type>Debit Card Transaction</type>
+      <description>BUYBUYBABY#3004 HUNTINGT        01/23BUYBUYBAB            Purchase $11.61 Cash Back $20.00</description>
+      <amount>31.61</amount>
+      <balance>18297.51</balance>
+    </expense>
+    <expense>
+      <date>01/25/2010</date>
+      <type>Debit Card Transaction</type>
+      <description>THE VITAMIN SHO HUNTINGT        01/25THE VITAM</description>
+      <amount>34.79</amount>
+      <balance>18329.12</balance>
+    </expense>
+    <expense>
+      <date>01/25/2010</date>
+      <type>Debit Card Transaction</type>
+      <description>WALDBAUM'S #704 HUNTINGT        01/24WALDBAUM'</description>
+      <amount>106.38</amount>
+      <balance>18363.91</balance>
+    </expense>
+    <expense>
+      <date>01/19/2010</date>
+      <type>Debit Card Transaction</type>
+      <description>PAYPAL *MARDEE331 402935        01/15PAYPAL *M</description>
+      <amount>10.0</amount>
+      <balance>18470.29</balance>
+    </expense>
+    <expense>
+      <date>01/19/2010</date>
+      <type>Debit Card Transaction</type>
+      <description>BEDBATH&amp;BEYOND# HUNTINGT        01/17BEDBATH&amp;B</description>
+      <amount>16.32</amount>
+      <balance>18480.29</balance>
+    </expense>
+    <expense>
+      <date>01/19/2010</date>
+      <type>Debit Card Transaction</type>
+      <description>MICHAELS #2062 HUNTINGTO        01/17MICHAELS</description>
+      <amount>39.06</amount>
+      <balance>18496.61</balance>
+    </expense>
+    <expense>
+      <date>01/19/2010</date>
+      <type>ATM Transaction</type>
+      <description>NON-CHASE ATM WITHDRAW  134074  01/19*WALT WHI</description>
+      <amount>42.0</amount>
+      <balance>18535.67</balance>
+    </expense>
+    <expense>
+      <date>01/19/2010</date>
+      <type>Debit Card Transaction</type>
+      <description>THE HOME DEPOT FARMINGDA        01/16THE HOME</description>
+      <amount>87.42</amount>
+      <balance>18577.67</balance>
+    </expense>
+    <expense>
+      <date>01/19/2010</date>
+      <type>Misc. Debit</type>
+      <description>NON-CHASE ATM FEE-WITH</description>
+      <amount>2.0</amount>
+      <balance>18665.09</balance>
+    </expense>
+    <expense>
+      <date>01/15/2010</date>
+      <type>ATM Transaction</type>
+      <description>ATM WITHDRAWAL          005736  01/15225 FIFTH</description>
+      <amount>100.0</amount>
+      <balance>18667.09</balance>
+    </expense>
+    <income>
+      <date>01/15/2010</date>
+      <type>ACH Credit</type>
+      <description>LAKE 5 MEDIA INC PAYROLL                    PPD ID: 9005989422</description>
+      <amount>2785.45</amount>
+      <balance>18767.09</balance>
+    </income>
+    <income>
+      <date>01/15/2010</date>
+      <type/>
+      <description>BED BATH &amp; BEYOND #03</description>
+      <amount>71.66</amount>
+      <balance>2066.66</balance>
+    </income>
+    <expense>
+      <date>01/14/2010</date>
+      <type/>
+      <description>NEWSDAY HOME DELIVERY - 101132010346504  </description>
+      <amount>19.5</amount>
+      <balance>2138.32</balance>
+    </expense>
+    <expense>
+      <date>01/14/2010</date>
+      <type/>
+      <description>GULF OIL 92040434 - 00023334  </description>
+      <amount>28.65</amount>
+      <balance>2118.82</balance>
+    </expense>
+    <income>
+      <date>01/14/2010</date>
+      <type/>
+      <description>VICTORIA SECRET - 0000410709069  </description>
+      <amount>24.24</amount>
+      <balance>2090.17</balance>
+    </income>
+    <income>
+      <date>01/14/2010</date>
+      <type/>
+      <description>PETSMART INC - 6890284  </description>
+      <amount>53.82</amount>
+      <balance>2114.41</balance>
+    </income>
+    <expense>
+      <date>01/13/2010</date>
+      <type>Debit Card Transaction</type>
+      <description>PAYPAL *TNVOLCHRIST 4029        01/12PAYPAL *T</description>
+      <amount>45.0</amount>
+      <balance>15981.64</balance>
+    </expense>
+    <expense>
+      <date>01/13/2010</date>
+      <type/>
+      <description>USPS 35406107431906357 - 688  </description>
+      <amount>11.57</amount>
+      <balance>2168.23</balance>
+    </expense>
+    <expense>
+      <date>01/13/2010</date>
+      <type/>
+      <description>DIRAIMO PIZZERIA INC</description>
+      <amount>12.87</amount>
+      <balance>2156.66</balance>
+    </expense>
+    <expense>
+      <date>01/13/2010</date>
+      <type/>
+      <description>BED BATH &amp; BEYOND #03</description>
+      <amount>102.24</amount>
+      <balance>2143.79</balance>
+    </expense>
+    <expense>
+      <date>01/12/2010</date>
+      <type>Debit Card Transaction</type>
+      <description>PAYPAL *VISTAPRINT 40293        01/11PAYPAL *V</description>
+      <amount>25.0</amount>
+      <balance>16026.64</balance>
+    </expense>
+    <expense>
+      <date>01/12/2010</date>
+      <type/>
+      <description>WALDBAUM'S #70449 - 06203350449SC3Y7000059632  </description>
+      <amount>21.97</amount>
+      <balance>2041.55</balance>
+    </expense>
+    <expense>
+      <date>01/11/2010</date>
+      <type/>
+      <description>STARVING ARTIST</description>
+      <amount>118.4</amount>
+      <balance>2019.58</balance>
+    </expense>
+    <expense>
+      <date>01/11/2010</date>
+      <type/>
+      <description>CHAIRMAN CO</description>
+      <amount>140.0</amount>
+      <balance>1901.18</balance>
+    </expense>
+    <expense>
+      <date>01/09/2010</date>
+      <type/>
+      <description>JCPENNEY CATLG 9831 - 2255908  </description>
+      <amount>133.34</amount>
+      <balance>1761.18</balance>
+    </expense>
+    <expense>
+      <date>01/09/2010</date>
+      <type/>
+      <description>AMAZON MKTPLACE PMTS - QC2QNFPYVID  </description>
+      <amount>17.06</amount>
+      <balance>1627.84</balance>
+    </expense>
+    <expense>
+      <date>01/09/2010</date>
+      <type/>
+      <description>AMAZON MKTPLACE PMTS - IDNEOGA6TRI  </description>
+      <amount>5.99</amount>
+      <balance>1610.78</balance>
+    </expense>
+    <expense>
+      <date>01/09/2010</date>
+      <type/>
+      <description>BED BATH &amp; BEYOND #03</description>
+      <amount>114.51</amount>
+      <balance>1604.79</balance>
+    </expense>
+    <expense>
+      <date>01/08/2010</date>
+      <type/>
+      <description>AMAZON PRIME - T5A950CYVYT  </description>
+      <amount>79.0</amount>
+      <balance>1490.28</balance>
+    </expense>
+    <expense>
+      <date>01/08/2010</date>
+      <type/>
+      <description>AMAZON.COM - SX6RDZ9EG1T   - SALES TAX AMT         0.00  </description>
+      <amount>7.58</amount>
+      <balance>1411.28</balance>
+    </expense>
+    <expense>
+      <date>01/07/2010</date>
+      <type/>
+      <description>PAYPAL *KADOOLI COM - 35042745114029357733  </description>
+      <amount>39.61</amount>
+      <balance>1403.7</balance>
+    </expense>
+    <expense>
+      <date>01/07/2010</date>
+      <type/>
+      <description>COUNTRY CURTAINS-MH</description>
+      <amount>64.09</amount>
+      <balance>1364.09</balance>
+    </expense>
+    <expense>
+      <date>01/06/2010</date>
+      <type/>
+      <description>WALDBAUM'S #70449 - 06203350449SC3Y7000012971  </description>
+      <amount>33.92</amount>
+      <balance>1300.0</balance>
+    </expense>
+    <expense>
+      <date>01/06/2010</date>
+      <type/>
+      <description>LIRR MAIL&amp;RIDE TICKET - 9463449  </description>
+      <amount>352.04</amount>
+      <balance>1266.08</balance>
+    </expense>
+    <income>
+      <date>01/04/2010</date>
+      <type/>
+      <description>BA ELECTRONIC PAYMENT</description>
+      <amount>4000.0</amount>
+      <balance>914.04</balance>
+    </income>
+    <expense>
+      <date>12/31/2009</date>
+      <type/>
+      <description>AMAZON MKTPLACE PMTS - N0UBVA8QADC  </description>
+      <amount>8.99</amount>
+      <balance>4914.04</balance>
+    </expense>
+    <income>
+      <date>12/30/2009</date>
+      <type/>
+      <description>TARGET 00018663</description>
+      <amount>9.78</amount>
+      <balance>4905.05</balance>
+    </income>
+    <expense>
+      <date>12/29/2009</date>
+      <type/>
+      <description>LARRY`S FUEL OIL - 8729  </description>
+      <amount>451.3</amount>
+      <balance>4914.83</balance>
+    </expense>
+    <expense>
+      <date>12/29/2009</date>
+      <type/>
+      <description>CONSUMERS WAREHOUSE CT</description>
+      <amount>224.72</amount>
+      <balance>4463.53</balance>
+    </expense>
+    <expense>
+      <date>12/26/2009</date>
+      <type/>
+      <description>OUTBACK #3332</description>
+      <amount>50.0</amount>
+      <balance>4238.81</balance>
+    </expense>
+    <expense>
+      <date>12/26/2009</date>
+      <type/>
+      <description>URBAN OUTFITTERS #11</description>
+      <amount>9.99</amount>
+      <balance>4188.81</balance>
+    </expense>
+    <expense>
+      <date>12/25/2009</date>
+      <type/>
+      <description>LUCKY 110 FARMS</description>
+      <amount>63.16</amount>
+      <balance>4178.82</balance>
+    </expense>
+    <expense>
+      <date>12/25/2009</date>
+      <type/>
+      <description>VICTORIA'S SECRET 0250</description>
+      <amount>16.16</amount>
+      <balance>4115.66</balance>
+    </expense>
+    <expense>
+      <date>12/25/2009</date>
+      <type/>
+      <description>PERSONALIZED CHRISTMAS</description>
+      <amount>13.02</amount>
+      <balance>4099.5</balance>
+    </expense>
+    <expense>
+      <date>12/24/2009</date>
+      <type/>
+      <description>USPS CHANGE OF66100959 - 000700164331169  </description>
+      <amount>1.0</amount>
+      <balance>4086.48</balance>
+    </expense>
+    <expense>
+      <date>12/24/2009</date>
+      <type/>
+      <description>USPS CHANGE OF66100959 - 000700164330246  </description>
+      <amount>1.0</amount>
+      <balance>4085.48</balance>
+    </expense>
+    <expense>
+      <date>12/23/2009</date>
+      <type/>
+      <description>GULF OIL 91522010 - 00036171  </description>
+      <amount>29.0</amount>
+      <balance>4084.48</balance>
+    </expense>
+    <expense>
+      <date>12/22/2009</date>
+      <type/>
+      <description>AMAZON.COM - W18ASW7ZZ09   - SALES TAX AMT         0.10  </description>
+      <amount>124.48</amount>
+      <balance>4055.48</balance>
+    </expense>
+    <expense>
+      <date>12/22/2009</date>
+      <type/>
+      <description>PLUSH NECESSITIES - 3023  </description>
+      <amount>113.1</amount>
+      <balance>3931.0</balance>
+    </expense>
+    <expense>
+      <date>12/21/2009</date>
+      <type/>
+      <description>THE HOME DEPOT 1272</description>
+      <amount>50.56</amount>
+      <balance>3817.9</balance>
+    </expense>
+    <expense>
+      <date>12/19/2009</date>
+      <type/>
+      <description>BED BATH &amp; BEYOND #03</description>
+      <amount>13.02</amount>
+      <balance>3767.34</balance>
+    </expense>
+    <expense>
+      <date>12/19/2009</date>
+      <type/>
+      <description>THE HOME DEPOT 1272</description>
+      <amount>11.76</amount>
+      <balance>3754.32</balance>
+    </expense>
+    <expense>
+      <date>12/18/2009</date>
+      <type/>
+      <description>THE HOME DEPOT 1202</description>
+      <amount>41.4</amount>
+      <balance>3742.56</balance>
+    </expense>
+    <expense>
+      <date>12/17/2009</date>
+      <type/>
+      <description>TGT*TARGET.COM - ERV6WT2H42T   - SALES TAX AMT         0.03  </description>
+      <amount>35.07</amount>
+      <balance>3701.16</balance>
+    </expense>
+    <expense>
+      <date>12/17/2009</date>
+      <type/>
+      <description>TARGET 00011080</description>
+      <amount>205.38</amount>
+      <balance>3666.09</balance>
+    </expense>
+    <expense>
+      <date>12/17/2009</date>
+      <type/>
+      <description>10,000 TREES</description>
+      <amount>51.05</amount>
+      <balance>3460.71</balance>
+    </expense>
+  </transactions>
+</root>

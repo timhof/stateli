@@ -1,27 +1,12 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
-  description: MyString
-  scheduled_date: 2009-06-22
-  executed_date: 2009-06-22
-  amount: 1.5
-  completed: 1
-  account_id_source: 1
-  account_id_dest: 1
-  contract_id: 1
-  type: MyString
-  user_id: 1
-
-two:
-  name: MyString
-  description: MyString
-  scheduled_date: 2009-06-22
-  executed_date: 2009-06-22
-  amount: 1.5
-  completed: 1
-  account_id_source: 1
-  account_id_dest: 1
-  contract_id: 1
-  type: MyString
-  user_id: 1
+oil_delivery:
+    name: Oil Payment
+    description: Oil Delivery
+    trans_date: 2010-03-01
+    amount: 456.12
+    account: chase
+    contract: oil
+    type: TransactionCredit
+    user_id: 1
+    autopay: true

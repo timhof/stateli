@@ -1,0 +1,42 @@
+<% enumValue = EnumValue.new('dfs', 'adfa') %>
+<div id="rule_listing" class="template_div">
+	<%= link_to 'New Rule', new_account_rule_path(@account), :title => 'Add Rule' %>
+	<div class="table_div">
+  		<table id="rule_listing_table" class="listing_table">
+  			<thead>
+  				<tr>
+	    			<th>Name</th>
+	  				<th>Type</th>
+	  				<th>Rule Type</th>
+	  				<th>String</th>
+	  				<th>Amount</th>
+	  				<th>Date</th>
+	  				<th>Action</th>
+	  				<th>Pocket</th>
+	  				<th>Options</td>
+	  			</tr>
+    		</thead>
+			<tbody>
+<% @rules.each do |rule| %>
+  				<tr>
+  					<td><%= rule.name %></td>
+  					<td><%= RuleType.label(rule.type) %></td>
+  					<td><%= rule.comp_type %></td>
+  					<td><%= rule.comp_string %></td>
+  					<td><%= rule.comp_amount %></td>
+  					<td><%= rule.comp_date %></td>
+  					<td><%= rule.comp_action %></td>
+  					<td><%= rule.comp_action == RuleActionType::DELETE.key || rule.pocket.nil? ? "&nbsp;" : rule.pocket.name %></td>
+  					<td><%= render :partial => 'options', :locals => {:acc => @account, :rule => rule} %></td>
+  				</tr>
+<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<script type="text/javascript">
+  	$(document).ready(function() {
+		$('#rule_listing_table').dataTable({"iDisplayLength": 15});
+  	} );
+</script>

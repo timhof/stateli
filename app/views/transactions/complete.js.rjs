@@ -1,0 +1,5 @@
+
+
+unless @transaction.blank?
+	page.show_popup_form('complete')
+end

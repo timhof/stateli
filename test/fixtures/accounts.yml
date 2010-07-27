@@ -1,15 +1,33 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
-  description: MyString
-  type: MyString
-  balance: 1.5
+chase:
+  name: Chase
+  description: Chase
+  type: AccountDebit
+  balance: 17341.78
   user_id: 1
+  active: true
 
-two:
-  name: MyString
-  description: MyString
-  type: MyString
-  balance: 1.5
+ing:
+  name: ING
+  description: ING
+  type: AccountDebit
+  balance: 549.34
   user_id: 1
+  active: true
+  
+mortgage:
+  name: Mortgage
+  description: Mortgage Account
+  type: AccountCredit
+  balance: 0
+  user_id: 1
+  active: true
+  
+oil:
+  name: Larrys Oil
+  description: Oil Delivery
+  type: AccountCredit
+  balance: 0
+  user_id: 1
+  active: true

@@ -1,37 +1,7 @@
-<h1>Listing transactions</h1>
 
-<p>All Transactions</p>
-<table>
-  <%= render :partial => 'transaction_header' %>
-  <%= render :partial => 'transaction_details', :collection => @transactions %>
-</table>
-
-
-<p>Debit Transactions</p>
-<table>
-  <%= render :partial => 'transaction_header' %>
-  <%= render :partial => 'transaction_details', :collection => @transactionsDebit %>
-</table>
-
-
-<p>Credit Transactions</p>
-<table>
-  <%= render :partial => 'transaction_header' %>
-  <%= render :partial => 'transaction_details', :collection => @transactionsCredit %>
-</table>
-
-<p>Transfer Transactions</p>
-<table>
-  <%= render :partial => 'transaction_header' %>
-  <%= render :partial => 'transaction_details', :collection => @transactionsTransfer %>
-</table>
-
-<p>Reconcile Transactions</p>
-<table>
-  <%= render :partial => 'transaction_header' %>
-  <%= render :partial => 'transaction_details', :collection => @transactionsReconcile %>
-</table>
-
-<br />
-
-<%= link_to 'New transaction', new_transaction_path %>
+<div id="pending" class="template_div">
+  <div class="date_selection_div">
+    <%= render :partial => 'stateli/date_span_selector_pending', :locals => {:form_url => transactions_pending_path, :start_text_field_id => "start_date", :end_text_field_id => "end_date"}; %>
+  </div>
+  <%= render :partial => 'transactions/transactions_div', :locals => {:transactions => @transactions, :div_id => :transactions_pending} %>
+</div>

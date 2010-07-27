@@ -1,5 +1,8 @@
 class StateliController < ApplicationController
 	
+  require 'bigdecimal'
+  require 'bigdecimal/util'
+  	
   before_filter :login_required, :except => ['index', 'signup', 'register', 'cancel_popup']
   
   def index
@@ -42,7 +45,6 @@ class StateliController < ApplicationController
   
   def account_pending
   	@account = Account.find(params[:id])
-  	@account.set_overdue_transactions()
   	@start_date = params[:start_date]
   	if @start_date.nil?
   		@start_date = Date.today
@@ -92,7 +94,6 @@ class StateliController < ApplicationController
   
    def account_journal
   	@account = Account.find(params[:id])
-  	@account.set_overdue_transactions()
   	@start_date = params[:start_date]
   	if @start_date.nil?
   		@start_date = Date.today >> -12
@@ -183,19 +184,18 @@ class StateliController < ApplicationController
   
   def get_pending_psuedo_transaction(transaction_list, user_id, pending_end_date)
   	
-	end_balance = 0
+	end_balance = 0.0.to_d
 	transaction_list.each do |trans|
 		end_balance = end_balance + trans.amount
 	end
 	
 	trans = Transaction.new
-	trans.scheduled_date = pending_end_date.to_s
-	trans.executed_date = pending_end_date.to_s
-	trans.completed = false
+	trans.trans_date = pending_end_date.to_s
 	trans.user_id = user_id
+	trans.completed = false
 	trans.name = "end"
 	trans.description = "end"
-	trans.amount = 0
+	trans.amount = 0.0
 	trans.account_balance = end_balance
 	return trans
 		
@@ -290,52 +290,28 @@ class StateliController < ApplicationController
   
   def execute_withdraw
   	@account = Account.find(params[:id])
-  	@transaction = TransactionCredit.new(params[:transaction])
-  	@transaction.scheduled_date = Date.today
-    @transaction.executed_date = Date.today
-    @transaction.completed = true
-    @transaction.user_id = @account.user_id
-    @transaction.account_id_source = @account.id
+  	@transaction = execute_withdrawal(params[:transaction])
     
-    respond_to do |format|
-      if @transaction.save
-      	
-      	@account.updateBalance(@transaction)
-    
+  	respond_to do |format|
+
         flash[:notice] = 'Withdraw was successfully executed.'
         format.html { redirect_to listing_url }
         format.xml  { render :xml => @transaction, :status => :created, :location => @transaction }
         format.js {render :action => "execute_transaction"}
-      else
-        format.html { render :action => "withdraw" }
-        format.xml  { render :xml => @transaction.errors, :status => :unprocessable_entity }
-      end
     end
   end
   
   def execute_deposit
+  	
   	@account = Account.find(params[:id])
-  	@transaction = TransactionDebit.new(params[:transaction])
-  	@transaction.scheduled_date = Date.today
-    @transaction.executed_date = Date.today
-    @transaction.completed = true
-    @transaction.user_id = @account.user_id
-    @transaction.account_id_dest = @account.id
+  	@transaction = @account.execute_deposit(params[:transaction])
     
     respond_to do |format|
-    	
-      if @transaction.save
-      	
-      	@account.updateBalance(@transaction)
-      	
+    
         flash[:notice] = 'Deposit was successfully executed.'
         format.html {redirect_to(listing_url)}
         format.xml  { render :xml => @transaction, :status => :created, :location => @transaction }
         format.js {render :action => "execute_transaction"}
-      else
-        format.html { render :action => "deposit" }
-        format.xml  { render :xml => @transaction.errors, :status => :unprocessable_entity }
-      end
     end
   end
   
@@ -358,7 +334,7 @@ class StateliController < ApplicationController
   	
 	
     respond_to do |format|
-      if @account.update_attributes(params[:account])
+      if @account.update_account_attributes(params[:account])
       	
       	transactions_asc = @account.completed_transactions_by_date(@start_date, @end_date)
   		@journal_transactions = transactions_asc.reverse
@@ -377,30 +353,22 @@ class StateliController < ApplicationController
   def autopay
  
     @transaction = Transaction.find(params[:transaction_id])
-    @transaction.executed_date = @transaction.scheduled_date
-    @transaction.completed = true
-						
-    @account_changed = false
+    @transaction.complete
     			
     respond_to do |format|
-      if @transaction.save
-      	
-      	if(@transaction.type == 'TransactionCredit')
-      		@account = @transaction.sourceAccount
-  		elsif(@transaction.type == 'TransactionDebit')
-  			@account = @transaction.destinationAccount
-  		end
-  		
-      	@account.updateBalance(@transaction)
-      	
         flash[:notice] = 'Transaction was successfully updated.'
-        format.html { redirect_to(pending_path(params[:account_id])) }
         format.js { render :action => "transaction_update"}
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @transaction.errors, :status => :unprocessable_entity }
-      end
+    end
+  end
+  
+  def transaction_remove
+  	
+  	@transaction = Transaction.find(params[:transaction_id])
+  	@transaction.destroy
+  	
+  	respond_to do |format|
+        flash[:notice] = 'Transaction was successfully deleted.'
+        format.js { render :action => "transaction_update"}
     end
   end
   
@@ -492,6 +460,8 @@ class StateliController < ApplicationController
 		contract = ContractOnce.new(params[:contract])
 	end
 	
+	contract.amount = contract.amount.to_d
+	
 	logger.info "CONTRACT TYPE: #{contract.type}"
 	contract.user_id = @current_user.id
 	return contract
@@ -510,57 +480,33 @@ class StateliController < ApplicationController
 	@transaction.user_id = @current_user.id
 	
 	@account_changed = false
-	param_acc_dest = params[:transaction][:account_id_dest]
-	param_acc_src = params[:transaction][:account_id_source]
-	if param_acc_dest && @transaction.account_id_dest != param_acc_dest.to_i
-		logger.info "Destination Account exists but not equal"
-		logger.info "Original Destination Account: #{@transaction.account_id_dest}"
-		logger.info "     New Destination Account: #{param_acc_dest}"
+	param_acc = params[:transaction][:account_id]
+	if param_acc && @transaction.account_id != param_acc.to_i
 		@account_changed = true
 	end
-	if param_acc_src && @transaction.account_id_source != param_acc_src.to_i
-		logger.info "Source Account exists but not equal"
-		@account_changed = true
-	end
+	
     respond_to do |format|
-      if @transaction.update_attributes(params[:transaction])
-      	
+      if @transaction.update_transaction_attributes(params[:transaction])
+      	@transaction.amount = @transaction.amount.to_d
         flash[:notice] = 'Transaction was successfully updated.'
         format.html { redirect_to(journal_path(params[:account_id])) }
         format.xml  { head :ok }
         format.js
       else
-        format.html { render :actionF => "edit" }
+        format.html { render :action => "edit" }
         format.xml  { render :xml => @transaction.errors, :status => :unprocessable_entity }
       end
     end
   end
   
   def transaction_complete
+  	
     @transaction = Transaction.find(params[:transaction_id])
-	@transaction.user_id = @current_user.id
-	@transaction.executed_date = Date.today
-	@transaction.completed = true;
-						
-	if @transaction.type == 'TransactionCredit'
-		@account = Account.find(params[:transaction][:account_id_source])
-	elsif @transaction.type == 'TransactionDebit'
-		@account = Account.find(params[:transaction][:account_id_dest])
-	end
+	transaction.update_and_complete(params[:transaction])
 	
     respond_to do |format|
-      if @transaction.update_attributes(params[:transaction])
-      
-      	@account.updateBalance(@transaction)
-      	
         flash[:notice] = 'Transaction was successfully updated.'
-        format.html { redirect_to(pending_path(@account.id)) }
-        format.xml  { head :ok }
         format.js { render :action => "transaction_update"}
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @transaction.errors, :status => :unprocessable_entity }
-      end
     end
   end
   
@@ -584,6 +530,28 @@ class StateliController < ApplicationController
       format.html # show.html.erb
       format.xml  { render :xml => @contract }
     end
+  end
+  
+  def contract_new_transaction
+    @contract = Contract.find(params[:id])
+	@transaction = TransactionCredit.new
+
+	respond_to do |format|
+      format.js {render :action => "contract_new_transaction"}
+    end
+  end
+  
+  def contract_add_transaction
+    @contract = Contract.find(params[:id])
+    logger.info "Adding Transaction to Contract: #{@contract}"
+	@transaction = @contract.addTransaction(params[:transaction])
+	
+	respond_to do |format|
+    	flash[:notice] = 'Trasaction was successfully added.'
+        format.html { redirect_to listing_url }
+       	format.js {render :action => "contract_add_transaction"}
+     
+  	end
   end
   
   def clean_transactions
@@ -625,4 +593,6 @@ class StateliController < ApplicationController
       render :action => 'signup'
     end
   end
+  
+  
 end

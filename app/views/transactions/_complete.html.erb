@@ -1,0 +1,64 @@
+
+<% remote_form_for(:transaction, @transaction, :url => transaction_update_path(@transaction), :html => {:method => 'put', :id => "listing_form_form"}) do |f| %>
+  <%= f.error_messages %>
+
+  <div class="form_element">
+  	<div class="form_label">
+    	Name
+    </div>
+    <div class="form_value">
+    	<%= h @transaction.name %>
+    </div>
+  </div>
+  <div class="form_element">
+  	<div class="form_label">
+    	Description
+    </div>
+    <div class="form_value">
+    <%= h @transaction.description %>
+    </div>
+  </div>
+  
+  <div class="form_element">
+  	<div class="form_label">
+  		Date
+    </div>
+    <div class="form_value">
+    	 <%=h @transaction.trans_date.strftime("%m/%d/%y") %>
+    </div>
+  </div>
+  
+  <div class="form_element">
+  	<div class="form_label">
+    	Amount
+    </div>
+    <div class="form_value">
+    	<%= f.text_field :amount %>
+    </div>
+  </div>
+  
+  <div class="form_element">
+  	<div class="form_label">
+    	Account
+    </div>
+    <div class="form_value">
+		<%= collection_select(:transaction, :account_id, Account.all, :id, :name) %> 
+    </div>
+  </div>
+ 
+  <div class="form_element">
+  	<div class="form_label">
+    	Contract
+    </div>
+    <div class="form_value">
+    	<%= @transaction.contract.blank? ? "&nbsp;" : @transaction.contract.name %> 
+    </div>
+  </div>
+ 
+  <div style="display:none;">
+    <%= f.check_box :completed %>
+  </div>
+  <div class="submit_button_div">
+    <%= f.submit 'Update' %>
+  </div>
+<% end %>
