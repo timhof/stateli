@@ -1,0 +1,37 @@
+
+ 
+ <% overdue = transaction.overdue?
+ 	amount = transaction.amount 
+ 	
+ 	isCredit = transaction.amount <= 0
+ 	isDebit = transaction.amount >= 0 %>
+ 	
+	<tr class="<%= overdue ? "overdue" : "" %>" id="transaction_detail_<%= transaction.id%>">
+		<td><%= check_box_tag "transactions[#{transaction.id}]" %></td>
+	 	<td><span id="transaction_date_<%=transaction.id%>">
+    		<%=h transaction.trans_date.strftime("%m/%d/%Y") %>
+    	</span></td>
+    	<td><span id="transaction_name_<%=transaction.id%>" title="<%=transaction.description%>" >
+    		<%=transaction.description[0,40]%>
+    	</span></td>
+    	<td>
+    <% if isCredit %>
+    			<%= h real_currency (0-amount) %>
+    <% end %>
+    	</td>
+    	<td>
+    <% if isDebit %>
+    		<%= h real_currency amount %>
+    <% end %>
+   	 	</td>
+   	<% if show_balance %>
+   		<td><%= h real_currency transaction.account_balance %></td>
+    <% end %>
+    	<td><span id="transaction_pocket_name_<%=transaction.id%>">
+    		<%= transaction.pocket.blank? ? "&nbsp;" : transaction.pocket.name%>
+    	</span></td>
+		<td>
+			<%= render :partial => 'transactions/options', :locals => {:transaction => transaction, :account => account} %>
+		</td>
+  	</tr>
+

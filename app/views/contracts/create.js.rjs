@@ -1,0 +1,8 @@
+
+#if Expense/Income, add new Expense/Income row
+page << "if($('contract_listing')){"
+page.insert_html :bottom, "contract_listing", :partial => 'listing_details', :locals => {:contract => @contract}
+page << "}"
+
+page.hide_popup_form flash[:notice]
+flash.discard

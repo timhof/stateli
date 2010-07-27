@@ -1,0 +1,23 @@
+
+
+<div id="pocket_totals" class="template_div">
+	<div>
+		<%= render :partial => 'stateli/date_selector', :locals => {:startDate => @startDate, :endDate => @endDate, :submit_path => pocket_totals_path(@account.id)} %>
+	</div>
+	<div class="page_title_div">
+		<span class="account_name" id="account_name_<%= @account.id %>">
+			<%= @account.name%><%= render :partial => 'options', :locals => {:acc => @account} %>
+		</span>
+	</div><!-- page_title_div -->
+	
+	<div class="table_div">
+	  	<%= render :partial => 'pocket_totals_table', :locals => {:pocket_totals => @pocket_totals, :account => @account} %>
+  	</div>
+</div>
+
+<script type="text/javascript">
+  	$(document).ready(function() {
+		$('#account_totals_table').dataTable({"iDisplayLength": 15});
+  	} );
+</script>
+

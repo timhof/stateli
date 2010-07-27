@@ -1,0 +1,13 @@
+<% form_for( pocket, :html => {:class => 'ajaxForm', :id => 'edit_pocket_form' }) do |f| %>
+  <%= f.error_messages %>
+
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Name</div>
+    	<div class="yui-u form_element_div"><%= f.text_field :name %></div>
+    </div>
+  </div>
+
+
+	<input type="hidden" id="edit_pocket_commit" name="edit_pocket_commit" value="update" />
+<% end %>

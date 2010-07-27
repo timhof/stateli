@@ -9,12 +9,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090713183914) do
+ActiveRecord::Schema.define(:version => 20100719110350) do
 
   create_table "accounts", :force => true do |t|
     t.string   "name"
     t.string   "description"
-    t.string   "type"
     t.float    "balance"
     t.integer  "user_id"
     t.datetime "created_at"
@@ -29,34 +28,54 @@ ActiveRecord::Schema.define(:version => 20090713183914) do
     t.date     "date_end"
     t.string   "type"
     t.integer  "user_id"
-    t.boolean  "autopay",            :default => false
-    t.integer  "autopay_account_id"
+    t.boolean  "autopay",          :default => false
     t.date     "full_date"
     t.integer  "day_of_month"
     t.integer  "day_of_month_alt"
     t.integer  "weekday"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "active",             :default => true
     t.float    "amount"
-    t.string   "transaction_type"
+    t.integer  "account_id"
+  end
+
+  create_table "pockets", :force => true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "rules", :force => true do |t|
+    t.string   "name"
+    t.string   "comp_type"
+    t.float    "comp_amount"
+    t.string   "comp_string"
+    t.date     "comp_date"
+    t.string   "comp_action"
+    t.integer  "account_id"
+    t.string   "type"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "rank"
+    t.integer  "pocket_id"
   end
 
   create_table "transactions", :force => true do |t|
     t.string   "name"
     t.string   "description"
-    t.date     "scheduled_date"
-    t.date     "executed_date"
+    t.datetime "trans_date"
     t.float    "amount"
-    t.boolean  "completed",         :default => false
-    t.integer  "account_id_source"
-    t.integer  "account_id_dest"
+    t.boolean  "completed",       :default => false
+    t.integer  "account_id"
     t.integer  "contract_id"
-    t.string   "type"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "autopay",           :default => false
+    t.boolean  "autopay",         :default => false
+    t.float    "account_balance"
+    t.integer  "pocket_id"
   end
 
   create_table "users", :force => true do |t|

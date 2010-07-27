@@ -1,0 +1,1259 @@
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+	
+            
+	
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /> 
+
+<link rel="shortcut icon" href="http://www.bankofamerica.com/favicon.ico" type="image/vnd.microsoft.icon" />
+
+<SCRIPT LANGUAGE="javascript">
+function openCardPanel() {
+    winStats = 'toolbar=yes,location=no,directories=no,status=yes,menubar=no,';
+    winStats+= 'scrollbars=yes,width=350,height=460,resizable=yes';
+    winStats+= ',left=10,top=25,';
+    urlString = 'HelpDisplay?type=panel' ;
+    window.open(urlString,'640x480',winStats)
+}
+function openPrimary() {
+    winStats = 'toolbar=yes,location=no,directories=no,status=yes,menubar=no,';
+    winStats+= 'scrollbars=yes,width=350,height=460,resizable=yes';
+    winStats+= ',left=10,top=25,';
+    urlString = 'HelpDisplay?type=primary' ;
+    window.open(urlString,'640x480',winStats)
+}
+function openLogin() {
+    winStats = 'toolbar=yes,location=no,directories=no,status=yes,menubar=no,';
+    winStats+= 'scrollbars=yes,width=350,height=460,resizable=yes';
+    winStats+= ',left=10,top=25,';
+    urlString = 'HelpDisplay?type=login' ;
+    window.open(urlString,'640x480',winStats)
+}
+function openPassword() {
+    winStats = 'toolbar=yes,location=no,directories=no,status=yes,menubar=no,';
+    winStats+= 'scrollbars=yes,width=350,height=460,resizable=yes';
+    winStats+= ',left=10,top=25,';
+    urlString = 'HelpDisplay?type=password' ;
+    window.open(urlString,'640x480',winStats)
+}
+
+
+var win= null;
+function newWindow(mypage,myname,x,y,w,h,scroll,resize,toolbar,location,menu,status){
+   
+    var settings  ='height='+h +',' ;
+    settings +='width='+w+',';
+    settings +='top='+y+',';
+    settings +='left='+x+',';
+    
+    settings +='scrollbars='+scroll+',';
+    settings +='resizable='+resize+',';
+    settings +='toolbar='+toolbar+',';
+    settings +='location='+location+',';
+    settings +='menubar='+menu+',';
+    settings +='status='+status;
+
+    win=window.open(mypage,myname,settings);
+    if(parseInt(navigator.appVersion) >= 4){
+        win.window.focus();
+    }
+}
+
+function isNN4(){ 
+    return((parseInt(navigator.appVersion) <= 4) && (navigator.appName.substring(0,1)=="N"));
+ }
+
+function isIE(){
+    return navigator.appName.substring(0,1)=="M";
+}
+
+function showInHelpWindow(pageToShow){
+    var originalX ;
+    var originalY ;
+    var w = 320;
+    var h = 460;
+
+    if(isIE()){
+        originalX=self.screenLeft + 10;
+        /* for IE we can only estimate the top of the screen: */
+        originalY=self.screenTop<120?self.screenTop:self.screenTop-110;
+}else{
+        originalX=self.screenX;
+        originalY=self.screenY;
+    }
+
+    var originalRight;
+    if(isNN4()){
+        originalRight = self.outerWidth + originalX;
+    }else{
+        originalRight = document.body.clientWidth + originalX;
+    }
+    var newWinX = originalRight - w;
+    var newWinY = originalY;
+    newWindow(pageToShow,'NetAccessHelp',newWinX,newWinY,w,h,'1','yes','yes','no','no','yes'); 
+}
+function showInHelpWindowSizeIt(pageToShow, w, h){
+    var originalX ;
+    var originalY ;
+
+    if(isIE()){
+        originalX=self.screenLeft + 10;
+        /* for IE we can only estimate the top of the screen: */
+        originalY=self.screenTop<120?self.screenTop:self.screenTop-110;
+}else{
+        originalX=self.screenX;
+        originalY=self.screenY;
+    }
+
+    var originalRight;
+    if(isNN4()){
+        originalRight = self.outerWidth + originalX;
+    }else{
+        originalRight = document.body.clientWidth + originalX;
+    }
+    var newWinX = originalRight - w;
+    var newWinY = originalY;
+    newWindow(pageToShow,'NetAccessHelp',newWinX,newWinY,w,h,'1','yes','no','no','no','no'); 
+}
+
+
+
+
+function jsLoaded(){
+    return true;
+}
+
+
+</SCRIPT>
+
+
+
+
+<title>
+	
+	
+		Bank of America | Online Banking | Accounts | Account Details | Account Activity 
+	
+</title>
+<link href="/bankofamerica/css/styles.css" rel="stylesheet" type="text/css">
+<link href="/bankofamerica/css/printstyles.css" rel="stylesheet" type="text/css" media="print"/>
+
+<link rel="stylesheet" type="text/css" href="/bankofamerica/css/flow/as/flow.css" media="screen"/>
+
+<script type='text/javascript' src='/bankofamerica/scripts/ajax.js'></script>
+<script type='text/javascript' src='/bankofamerica/scripts/dhtml.js'></script>
+<script type='text/javascript' src='/bankofamerica/scripts/toggle_language_popup.js'></script>
+<script type='text/javascript' src='/bankofamerica/scripts/utils.js'></script>
+<script type='text/javascript' src='/bankofamerica/scripts/jquery-1.3.2.min.js' language='JavaScript'></script><script type='text/javascript' src='/bankofamerica/scripts/RollOver.2.2.js' language='JavaScript'></script>	
+
+<script>
+var searchHost = 'https://www.bankofamerica.com';
+function jsInclude(jsFile) {
+ document.write('<scr' + 'ipt type="text/javascript" src="' + jsFile + '"></scr' + 'ipt>');
+}
+
+jsInclude( searchHost + "/www/" + "en" + "_US/js/search/search-loader.js" );
+</script>
+
+
+<script>
+
+
+
+
+
+
+
+
+<!-- 
+
+    var timeOutURL = "BacLogoff?url=https%3A%2F%2Fonlineeast1.bankofamerica.com%2Fcgi-bin%2Fias%2F0%2FE%2Fbofa%2Fibd%2FIAS%2Fpresentation%2FSSOReentryPoint%3Fsource%3Dnetaccess%26target%3Dlogout%26AccountIndex%3D1";
+    var helpURL = "SSOExit?WeasUrl=https%3A%2F%2Fonlineeast1.bankofamerica.com%2Fcgi-bin%2Fias%2F0%2FE%2Fbofa%2Fibd%2FIAS%2Fpresentation%2FSSOReentryPoint%3Fsource%3Dnetaccess%26target%3Dhelp%26AccountIndex%3D1";	
+
+    var defaultTimeOutMilliseconds = 480000; 
+    var TimeOutWaitMilliseconds = 120000;
+
+
+var statementWin;
+var opt="toolbar=no,directories=no,location=no,status=no,scrollbars=yes,resizable=yes,copyhistory=no";
+var opt480=opt + ",width=600,height=480";
+var opt500=opt + ",width=636,height=370";
+var curTimeOut=defaultTimeOutMilliseconds;
+var timerID, timerWarnID, timeoutUrl, resetTimeoutURL="";
+var timeoutMsg;
+var baseURL="netaccess";
+
+var curTimeOut=defaultTimeOutMilliseconds;
+var myTimeoutMilliseconds=defaultTimeOutMilliseconds;
+
+
+var tmOutID = "AC";
+
+function openHelp(url,custType)
+{
+    open(url, "helpwindow_" + custType, opt480 );
+}
+
+function openHelpUrl(url)
+{
+    open(url, "helpwindow_", opt480);
+}
+
+function openHelpUrlCustom(url, iWidth, iHeight)
+{
+    var optCustom = opt + ",width=" + iWidth + ",height=" + iHeight;
+
+    open(url, "helpwindow_", openForPrintWindowPosition(optCustom));
+}
+
+function openForPrint(url)
+{
+    open(url, "pintwindow_", openForPrintWindowPosition(opt500));
+}
+
+function commonWindow(url,width,heigth)
+{
+	if (document.all)
+		var xMax = screen.width, yMax = screen.height;
+	else if (document.layers)
+		var xMax = window.outerWidth, yMax = window.outerHeight;
+	else
+		var xMax = 800, yMax=600;
+	
+	var xOffset = (xMax - width)/2, yOffset = (yMax - heigth)/2;
+	newWindow = window.open(url,'privacysource','width='+width+',height='+heigth+',screenX='+xOffset+',screenY='+yOffset+',top='+yOffset+',left='+xOffset+',directories=yes,location=yes,menubar=yes,scrollbars=yes,status=yes,toolbar=yes,resizable=yes');
+	newWindow.focus();
+}
+
+function openForPrintWindowPosition(winOpt)
+{
+    var new_x = 0;
+    var new_y = 0;
+
+    if(document.all)
+    {
+        new_x = window.screenLeft + 35;
+        new_y = window.screenTop + 47;
+    }
+    else
+    {
+        new_x = window.screenX + 35;
+        new_y = window.screenY + 47 + 112;
+    }
+
+    winOpt += ",left=" + new_x + ",top=" + new_y + ",screenX=" + new_x + ",screenY=" + new_y;
+    return winOpt;
+}
+
+
+
+
+     
+function LoadPage()
+{
+ customaryLoadPage();
+}
+
+function customaryLoadPage() {
+
+ isErrorWinOpen();
+ if (this["extendbody"]!=null) {
+	alert("CustomaryLoadPage: extendbody " );
+  	extendbody.action();
+  }
+ 
+ if(this["myTimeoutMilliseconds"] != null) {
+  	curTimeOut=myTimeoutMilliseconds;
+  	setupTimeout(curTimeOut);
+ }
+ else if(this["UITimeoutMilliseconds"] != null)
+ {
+	alert("CustomaryLoadPage: setupTimeout 2" );
+	  curTimeOut=UITimeoutMilliseconds;
+	  setupTimeout(curTimeOut);
+  }
+
+  if (this["timeOutURL"] != null)
+  timeoutUrl=timeOutURL;
+
+ resetTimeoutURL="ResetTimeout";
+}
+
+
+
+
+
+
+function loadPageWithoutTimeout()
+{
+ isErrorWinOpen();
+ if (this["extendbody"]!=null)
+ {
+  extendbody.action();
+ }
+}
+
+function unLoadPage()
+{
+ killErrorWin();
+}
+
+function writeToTimeoutWin(curTimeOut)
+{
+  var timeout_option = "toolbar=0" + ",location=0" + ",directories=0"
+ + ",status=0" + ",menubar=0" + ",scrollbars=0"
+ + ",resizable=0" + ",width=320" + ",height=210";
+
+    // AOL browser requires a blank HTML when opening a new window, but Safari overlays
+    // all the data written to the window with the html doc if provided in the window.open
+    // statement
+
+    blankWindowTemplate = "/eas-docs/help/blank.html";
+    var agt=navigator.userAgent.toLowerCase();
+    if (agt.indexOf("safari") != -1)
+    {
+        blankWindowTemplate = "";
+    }
+
+    var timeout_win = window.open(blankWindowTemplate, "NewWindow", timeout_option, true );
+
+    timeout_win.document.write('<HTML><HEAD><TITLE>Please - Note<\/TITLE>\n');
+
+    checkBrowser(timeout_win.document);
+
+    timeout_win.document.write('<scr' + 'ipt language="JavaScript" type="text/javascript">');
+    timeout_win.document.write('function submitForm() { window.opener.clearGoToTimeout(); document.frmTimeout.submit(); this.close();  }\n');
+    timeout_win.document.write( 'function hover(ref, classRef) { eval(ref).className = classRef; }');
+    timeout_win.document.write('<\/scr' + 'ipt>');
+
+    timeout_win.document.write('<\/head>\n');
+    timeout_win.document.write('<body bgcolor="#ffffff" link="#0000cc" vlink="#ff0000" alink="#cecece" onload=\'window.setTimeout("this.close()",' + (TimeOutWaitMilliseconds-2000).toString() + ');\'>\n');
+
+    timeout_win.document.write('<FORM METHOD=GET name=frmTimeout ACTION="' + resetTimeoutURL + '">\n');
+    if ( tmOutID != null )
+    {
+        timeout_win.document.write('<input type=hidden name=tmOutID value="' + tmOutID + '">\n' );
+    }
+    timeout_win.document.write('<input type=hidden name=timerreset value=yes>\n' );
+    timeout_win.document.write('<\/form>\n');
+
+    timeout_win.document.write('<table cellpadding=0 cellspacing=0 border=0 width=300 align=center summary="">');
+
+    timeout_win.document.write('<tr><td align=center width="100%" colspan=3>');
+    timeout_win.document.write('<img alt="" src="/eas-docs/images/timeout-header.gif" border=0 width=310 height=55>\n');
+    timeout_win.document.write('<\/td><\/tr>\n')
+
+    timeout_win.document.write('<tr><td align=center width="100%" colspan=3>');
+    timeout_win.document.write('<img alt="" src="/eas-docs/images/clr.gif" border=0 width=1 height=5>\n');
+    timeout_win.document.write('<\/td><\/tr>\n')
+
+    timeout_win.document.write('<tr><td>&nbsp;<\/td><td align=left>\n');
+
+    timeout_win.document.write('<p class="text2">\n');
+    timeout_win.document.write('Your Online Banking session is about to be timed out. As a security precaution, sessions end after ' + (curTimeOut+TimeOutWaitMilliseconds)/60000 + ' minutes of inactivity. Click OK to continue your current session.');
+    timeout_win.document.write('<\/p>\n');
+
+    timeout_win.document.write('<\/td><td>&nbsp;<\/td><\/tr>\n')
+
+    timeout_win.document.write('<tr><td align=center width="100%" colspan=3>');
+    timeout_win.document.write('<img alt="" src="/eas-docs/images/clr.gif" border=0 width=1 height=5>\n');
+    timeout_win.document.write('<\/td><\/tr>\n')
+
+    timeout_win.document.write('<tr><td>&nbsp;<\/td><td align=center>\n');
+
+    getButton('OK', 'javascript: void submitForm();', '', '', '/eas-docs/images/', '', 'btn1', '','','', timeout_win.document);
+
+    timeout_win.document.write('<\/td><td>&nbsp;<\/td><\/tr>\n');
+
+    timeout_win.document.write('<\/table>\n');
+
+    timeout_win.document.write('<\/body>\n');
+    timeout_win.document.write('<\/html>\n');
+    timeout_win.document.close();
+}
+
+function clearGoToTimeout()
+{
+  clearTimeout(timerID);
+
+  if(this["UITimeoutMilliseconds"] != null)
+ {
+  curTimeOut=UITimeoutMilliseconds;
+ }
+
+  setupTimeout(curTimeOut);
+}
+
+function resetTimeoutValues(timeoutValue)
+{
+// For clearing the timeout for timeout window AND timeout-warning window
+  clearTimeout(timerID);
+  clearTimeout(timerWarnID);
+  curTimeOut=timeoutValue;
+  setupTimeout(timeoutValue);
+}
+
+function goToTimeout(curTimeOut)
+{
+ // statementWin is used by PaperStatementLandingPage to popup
+ // a new window to show the customers selected statement. It
+ // must be closed when the session is ended or times out.
+ if(statementWin && !statementWin.closed)
+ {
+        statementWin.close();
+ }
+
+
+ var timeoutMsg="Your Online Banking session has been timed out. \n\nAs a security precaution, sessions are ended after "+ (curTimeOut+TimeOutWaitMilliseconds)/60000 + " minutes of inactivity. \n\nYou can sign in again to resume using Online Banking.";
+
+ deleteSMCookie();
+ alert(timeoutMsg);
+ self.status ="Redirect now...";
+ self.location=timeoutUrl;
+ return;
+}
+
+function deleteSMCookie()
+{
+	
+	
+	Delete_Cookie("SMSESSION", "/", ".bankofamerica.com");
+	
+
+}
+
+// this deletes the cookie when called
+function Delete_Cookie( name, path, domain ) {
+if ( Get_Cookie( name ) ) document.cookie = name + "=" +
+( ( path ) ? ";path=" + path : "") +
+( ( domain ) ? ";domain=" + domain : "" ) +
+";expires=Thu, 01-Jan-1970 00:00:01 GMT";
+}
+
+
+// this function gets the cookie, if it exists
+function Get_Cookie( name ) {
+	
+var start = document.cookie.indexOf( name + "=" );
+var len = start + name.length + 1;
+if ( ( !start ) &&
+( name != document.cookie.substring( 0, name.length ) ) )
+{
+return null;
+}
+if ( start == -1 ) return null;
+var end = document.cookie.indexOf( ";", len );
+if ( end == -1 ) end = document.cookie.length;
+return unescape( document.cookie.substring( len, end ) );
+}
+
+
+
+function setupTimeout(curTimeOut)
+{
+ timerWarnID=window.setTimeout('writeToTimeoutWin(curTimeOut)', curTimeOut);
+ timerID=window.setTimeout('goToTimeout(curTimeOut)', curTimeOut+TimeOutWaitMilliseconds);
+}
+
+var clickedAlready = 0;
+function GotoCFAndPause(ctrl)
+{
+ if ( clickedAlready != 1 )
+ {
+ window.setTimeout( "clickedAlready=0;", 5000);
+ clickedAlready = 1;
+ window.location=baseURL + "bofa/ibd/IAS/presentation/" + ctrl;
+ }
+}
+
+var platform= navigator.platform.toLowerCase(); // Operating system
+var appName = navigator.appName;                // Browser name
+var appVer= parseInt(navigator.appVersion);     // Browser versionnumber
+
+// set the correct style sheet for the browser
+function checkBrowser(doc)
+{
+    if (platform.indexOf("win") != -1)  // Windows platform
+    {
+        if (appName == "Netscape" && appVer >= 5) // Netscape 6.x
+        {
+            doc.writeln('<link rel="stylesheet" type="text/css" href="/eas-docs/images/win_ns6.css">');
+        }
+        else if (appName == "Netscape" && appVer >= 4) // Netscape 4
+        {
+            doc.writeln('<link rel="stylesheet" type="text/css" href="/eas-docs/images/win_ns4.css">');
+        }
+        else if (appName == "Microsoft Internet Explorer" && appVer >= 4 &&  navigator.appVersion .indexOf("MSIE 4") != -1) // IE 4.x
+        {
+            doc.writeln('<link rel="stylesheet" type="text/css" href="/eas-docs/images/win_ie4.css">');
+        }
+        else if (appName == "Microsoft Internet Explorer" && appVer >= 4) // IE 4.x +
+        {
+            doc.writeln('<link rel="stylesheet" type="text/css" href="/eas-docs/images/win_ie.css">');
+        }
+        else if (appName == "Opera")  // Opera 5.x, 6.x
+        {
+            doc.writeln('<link rel="stylesheet" type="text/css" href="/eas-docs/images/win_opera.css">');
+        }
+        else  // All other win browsers
+        {
+            doc.writeln('<link rel="stylesheet" type="text/css" href="/eas-docs/images/win_ie.css">');
+        }
+    }
+    else if (platform.indexOf("mac") != -1)    // Mac platform
+    {
+        if (appName == "Netscape" && appVer >= 5) // Netscape 6.x
+        {
+            doc.writeln('<link rel="stylesheet" type="text/css" href="/eas-docs/images/mac_ns6.css">');
+        }
+        else if (appName == "Netscape" && appVer >= 4) // Netscape 4
+        {
+            doc.writeln('<link rel="stylesheet" type="text/css" href="/eas-docs/images/mac_ns4.css">');
+        }
+        else if (appName == "Microsoft Internet Explorer" && appVer >= 4) // IE 4.x
+        {
+            doc.writeln('<link rel="stylesheet" type="text/css" href="/eas-docs/images/mac_ie.css">');
+        }
+        else if (appName == "Opera")  // Opera 5.x, 6.x
+        {
+            doc.writeln('<link rel="stylesheet" type="text/css" href="/eas-docs/images/mac_ie.css">');
+        }
+        else  // All other browsers
+        {
+            doc.writeln('<link rel="stylesheet" type="text/css" href="/eas-docs/images/mac_ie.css">');
+        }
+    }
+    else if (platform.indexOf("os2") != -1)    // os2 platform
+    {
+        if (appName == "Netscape" && appVer >= 4) // Netscape 4
+        {
+            doc.writeln('<link rel="stylesheet" type="text/css" href="/eas-docs/images/os2_ns4.css">');
+        }
+        else
+        {
+            doc.writeln('<link rel="stylesheet" type="text/css" href="/eas-docs/images/win_ie.css">');
+        }
+    }
+    else    // all other platforms
+    {
+        if (appName == "Netscape" && appVer >= 4) // Netscape 4
+        {
+            doc.writeln('<link rel="stylesheet" type="text/css" href="/eas-docs/images/mac_ns4.css">');
+        }
+        else
+        {
+            doc.writeln('<link rel="stylesheet" type="text/css" href="/eas-docs/images/win_ie.css">');
+        }
+    }
+}
+/* Multiply the size of the font for each style sheet rule
+   for all linked and embedded style sheets.
+*/
+function multipleFontSize(factor)
+{
+    var styleSheet;
+    var i;
+    var done;
+
+    for(i=0;i<document.styleSheets.length;i++)
+{
+        styleSheet = document.styleSheets[i].cssText;
+        styleSheet = styleSheet.toLowerCase();
+
+        var pattern = /font-size\s*:\s*([\d\.]+)((em)|%)+/g;
+        pattern.multiline = true;
+        var result;
+        done = false;
+
+        while (!done)
+        {
+            var result = pattern.exec(styleSheet);
+            if (result == null)
+            {
+                done = true;
+            }
+            else
+            {
+                strLeft = styleSheet.substring(0, result.index-1);
+                strMid = result[0];
+                strRight = styleSheet.substring(result.index +  result[0].length);
+                size = result[1];
+                size *= factor;
+                var number_pattern = /(\d*.?\d{0,2})\d*/;
+                var number_result = number_pattern.exec(size);
+                strMid = strMid.replace(result[1], number_result[1]);
+                styleSheet = strLeft + strMid + strRight;
+            }
+        }
+        document.styleSheets[i].cssText= styleSheet;
+    }
+}
+
+/* Examine the default page font.  If too small,
+   increase by a percent factor
+*/
+function examineFontSize(ref)
+{
+    if (document.getElementById)
+    {
+        if (document.getElementById(ref).currentStyle)
+        {
+            var size = document.getElementById(ref).currentStyle.fontSize;
+            var index = size.indexOf("pt");
+            var newstr = parseInt(size.substr(0,index));
+
+            if (newstr < 10)
+{
+                multipleFontSize(1.3);
+            }
+            else if (newstr < 12)
+{
+                multipleFontSize(1.2);
+            }
+        }
+    }
+}
+function getButton(btnText, btnHref, btnTarget, btnOnClick, baseURL, btnTitle,  css_class, tabindex , onmouseover_evt, onmouseout_evt)
+{
+    /// Note:  an extra, optional argument may be passed to this function
+    /// which specifies the window that should be written to.  If the
+    /// argument is not supplied, the current document window is used.
+    if(getButton.arguments.length > 10) {
+		doc = getButton.arguments[10];
+    }
+    else {
+		doc = document;
+    }
+    var t = "";
+    if (( doc.getElementById )||( doc.all )) {
+		t = "<table border=0 cellpadding=0 cellspacing=0 summary=\"\" class=" + css_class
+			+ "><tr><td nowrap><div class=" + css_class
+			+ "><a href=\"" + btnHref
+			+ "\" target=\"" + btnTarget
+			+ "\" class=" + css_class;
+		if(onmouseover_evt) {
+			t = t + " onMouseOver='"
+				+ onmouseover_evt + "'"
+				+ " onFocus='hover(this, \"" + css_class + "-over\");"
+				+ onmouseover_evt
+				+ "'" ;
+		}
+		else {
+			t = t + " onFocus='hover(this, \"" + css_class + "-over\")";
+		 	if(btnTitle)
+		 	{
+				t = t + ";window.status=\"" + btnTitle + "\";";
+		 	}
+		 	t = t+ "'" ;
+		}
+		if(onmouseout_evt) {
+			t = t + " onMouseOut='"
+				+ onmouseout_evt + "'"
+				+ " onBlur='hover(this, \"" + css_class + "\"); "
+				+ onmouseout_evt;
+		}
+		else {
+			t = t + " onBlur='hover(this, \"" + css_class + "\")";//'" ;
+		}
+		if(btnTitle) {
+			t = t + "; window.status=\"\"";
+		}
+		t = t + "' ";
+		if (btnTitle) { t = t + " title=\"" + btnTitle + "\""; }
+		if (btnOnClick) { t = t + " \'" + btnOnClick + "\'"; }
+		if (tabindex) { t = t + " tabindex=\"" + tabindex + "\""; }
+		t = t + ">&nbsp;" + btnText + "&nbsp;<\/a><\/div><\/td><\/tr><\/table>";
+	}
+	else {
+		t = "<table border=0 cellpadding=0 cellspacing=0 summary=\"\" class=" + css_class + "><tr><td width=2 rowspan=2 class=" + css_class + "-left><img src='" + baseURL + "clr.gif' alt=\"\" width=2 height=2><\/td><td class=" + css_class + "-top><img src='" + baseURL + "clr.gif' alt=\"\" width=1 height=2><\/td><td width=2 rowspan=3 class=" + css_class + "-right><img src='" + baseURL + "clr.gif' alt=\"\" width=2 height=2><\/td><\/tr><tr><td><div class=" + css_class + "style=\"padding: 1px 3px 1px 3px;\"><a href=\"" + btnHref + "\" target=\"" + btnTarget + "\" class=" + css_class ;
+		if (btnTitle) { t = t + " title=\"" + btnTitle + "\""; }
+		if (btnOnClick) { t = t + " \'" + btnOnClick + "\'"; }
+		if (tabindex) { t = t + " tabindex=\"" + tabindex + "\""; }
+		t = t + ">&nbsp;" + btnText + "&nbsp;<\/a><\/div><\/td><\/tr><tr><td colspan=2 class=" + css_class +  "-right><img src='" + baseURL + "clr.gif' alt=\"\" width=1 height=2><\/td><\/tr><\/table>";
+	}
+	doc.write(t);
+}
+
+function getAnchor(btnText, btnHref, btnTarget, btnOnClick, baseURL, btnTitle, ancText, ancClass)
+{
+	document.write("<a href=\"" + btnHref + "\" target=\"" + btnTarget + "\" title=\"" + btnTitle +  "\" class=" + ancClass + ">" + ancText + "<\/a>");
+}
+
+function actionSubmit(actionValue) {
+	document.theForm.myaction.value = actionValue;
+	document.theForm.submit();
+}
+
+var new_win;
+var openWin;
+var errorWinOpen;
+var custType="";
+
+function isErrorWinOpen()
+{
+	if (errorWinOpen == 1)
+	{
+		createErrorWin(errorMsg, custType);
+		return;
+	}
+}
+
+function clearError()
+{
+	errorWinOpen=0;
+	errorMsg="";
+}
+
+function killErrorWin()
+{
+	if (errorWinOpen == 1 && new_win && !new_win.closed  )
+	{
+	    new_win.user_close=0;
+	    new_win.close();
+	}
+	new_win = "";
+	penWin = 0;
+}
+
+function showTip(msg)
+{
+	errorMsg = msg;
+	createErrorWin();
+}
+
+function createErrorWin()
+{
+	// New Window Init variables
+	var option = "toolbar=0" + ",location=0" + ",directories=0"
+        	     + ",status=0" + ",menubar=0" + ",scrollbars=1"
+	             + ",resizable=1"  + ",width=360" + ",height=400";
+
+	// Apple's Safari browser overlays the content written to the child window with
+	// the blank.html, so no template will be used for Safari. However, the AOL browser
+	// requires an HTML doc when opening a new window.
+
+	blankWindowTemplate = "/eas-docs/help/blank.html";
+	var agt=navigator.userAgent.toLowerCase();
+	if (agt.indexOf("safari") != -1)
+	{
+		blankWindowTemplate = "";
+	}
+    new_win = window.open(blankWindowTemplate, "NewWindow", option, true );
+
+	ntimes=1;
+	if (new_win.focus)
+	{
+		new_win.focus();
+	}
+	setTimeout("writeToErrorsWin(new_win, errorMsg);", 100);
+	return new_win;
+}
+
+function addError(error)
+{
+	errorMsg = errorMsg + "<li>" + error + "<p>\n\n";
+	errorStatus = 1;
+}
+
+function writeToErrorsWin(win, errors)
+{
+	if(errors.length == 4 && errors.substring(0,4).toLowerCase() == "<li>")
+	{
+		errors = "";
+	}
+	else if(errors.length > 4 && errors.substring(0,4).toLowerCase() == "<li>")
+	{
+		errors = errors.substring(4, errors.length);
+	}
+
+	if(ntimes == 3)
+	{
+		return;
+	}
+	ntimes = ntimes + 1;
+
+	new_win.document.write('<HTML><HEAD><TITLE>Please Note<\/TITLE>\n');
+
+	//run the common_misc checkBrowser function to load the stylesheet
+	checkBrowser(new_win.document);
+
+	new_win.document.write('<scr' + 'ipt>\n');
+	new_win.document.write('var user_close =1;\n');
+	new_win.document.write('function setParentObj(WinObj) {\n');
+	new_win.document.write('this.WinObj=WinObj\; \n}\n\n');
+	new_win.document.write('function CParentObj() { \n');
+	new_win.document.write('this.WinObj=null; this.setParentObj=setParentObj;\n}\n\n');
+	new_win.document.write('MyParent = new CParentObj();\n\n');
+	new_win.document.write('function unloader() {\n');
+	// If it is AOL just return.
+	new_win.document.write('if (navigator.appVersion.indexOf("AOL") != -1) { return; } \n');
+
+	// the following line is different for the macintosh version above
+	new_win.document.write('if (user_close) MyParent.WinObj.openWin =2;\n');
+	new_win.document.write('}\n');
+	new_win.document.write('<\/scr' + 'ipt>\n');
+
+	new_win.document.write('<\/head>\n');
+
+	new_win.document.write('<body bgcolor="#ffffff" link="#0000cc" vlink="#ff0000" alink="#cecece" onUnLoad="unloader();">\n');
+
+	new_win.document.write('<table cellpadding=2 cellspacing=2 border=0 align=center summary="">');
+	new_win.document.write('<tr><td>&nbsp;<\/td><td align=center>');
+
+	new_win.document.write('<IMG SRC="' + window.location.protocol + '//' + window.location.host);
+
+	new_win.document.write('/eas-docs/images/error-header.gif');
+
+	new_win.document.write('" width=310 height= 55 ALT="Bank of America">\n');
+
+	new_win.document.write('<\/td><\/tr>\n')
+	new_win.document.write('<tr><td align=left width=300 colspan=2>\n')
+
+	new_win.document.write('<font size=2 face="arial, helvetica, sans-serif">\n');
+	new_win.document.write('<ul>\n<li>');
+	new_win.document.write(errors);
+	new_win.document.write('<\/ul>\n');
+	new_win.document.write('<\/font>\n');
+
+	new_win.document.write('<\/td><\/tr>\n')
+	new_win.document.write('<tr><td align=center colspan=2>\n')
+
+	// pass the new_win.document object to the getButton function
+	getButton('OK', 'javascript:window.close();', '', '', '' + window.location.protocol + '//' + window.location.host + '/eas-docs/images/', '', 'btn1', '','','', new_win.document);
+
+
+	new_win.document.write('<\/td><\/tr>\n');
+
+	new_win.document.write('<\/table>\n');
+
+	new_win.document.write('<\/BODY><\/HTML>\n');
+	new_win.document.close();
+
+	openWin = 1;
+	if (new_win.MyParent != null )  {
+		new_win.MyParent.setParentObj(window);
+	}
+	else {
+		window.setTimeout("writeToErrorsWin(new_win, errorMsg);",1000);
+	}
+}
+-->
+    
+
+</script>
+
+
+<script type="text/javascript" language="javascript1.1">
+function onLoadBoth() {
+ initForm();
+ LoadPage();
+}
+</script>
+
+
+</head>
+<body class="en">
+
+	<body onload='LoadPage()'>
+
+
+
+
+
+ 
+
+
+<div class="skipLincs"  >
+	<a href="#skipnav" onfocus="window.status='Skip navigational links'" onblur="window.status=''">Skip navigational links</a>
+	<a href="https://onlineeast1.bankofamerica.com/cgi-bin/ias/0/E/GotoScreenReaderSupport" tabindex='1'>Help for Users of Screen Readers</a>
+</div>
+
+
+
+
+
+ 
+
+
+
+
+
+
+	
+		<div class="navheader tenTwentyFour">	<div class="logoUtilityCnt">		<span class="logo">			Bank of America		</span>		<div class="utilityNavCnt">			<div class="utilityTitleAndSignOffCnt">						<span class="utilityTitle">					Online Banking				</span>				<span class="signOffLinc">					<a href="BacLogoff?url=https%3A%2F%2Fonlineeast1.bankofamerica.com%2Fcgi-bin%2Fias%2F0%2FE%2Fbofa%2Fibd%2FIAS%2Fpresentation%2FSSOReentryPoint%3Fsource%3Dnetaccess%26target%3Dlogout%26AccountIndex%3D1" title="Sign Off">Sign Off</a>											</span>			</div><!-- utilityTitleAndSignOffCnt -->			<div class="utilityNav">				<a name="utilityNavigation" class="skipLincDest"></a>				<ul><li class="first"><a href="SSOExit?WeasUrl=https%3A%2F%2Fonlineeast1.bankofamerica.com%2Fcgi-bin%2Fias%2F0%2FE%2Fbofa%2Fibd%2FIAS%2Fpresentation%2FSSOReentryPoint%3Fsource%3Dnetaccess%26target%3DbillPay%26AccountIndex%3D1" id="gblBillPayLinkLocaleSensitiveLink" class="active" title="New e-Bills" >New e-Bills</a></li><li ><a href="SSOExit?dotcomURL=http%3A%2F%2Flocators.bankofamerica.com%2Flocator%2Flocator%2F" title="Locations" target="_blank">Locations</a></li><li ><a href="SSOExit?WeasUrl=https%3A%2F%2Fonlineeast1.bankofamerica.com%2Fcgi-bin%2Fias%2F0%2FE%2Fbofa%2Fibd%2FIAS%2Fpresentation%2FSSOReentryPoint%3Fsource%3Dnetaccess%26target%3Dmail%26AccountIndex%3D1" title="Mail">Mail</a></li><li ><a href="SSOExit?WeasUrl=https%3A%2F%2Fonlineeast1.bankofamerica.com%2Fcgi-bin%2Fias%2F0%2FE%2Fbofa%2Fibd%2FIAS%2Fpresentation%2FSSOReentryPoint%3Fsource%3Dnetaccess%26target%3Dhelp%26AccountIndex%3D1" title="Help" target="_blank">Help</a></li><li class="last">						<span id="langToggleM"><a id="langToggleLink" lang="en-US" class="langLinc" onMouseOver="setCSSClass('langToggleM','borderOn');" onMouseOut="toggleClass('langToggleM','');"  href="g_accountsummary.el_event?id=viewInSpanishCommand"><span class="floatMeLeft">En Espa&ntilde;ol</span></a>							<span class="dispLangToggleSpan" onmouseover="languageToggleHandler(event);" onmouseout="languageToggleHandler(event);"><a href="#" title="Use Enter and the arrow keys to select your language option" onkeydown="languageToggleHandler(event);" onfocus="languageToggleHandler(event);" onblur="languageToggleHandler(event);" tabindex="0" id="arrowIcon"><img src="/bankofamerica/images/bk_es_button_rt.gif" alt="Show language preference menu" title="Show language preference menu" class="langLincIcon" id="icon" /></a></span>						</span>							<ul id="langMenuM" onmouseover="languageToggleHandler(event);" onmouseout="languageToggleHandler(event);">							<li>								<a href="SSOExit?WeasUrl=https%3A%2F%2Fonlineeast1.bankofamerica.com%2Fcgi-bin%2Fias%2F0%2FE%2Fbofa%2Fibd%2FIAS%2Fpresentation%2FSSOReentryPoint%3Fsource%3Dnetaccess%26target%3DsetLOP%26AccountIndex%3D1" title="Set language preference" id="en-langPref" tabindex="1">Set language preference</a>							</li>							<li lang="es">								<a href="SSOExit?WeasUrl=https%3A%2F%2Fonlineeast1.bankofamerica.com%2Fcgi-bin%2Fias%2F0%2FE%2Fbofa%2Fibd%2FIAS%2Fpresentation%2FSSOReentryPoint%3Fsource%3Dnetaccess%26target%3DsetLOP%26AccountIndex%3D1" title="Seleccionar el idioma prefereido" id="es-langPref" tabindex="2">Seleccionar el idioma preferido</a>							</li>						</ul></li>				</ul>			</div><!-- utilityNav -->		</div><!-- utilityNavCnt -->	</div><!-- logoUtilityCnt -->	<div class="greyLines"></div>	<div class="primaryNavCnt">		<a name="primaryNavigation" class="skipLincDest"></a>		<ul>			<li class="currentTab">				<a href="SSOExit?WeasUrl=https%3A%2F%2Fonlineeast1.bankofamerica.com%2Fcgi-bin%2Fias%2F0%2FE%2Fbofa%2Fibd%2FIAS%2Fpresentation%2FSSOReentryPoint%3Fsource%3Dnetaccess%26target%3Dacctoverview%26AccountIndex%3D1" title="Accounts">Accounts</a>			</li>			<li><a id="LocaleSensitiveLinkForBillpayHeaderPane" href="SSOExit?WeasUrl=https%3A%2F%2Fonlineeast1.bankofamerica.com%2Fcgi-bin%2Fias%2F0%2FE%2Fbofa%2Fibd%2FIAS%2Fpresentation%2FSSOReentryPoint%3Fsource%3Dnetaccess%26target%3DbillPay%26AccountIndex%3D1">Bill Pay</a>			</li>			<li>				<a href="SSOExit?WeasUrl=https%3A%2F%2Fonlineeast1.bankofamerica.com%2Fcgi-bin%2Fias%2F0%2FE%2Fbofa%2Fibd%2FIAS%2Fpresentation%2FSSOReentryPoint%3Fsource%3Dnetaccess%26target%3DtranFunds%26AccountIndex%3D1" title="Transfers">Transfers</a>			</li>			<li><a id="investmentsLinkLocaleSensitiveLink" href="SSOExit?WeasUrl=https%3A%2F%2Fonlineeast1.bankofamerica.com%2Fcgi-bin%2Fias%2F0%2FE%2Fbofa%2Fibd%2FIAS%2Fpresentation%2FSSOReentryPoint%3Fsource%3Dnetaccess%26target%3Dinvestments%26AccountIndex%3D1">Investments</a>			</li>			<li>				<a href="SSOExit?WeasUrl=https%3A%2F%2Fonlineeast1.bankofamerica.com%2Fcgi-bin%2Fias%2F0%2FE%2Fbofa%2Fibd%2FIAS%2Fpresentation%2FSSOReentryPoint%3Fsource%3Dnetaccess%26target%3DcustService%26AccountIndex%3D1" title="Customer Service">Customer Service</a>			</li>
+<li class="searchcontainer">
+				<form method="post" action="https://www.bankofamerica.com/search/Search.do" name="SiteSearchForm" id="SiteSearchForm" target="searchWindow">
+<label class="adaHidden" for="questionbox">Search:</label>
+					<div class="leftinput">
+						<input type="text" onfocus="changeColor(this)" class="home-searchbox" title="Enter keyword(s) to search" name="questionbox" id="questionbox" maxlength="75" value="" autocomplete="off"></input></div> 
+<script language="JavaScript" type="text/javascript">
+document.write('<a href="javascript:submit_search();" class="searchIcon" title="Search(opens a new window)" ></a>');
+</script>
+<!-- <a title="Search (opens a new window)" class="searchIcon" href="javascript:submit_search();"/> //-->
+<noscript>
+						<button type="submit" value="Submit">Search</button>
+</noscript>					<input type="hidden" name="locale" value="en_US" />					<input type="hidden" name="searchSourceSite" value="NetAccess" />					<input type="hidden" value="Bank of America | Online Banking | Accounts | Account Details | Account Activity" name="searchSourceTitle"/>				</form></li>		</ul>		<br clear="all" />	</div><!-- primaryNavCnt -->	<div class="secondaryNavCnt">		<a name="secondaryNavigation" class="skipLincDest"></a>		<ul>			<li>				<a href="SSOExit?WeasUrl=https%3A%2F%2Fonlineeast1.bankofamerica.com%2Fcgi-bin%2Fias%2F0%2FE%2Fbofa%2Fibd%2FIAS%2Fpresentation%2FSSOReentryPoint%3Fsource%3Dnetaccess%26target%3Dacctoverview%26AccountIndex%3D1" title="Accounts Overview">Accounts Overview</a>			</li>			<li class="currentTab">				<a href="#" title="Account Details">Account Details</a>			</li>			<li>				<a href="SSOExit?WeasUrl=https%3A%2F%2Fonlineeast1.bankofamerica.com%2Fcgi-bin%2Fias%2F0%2FE%2Fbofa%2Fibd%2FIAS%2Fpresentation%2FSSOReentryPoint%3Fsource%3Dnetaccess%26target%3Dalerts%26AccountIndex%3D1" title="Alerts">Alerts</a>			</li>			<li>				<a href="SSOExit?WeasUrl=https%3A%2F%2Fonlineeast1.bankofamerica.com%2Fcgi-bin%2Fias%2F0%2FE%2Fbofa%2Fibd%2FIAS%2Fpresentation%2FSSOReentryPoint%3Fsource%3Dnetaccess%26target%3Dopenanaccount%26AccountIndex%3D1" title="Open an Account">Open an Account</a>			</li></ul>		<br clear="all" />	</div><!-- secondaryNavCnt --></div><!-- navheader --><span style="position:absolute;"><a name="skipnav" class="skipLincDest">&nbsp;</a></span>
+	
+
+
+
+
+
+<div id="maincontainer">
+
+
+
+
+
+
+
+    <div id="pgtitleContainer">
+    
+    <!--  Defect fix for #85175 Starts -->
+       <!--  <div id="pgtitle">Working Assets Visa - 3023</div> -->       
+        <div id="pgtitle"><H1>Working Assets Visa - 3023</H1></div>
+     <!--  Defect fix for #85175 Ends -->
+     
+        <div id="acctSelectorContainer">
+            <form action="g_accountsummary.el_event?id=accountSelector" method="post" class="acctgoform">
+			<span>Account: </span>
+            	<select name="AccountSelector" id="accountsListBox" >
+<option value="0"  selected>Working Assets Visa - 3023</option>
+</select>
+ 
+            	<input type="submit" value="Go" name="Go" title="Go to the Account Details screen for the account you selected" alt="Go to the Account Details screen for the account you selected" />
+            </form>
+        </div>
+    </div>
+    <div id="affinityBannerContainer">&nbsp;</div>
+
+
+	
+
+
+
+
+
+
+
+
+		
+        
+        
+
+
+
+
+    <div id="leftcol">
+		<div class="modadcontainer"><div class="modBannerAd">
+<a href="LinkClickReport?set=42&seq=1&ACCTID=1"  title="Consolidate your bills. Transfer balances from other credit cards.">
+<img src="/bankofamerica/images/cashBanner2.gif" width="69" height="74"
+ alt="Consolidate your bills. Transfer balances from other credit cards."
+title="Consolidate your bills. Transfer balances from other credit cards."></a>
+</div>
+<div id="adtext">
+<a href="LinkClickReport?set=42&seq=1&ACCTID=1"  title="Consolidate your bills. Transfer balances from other credit cards.">
+<span class="boldcontent">Consolidate your bills.</span><br>Transfer balances from other credit cards.</a>
+</div></div>
+
+		<div class="live-chat">
+	    	<!-- BEGIN LivePerson Button Code -->
+<div class="adaHidden">
+<h2>Talk to a specialist</h2>
+<p>Our online Text Chat service lets you talk to a specialist through a secure, live chat session. If a specialist is now available, you will have access via the "Chat with a Specialist" link immediately following.</p>
+</div>
+<script type='text/javascript'>
+var lpRandomNumber = new Date().getTime();
+var lpOnlineAltText = 'Chat online now (opens a new browser window).';
+var lpNoServerAltText = '';
+var lpOfflineAltText = 'Online chat is not available. Please call us at 1-800-555-5555.';
+function lpSetAltText(){
+	smartButtonObj = document.getElementById('smartButton');
+	smartButtonLinkObj = document.getElementById('smartButtonLink');
+	if(smartButtonObj.width == 1){
+		smartButtonObj.alt = lpOfflineAltText;
+		smartButtonLinkObj.parentNode.removeChild(smartButtonLinkObj);
+	}else{
+		smartButtonObj.alt = lpOnlineAltText;
+	}
+}
+document.writeln("<a id='smartButtonLink' href='https://chat.bankofamerica.com/hc/LPBofA2/?cmd=file&file=visitorWantsToChat&site=LPBofA2&byhref=1&SESSIONVAR!skill=olb-creditcard-general-service-english' target='chatLPBofA2'");
+document.writeln("  onClick=\"javascript:window.open('https://chat.bankofamerica.com/hc/LPBofA2/?cmd=file&file=visitorWantsToChat&site=LPBofA2&SESSIONVAR!skill=olb-creditcard-general-service-english&referrer='+escape(document.location),'chatLPBofA2','width=472,height=320');return false;\" >");
+document.writeln("<img onload='lpSetAltText()' id='smartButton' alt='" + lpNoServerAltText + "' src='https://chat.bankofamerica.com/hc/LPBofA2/cmd/query/?site=LPBofA2&page=https://chat.bankofamerica.com/hcp/width/img1.gif&query=SmartButton-olb-creditcard-general-service-english&d="+ lpRandomNumber +"' name='hcIcon' border=0></a>");
+</script>
+<!-- END LivePerson Button Code -->
+
+    	</div>    	    	
+        <a name="balance"></a>
+        <span id="balance-summary"><a name="balance"></a><span id="balance-summary">    <div class="modheading"><h2>Balance Summary</h2>      <p>02/18/2010</p></div>    <div class="modpad">    <table cellpadding="0" cellspacing="0"  class="balSumModule blockA">     <tbody><tr><td>$2,822.81</td>     <th scope="col"><span class="auraltext">is your</span>Current Balance</th>      </tr></tbody></table></div> <div class="modpad"> <table cellpadding="0" cellspacing="0"  class="balSumModule blockB"> <tbody> <tr><td> $2,120.87</td> <th scope="col"><span class="auraltext">is your</span>Available credit</th> </tr><tr><td>$56.32</td><th scope="col"><span class="auraltext">is your</span>Temporary Authorization<br clear="all"/>(rounded)&nbsp;<a href="HelpDisplay?topicID=help.temporaryAuthorization"title="What is a temporary authorization?" onclick="showInHelpWindowSizeIt(this.href,'380','280');return false;"><NOSCRIPT><a href="HelpDisplay?topicID=help.temporaryAuthorization" target="_target"></NOSCRIPT><img src="/bankofamerica/images/help_icon.gif"alt="What is a temporary authorization?" border="0"></a>        <a href="CreditLineIncreaseEFormSubmit?TYPE=display&ACCTID=1&eformname=Credit Line Increase" title="Request a credit line increase">        <br>        Request a credit line increase</a>		</th></tr>      </tbody></table></div><div class="modpad"><table cellpadding="0" cellspacing="0" class="balSumModule blockA"><tbody><tr><td>03/14/2010</td><th scope="col"><span class="auraltext">is your</span>Payment due date</th><tr><tr><td>$25.00</td><th scope="col"><span class="auraltext">is your</span>Current payment due</th><tr><tr><td>$0.00</td><th scope="col"><span class="auraltext">is your</span>Past due amount</th></tr><tr><td class="dottedLineRule"><span class="boldcontent">$25.00</span></td><th scope="col" class="dottedLineRule"><span class="auraltext">is your</span>Total minimum payment due<br> <a id="LocaleSensitiveLinkForBalanceSummaryPayNow" href="SSOExit?WeasUrl=https%3A%2F%2Fonlineeast1.bankofamerica.com%2Fcgi-bin%2Fias%2F0%2FE%2Fbofa%2Fibd%2FIAS%2Fpresentation%2FSSOReentryPoint%3Fsource%3Dnetaccess%26target%3DbillPay%26AccountIndex%3D1">Pay now</a> <a id="LocaleSensitiveLinkForpayNowImage" href="SSOExit?WeasUrl=https%3A%2F%2Fonlineeast1.bankofamerica.com%2Fcgi-bin%2Fias%2F0%2FE%2Fbofa%2Fibd%2FIAS%2Fpresentation%2FSSOReentryPoint%3Fsource%3Dnetaccess%26target%3DbillPay%26AccountIndex%3D1"><img src="/bankofamerica/images/more.gif" alt="Pay now" border="0"></a></br> </th></tr> </tbody></table></div><div class="modpad"><table cellpadding="0" cellspacing="0" class="balSumModule blockB"><tbody><tr><td>$2,550.37</td><th scope="col"><span class="auraltext">is your</span>Balance as of your last statement&nbsp;<a href="HelpDisplay?topicID=help.lastStatementBalance"title="More information about your balance as of your last statement" onclick="showInHelpWindowSizeIt(this.href,'380','280');return false;"><NOSCRIPT><a href="HelpDisplay?topicID=help.lastStatementBalance" target="_target"></NOSCRIPT><img src="/bankofamerica/images/help_icon.gif"alt="More information about your balance as of your last statement" border="0"></a></th></tr></table></div><div class="modpad"><table cellpadding="0" cellspacing="0" class="balSumModule blockA"><tbody><tr><td>$5,000.00</td><th scope="col"><span class="auraltext">is your</span>Credit Limit</th></tr><tr><td>$0.00</td><th scope="col"><span class="auraltext">is your</span>Amount over the limit</th></tr></tbody></table></div></span>
+        <span id="payment-summary"><div class="modpay"><H2><a id="payment-summary-command" href="javascript:asynchCall('g_accountsummary.el_event?id=payment-summary&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand a summary of your payment" border="0"> Payment Summary</a></H2></div></span>
+        <div class="modadpadding"><a id="localeSensitiveLinkForBannerAd" target="target="_blank"" href="MarketMessageClick?ACCTID=1&MMID=1&SET=46"><img src="/bankofamerica/images/en_US/links/images/messages/cardbillpay_05_09.gif" size=200 alt="Pay your credit card bills in seconds online. Learn more."></a></div>
+    </div>
+
+
+	
+	
+        
+        <div id="activitycontainer">
+        <!-- beginning of navigation tabs -->
+        <div id="tabnavigation">
+            <ul ><li class="select1" ><a href="g_accountsummary.el_event?id=tabNavigation&tab=g_accountsummary" title="Account Activity shows pending transactions and transactions that have posted to your account." alt="Account Activity shows pending transactions and transactions that have posted to your account" >Account Activity</a>
+</li>
+<li class="tab" ><a href="g_accountsummary.el_event?id=tabNavigation&tab=g_estatement" title="My Statements lets you view, print, and download current and past account statements." alt="My Statements lets you view, print, and download current and past account statements." >My Statements</a>
+</li>
+<li class="tab" ><a href="g_accountsummary.el_event?id=tabNavigation&tab=k_customer_satisfaction_center" title="Services" alt="Services" >Services</a>
+</li>
+<li class="tab" ><a href="g_accountsummary.el_event?id=tabNavigation&tab=g_rewardsOverview" title="Rewards" alt="Rewards" >Rewards</a>
+</li>
+</ul>
+
+        </div>
+        <!-- end of navigation tabs-->
+        <div id="infocontainer">
+            <div class="topleftborder">&nbsp;</div>
+            <div class="toprightborder">&nbsp;</div>
+            <a name="acctactivity"></a>
+            
+	            <div class="AcctSScontent">
+					
+					
+					
+					
+					
+					<h3>The free and easy way to protect yourself when you shop online.</h3>
+					<p>ShopSafe&reg; is our free service for Online Banking customers that allows you to create a unique, temporary account number for online purchases.</p>
+					<p><SCRIPT LANGUAGE="javascript" src="https://www.mbnashopsafe.com/download/browser-detect.js"></script>
+<SCRIPT LANGUAGE="javascript" src="https://www.mbnashopsafe.com/download/smart-update-trigger.js"></script>
+<SCRIPT LANGUAGE="javascript" src="https://www.mbnashopsafe.com/download/configure.js"></script>
+<SCRIPT LANGUAGE="javascript">
+    function sswindowopen() {
+        var winStats = 'titlebar=no,toolbar=no,location=no,directories=no,status=no,menubar=no,';
+        var url="ShopSafeRequestHandler";
+        window.open(url ,"shopSafe","width=465,height=300,dependent=0,resizable=no");  
+    }
+    function IE_Install() {
+        var url2 = "https://www.mbnashopsafe.com/vista/setup.exe";
+        var retVal = window.open (url2, "", "width=500,height=250,status=no,help=no,center=yes,resizable=no,scroll=no");
+        if (retVal == 1) {
+            window.navigate(CONFIGURE_urlInstallationComplete);
+        }
+    }
+</SCRIPT>
+<script>
+<!--
+document.write('');
+//-->
+</script>
+<NOSCRIPT><a href="javascript_error_screen.el_uif" title="null">Use ShopSafe</a></NOSCRIPT><a id="LocaleSensitiveLinkForShopSafePopupPane" onMouseMove="window.status=&quot;Use ShopSafe: Link opens a new window &quot;" onMouseOut="window.status=&quot;Done&quot;" href="javascript:sswindowopen();void(0)">Use ShopSafe</a> | <a href="AboutShopSafeDisplay" title="Learn more about ShopSafe">Learn more about ShopSafe</a></p>
+					
+				
+        	    </div>
+        	
+            <div id="rewardscontainer">
+                <p>  Total Points: 39,796 WorldPoints&reg;  <a href="PointsOverview?ACCTID=1">View my Rewards</a> <img src="/bankofamerica/images/calltoaction_body.gif" border="0" alt="View reward earnings"></p> 
+            </div>
+            <!-- Beginning of Register -->
+            <div id="registercontainer">
+                <div class="financialselecttype"><b> Go to:</b>
+                    <form action="g_accountsummary.el_event?id=statementSelectorTop" method="post" class="financialgoform">
+                        <select name="StatementSelector" id="statementSelectorTop" >
+<option value="0" >Current Statement</option>
+<option value="1" >February 15, 2010</option>
+<option value="2"  selected>January 16, 2010</option>
+<option value="3" >December 16, 2009</option>
+<option value="4" >November 16, 2009</option>
+<option value="5" >October 19, 2009</option>
+<option value="6" >September 17, 2009</option>
+<option value="7" >August 15, 2009</option>
+<option value="8" >July 16, 2009</option>
+<option value="9" >June 15, 2009</option>
+<option value="10" >May 15, 2009</option>
+<option value="11" >April 15, 2009</option>
+<option value="12" >March 17, 2009</option>
+</select>
+ 
+                        <input type="submit" value="Go" name="Go" title="Show transactions in the selected billing period" />
+                    </form>
+                </div>
+                <div class="transactiontype"><b> View:</b>
+                    <form action="g_accountsummary.el_event?id=transactionSelectorTop" method="post" class="transgoform">
+                        <select name="TransactionSelector" id="transactionSelectorTop" >
+<option value="all_transactions"  selected>All Transactions</option>
+<option value="purchases" >Purchases</option>
+<option value="payments" >Payments</option>
+<option value="balance_transfers" >Balance Transfers</option>
+<option value="access_checks" >Access Checks</option>
+<option value="cash_advances" >Cash Advances</option>
+<option value="atm_transaction" >ATM Transactions</option>
+<option value="temporary_authorizations" >Temporary Transaction</option>
+<option value="fees" >Fees</option>
+<option value="bank_charges" >Bank Charges</option>
+</select>
+ 
+                        <input type="submit" value="Go" name="Go" title="Display only the selected transaction type" />
+                    </form>
+                </div>
+                    <div class="statementpagination">
+                    <ul>
+                        <li class="nobullet"><a id="newestStatement1" href="g_accountsummary.el_event?id=newestStatement1">Newest</a></li>
+                        <li><a id="nextStatement1" href="g_accountsummary.el_event?id=nextStatement1">Next</a></li>
+                        <li><a id="previousStatement1" href="g_accountsummary.el_event?id=previousStatement1">Previous</a></li>
+                        <li><a id="oldestStatement1" href="g_accountsummary.el_event?id=oldestStatement1">Oldest</a></li>
+                    </ul>
+                </div>
+                
+<script language="JavaScript">
+    function windowopen() {
+       var url ="g_printableversion.el_uif"; 
+       var winStats = "titlebar=no,location=no,directories=no,status=no,scrollbars=yes,menubar=no,dependent=0,resizable=no";
+       window.open(url ,"Printable",winStats);  
+    }
+</script>
+                
+                <table border="0" cellpadding="0" cellspacing="0" id="activityheader"
+                width="512">
+                <tr>
+                    <td class="activityheading"><b>Transaction</b></td>
+                    <td>
+                        <ul>
+							<li class="print">
+<noscript>
+<a href="g_printableversion.el_uif" target="_blank" title="Printable">Printable</a>
+</noscript>
+<script>
+<!--
+document.write('<a href="javascript:windowopen();void(0)" onmouseout="window.status=&quot;Done&quot;" onmousemove="window.status=&quot;Printable&quot;" >Printable</a>');
+//-->
+</script>
+</li>
+<li>
+<a href="h2_recent_statements.el_uif" title="Download">Download</a>
+</li>
+
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                <td colspan="2" class="blockE"><span id="transaction"><table border="0" cellpadding="0" cellspacing="0" id="transaction" summary="This is a financial summary table of your account activity. Each row represents a distinct transaction. The table has either four or five columns, depending on how you sort the data. The first column has a link that will show or hide details about the transaction, plus the date the transaction was posted. The subsequent columns are: transaction description (also serves as a link to the additional details), transaction type, amount of the transaction, and, if the data is sorted by posting date, a fifth column will be present that shows the account's running balance." >  <tr>    <th class="headerpost" width="139" scope="col" ><a id="sortByPosted" href="javascript:asynchCall('g_accountsummary.el_event?id=sortByPosted&ajax-request=true');"><b>Posted</b> </a><img src="/bankofamerica/images/arrow_descend.gif" alt="Sort Transactions" border="0"></th>    <th class="headeracctdetail" width="159" scope="col"><a id="sortByDescription" href="javascript:asynchCall('g_accountsummary.el_event?id=sortByDescription&ajax-request=true');"><b>Transaction</b> </a></th>    <th class="headertype" width="52" scope="col"><a id="sortByType" href="javascript:asynchCall('g_accountsummary.el_event?id=sortByType&ajax-request=true');"><b>Type</b> </a></th>    <th class="headeramt" width="88" scope="col"><a id="sortByAmount" href="javascript:asynchCall('g_accountsummary.el_event?id=sortByAmount&ajax-request=true');"><b>Amount</b> </a></th>    <th class="headerbalance" width="79" scope="col"><b>Balance</b></th>  </tr><tr>    <td class="stateleft" width="132"><a id="xa_0-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_0&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 01/15/2010 </td>    <td class="acctdetaillinks" width="159"><a id="xa_0-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_0&ajax-request=true');">BED BATH & BEYOND #03</a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">-$71.66</td>    <td class="activitybal" width="79">$2,066.66</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_1-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_1&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 01/14/2010 </td>    <td class="acctdetaillinks" width="159"><a id="xa_1-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_1&ajax-request=true');">NEWSDAY HOME DELIVERY - 101132010346504  </a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$19.50</td>    <td class="activitybal" width="79">$2,138.32</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_2-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_2&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 01/14/2010 </td>    <td class="acctdetaillinks" width="159"><a id="xa_2-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_2&ajax-request=true');">GULF OIL 92040434 - 00023334  </a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$28.65</td>    <td class="activitybal" width="79">$2,118.82</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_3-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_3&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 01/14/2010 </td>    <td class="acctdetaillinks" width="159"><a id="xa_3-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_3&ajax-request=true');">VICTORIA SECRET - 0000410709069  </a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">-$24.24</td>    <td class="activitybal" width="79">$2,090.17</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_4-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_4&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 01/14/2010 </td>    <td class="acctdetaillinks" width="159"><a id="xa_4-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_4&ajax-request=true');">PETSMART INC - 6890284  </a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">-$53.82</td>    <td class="activitybal" width="79">$2,114.41</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_5-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_5&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 01/13/2010 </td>    <td class="acctdetaillinks" width="159"><a id="xa_5-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_5&ajax-request=true');">USPS 35406107431906357 - 688  </a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$11.57</td>    <td class="activitybal" width="79">$2,168.23</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_6-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_6&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 01/13/2010 </td>    <td class="acctdetaillinks" width="159"><a id="xa_6-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_6&ajax-request=true');">DIRAIMO PIZZERIA INC</a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$12.87</td>    <td class="activitybal" width="79">$2,156.66</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_7-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_7&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 01/13/2010 </td>    <td class="acctdetaillinks" width="159"><a id="xa_7-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_7&ajax-request=true');">BED BATH & BEYOND #03</a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$102.24</td>    <td class="activitybal" width="79">$2,143.79</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_8-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_8&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 01/12/2010 </td>    <td class="acctdetaillinks" width="159"><a id="xa_8-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_8&ajax-request=true');">WALDBAUM'S #70449 - 06203350449SC3Y7000059632  </a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$21.97</td>    <td class="activitybal" width="79">$2,041.55</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_9-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_9&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 01/11/2010 </td>    <td class="acctdetaillinks" width="159"><a id="xa_9-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_9&ajax-request=true');">STARVING ARTIST</a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$118.40</td>    <td class="activitybal" width="79">$2,019.58</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_10-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_10&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 01/11/2010 </td>    <td class="acctdetaillinks" width="159"><a id="xa_10-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_10&ajax-request=true');">CHAIRMAN CO</a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$140.00</td>    <td class="activitybal" width="79">$1,901.18</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_11-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_11&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 01/09/2010 </td>    <td class="acctdetaillinks" width="159"><a id="xa_11-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_11&ajax-request=true');">JCPENNEY CATLG 9831 - 2255908  </a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$133.34</td>    <td class="activitybal" width="79">$1,761.18</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_12-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_12&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 01/09/2010 </td>    <td class="acctdetaillinks" width="159"><a id="xa_12-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_12&ajax-request=true');">AMAZON MKTPLACE PMTS - QC2QNFPYVID  </a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$17.06</td>    <td class="activitybal" width="79">$1,627.84</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_13-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_13&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 01/09/2010 </td>    <td class="acctdetaillinks" width="159"><a id="xa_13-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_13&ajax-request=true');">AMAZON MKTPLACE PMTS - IDNEOGA6TRI  </a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$5.99</td>    <td class="activitybal" width="79">$1,610.78</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_14-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_14&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 01/09/2010 </td>    <td class="acctdetaillinks" width="159"><a id="xa_14-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_14&ajax-request=true');">BED BATH & BEYOND #03</a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$114.51</td>    <td class="activitybal" width="79">$1,604.79</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_15-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_15&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 01/08/2010 </td>    <td class="acctdetaillinks" width="159"><a id="xa_15-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_15&ajax-request=true');">AMAZON PRIME - T5A950CYVYT  </a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$79.00</td>    <td class="activitybal" width="79">$1,490.28</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_16-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_16&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 01/08/2010 </td>    <td class="acctdetaillinks" width="159"><a id="xa_16-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_16&ajax-request=true');">AMAZON.COM - SX6RDZ9EG1T   - SALES TAX AMT         0.00  </a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$7.58</td>    <td class="activitybal" width="79">$1,411.28</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_17-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_17&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 01/07/2010 </td>    <td class="acctdetaillinks" width="159"><a id="xa_17-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_17&ajax-request=true');">PAYPAL *KADOOLI COM - 35042745114029357733  </a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$39.61</td>    <td class="activitybal" width="79">$1,403.70</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_18-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_18&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 01/07/2010 </td>    <td class="acctdetaillinks" width="159"><a id="xa_18-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_18&ajax-request=true');">COUNTRY CURTAINS-MH</a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$64.09</td>    <td class="activitybal" width="79">$1,364.09</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_19-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_19&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 01/06/2010 </td>    <td class="acctdetaillinks" width="159"><a id="xa_19-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_19&ajax-request=true');">WALDBAUM'S #70449 - 06203350449SC3Y7000012971  </a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$33.92</td>    <td class="activitybal" width="79">$1,300.00</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_20-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_20&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 01/06/2010 </td>    <td class="acctdetaillinks" width="159"><a id="xa_20-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_20&ajax-request=true');">LIRR MAIL&RIDE TICKET - 9463449  </a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$352.04</td>    <td class="activitybal" width="79">$1,266.08</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_21-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_21&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 01/04/2010 </td>    <td class="acctdetaillinks" width="159"><a id="xa_21-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_21&ajax-request=true');">BA ELECTRONIC PAYMENT</a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_payment.gif" border="0" alt="Payment" title="Payment"></td>    <td class="amtstate" width="88">-$4,000.00</td>    <td class="activitybal" width="79">$914.04</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_22-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_22&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 12/31/2009 </td>    <td class="acctdetaillinks" width="159"><a id="xa_22-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_22&ajax-request=true');">AMAZON MKTPLACE PMTS - N0UBVA8QADC  </a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$8.99</td>    <td class="activitybal" width="79">$4,914.04</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_23-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_23&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 12/30/2009 </td>    <td class="acctdetaillinks" width="159"><a id="xa_23-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_23&ajax-request=true');">TARGET 00018663</a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">-$9.78</td>    <td class="activitybal" width="79">$4,905.05</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_24-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_24&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 12/29/2009 </td>    <td class="acctdetaillinks" width="159"><a id="xa_24-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_24&ajax-request=true');">LARRY`S FUEL OIL - 8729  </a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$451.30</td>    <td class="activitybal" width="79">$4,914.83</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_25-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_25&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 12/29/2009 </td>    <td class="acctdetaillinks" width="159"><a id="xa_25-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_25&ajax-request=true');">CONSUMERS WAREHOUSE CT</a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$224.72</td>    <td class="activitybal" width="79">$4,463.53</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_26-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_26&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 12/26/2009 </td>    <td class="acctdetaillinks" width="159"><a id="xa_26-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_26&ajax-request=true');">OUTBACK #3332</a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$50.00</td>    <td class="activitybal" width="79">$4,238.81</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_27-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_27&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 12/26/2009 </td>    <td class="acctdetaillinks" width="159"><a id="xa_27-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_27&ajax-request=true');">URBAN OUTFITTERS #11</a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$9.99</td>    <td class="activitybal" width="79">$4,188.81</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_28-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_28&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 12/25/2009 </td>    <td class="acctdetaillinks" width="159"><a id="xa_28-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_28&ajax-request=true');">LUCKY 110 FARMS</a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$63.16</td>    <td class="activitybal" width="79">$4,178.82</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_29-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_29&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 12/25/2009 </td>    <td class="acctdetaillinks" width="159"><a id="xa_29-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_29&ajax-request=true');">VICTORIA'S SECRET 0250</a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$16.16</td>    <td class="activitybal" width="79">$4,115.66</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_30-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_30&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 12/25/2009 </td>    <td class="acctdetaillinks" width="159"><a id="xa_30-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_30&ajax-request=true');">PERSONALIZED CHRISTMAS</a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$13.02</td>    <td class="activitybal" width="79">$4,099.50</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_31-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_31&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 12/24/2009 </td>    <td class="acctdetaillinks" width="159"><a id="xa_31-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_31&ajax-request=true');">USPS CHANGE OF66100959 - 000700164331169  </a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$1.00</td>    <td class="activitybal" width="79">$4,086.48</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_32-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_32&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 12/24/2009 </td>    <td class="acctdetaillinks" width="159"><a id="xa_32-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_32&ajax-request=true');">USPS CHANGE OF66100959 - 000700164330246  </a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$1.00</td>    <td class="activitybal" width="79">$4,085.48</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_33-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_33&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 12/23/2009 </td>    <td class="acctdetaillinks" width="159"><a id="xa_33-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_33&ajax-request=true');">GULF OIL 91522010 - 00036171  </a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$29.00</td>    <td class="activitybal" width="79">$4,084.48</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_34-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_34&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 12/22/2009 </td>    <td class="acctdetaillinks" width="159"><a id="xa_34-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_34&ajax-request=true');">AMAZON.COM - W18ASW7ZZ09   - SALES TAX AMT         0.10  </a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$124.48</td>    <td class="activitybal" width="79">$4,055.48</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_35-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_35&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 12/22/2009 </td>    <td class="acctdetaillinks" width="159"><a id="xa_35-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_35&ajax-request=true');">PLUSH NECESSITIES - 3023  </a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$113.10</td>    <td class="activitybal" width="79">$3,931.00</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_36-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_36&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 12/21/2009 </td>    <td class="acctdetaillinks" width="159"><a id="xa_36-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_36&ajax-request=true');">THE HOME DEPOT 1272</a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$50.56</td>    <td class="activitybal" width="79">$3,817.90</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_37-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_37&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 12/19/2009 </td>    <td class="acctdetaillinks" width="159"><a id="xa_37-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_37&ajax-request=true');">BED BATH & BEYOND #03</a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$13.02</td>    <td class="activitybal" width="79">$3,767.34</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_38-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_38&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 12/19/2009 </td>    <td class="acctdetaillinks" width="159"><a id="xa_38-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_38&ajax-request=true');">THE HOME DEPOT 1272</a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$11.76</td>    <td class="activitybal" width="79">$3,754.32</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_39-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_39&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 12/18/2009 </td>    <td class="acctdetaillinks" width="159"><a id="xa_39-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_39&ajax-request=true');">THE HOME DEPOT 1202</a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$41.40</td>    <td class="activitybal" width="79">$3,742.56</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_40-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_40&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 12/17/2009 </td>    <td class="acctdetaillinks" width="159"><a id="xa_40-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_40&ajax-request=true');">TGT*TARGET.COM - ERV6WT2H42T   - SALES TAX AMT         0.03  </a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$35.07</td>    <td class="activitybal" width="79">$3,701.16</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_41-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_41&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 12/17/2009 </td>    <td class="acctdetaillinks" width="159"><a id="xa_41-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_41&ajax-request=true');">TARGET 00011080</a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$205.38</td>    <td class="activitybal" width="79">$3,666.09</td></tr><tr>    <td class="stateleft" width="132"><a id="xa_42-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_42&ajax-request=true');"><img src="/bankofamerica/images/bluetriangle.gif" alt="Expand to view more details about this transaction." border="0"></a> 12/17/2009 </td>    <td class="acctdetaillinks" width="159"><a id="xa_42-command" href="javascript:asynchCall('g_accountsummary.el_event?id=xa_42&ajax-request=true');">10,000 TREES</a></td>    <td class="icontags" width="52"><img src="/bankofamerica/images/typeicons/type_purchase.gif" border="0" alt="Purchase" title="Purchase"></td>    <td class="amtstate" width="88">$51.05</td>    <td class="activitybal" width="79">$3,460.71</td></tr><tr>    <td colspan="4" class="textsummary">Beginning Balance as of 12&#47;17&#47;2009</td>    <td class="activitybal">$3,409.66</td></tr></table></span>
+                </td>
+                </tr>
+                <tr>
+                    <td class="activityheading">
+                    	<span id="toggleIconLegend"><a id="toggleIconLegend" href="javascript:asynchCall('g_accountsummary.el_event?id=toggleIconLegend&ajax-request=true');">
+                    		Icon Legend
+                    	</a></span>
+                    </td>
+                    <td>
+                        <ul>
+							<li class="print">
+<noscript>
+<a href="g_printableversion.el_uif" target="_blank" title="Printable">Printable</a>
+</noscript>
+<script>
+<!--
+document.write('<a href="javascript:windowopen();void(0)" onmouseout="window.status=&quot;Done&quot;" onmousemove="window.status=&quot;Printable&quot;" >Printable</a>');
+//-->
+</script>
+</li>
+<li>
+<a href="h2_recent_statements.el_uif" title="Download">Download</a>
+</li>
+
+                        </ul>
+                    </td>
+                </tr>
+                </table>
+                
+                
+                <span id="iconLegend"></span>
+                <!-- End of Transaction and Financial Selection Type -->
+                <div class="financialselecttype"><b> Go to:</b>
+
+                    <form action="g_accountsummary.el_event?id=statementSelectorBottom" method="post" class="financialgoform">
+                        <select name="StatementSelector2" id="statementSelectorBottom" >
+<option value="0" >Current Statement</option>
+<option value="1" >February 15, 2010</option>
+<option value="2"  selected>January 16, 2010</option>
+<option value="3" >December 16, 2009</option>
+<option value="4" >November 16, 2009</option>
+<option value="5" >October 19, 2009</option>
+<option value="6" >September 17, 2009</option>
+<option value="7" >August 15, 2009</option>
+<option value="8" >July 16, 2009</option>
+<option value="9" >June 15, 2009</option>
+<option value="10" >May 15, 2009</option>
+<option value="11" >April 15, 2009</option>
+<option value="12" >March 17, 2009</option>
+</select>
+ 
+                        <input type="submit" value="Go" name="Go" title="Show transactions in the selected billing period" />
+                    </form>
+                </div>
+                <div class="transactiontype"><b>&nbsp;View:</b>
+                    <form action="g_accountsummary.el_event?id=transactionSelectorBottom" method="post" class="transgoform">
+                        <select name="TransactionSelector" id="transactionSelectorBottom" >
+<option value="all_transactions"  selected>All Transactions</option>
+<option value="purchases" >Purchases</option>
+<option value="payments" >Payments</option>
+<option value="balance_transfers" >Balance Transfers</option>
+<option value="access_checks" >Access Checks</option>
+<option value="cash_advances" >Cash Advances</option>
+<option value="atm_transaction" >ATM Transactions</option>
+<option value="temporary_authorizations" >Temporary Transaction</option>
+<option value="fees" >Fees</option>
+<option value="bank_charges" >Bank Charges</option>
+</select>
+ 
+                        <input type="submit" value="Go" name="Go" title="Display only the selected transaction type" />
+                    </form>
+                </div>
+                <div class="statementpagination">
+                    <ul>
+                        <li class="nobullet"><a id="newestStatement2" href="g_accountsummary.el_event?id=newestStatement2">Newest</a></li>
+                        <li><a id="nextStatement2" href="g_accountsummary.el_event?id=nextStatement2">Next</a></li>
+                        <li><a id="previousStatement2" href="g_accountsummary.el_event?id=previousStatement2">Previous</a></li>
+                        <li><a id="oldestStatement2" href="g_accountsummary.el_event?id=oldestStatement2">Oldest</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottomleftborder">&nbsp;</div>
+            <div class="bottomrightborder">&nbsp;</div>
+        </div>
+    </div>
+    <!-- End of Activity Module --> 
+        
+        
+
+
+
+
+
+    
+	<div id="footercontainer"><div class="footersecure"><img src="/bankofamerica/images/secure_icon.gif" alt="Secure Area" title="Secure Area"/>Secure Area</div><div id="footer"><ul><li class="beginning"><a href="SSOExit?WeasUrl=https%3A%2F%2Fonlineeast1.bankofamerica.com%2Fcgi-bin%2Fias%2F0%2FE%2Fbofa%2Fibd%2FIAS%2Fpresentation%2FSSOReentryPoint%3Fsource%3Dnetaccess%26target%3Dacctoverview%26AccountIndex%3D1" title="Accounts">Accounts</a></li><li><a id="LocaleSensitiveLinkForBillpayTab" href="SSOExit?WeasUrl=https%3A%2F%2Fonlineeast1.bankofamerica.com%2Fcgi-bin%2Fias%2F0%2FE%2Fbofa%2Fibd%2FIAS%2Fpresentation%2FSSOReentryPoint%3Fsource%3Dnetaccess%26target%3DbillPay%26AccountIndex%3D1">Bill Pay</a></li><li><a href="SSOExit?WeasUrl=https%3A%2F%2Fonlineeast1.bankofamerica.com%2Fcgi-bin%2Fias%2F0%2FE%2Fbofa%2Fibd%2FIAS%2Fpresentation%2FSSOReentryPoint%3Fsource%3Dnetaccess%26target%3DtranFunds%26AccountIndex%3D1" title="Transfer Funds">Transfer Funds</a></li><li><a id="LocaleSensitiveLinkForInvestments" href="SSOExit?WeasUrl=https%3A%2F%2Fonlineeast1.bankofamerica.com%2Fcgi-bin%2Fias%2F0%2FE%2Fbofa%2Fibd%2FIAS%2Fpresentation%2FSSOReentryPoint%3Fsource%3Dnetaccess%26target%3Dinvestments%26AccountIndex%3D1">Investments</a></li><li><a href="SSOExit?WeasUrl=https%3A%2F%2Fonlineeast1.bankofamerica.com%2Fcgi-bin%2Fias%2F0%2FE%2Fbofa%2Fibd%2FIAS%2Fpresentation%2FSSOReentryPoint%3Fsource%3Dnetaccess%26target%3DcustService%26AccountIndex%3D1" title="Customer Service">Customer Service</a></li></ul> <ul><li class="beginning"><a href="SSOExit?dotcomURL=https%3A%2F%2Fwww.bankofamerica.com%2Fprivacy%2F" title="Privacy & Security (opens in a new window)." target="_blank">Privacy &amp; Security</a></li><li><a href="SSOExit?dotcomURL=http%3A%2F%2Flocators.bankofamerica.com%2Flocator%2Flocator%2F" title="Locate Bank of America ATMs and Banking Centers (opens in a new window)." target="_blank">Locations</a></li><li><a href="SSOExit?WeasUrl=https%3A%2F%2Fonlineeast1.bankofamerica.com%2Fcgi-bin%2Fias%2F0%2FE%2Fbofa%2Fibd%2FIAS%2Fpresentation%2FSSOReentryPoint%3Fsource%3Dnetaccess%26target%3Dalerts%26AccountIndex%3D1" title="Alerts">Alerts</a></li><li><a href="SSOExit?WeasUrl=https%3A%2F%2Fonlineeast1.bankofamerica.com%2Fcgi-bin%2Fias%2F0%2FE%2Fbofa%2Fibd%2FIAS%2Fpresentation%2FSSOReentryPoint%3Fsource%3Dnetaccess%26target%3Dmail%26AccountIndex%3D1" title="Mail">Mail</a></li><li><a id='footerHelpID' href="SSOExit?WeasUrl=https%3A%2F%2Fonlineeast1.bankofamerica.com%2Fcgi-bin%2Fias%2F0%2FE%2Fbofa%2Fibd%2FIAS%2Fpresentation%2FSSOReentryPoint%3Fsource%3Dnetaccess%26target%3Dhelp%26AccountIndex%3D1" target="_blank" title="Help">Help</a></li><li><a id="LocaleSensitiveLinkForSiteMap" target="_blank" href="SSOExit?dotcomURL=http%3A%2F%2Fwww.bankofamerica.com%2Fhelp%2Frouter.cfm%3Fsrc%3Dolb%26dest%3Dsitemap">Site Map</a></li><li><a href="BacLogoff?url=https%3A%2F%2Fonlineeast1.bankofamerica.com%2Fcgi-bin%2Fias%2F0%2FE%2Fbofa%2Fibd%2FIAS%2Fpresentation%2FSSOReentryPoint%3Fsource%3Dnetaccess%26target%3Dlogout%26AccountIndex%3D1" title="Sign Off" >Sign Off</a></li></ul></div><div class="footercopyright">Bank of America, N.A. Member FDIC.&nbsp;Equal Housing Lender <img src="/bankofamerica/images/home_icon.gif" alt="Equal Housing Lender"><p>&copy;2010 Bank of America Corporation. All rights reserved.<br clear="all"></p></div></div><script type='text/javascript' src='/bankofamerica/scripts/events.js'></script>
+	
+
+	

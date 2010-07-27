@@ -31,7 +31,7 @@
 			var transactionAC:ArrayCollection = new ArrayCollection(Array(resultObj.hash.records.transaction));
 
 			journalAccount = StateliHelper.getTotalJournalAccount(transactionAC);
-			
+			trace(journalAccount)
 			updateDateRange(startDateStr, endDateStr);
 			
 			var temp:Array = new Array();

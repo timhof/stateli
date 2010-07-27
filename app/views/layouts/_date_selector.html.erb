@@ -1,0 +1,29 @@
+
+
+
+	
+<% form_tag :url => submit_path do %>
+<div onclick="javascript:toggle_date_selectors();">Toggle Dates</div>
+<div id="date_selectors" style="display:inline;">
+	<div type="text" id="start_date_field" id="start_date_field" style="float:left;margin:10px;"></div>
+	<div type="text" id="end_date_field" id="end_date_field" style="float:left;margin:10px;"></div>
+</div>
+
+<% end %>
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+  	$(document).ready(function() {
+
+		$("#start_date_field").datepicker();
+		$("#end_date_field").datepicker();
+
+$('.selector').datepicker({
+   onSelect: function(dateText, inst) { ... }
+});
+  	} );
+		
+</script>

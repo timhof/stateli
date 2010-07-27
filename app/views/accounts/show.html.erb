@@ -1,22 +1,29 @@
-<p>
-  <b>Name:</b>
-  <%=h @account.name %>
-</p>
 
-<p>
-  <b>Description:</b>
-  <%=h @account.description %>
-</p>
 
-<p>
-  <b>Type:</b>
-  <%=h @account.type %>
-</p>
+<div id="account_details" class="template_div">
 
-<p>
-  <b>Balance:</b>
-  <%=h @account.balance %>
-</p>
-
-<%= link_to 'Edit', edit_account_path(@account) %> |
-<%= link_to 'Back', accounts_path %>
+	<div class="detail_div">
+		<div class="detail_label">
+		  Name
+		</div>
+		<div id="account_name_<%=@account.id%>" class="detail_value">
+		  <%=h @account.name %>
+		</div>
+		
+		<div id="account_description_<%=@account.id%>" class="detail_label">
+		  Description
+		</div>
+		<div id="account_description_<%=@account.id%>" class="detail_value">
+		  <%=h @account.description %>
+		</div>
+		
+		
+		<div class="detail_label">
+		  Balance
+		</div>
+		<div id="account_balance_<%= @account.id %>" class="detail_value">
+		  <%=h real_currency @account.balance %>
+		</div>
+		
+	</div>
+</div>

@@ -1,0 +1,6 @@
+
+	<%= link_to 'shw', contract_details_path(contract.id), {:class => "listing_link", :title => "View Contract Details"} %>
+	<%= link_to 'jrnl', contract_journal_path(contract.id), {:class => "listing_link", :title => "View Contract Trasactions"} %>
+	<%= link_to 'pnd', contract_pending_path(contract.id), {:class => "listing_link", :title => "View Pending Transactions"} %>
+	<%= link_to_remote 'add trans', {:url => contract_new_transaction_path(contract.id, @start_date, @end_date)}, {:class => "listing_link", :title => "Add New Transaction"} %>
+  

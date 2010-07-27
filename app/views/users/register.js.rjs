@@ -1,0 +1,6 @@
+
+page[:login].value = @user.login
+page[:password].value = @user.password
+
+page.hide_popup_form flash[:notice]
+flash.discard

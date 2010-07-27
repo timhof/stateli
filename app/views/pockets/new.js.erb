@@ -1,0 +1,25 @@
+
+$('#edit_pocket_dialog').html("<%= escape_javascript(render :partial => 'edit', :locals => {:pocket => @pocket})%>");
+
+$("#edit_pocket_dialog").dialog({
+	bgiframe: true, 
+	autoOpen: false, 
+	modal: true,
+	width: '850px',
+	buttons: {
+		Cancel: function() {
+			$(this).dialog('close');
+			$('#edit_pocket_commit').val('cancel');
+			$('#edit_pocket_form').submit();
+		},
+		'OK': function() {
+			$(this).dialog('close');
+			$('#edit_pocket_commit').val('update');
+			$('#edit_pocket_form').submit();
+		}
+	}
+}); 
+
+$('#edit_pocket_dialog').dialog('open');
+
+ajaxLinks();

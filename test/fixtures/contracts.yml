@@ -1,29 +1,58 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
-  description: MyString
-  date_start: 2009-06-22
-  date_end: 2009-06-22
-  type: MyString
+ 
+l5m:
+  name: Lake 5 Media
+  description: Paycheck
+  date_start: 2010-01-01
+  date_end: 2010-12-31
+  type: ContractBimonthly
   user_id: 1
-  autopay: 1
-  autopay_account_id: 1
+  autopay: true
+  autopayAccount: chase
   full_date: 2009-06-22
   day_of_month: 1
-  day_of_month_alt: 1
+  day_of_month_alt: 15
   weekday: 1
+  active: true
+  amount: 2711.73
+  transaction_type: TransactionDebit
+  
+mortgage:
+  name: Mortgage
+  description: mortgage
+  date_start: 2010-01-01
+  date_end: 2010-12-31
+  type: ContractMonthly
+  user_id: 1
+  autopay: true
+  autopayAccount: chase
+  full_date: 2009-06-22
+  day_of_month: 1
+  day_of_month_alt: 15
+  weekday: 1
+  active: true
+  amount: 2544.73
+  transaction_type: TransactionCredit
+  
+  
+oil:
+  name: Larrys Oil
+  description: Oil Delivery
+  date_start: 2010-01-01
+  date_end: 2011-12-31
+  type: ContractOnce
+  user_id: 1
+  autopay: true
+  autopayAccount: chase
+  full_date: 2009-06-22
+  day_of_month: 1
+  day_of_month_alt: 15
+  weekday: 1
+  active: true
+  amount: 542.14
+  transaction_type: TransactionCredit
+  
 
-two:
-  name: MyString
-  description: MyString
-  date_start: 2009-06-22
-  date_end: 2009-06-22
-  type: MyString
-  user_id: 1
-  autopay: 1
-  autopay_account_id: 1
-  full_date: 2009-06-22
-  day_of_month: 1
-  day_of_month_alt: 1
-  weekday: 1
+
+ 

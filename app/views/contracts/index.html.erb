@@ -1,39 +1,19 @@
-<h1>Listing contracts</h1>
-<table>
-  <%= render :partial => 'contract_header' %>
-  <%= render :partial => 'contract_details', :collection => @contracts %>
-</table>
+<div class="template_div">
+	<div><%= link_to 'Create New', new_account_contract_path(@account), {:class => 'listing_link', :title => 'Create New Contract'} %></div>
+  	<div id="contract_listing" class="table_div contracts_listing">
+  		<table id="contract_listing_table" class="listing_table">
+  			<thead>
+    			<%= render :partial => 'listing_header' %>
+    		</thead>
+    		<tbody>
+    			<%= render :partial => 'listing_details', :collection => @contracts, :as => :contract %>
+    		</tbody>
+    	</table>
+  </div>
+</div>
 
-<h1>Listing Yearly Contracts</h1>
-<table>
-  <%= render :partial => 'contract_header' %>
-  <%= render :partial => 'contract_details', :collection => @contractsYearly %>
-</table>
-
-<h1>Listing Monthly Contracts</h1>
-<table>
-  <%= render :partial => 'contract_header' %>
-  <%= render :partial => 'contract_details', :collection => @contractsMonthly %>
-</table>
-
-<h1>Listing Bi-Monthly</h1>
-<table>
-  <%= render :partial => 'contract_header' %>
-  <%= render :partial => 'contract_details', :collection => @contractsBimonthly %>
-</table>
-
-<h1>Listing Weekly</h1>
-<table>
-  <%= render :partial => 'contract_header' %>
-  <%= render :partial => 'contract_details', :collection => @contractsWeekly %>
-</table>
-
-<h1>Listing One-Time Contracts</h1>
-<table>
-  <%= render :partial => 'contract_header' %>
-  <%= render :partial => 'contract_details', :collection => @contractsOnce %>
-</table>
-
-<br />
-
-<%= link_to 'New contract', new_contract_path %>
+<script type="text/javascript">
+  	$(document).ready(function() {
+		$('#contract_listing_table').dataTable({"iDisplayLength": 15});
+  	} );
+</script>

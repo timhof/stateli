@@ -1,0 +1,20 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+
+boa_payment:
+  name: boa_payments
+  comp_type: <%= RuleCompType::CONTAINS.key %>
+  comp_string: BK OF AMER
+  comp_action: <%= RuleActionType::ASSIGN_CONTRACT.key %>
+  contract_id: 20
+  type: RuleName
+  rank: 1
+  
+before_jun:
+  name: before_jun
+  comp_type: <%= RuleCompType::LESS_THAN.key %>
+  comp_string: comp_string
+  comp_date: 04/01/2010
+  comp_action: <%= RuleActionType::DELETE.key %>
+  type: RuleName
+  rank: 1

@@ -1,0 +1,13 @@
+<h1>Editing pocket</h1>
+
+<% form_for(@pocket) do |f| %>
+  <%= f.error_messages %>
+
+	<%= render :partial => 'edit_form', :locals => {:f => f} %>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @pocket %> |
+<%= link_to 'Back', pockets_path %>

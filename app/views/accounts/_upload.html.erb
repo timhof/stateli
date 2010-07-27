@@ -1,0 +1,8 @@
+
+
+<% form_tag account_upload_file_path(@account), :id => "listing_form_form", :method => 'post', :multipart => true do %>
+	Upload your XML file: <%= file_field_tag 'file', :class => 'upload' %><br/>
+<%= submit_tag("Upload file" ) %>
+	<%= radio_button_tag "upload_type", 'Chase', true %>Chase
+	<%= radio_button_tag "upload_type", 'BOA', false %>BOA
+<% end %>

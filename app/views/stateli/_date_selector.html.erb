@@ -1,10 +1,23 @@
 
-<%= form_for_obj.text_field date_field, {:onfocus => "click_date_text('#{text_field_id}')", :value => Date.today.to_s, :size => 10, :class => "base_form_field"} %>
-        
-        <div id="<%= text_field_id %>_calendar_div" class="popup_calendar_div" style="display:none;text-align:right;" onmouseover="mouseover_calendar()" onmouseout="mouseout_calendar()">
-		    <%= calendar_date_select_tag "#{text_field_id}_calendar", Date.today,
-	        :embedded => true,
-	        :year_range => 0.years.ago..10.years.from_now,
-	        :clear_button => false,
-	        :onchange => "select_date('#{text_field_id}')" %>
-        </div>
+
+
+	
+<div onclick="javascript:toggle_date_selectors();">Toggle Dates</div>
+<div id="date_selectors" style="display:none;">
+	<div type="text" id="start_date_field" style="float:left;margin:10px;"></div>
+	<div type="text" id="end_date_field" style="float:left;margin:10px;"></div>
+	<div style="clear:both;"></div>
+</div>
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+  	$(document).ready(function() {
+
+		$("#start_date_field").datepicker();
+		$("#end_date_field").datepicker();
+  	} );
+		
+</script>

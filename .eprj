@@ -4,22 +4,140 @@
     <dict>
         <key>fileTriggers</key>
         <dict>
+            <key>.js</key>
+            <string>public\javascripts\application.js</string>
+            <key>AC</key>
+            <string>app\models\account.rb</string>
+            <key>ACC</key>
+            <string>app\models\account.rb</string>
+            <key>ACCOUNT.R</key>
+            <string>app\models\account.rb</string>
+            <key>ACCOUNT.RB</key>
+            <string>app\models\account.rb</string>
+            <key>ACCOUNTSCON</key>
+            <string>app\controllers\accounts_controller.rb</string>
+            <key>ACCOUNT_TES</key>
+            <string>test\unit\account_test.rb</string>
+            <key>ACCOUNT_TEST</key>
+            <string>test\unit\account_test.rb</string>
+            <key>ACCOUNTscon</key>
+            <string>app\controllers\accounts_controller.rb</string>
+            <key>AP</key>
+            <string>..\tracker\public\javascripts\application.js</string>
             <key>APP</key>
             <string>public\javascripts\application.js</string>
             <key>APPLI</key>
             <string>app\views\layouts\application.html.erb</string>
+            <key>BUG.RB</key>
+            <string>..\tracker\app\models\bug.rb</string>
+            <key>BUGCON</key>
+            <string>..\tracker\app\controllers\bugs_controller.rb</string>
+            <key>BUGSCO</key>
+            <string>..\tracker\app\controllers\bugs_controller.rb</string>
+            <key>BUGSTAT</key>
+            <string>..\tracker\app\models\bug_status.rb</string>
             <key>BUILD</key>
             <string>app\views\stateli\build_contract.js.rjs</string>
+            <key>CONTRACT.RB</key>
+            <string>app\models\contract.rb</string>
+            <key>CONTRACTS</key>
+            <string>app\controllers\contracts_controller.rb</string>
+            <key>CONTRACTSCON</key>
+            <string>app\controllers\contracts_controller.rb</string>
+            <key>CONTRACTSCONT</key>
+            <string>app\controllers\contracts_controller.rb</string>
+            <key>CONTRACT_PENDING</key>
+            <string>app\views\contracts\contract_pending.html.erb</string>
+            <key>CONTRACT_TEST</key>
+            <string>test\unit\contract_test.rb</string>
+            <key>EDIT_</key>
+            <string>app\views\rules\_edit_form.html.erb</string>
+            <key>ENVIR</key>
+            <string>..\tracker\config\environment.rb</string>
+            <key>IND</key>
+            <string>app\views\stateli\index.html.erb</string>
+            <key>INDEX.</key>
+            <string>app\views\rules\index.html.erb</string>
             <key>JOurnalpe</key>
             <string>app\flex\JournalPending.mxml</string>
             <key>LISTING</key>
             <string>app\views\stateli\account_listing.html.erb</string>
+            <key>OOS</key>
+            <string>..\timothyimhof\public\stylesheets\oostyle.css</string>
+            <key>REPORTSCON</key>
+            <string>..\tracker\app\controllers\reports_controller.rb</string>
+            <key>REPORTTAB</key>
+            <string>..\tracker\app\views\reports\_report_table.html.erb</string>
+            <key>ROUT</key>
+            <string>..\tracker\config\routes.rb</string>
             <key>ROUTE</key>
             <string>config\routes.rb</string>
+            <key>ROUTES</key>
+            <string>config\routes.rb</string>
+            <key>ROUTES.</key>
+            <string>config\routes.rb</string>
+            <key>RULE.</key>
+            <string>app\models\rule.rb</string>
+            <key>RULE.R</key>
+            <string>app\models\rule.rb</string>
+            <key>RULE.RB</key>
+            <string>app\models\rule.rb</string>
+            <key>RULECOMPTY</key>
+            <string>app\models\rule_comp_type.rb</string>
+            <key>RULES</key>
+            <string>app\controllers\rules_controller.rb</string>
+            <key>RULE_NA</key>
+            <string>app\models\rule_name.rb</string>
+            <key>SCA</key>
+            <string>..\tracker\public\stylesheets\scaffold.css</string>
+            <key>SCAFF</key>
+            <string>..\tracker\public\stylesheets\scaffold.css</string>
+            <key>SCH</key>
+            <string>db\schema.rb</string>
+            <key>SCHEMA</key>
+            <string>db\schema.rb</string>
+            <key>SCHEMA.RB</key>
+            <string>..\tracker\db\schema.rb</string>
             <key>STAT</key>
             <string>app\controllers\stateli_controller.rb</string>
             <key>STATE</key>
-            <string>app\controllers\stateli_controller.rb</string>
+            <string>app\helpers\stateli_helper.rb</string>
+            <key>STATELIHELP</key>
+            <string>app\helpers\stateli_helper.rb</string>
+            <key>SUMM</key>
+            <string>..\tracker\app\views\reports\summary_report.html.erb</string>
+            <key>TASK.R</key>
+            <string>..\tracker\app\models\task.rb</string>
+            <key>TASKST</key>
+            <string>..\tracker\app\models\task_status.rb</string>
+            <key>TASKSTAT</key>
+            <string>..\tracker\app\models\task_status.rb</string>
+            <key>TR</key>
+            <string>app\models\transaction.rb</string>
+            <key>TRANSAC</key>
+            <string>app\models\transaction.rb</string>
+            <key>TRANSACTION.RB</key>
+            <string>app\models\transaction.rb</string>
+            <key>TRANSACTIONCON</key>
+            <string>app\controllers\transactions_controller.rb</string>
+            <key>TRANSACTIONS</key>
+            <string>app\views\transactions\_transactions.html.erb</string>
+            <key>TRANSACTIONS.HT</key>
+            <string>app\views\transactions\_transactions.html.erb</string>
+            <key>TRANSACTIONSCON</key>
+            <string>app\controllers\transactions_controller.rb</string>
+            <key>TRANSACTIONSLIST</key>
+            <string>app\views\transactions\_transactions_listing.html.erb</string>
+            <key>TRANSACTIONS_L</key>
+            <string>app\views\transactions\_transactions_listing.html.erb</string>
+            <key>TRANSACTIONS_LI</key>
+            <string>app\views\transactions\_transactions_listing.html.erb</string>
+            <key>TRANSACTIONUP</key>
+            <string>app\models\transaction_uploader.rb</string>
+            <key>TRANSACTION_TEST</key>
+            <string>test\unit\transaction_test.rb</string>
+            <key>_NEW</key>
+            <string>app\views\accounts\_new.html.erb</string>
             <key>_account_his</key>
             <string>app\views\stateli\_account_history_details.html.erb</string>
             <key>_account_j</key>
@@ -28,6 +146,8 @@
             <string>app\views\stateli\_account_listing_header.html.erb</string>
             <key>_account_listing</key>
             <string>app\views\accounts\_account_listing_details.html.erb</string>
+            <key>_account_opt</key>
+            <string>app\views\accounts\_account_options.html.erb</string>
             <key>_con</key>
             <string>app\views\stateli\_contract_credit_new.html.erb</string>
             <key>_cont</key>
@@ -36,50 +156,108 @@
             <string>app\views\stateli\_contract_credit_new.html.erb</string>
             <key>_contrac</key>
             <string>app\views\stateli\_contract_credit_new.html.erb</string>
+            <key>_contract_new</key>
+            <string>app\views\contracts\_contract_new.html.erb</string>
+            <key>_contract_new_transaction</key>
+            <string>app\views\stateli\_contract_new_transaction.html.erb</string>
+            <key>_contract_op</key>
+            <string>app\views\stateli\_contract_options.html.erb</string>
             <key>_do</key>
             <string>app\views\stateli\_transaction_do.html.erb</string>
+            <key>_ed</key>
+            <string>..\tracker\app\views\tasks\_edit_form.html.erb</string>
+            <key>_edit</key>
+            <string>app\views\transactions\_edit.html.erb</string>
+            <key>_listing</key>
+            <string>app\views\contracts\contract_listing.html.erb</string>
+            <key>_op</key>
+            <string>..\tracker\app\views\bugs\_options.html.erb</string>
+            <key>_opt</key>
+            <string>app\views\transactions\_options.html.erb</string>
             <key>_options</key>
             <string>app\views\stateli\_contract_options.html.erb</string>
             <key>_pend</key>
             <string>app\views\stateli\_account_pending_header.html.erb</string>
+            <key>_tra</key>
+            <string>app\views\stateli\_transaction_options.html.erb</string>
+            <key>_tran</key>
+            <string>app\views\stateli\_transaction_options.html.erb</string>
             <key>_trans</key>
             <string>app\views\stateli\_transaction_options.html.erb</string>
+            <key>_transaction</key>
+            <string>app\views\stateli\_transaction_options.html.erb</string>
+            <key>_transaction_new</key>
+            <string>app\views\accounts\_transaction_new.html.erb</string>
+            <key>_trs</key>
+            <string>app\views\transactions\_transaction_details.html.erb</string>
             <key>a</key>
             <string>app\models\account.rb</string>
             <key>about</key>
             <string>..\timothyimhof\app\views\navigation\about.html.erb</string>
             <key>ac</key>
             <string>app\models\account.rb</string>
+            <key>acc</key>
+            <string>app\models\account.rb</string>
+            <key>accou</key>
+            <string>app\models\account.rb</string>
+            <key>accounscon</key>
+            <string>app\controllers\accounts_controller.rb</string>
             <key>account</key>
+            <string>app\models\account.rb</string>
+            <key>account.</key>
             <string>app\models\account.rb</string>
             <key>account.r</key>
             <string>app\models\account.rb</string>
+            <key>account.rb</key>
+            <string>app\models\account.rb</string>
+            <key>account_con</key>
+            <string>app\controllers\accounts_controller.rb</string>
+            <key>account_cont</key>
+            <string>app\controllers\accounts_controller.rb</string>
+            <key>account_controller</key>
+            <string>app\controllers\accounts_controller.rb</string>
+            <key>account_crea</key>
+            <string>app\views\accounts\account_create_account.js.rjs</string>
+            <key>account_deta</key>
+            <string>app\views\accounts\account_details.html.erb</string>
             <key>account_detai</key>
             <string>app\views\stateli\account_details.html.erb</string>
             <key>account_detail</key>
             <string>app\views\stateli\_account_listing_details.html.erb</string>
             <key>account_details</key>
-            <string>app\views\stateli\account_details.html.erb</string>
+            <string>app\views\accounts\account_details.html.erb</string>
             <key>account_histor</key>
-            <string>app\views\stateli\account_history.html.erb</string>
+            <string>app\views\accounts\account_history.html.erb</string>
             <key>account_history</key>
-            <string>app\views\stateli\account_history.html.erb</string>
+            <string>app\views\accounts\account_history.html.erb</string>
+            <key>account_history_detail</key>
+            <string>app\views\accounts\_account_history_details.html.erb</string>
+            <key>account_jou</key>
+            <string>app\views\accounts\_account_journal_details.html.erb</string>
             <key>account_jour</key>
-            <string>app\views\stateli\account_journal.html.erb</string>
+            <string>app\views\accounts\account_journal.html.erb</string>
             <key>account_journ</key>
             <string>app\views\stateli\account_journal_flex.html.erb</string>
             <key>account_journal</key>
-            <string>app\views\stateli\account_journal.html.erb</string>
+            <string>app\views\accounts\account_journal.html.erb</string>
+            <key>account_journal_fle</key>
+            <string>app\views\accounts\account_journal_flex.html.erb</string>
+            <key>account_journal_h</key>
+            <string>app\views\accounts\_account_journal_header.html.erb</string>
+            <key>account_journal_tra</key>
+            <string>app\views\accounts\_account_journal_transactions.html.erb</string>
             <key>account_list</key>
-            <string>app\views\stateli\account_listing.html.erb</string>
+            <string>app\views\accounts\_account_listing_details.html.erb</string>
             <key>account_listin</key>
             <string>app\views\stateli\account_listing.html.erb</string>
             <key>account_listin_head</key>
             <string>app\views\stateli\_account_listing_header.html.erb</string>
             <key>account_listing</key>
-            <string>app\views\stateli\account_listing.html.erb</string>
+            <string>app\views\accounts\account_listing.html.erb</string>
+            <key>account_listing_de</key>
+            <string>app\views\accounts\_account_listing_details.html.erb</string>
             <key>account_new</key>
-            <string>app\views\stateli\_account_new.html.erb</string>
+            <string>app\views\accounts\account_new_account.js.rjs</string>
             <key>account_op</key>
             <string>app\views\accounts\_account_options.html.erb</string>
             <key>account_opt</key>
@@ -89,55 +267,139 @@
             <key>account_option</key>
             <string>app\views\stateli\_account_options.html.erb</string>
             <key>account_pend</key>
-            <string>app\views\stateli\account_pending_flex.html.erb</string>
+            <string>app\views\accounts\_account_pending_details.html.erb</string>
+            <key>account_pendin</key>
+            <string>app\views\accounts\account_pending.html.erb</string>
             <key>account_pending</key>
-            <string>app\views\stateli\_account_pending_details.html.erb</string>
+            <string>app\views\accounts\account_pending.html.erb</string>
             <key>account_pending_det</key>
             <string>app\views\stateli\_account_pending_details.html.erb</string>
+            <key>account_pending_tr</key>
+            <string>app\views\accounts\_account_pending_transactions.html.erb</string>
+            <key>account_te</key>
+            <string>test\unit\account_test.rb</string>
+            <key>account_tes</key>
+            <string>test\unit\account_test.rb</string>
+            <key>account_test</key>
+            <string>test\unit\account_test.rb</string>
+            <key>account_test.r</key>
+            <string>test\unit\account_test.rb</string>
+            <key>account_tr</key>
+            <string>app\views\accounts\account_transact.js.rjs</string>
             <key>account_up</key>
-            <string>app\views\stateli\account_update.js.rjs</string>
+            <string>app\views\accounts\account_update.js.rjs</string>
             <key>account_upd</key>
-            <string>app\views\stateli\account_update.js.rjs</string>
+            <string>app\views\accounts\account_update.js.rjs</string>
             <key>account_updat</key>
             <string>app\views\stateli\account_update.js.rjs</string>
             <key>account_update</key>
             <string>app\views\stateli\account_update.js.rjs</string>
+            <key>accountcon</key>
+            <string>app\controllers\accounts_controller.rb</string>
             <key>accountjour</key>
             <string>app\flex\accountJournal.mxml</string>
             <key>accountpend</key>
             <string>app\flex\accountPending.mxml</string>
             <key>accountpending</key>
             <string>app\flex\accountPending.mxml</string>
+            <key>accounts</key>
+            <string>app\controllers\accounts_controller.rb</string>
+            <key>accounts_</key>
+            <string>app\controllers\accounts_controller.rb</string>
+            <key>accounts_con</key>
+            <string>app\controllers\accounts_controller.rb</string>
+            <key>accounts_controll</key>
+            <string>app\controllers\accounts_controller.rb</string>
+            <key>accountsco</key>
+            <string>app\controllers\accounts_controller.rb</string>
+            <key>accountscon</key>
+            <string>app\controllers\accounts_controller.rb</string>
+            <key>accountscont</key>
+            <string>app\controllers\accounts_controller.rb</string>
+            <key>accountscontol</key>
+            <string>app\controllers\accounts_controller.rb</string>
+            <key>accountscontroller</key>
+            <string>app\controllers\accounts_controller.rb</string>
+            <key>accountscontroller.r</key>
+            <string>app\controllers\accounts_controller.rb</string>
+            <key>accountsocn</key>
+            <string>db\migrate\20100304115113_drop_account_id_source_column.rb</string>
+            <key>accountte</key>
+            <string>test\unit\account_test.rb</string>
+            <key>accounttest</key>
+            <string>test\unit\account_test.rb</string>
+            <key>acount.rb</key>
+            <string>app\models\account.rb</string>
             <key>acount_jour</key>
             <string>app\views\stateli\account_journal.html.erb</string>
+            <key>add</key>
+            <string>..\tracker\db\migrate\20100607122844_add_name_to_bugs.rb</string>
+            <key>add_report</key>
+            <string>..\tracker\db\migrate\20100702105831_add_report_to_task.rb</string>
+            <key>addman</key>
+            <string>..\tracker\db\migrate\20100630005742_add_manual_to_reports.rb</string>
+            <key>addpri</key>
+            <string>..\tracker\db\migrate\20100701104027_add_priority_to_tasks.rb</string>
+            <key>addreport</key>
+            <string>..\tracker\db\migrate\20100623170528_add_report_rank_to_developers.rb</string>
             <key>ap</key>
-            <string>app\views\layouts\application.html.erb</string>
+            <string>app\helpers\application_helper.rb</string>
             <key>apl</key>
             <string>app\views\layouts\application.html.erb</string>
+            <key>aplic</key>
+            <string>app\views\layouts\application.html.erb</string>
+            <key>aplication.js</key>
+            <string>public\javascripts\application.js</string>
             <key>app</key>
-            <string>app\controllers\application_controller.rb</string>
+            <string>app\views\layouts\application.html.erb</string>
             <key>appi</key>
             <string>public\javascripts\application.js</string>
             <key>appl</key>
             <string>app\views\layouts\application.html.erb</string>
             <key>appli</key>
-            <string>app\helpers\application_helper.rb</string>
+            <string>app\views\layouts\application.html.erb</string>
             <key>applic</key>
-            <string>app\helpers\application_helper.rb</string>
+            <string>app\views\layouts\application.html.erb</string>
             <key>applica</key>
             <string>public\javascripts\application.js</string>
             <key>applicat</key>
             <string>app\views\layouts\application.html.erb</string>
             <key>application</key>
+            <string>app\views\layouts\application.html.erb</string>
+            <key>application.</key>
+            <string>app\views\layouts\application.html.erb</string>
+            <key>application.ht</key>
+            <string>app\views\layouts\application.html.erb</string>
+            <key>application.html</key>
+            <string>app\views\layouts\application.html.erb</string>
+            <key>application.js</key>
             <string>public\javascripts\application.js</string>
+            <key>application.t</key>
+            <string>app\views\layouts\application.html.erb</string>
+            <key>application_h</key>
+            <string>app\helpers\application_helper.rb</string>
             <key>application_hel</key>
             <string>app\helpers\application_helper.rb</string>
+            <key>application_helper</key>
+            <string>app\helpers\application_helper.rb</string>
+            <key>applicationcon</key>
+            <string>app\controllers\application_controller.rb</string>
+            <key>applicato</key>
+            <string>public\javascripts\application.js</string>
+            <key>appliction</key>
+            <string>app\views\layouts\application.html.erb</string>
             <key>applit</key>
             <string>app\views\layouts\application.html.erb</string>
             <key>appll</key>
-            <string>app\views\layouts\application.html.erb</string>
+            <string>app\helpers\application_helper.rb</string>
             <key>avai</key>
             <string>..\tutor\app\views\navigation\availability.html.erb</string>
+            <key>b</key>
+            <string>public\stylesheets\bank.css</string>
+            <key>ba</key>
+            <string>public\stylesheets\bank.css</string>
+            <key>ban</key>
+            <string>public\stylesheets\bank.css</string>
             <key>bank</key>
             <string>public\stylesheets\bank.css</string>
             <key>bank.</key>
@@ -148,14 +410,72 @@
             <string>public\stylesheets\bank.css</string>
             <key>bank.css</key>
             <string>public\stylesheets\bank.css</string>
+            <key>bug</key>
+            <string>..\tracker\app\models\bug.rb</string>
+            <key>bug.r</key>
+            <string>..\tracker\app\models\bug.rb</string>
+            <key>bug.rb</key>
+            <string>..\tracker\app\models\bug.rb</string>
+            <key>bugStatus</key>
+            <string>..\tracker\app\models\bug_status.rb</string>
+            <key>bug_fil</key>
+            <string>..\tracker\app\views\bugs\_bug_filters.html.erb</string>
+            <key>bug_statusescon</key>
+            <string>..\tracker\app\controllers\bug_statuses_controller.rb</string>
+            <key>bug_tr</key>
+            <string>..\tracker\app\views\bugs\_bug_tr.html.erb</string>
+            <key>bugc</key>
+            <string>..\tracker\app\controllers\bugs_controller.rb</string>
+            <key>bugs</key>
+            <string>..\tracker\app\controllers\bugs_controller.rb</string>
+            <key>bugsco</key>
+            <string>..\tracker\app\controllers\bugs_controller.rb</string>
+            <key>bugscon</key>
+            <string>..\tracker\app\controllers\bugs_controller.rb</string>
+            <key>bugscont</key>
+            <string>..\tracker\app\controllers\bugs_controller.rb</string>
+            <key>bugscontro</key>
+            <string>..\tracker\app\controllers\bugs_controller.rb</string>
+            <key>bugscontrol</key>
+            <string>..\tracker\app\controllers\bugs_controller.rb</string>
+            <key>bugsta</key>
+            <string>..\tracker\app\models\bug_status.rb</string>
+            <key>bugstatusescon</key>
+            <string>..\tracker\app\controllers\bug_statuses_controller.rb</string>
             <key>bui</key>
             <string>app\views\stateli\build_contract.js.rjs</string>
             <key>build</key>
-            <string>app\views\stateli\build_contract.js.rjs</string>
+            <string>app\views\contracts\build_contract.js.rjs</string>
+            <key>buildcontra</key>
+            <string>app\views\contracts\build_contract.js.rjs</string>
+            <key>complete</key>
+            <string>app\views\transactions\transaction_complete.js.rjs</string>
+            <key>con</key>
+            <string>app\models\contract.rb</string>
+            <key>contactscont</key>
+            <string>app\controllers\contracts_controller.rb</string>
+            <key>contra</key>
+            <string>test\fixtures\contracts.yml</string>
+            <key>contrac</key>
+            <string>app\models\contract.rb</string>
+            <key>contract.</key>
+            <string>app\models\contract.rb</string>
+            <key>contract.r</key>
+            <string>app\models\contract.rb</string>
             <key>contract.rb</key>
             <string>app\models\contract.rb</string>
+            <key>contract.y</key>
+            <string>test\fixtures\contracts.yml</string>
             <key>contract_</key>
             <string>app\views\stateli\contract_listing.html.erb</string>
+            <key>contract_ad</key>
+            <string>app\views\contracts\contract_add_transaction.js.rjs</string>
+            <key>contract_add</key>
+            <string>app\views\contracts\contract_add_transaction.js.rjs</string>
+            <key>contract_add_</key>
+            <string>app\views\contracts\contract_add_transaction.js.rjs</string>
+            <key>contract_con</key>
+            <string>app\controllers\contracts_controller.rb</string>
             <key>contract_cre</key>
             <string>app\views\stateli\_contract_credit_new.html.erb</string>
             <key>contract_credit</key>
@@ -168,40 +488,162 @@
             <string>app\views\stateli\contract_details.html.erb</string>
             <key>contract_deta</key>
             <string>app\views\stateli\contract_details.html.erb</string>
+            <key>contract_detai</key>
+            <string>app\views\contracts\_contract_journal_details.html.erb</string>
             <key>contract_detail</key>
             <string>app\views\stateli\contract_details.html.erb</string>
             <key>contract_details</key>
             <string>app\views\stateli\_contract_listing_details.html.erb</string>
+            <key>contract_jou</key>
+            <string>app\views\contracts\_contract_journal_details.html.erb</string>
+            <key>contract_jour</key>
+            <string>app\views\contracts\_contract_journal_header.html.erb</string>
+            <key>contract_journ</key>
+            <string>app\views\contracts\contract_journal.html.erb</string>
+            <key>contract_journa</key>
+            <string>app\views\contracts\_contract_journal_header.html.erb</string>
+            <key>contract_journal</key>
+            <string>app\views\contracts\_contract_journal_transactions.html.erb</string>
+            <key>contract_l</key>
+            <string>app\views\contracts\_contract_listing_details.html.erb</string>
+            <key>contract_list</key>
+            <string>app\views\contracts\contract_listing.html.erb</string>
             <key>contract_listin</key>
             <string>app\views\stateli\_contract_listing_details.html.erb</string>
             <key>contract_listing</key>
-            <string>app\views\stateli\_contract_listing_details.html.erb</string>
+            <string>app\views\contracts\_contract_listing_details.html.erb</string>
             <key>contract_liti</key>
             <string>app\views\stateli\_contract_listing_details.html.erb</string>
             <key>contract_new</key>
-            <string>app\views\stateli\_contract_new.html.erb</string>
+            <string>app\views\contracts\_contract_new.html.erb</string>
+            <key>contract_new_</key>
+            <string>app\views\contracts\_contract_new_transaction.html.erb</string>
+            <key>contract_new_tr</key>
+            <string>app\views\contracts\_contract_new_transaction.html.erb</string>
+            <key>contract_new_tra</key>
+            <string>app\views\contracts\_contract_new_transaction.html.erb</string>
+            <key>contract_new_trr</key>
+            <string>app\views\contracts\contract_new_transaction.js.rjs</string>
+            <key>contract_op</key>
+            <string>app\views\contracts\_contract_options.html.erb</string>
+            <key>contract_opt</key>
+            <string>app\views\contracts\_contract_options.html.erb</string>
+            <key>contract_pen</key>
+            <string>app\views\contracts\contract_pending.html.erb</string>
+            <key>contract_pend</key>
+            <string>app\views\contracts\contract_pending.html.erb</string>
+            <key>contract_pending</key>
+            <string>app\views\contracts\contract_pending.html.erb</string>
+            <key>contract_pending_details</key>
+            <string>app\views\contracts\_contract_pending_details.html.erb</string>
+            <key>contract_pending_hea</key>
+            <string>app\views\contracts\_contract_pending_header.html.erb</string>
+            <key>contract_test</key>
+            <string>test\unit\contract_test.rb</string>
+            <key>contractcont</key>
+            <string>app\controllers\contracts_controller.rb</string>
+            <key>contracts</key>
+            <string>app\controllers\contracts_controller.rb</string>
+            <key>contracts.</key>
+            <string>test\fixtures\contracts.yml</string>
+            <key>contracts.y</key>
+            <string>test\fixtures\contracts.yml</string>
+            <key>contracts_contr</key>
+            <string>app\controllers\contracts_controller.rb</string>
+            <key>contractsc</key>
+            <string>app\controllers\contracts_controller.rb</string>
+            <key>contractscon</key>
+            <string>app\controllers\contracts_controller.rb</string>
+            <key>contractscont</key>
+            <string>app\controllers\contracts_controller.rb</string>
+            <key>contractscontr</key>
+            <string>app\controllers\contracts_controller.rb</string>
+            <key>contractscontroller</key>
+            <string>app\controllers\contracts_controller.rb</string>
+            <key>contractson</key>
+            <string>app\controllers\contracts_controller.rb</string>
+            <key>contractte</key>
+            <string>test\unit\contract_test.rb</string>
+            <key>contracttest</key>
+            <string>test\unit\contract_test.rb</string>
+            <key>cre</key>
+            <string>db\migrate\20100715144209_create_pockets.rb</string>
+            <key>create</key>
+            <string>db\migrate\20100712104919_create_rules.rb</string>
+            <key>create_test</key>
+            <string>..\tracker\db\migrate\20100630105226_create_test_plans.rb</string>
+            <key>createtestpl</key>
+            <string>..\tracker\db\migrate\20100630105226_create_test_plans.rb</string>
             <key>cub</key>
             <string>..\tutor\public\stylesheets\cuba.css</string>
+            <key>d</key>
+            <string>app\views\stateli\_date_selector.html.erb</string>
             <key>date</key>
             <string>app\views\stateli\_date_selector.html.erb</string>
+            <key>dateselector</key>
+            <string>app\views\stateli\_date_selector.html.erb</string>
+            <key>demo</key>
+            <string>..\tracker\public\javascripts\dataTables-1.6\media\css\demo_table.css</string>
+            <key>demo_ta</key>
+            <string>public\javascripts\dataTables-1.6\media\css\demo_table.css</string>
+            <key>demot</key>
+            <string>public\javascripts\dataTables-1.6\media\css\demo_table.css</string>
+            <key>demotable</key>
+            <string>..\tracker\public\javascripts\dataTables-1.6\media\css\demo_table.css</string>
             <key>details</key>
             <string>app\views\stateli\_account_history_details.html.erb</string>
+            <key>deve</key>
+            <string>..\tracker\app\controllers\developers_controller.rb</string>
+            <key>develope</key>
+            <string>..\tracker\app\models\developer.rb</string>
+            <key>developer</key>
+            <string>..\tracker\app\models\developer.rb</string>
+            <key>developer.</key>
+            <string>..\tracker\app\models\developer.rb</string>
+            <key>developer.r</key>
+            <string>..\tracker\app\models\developer.rb</string>
+            <key>developer.rb</key>
+            <string>..\tracker\app\models\developer.rb</string>
+            <key>developerc</key>
+            <string>..\tracker\app\controllers\developers_controller.rb</string>
+            <key>developerscon</key>
+            <string>..\tracker\app\controllers\developers_controller.rb</string>
+            <key>developerstat</key>
+            <string>..\tracker\app\models\developer_status.rb</string>
             <key>do</key>
             <string>app\views\stateli\_transaction_do.html.erb</string>
+            <key>drop</key>
+            <string>db\migrate\20100715231744_drop_type_from_accounts.rb</string>
             <key>e</key>
             <string>app\views\stateli\error500.html.erb</string>
             <key>edit</key>
-            <string>app\views\stateli\_transaction_edit.html.erb</string>
+            <string>app\views\rules\_edit_form.html.erb</string>
+            <key>edit_</key>
+            <string>app\views\rules\_edit_form.html.erb</string>
+            <key>edit_Form</key>
+            <string>app\views\rules\_edit_form.html.erb</string>
+            <key>edit_f</key>
+            <string>app\views\rules\_edit_form.html.erb</string>
+            <key>edit_form</key>
+            <string>app\views\rules\_edit_form.html.erb</string>
             <key>en</key>
             <string>config\environment.rb</string>
+            <key>enumv</key>
+            <string>app\models\enum_value.rb</string>
             <key>env</key>
             <string>..\timothyimhof\config\environment.rb</string>
             <key>envi</key>
             <string>config\environment.rb</string>
+            <key>exec</key>
+            <string>app\views\accounts\execute_transaction.js.rjs</string>
+            <key>execute</key>
+            <string>app\views\accounts\execute_transaction.js.rjs</string>
             <key>expen</key>
             <string>app\views\stateli\expense_listing.html.erb</string>
             <key>expens</key>
             <string>app\views\stateli\expense_listing.html.erb</string>
+            <key>export</key>
+            <string>..\tracker\app\controllers\export_statuses_controller.rb</string>
             <key>fle</key>
             <string>app\views\stateli\account_journal_flex.html.erb</string>
             <key>flex</key>
@@ -227,11 +669,21 @@
             <key>inde</key>
             <string>app\views\stateli\index.html.erb</string>
             <key>index</key>
-            <string>app\views\stateli\index.html.erb</string>
+            <string>app\views\pockets\index.html.erb</string>
             <key>index.</key>
             <string>app\views\transactions\index.html.erb</string>
+            <key>index.html.erb</key>
+            <string>..\tracker\app\views\tasks\index.html.erb</string>
             <key>indx</key>
             <string>app\views\stateli\index.html.erb</string>
+            <key>issue</key>
+            <string>..\tracker\app\models\issue.rb</string>
+            <key>issue.rb</key>
+            <string>..\tracker\app\models\issue.rb</string>
+            <key>issuest</key>
+            <string>..\tracker\app\models\issue_status.rb</string>
+            <key>issuestat</key>
+            <string>..\tracker\app\models\issue_status.rb</string>
             <key>jour</key>
             <string>app\flex\lib\JournalAccount.as</string>
             <key>journ</key>
@@ -239,21 +691,39 @@
             <key>journa</key>
             <string>app\views\stateli\_account_journal_details.html.erb</string>
             <key>journal</key>
-            <string>app\views\stateli\_account_journal_details.html.erb</string>
+            <string>app\views\accounts\journal.html.erb</string>
+            <key>journal.h</key>
+            <string>app\views\accounts\journal.html.erb</string>
+            <key>journalacc</key>
+            <string>app\flex\lib\JournalAccount.as</string>
+            <key>journaltra</key>
+            <string>app\views\accounts\_journal_transactions.html.erb</string>
+            <key>l</key>
+            <string>app\views\accounts\_listing_details.html.erb</string>
             <key>lisint</key>
             <string>app\views\stateli\_account_listing_details.html.erb</string>
             <key>listing</key>
-            <string>app\views\stateli\contract_listing.html.erb</string>
+            <string>app\views\accounts\listing.html.erb</string>
             <key>listing_de</key>
             <string>app\views\stateli\_account_listing_details.html.erb</string>
+            <key>listingh</key>
+            <string>app\views\transactions\_transactions_listing.html.erb</string>
             <key>lost</key>
             <string>lib\lost_handler.rb</string>
+            <key>ma</key>
+            <string>..\tracker\app\views\layouts\main.html.erb</string>
             <key>main</key>
             <string>public\stylesheets\main.css</string>
+            <key>main.</key>
+            <string>..\tracker\app\views\layouts\main.html.erb</string>
+            <key>main.h</key>
+            <string>app\views\layouts\main.html.erb</string>
             <key>mxm</key>
             <string>app\flex\accountJournal.mxml</string>
             <key>mxml</key>
             <string>app\flex\accountPending.mxml</string>
+            <key>n</key>
+            <string>..\timothyimhof\app\views\layouts\navigation.html.erb</string>
             <key>na</key>
             <string>..\timothyimhof\app\views\layouts\navigation.html.erb</string>
             <key>nav</key>
@@ -271,7 +741,9 @@
             <key>navigation</key>
             <string>..\oriented_objects\app\controllers\navigations_controller.rb</string>
             <key>new</key>
-            <string>app\views\sessions\new.html.erb</string>
+            <string>app\views\rules\new.html.erb</string>
+            <key>new.h</key>
+            <string>..\tracker\app\views\reports\new.html.erb</string>
             <key>oo</key>
             <string>..\timothyimhof\public\stylesheets\oostyle.css</string>
             <key>oos</key>
@@ -280,84 +752,280 @@
             <string>..\timothyimhof\public\stylesheets\oostyle.css</string>
             <key>oosty</key>
             <string>..\timothyimhof\public\stylesheets\oostyle.css</string>
+            <key>op</key>
+            <string>..\tracker\app\views\bugs\_options.html.erb</string>
+            <key>opt</key>
+            <string>app\views\accounts\_options.html.erb</string>
+            <key>optio</key>
+            <string>app\views\accounts\_options.html.erb</string>
             <key>option</key>
             <string>app\views\stateli\_transaction_options.html.erb</string>
             <key>options</key>
-            <string>app\views\accounts\_account_options.html.erb</string>
+            <string>app\views\accounts\_options.html.erb</string>
             <key>pend</key>
             <string>app\views\stateli\_account_pending_details.html.erb</string>
             <key>pendin</key>
             <string>app\views\stateli\_pending_details.html.erb</string>
             <key>pending</key>
-            <string>app\views\stateli\transactions_pending.html.erb</string>
+            <string>app\views\transactions\transactions_pending.html.erb</string>
+            <key>pending.ht</key>
+            <string>app\views\contracts\pending.html.erb</string>
+            <key>pending.html</key>
+            <string>app\views\transactions\pending.html.erb</string>
             <key>pending_</key>
             <string>app\views\stateli\_account_pending_details.html.erb</string>
+            <key>pending_de</key>
+            <string>app\views\transactions\_pending_details.html.erb</string>
             <key>pending_det</key>
             <string>app\views\stateli\_pending_details.html.erb</string>
             <key>pending_deta</key>
-            <string>app\views\stateli\_pending_details.html.erb</string>
+            <string>app\views\transactions\_pending_details.html.erb</string>
             <key>pending_detail</key>
-            <string>app\views\stateli\_account_pending_details.html.erb</string>
+            <string>app\views\transactions\_pending_details.html.erb</string>
             <key>pending_details</key>
-            <string>app\views\stateli\_pending_details.html.erb</string>
+            <string>app\views\transactions\_pending_details.html.erb</string>
             <key>pending_he</key>
             <string>app\views\stateli\_pending_header.html.erb</string>
+            <key>pending_hea</key>
+            <string>app\views\transactions\_pending_header.html.erb</string>
             <key>pending_head</key>
             <string>app\views\stateli\_pending_header.html.erb</string>
+            <key>pending_header</key>
+            <string>app\views\transactions\_pending_header.html.erb</string>
+            <key>pending_trans</key>
+            <string>app\views\transactions\_pending_transactions.html.erb</string>
+            <key>pending_transac</key>
+            <string>app\views\transactions\_pending_transactions.html.erb</string>
             <key>pie</key>
             <string>..\tutor\public\stylesheets\pieces.css</string>
             <key>piec</key>
             <string>..\tutor\public\stylesheets\pieces.css</string>
+            <key>pock</key>
+            <string>app\controllers\pockets_controller.rb</string>
+            <key>pocket</key>
+            <string>app\models\pocket.rb</string>
+            <key>pocket.r</key>
+            <string>app\models\pocket.rb</string>
+            <key>pocket.rb</key>
+            <string>app\models\pocket.rb</string>
+            <key>pocketcon</key>
+            <string>app\controllers\pockets_controller.rb</string>
+            <key>pocketscon</key>
+            <string>app\controllers\pockets_controller.rb</string>
+            <key>pocketscont</key>
+            <string>app\controllers\pockets_controller.rb</string>
+            <key>pocketson</key>
+            <string>app\controllers\pockets_controller.rb</string>
+            <key>re</key>
+            <string>..\tracker\app\controllers\reports_controller.rb</string>
+            <key>regie</key>
+            <string>app\views\users\register.js.rjs</string>
             <key>register</key>
             <string>app\views\stateli\register.js.rjs</string>
+            <key>repo</key>
+            <string>..\tracker\app\controllers\reports_controller.rb</string>
+            <key>repor.rb</key>
+            <string>..\tracker\app\models\report.rb</string>
+            <key>repors</key>
+            <string>..\tracker\app\controllers\reports_controller.rb</string>
+            <key>reporscon</key>
+            <string>..\tracker\app\controllers\reports_controller.rb</string>
+            <key>reporscont</key>
+            <string>..\tracker\app\controllers\reports_controller.rb</string>
+            <key>report</key>
+            <string>..\tracker\app\models\report.rb</string>
+            <key>report.</key>
+            <string>..\tracker\app\models\report.rb</string>
+            <key>report.r</key>
+            <string>..\tracker\app\models\report.rb</string>
+            <key>report.rb</key>
+            <string>..\tracker\app\models\report.rb</string>
+            <key>report.y</key>
+            <string>..\tracker\test\fixtures\reports.yml</string>
+            <key>report_t</key>
+            <string>..\tracker\app\views\reports\_report_table.html.erb</string>
+            <key>report_ta</key>
+            <string>..\tracker\app\views\reports\_report_table.html.erb</string>
+            <key>report_tab</key>
+            <string>..\tracker\app\views\reports\_report_table.html.erb</string>
+            <key>report_tabl</key>
+            <string>..\tracker\app\views\reports\_report_table.html.erb</string>
+            <key>report_table</key>
+            <string>..\tracker\app\views\reports\_report_table.html.erb</string>
+            <key>reportcon</key>
+            <string>..\tracker\app\controllers\reports_controller.rb</string>
+            <key>reports</key>
+            <string>..\tracker\app\controllers\reports_controller.rb</string>
+            <key>reports.rb</key>
+            <string>..\tracker\test\unit\report_test.rb</string>
+            <key>reports.y</key>
+            <string>..\tracker\test\fixtures\reports.yml</string>
+            <key>reportscon</key>
+            <string>..\tracker\app\controllers\reports_controller.rb</string>
+            <key>reportsconr</key>
+            <string>..\tracker\app\controllers\reports_controller.rb</string>
+            <key>reportscont</key>
+            <string>..\tracker\app\controllers\reports_controller.rb</string>
+            <key>reportshe</key>
+            <string>..\tracker\app\helpers\reports_helper.rb</string>
+            <key>reportshel</key>
+            <string>..\tracker\app\helpers\reports_helper.rb</string>
+            <key>reportso</key>
+            <string>..\tracker\app\controllers\reports_controller.rb</string>
+            <key>reportson</key>
+            <string>..\tracker\app\controllers\reports_controller.rb</string>
+            <key>reportsta</key>
+            <string>..\tracker\app\models\report_status.rb</string>
+            <key>reportstatusescon</key>
+            <string>..\tracker\app\controllers\report_statuses_controller.rb</string>
+            <key>reporttab</key>
+            <string>..\tracker\app\views\reports\_report_table.html.erb</string>
             <key>resu</key>
             <string>..\timothyimhof\app\views\navigation\resume.html.erb</string>
             <key>resume</key>
             <string>..\timothyimhof\app\views\navigation\resume.html.erb</string>
+            <key>ro</key>
+            <string>..\tutor\config\routes.rb</string>
             <key>rou</key>
             <string>..\tutor\config\routes.rb</string>
             <key>rout</key>
             <string>config\routes.rb</string>
             <key>route</key>
-            <string>config\routes.rb</string>
+            <string>vendor\rails\actionpack\lib\action_controller\routing\route.rb</string>
             <key>routes</key>
+            <string>config\routes.rb</string>
+            <key>routes.</key>
+            <string>config\routes.rb</string>
+            <key>routes.r</key>
+            <string>config\routes.rb</string>
+            <key>routes.rb</key>
             <string>config\routes.rb</string>
             <key>routess</key>
             <string>app\views\stateli\transaction_update.js.rjs</string>
+            <key>rule</key>
+            <string>app\models\rule_name.rb</string>
+            <key>rule.r</key>
+            <string>app\models\rule.rb</string>
+            <key>rule.rb</key>
+            <string>app\models\rule.rb</string>
+            <key>rule_act</key>
+            <string>app\models\rule_action_type.rb</string>
+            <key>rule_d</key>
+            <string>app\models\rule_date.rb</string>
+            <key>rule_na</key>
+            <string>app\models\rule_name.rb</string>
+            <key>rule_test</key>
+            <string>test\unit\rule_test.rb</string>
+            <key>ruleac</key>
+            <string>app\models\rule_action_type.rb</string>
+            <key>ruleact</key>
+            <string>app\models\rule_action_type.rb</string>
+            <key>ruleactio</key>
+            <string>app\models\rule_action_type.rb</string>
+            <key>rulecon</key>
+            <string>app\controllers\rules_controller.rb</string>
+            <key>rulen</key>
+            <string>app\models\rule_name.rb</string>
+            <key>rulena</key>
+            <string>app\models\rule_name.rb</string>
+            <key>rulenam</key>
+            <string>app\models\rule_name.rb</string>
+            <key>rules</key>
+            <string>test\fixtures\rules.yml</string>
+            <key>rules.</key>
+            <string>test\fixtures\rules.yml</string>
+            <key>rulescon</key>
+            <string>app\controllers\rules_controller.rb</string>
+            <key>ruleson</key>
+            <string>app\controllers\rules_controller.rb</string>
+            <key>s</key>
+            <string>..\tracker\public\stylesheets\scaffold.css</string>
+            <key>sc</key>
+            <string>..\tracker\public\stylesheets\scaffold.css</string>
+            <key>sca</key>
+            <string>..\tracker\public\stylesheets\scaffold.css</string>
+            <key>scaf</key>
+            <string>public\stylesheets\scaffold.css</string>
+            <key>scaff</key>
+            <string>public\stylesheets\scaffold.css</string>
+            <key>scaffo</key>
+            <string>public\stylesheets\scaffold.css</string>
+            <key>scaffol</key>
+            <string>public\stylesheets\scaffold.css</string>
+            <key>scaffold</key>
+            <string>public\stylesheets\scaffold.css</string>
+            <key>scaffold.</key>
+            <string>public\stylesheets\scaffold.css</string>
+            <key>scaffold.css</key>
+            <string>public\stylesheets\scaffold.css</string>
+            <key>sch</key>
+            <string>..\tracker\db\schema.rb</string>
+            <key>sche</key>
+            <string>db\schema.rb</string>
             <key>schem</key>
             <string>db\schema.rb</string>
             <key>schema</key>
             <string>db\schema.rb</string>
+            <key>schema.</key>
+            <string>..\tracker\db\schema.rb</string>
+            <key>schema.r</key>
+            <string>db\schema.rb</string>
+            <key>schm</key>
+            <string>db\schema.rb</string>
+            <key>sele</key>
+            <string>..\tracker\app\models\selector.rb</string>
+            <key>select</key>
+            <string>..\tracker\app\models\selector.rb</string>
+            <key>selecto</key>
+            <string>app\models\selector.rb</string>
+            <key>selector</key>
+            <string>app\models\selector.rb</string>
+            <key>selector.</key>
+            <string>..\tracker\app\models\selector.rb</string>
+            <key>selector.r</key>
+            <string>app\models\selector.rb</string>
             <key>sess</key>
             <string>app\controllers\sessions_controller.rb</string>
             <key>session_con</key>
             <string>app\controllers\sessions_controller.rb</string>
             <key>session_contr</key>
             <string>app\controllers\sessions_controller.rb</string>
+            <key>sessionstore</key>
+            <string>..\tracker\config\initializers\session_store.rb</string>
+            <key>show</key>
+            <string>..\tracker\app\views\reports\show.html.erb</string>
+            <key>show.</key>
+            <string>..\tracker\app\views\reports\show.html.erb</string>
             <key>sig</key>
             <string>vendor\plugins\restful_authentication\generators\authenticated\templates\signup.html.erb</string>
             <key>sign</key>
             <string>app\views\stateli\signup.js.rjs</string>
             <key>signup</key>
             <string>app\views\stateli\signup.js.rjs</string>
+            <key>specsst</key>
+            <string>..\tracker\app\controllers\specs_statuses_controller.rb</string>
             <key>st</key>
             <string>app\controllers\stateli_controller.rb</string>
             <key>sta</key>
             <string>app\controllers\stateli_controller.rb</string>
+            <key>stae</key>
+            <string>.git\hooks\post-update.sample</string>
             <key>stali</key>
             <string>app\controllers\stateli_controller.rb</string>
             <key>stat</key>
-            <string>app\controllers\stateli_controller.rb</string>
+            <string>app\helpers\stateli_helper.rb</string>
             <key>state</key>
             <string>app\controllers\stateli_controller.rb</string>
+            <key>statei</key>
+            <string>app\flex\lib\StateliHelper.as</string>
             <key>stateli</key>
             <string>app\controllers\stateli_controller.rb</string>
             <key>statelicon</key>
             <string>app\controllers\stateli_controller.rb</string>
             <key>statelih</key>
-            <string>app\flex\lib\StateliHelper.as</string>
+            <string>app\helpers\stateli_helper.rb</string>
             <key>statelihel</key>
-            <string>app\flex\lib\StateliHelper.as</string>
+            <string>app\helpers\stateli_helper.rb</string>
             <key>stati</key>
             <string>app\controllers\stateli_controller.rb</string>
             <key>statil</key>
@@ -370,30 +1038,122 @@
             <string>..\tutor\public\stylesheets\suess.css</string>
             <key>sue</key>
             <string>..\tutor\public\stylesheets\suess.css</string>
+            <key>sum</key>
+            <string>..\tracker\app\views\reports\summary_report.html.erb</string>
+            <key>summ</key>
+            <string>..\tracker\app\views\reports\summary_report.html.erb</string>
+            <key>summa</key>
+            <string>..\tracker\app\views\reports\summary_report.html.erb</string>
+            <key>summar</key>
+            <string>..\tracker\app\views\reports\summary_report.html.erb</string>
+            <key>summary</key>
+            <string>..\tracker\app\views\reports\summary_report.html.erb</string>
+            <key>task</key>
+            <string>..\tracker\app\models\task_status.rb</string>
+            <key>task.</key>
+            <string>..\tracker\app\models\task.rb</string>
+            <key>task.r</key>
+            <string>..\tracker\app\models\task.rb</string>
+            <key>task.rb</key>
+            <string>..\tracker\app\models\task.rb</string>
+            <key>task_re</key>
+            <string>..\tracker\app\views\tasks\task_report.html.erb</string>
+            <key>task_rep</key>
+            <string>..\tracker\app\views\tasks\task_report.html.erb</string>
+            <key>task_report</key>
+            <string>..\tracker\app\views\tasks\task_report.html.erb</string>
+            <key>taskc</key>
+            <string>..\tracker\app\controllers\tasks_controller.rb</string>
+            <key>taskcon</key>
+            <string>..\tracker\app\controllers\tasks_controller.rb</string>
+            <key>taskcontr</key>
+            <string>..\tracker\app\controllers\tasks_controller.rb</string>
+            <key>taskre</key>
+            <string>..\tracker\app\views\tasks\task_report.html.erb</string>
+            <key>tasks</key>
+            <string>..\tracker\app\models\task_status.rb</string>
+            <key>taskscon</key>
+            <string>..\tracker\app\controllers\tasks_controller.rb</string>
+            <key>taskst</key>
+            <string>..\tracker\app\models\task_status.rb</string>
+            <key>taskstat</key>
+            <string>..\tracker\app\models\task_status.rb</string>
+            <key>taskstatus.rb</key>
+            <string>..\tracker\app\models\task_status.rb</string>
+            <key>test_helper</key>
+            <string>test\test_helper.rb</string>
+            <key>test_pa</key>
+            <string>..\tracker\app\models\test_plan.rb</string>
+            <key>testpl</key>
+            <string>..\tracker\app\models\test_plan.rb</string>
+            <key>testscon</key>
+            <string>..\tracker\app\controllers\test_statuses_controller.rb</string>
+            <key>teststatusescon</key>
+            <string>..\tracker\app\controllers\test_statuses_controller.rb</string>
+            <key>testt</key>
+            <string>..\tracker\app\models\test_status.rb</string>
+            <key>total_jour</key>
+            <string>app\views\transactions\total_journal_flex.html.erb</string>
+            <key>total_pend</key>
+            <string>app\views\transactions\total_pending_flex.html.erb</string>
             <key>totalpending</key>
             <string>app\flex\totalPending.mxml</string>
+            <key>tr</key>
+            <string>app\models\transaction.rb</string>
+            <key>tra</key>
+            <string>app\models\transaction.rb</string>
+            <key>tracker</key>
+            <string>..\tracker\app\models\tracker_mailer.rb</string>
+            <key>tracker_m</key>
+            <string>..\tracker\app\models\tracker_mailer.rb</string>
+            <key>trackeren</key>
+            <string>..\tracker\app\models\tracker_enumeration.rb</string>
+            <key>trackerst</key>
+            <string>..\tracker\app\models\tracker_status.rb</string>
+            <key>trackerstat</key>
+            <string>..\tracker\app\models\tracker_status.rb</string>
+            <key>tran</key>
+            <string>app\models\transaction.rb</string>
             <key>trans</key>
-            <string>app\flex\lib\Transaction.as</string>
+            <string>app\models\transaction.rb</string>
             <key>transa</key>
             <string>app\models\transaction.rb</string>
             <key>transac</key>
             <string>app\models\transaction.rb</string>
             <key>transact</key>
-            <string>app\views\transactions\_transaction_details.html.erb</string>
+            <string>vendor\rails\activerecord\test\cases\transactions_test.rb</string>
             <key>transactio</key>
             <string>app\views\stateli\transaction_details.html.erb</string>
             <key>transaction</key>
             <string>app\views\transactions\_transaction_details.html.erb</string>
+            <key>transaction.</key>
+            <string>app\models\transaction.rb</string>
             <key>transaction.r</key>
             <string>app\models\transaction.rb</string>
             <key>transaction.rb</key>
             <string>app\models\transaction.rb</string>
+            <key>transactionCredit</key>
+            <string>app\models\transaction_credit.rb</string>
+            <key>transaction_</key>
+            <string>app\views\transactions\transaction_update.js.rjs</string>
+            <key>transaction_com</key>
+            <string>app\views\transactions\transaction_complete.js.rjs</string>
+            <key>transaction_comp</key>
+            <string>app\views\transactions\transaction_complete.js.rjs</string>
+            <key>transaction_con</key>
+            <string>app\controllers\transactions_controller.rb</string>
+            <key>transaction_contr</key>
+            <string>app\controllers\transactions_controller.rb</string>
+            <key>transaction_d</key>
+            <string>app\views\transactions\transaction_do.js.rjs</string>
             <key>transaction_de</key>
             <string>app\views\stateli\transaction_details.html.erb</string>
+            <key>transaction_debi</key>
+            <string>app\models\transaction_debit.rb</string>
             <key>transaction_det</key>
             <string>app\views\stateli\transaction_details.html.erb</string>
             <key>transaction_deta</key>
-            <string>app\views\stateli\transaction_details.html.erb</string>
+            <string>app\views\transactions\transaction_details.html.erb</string>
             <key>transaction_detai</key>
             <string>app\views\stateli\transaction_details.html.erb</string>
             <key>transaction_details</key>
@@ -401,23 +1161,85 @@
             <key>transaction_do</key>
             <string>app\views\stateli\_transaction_do.html.erb</string>
             <key>transaction_ed</key>
-            <string>app\views\stateli\_transaction_edit.html.erb</string>
+            <string>app\views\transactions\_transaction_edit.html.erb</string>
             <key>transaction_edi</key>
             <string>app\views\stateli\_transaction_edit.html.erb</string>
+            <key>transaction_h</key>
+            <string>app\views\transactions\_transactions_header.html.erb</string>
             <key>transaction_op</key>
             <string>app\views\stateli\_transaction_options.html.erb</string>
+            <key>transaction_ope</key>
+            <string>app\views\transactions\transaction_complete.js.rjs</string>
             <key>transaction_opt</key>
-            <string>app\views\stateli\_transaction_options.html.erb</string>
+            <string>app\views\transactions\_transaction_options.html.erb</string>
             <key>transaction_options</key>
             <string>app\views\stateli\_transaction_options.html.erb</string>
             <key>transaction_p</key>
             <string>app\views\stateli\transactions_pending.html.erb</string>
+            <key>transaction_pend</key>
+            <string>app\views\transactions\transactions_pending.html.erb</string>
+            <key>transaction_pendi</key>
+            <string>app\views\transactions\transactions_pending.html.erb</string>
+            <key>transaction_pending</key>
+            <string>app\views\transactions\transactions_pending.html.erb</string>
+            <key>transaction_remove</key>
+            <string>app\views\transactions\transactions_remove.js.rjs</string>
+            <key>transaction_test</key>
+            <string>test\unit\transaction_test.rb</string>
+            <key>transaction_up</key>
+            <string>app\models\transaction_uploader.rb</string>
+            <key>transaction_upd</key>
+            <string>app\views\transactions\transaction_update.js.rjs</string>
+            <key>transaction_updat</key>
+            <string>app\views\transactions\transaction_update.js.rjs</string>
+            <key>transaction_update</key>
+            <string>app\views\transactions\transaction_update.js.rjs</string>
+            <key>transactioncon</key>
+            <string>app\controllers\transactions_controller.rb</string>
+            <key>transactioncre</key>
+            <string>app\models\transaction_credit.rb</string>
             <key>transactions</key>
-            <string>app\views\stateli\transactions_pending.html.erb</string>
+            <string>app\controllers\transactions_controller.rb</string>
+            <key>transactions.</key>
+            <string>test\fixtures\transactions.yml</string>
+            <key>transactions_con</key>
+            <string>app\controllers\transactions_controller.rb</string>
+            <key>transactions_pe</key>
+            <string>app\views\transactions\transactions_pending.html.erb</string>
             <key>transactions_pend</key>
-            <string>app\views\stateli\transactions_pending.html.erb</string>
+            <string>app\views\transactions\transactions_pending.html.erb</string>
+            <key>transactions_pending</key>
+            <string>app\views\transactions\transactions_pending.html.erb</string>
+            <key>transactions_test</key>
+            <string>vendor\rails\activerecord\test\cases\transactions_test.rb</string>
+            <key>transactionsc</key>
+            <string>app\controllers\transactions_controller.rb</string>
+            <key>transactionscon</key>
+            <string>app\controllers\transactions_controller.rb</string>
+            <key>transactionscont</key>
+            <string>app\controllers\transactions_controller.rb</string>
+            <key>transactionscontr</key>
+            <string>app\controllers\transactions_controller.rb</string>
+            <key>transactionso</key>
+            <string>app\controllers\transactions_controller.rb</string>
+            <key>transactiontest</key>
+            <string>test\unit\transaction_test.rb</string>
+            <key>transactionup</key>
+            <string>app\models\transaction_uploader.rb</string>
+            <key>transactionuploader.rb</key>
+            <string>app\models\transaction_uploader.rb</string>
+            <key>transactonscon</key>
+            <string>app\controllers\transactions_controller.rb</string>
+            <key>update_bug</key>
+            <string>..\tracker\app\views\bugs\update_bug_status.js.erb</string>
+            <key>update_journal</key>
+            <string>app\views\accounts\update_journal.js.rjs</string>
             <key>update_pend</key>
             <string>app\views\stateli\update_pending.js.rjs</string>
+            <key>uploa</key>
+            <string>app\models\transaction_uploader.rb</string>
+            <key>usage</key>
+            <string>..\tracker\app\controllers\usage_statuses_controller.rb</string>
             <key>users_con</key>
             <string>app\controllers\users_controller.rb</string>
             <key>xml</key>

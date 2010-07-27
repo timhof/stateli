@@ -1,0 +1,42 @@
+
+<% form_for( [account, transaction], :html => {:class => 'ajaxForm', :id => 'edit_form' }) do |f| %>
+  <%= f.error_messages %>
+
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Name</div>
+    	<div class="yui-u form_element_div">
+   	 		<%= transaction.name %>
+    	</div>
+    </div>
+  </div>
+  
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Description</div>
+    	<div class="yui-u form_element_div">
+    		<%= f.text_field :description %>
+    	</div>
+    </div>
+  </div>
+ 
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Amount</div>
+    	<div class="yui-u form_element_div">
+    		<%= h real_currency transaction.amount %>
+    	</div>
+    </div>
+  </div>
+ 
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Pocket</div>
+    	<div class="yui-u" id="pocket_select_div">
+			<%= render :partial => 'pockets/pocket_select', :locals => {:pockets => pockets} %>	
+    	</div>
+    </div>
+  </div>
+  
+	<input type="hidden" id="edit_commit" name="edit_commit" value="update" />
+<% end %>

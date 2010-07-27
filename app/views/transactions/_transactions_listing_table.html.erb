@@ -1,0 +1,19 @@
+
+    <table id="transaction_listing_table" class="listing_table">
+  		<thead>
+    		<tr class="header_row">
+   				<th>&nbsp;</th>
+    			<th>Date</th>
+			    <th>Name</th>
+			    <th>Credit</th>
+			    <th>Debit</th>
+			<% if show_balance %>
+			    <th>Balance</th>
+			<% end %>
+			    <th>Pocket</th>
+			 	<th>Options</th>
+		</thead>
+		<tbody id="transactions">
+	  		<%= render :partial => 'transactions/transactions_listing', :locals => {:account => account, :show_balance => show_balance}, :collection => transactions, :as => :transaction %>
+		</tbody>
+	</table>

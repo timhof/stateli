@@ -59,12 +59,12 @@ package lib{
 				
 				if(p.length){
 					for(var countTrans2:int = 0; countTrans2 < p.length; countTrans2++){
-						var tr1:Transaction = new Transaction(p[countTrans2]["name"], p[countTrans2]["description"], p[countTrans2]["scheduled_date"], p[countTrans2]["executed_date"], p[countTrans2]["account_balance"]);
+						var tr1:Transaction = new Transaction(p[countTrans2]["name"], p[countTrans2]["description"], p[countTrans2]["trans_date"], p[countTrans2]["account_balance"]);
 						newAC.addItem(tr1);
 					}
 				}
 				else{
-					var tr2:Transaction = new Transaction(p["name"], p["description"], p["scheduled_date"], p["executed_date"], p["account_balance"]);
+					var tr2:Transaction = new Transaction(p["name"], p["description"], p["trans_date"], p["account_balance"]);
 					newAC.addItem(tr2);
 				}
 			}
@@ -92,12 +92,12 @@ package lib{
 				
 				if(p.length){
 					for(var countTrans2:int = 0; countTrans2 < p.length; countTrans2++){
-						var tr1:Transaction = new Transaction(p[countTrans2]["name"], p[countTrans2]["description"], p[countTrans2]["scheduled_date"], p[countTrans2]["executed_date"], p[countTrans2]["account_balance"]);
+						var tr1:Transaction = new Transaction(p[countTrans2]["name"], p[countTrans2]["description"], p[countTrans2]["trans_date"], p[countTrans2]["account_balance"]);
 						newAC.addItem(tr1);
 					}
 				}
 				else{
-					var tr2:Transaction = new Transaction(p["name"], p["description"], p["scheduled_date"], p["executed_date"], p["account_balance"]);
+					var tr2:Transaction = new Transaction(p["name"], p["description"], p["trans_date"],  p["account_balance"]);
 					newAC.addItem(tr2);
 				}
 			}
@@ -140,12 +140,8 @@ package lib{
 			var newlineseries:LineSeries = new LineSeries();
 			newlineseries.yField = "balance";
 			newlineseries.displayName = jax.account.name;
-			if(use_scheduled){
-				newlineseries.xField = "date_scheduled";
-			}
-			else{
-				newlineseries.xField = "date_executed";
-			}
+			newlineseries.xField = "date_scheduled";
+			
 			newlineseries.dataProvider = jax.transactionsFiltered;
 				
 			return newlineseries;

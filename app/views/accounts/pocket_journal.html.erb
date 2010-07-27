@@ -1,0 +1,12 @@
+
+
+<div id="journal" class="template_div">
+	<div class="page_title_div">
+		<span class="pocket_name" id="pocket_name_<%= @pocket.id %>">
+			Pocket: <%= @pocket.name %><br/>
+			<%= @account.name%>
+		</span>
+	</div><!-- page_title_div -->
+	<%= render :partial => 'transactions/transactions_div', :locals => {:transactions => @transactions, :account => @account, :show_balance => false} %>
+</div><!-- account_journal -->
+

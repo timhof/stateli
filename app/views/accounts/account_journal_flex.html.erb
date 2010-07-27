@@ -1,0 +1,20 @@
+
+
+<div id="account_journal" class="template_div" style="z-index: 0;">
+	<div class="date_selection_div">
+		<%= render :partial => 'stateli/date_span_selector_journal', :locals => {:form_url => "", :start_text_field_id => "start_date", :end_text_field_id => "end_date"}; %>
+	</div>
+	<div class="flex_spacer_div">&nbsp;</div>
+	 <object id="timeline_obj" name="timeline_obj" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="780" height="420">
+        <param name="movie" value="/swf/accountJournal.swf" />
+		<param name="wmode" value="transparent" />
+        <!--[if !IE]>-->
+        <object type="application/x-shockwave-flash" data="/swf/accountJournal.swf" width="780" height="420" wmode="transparent">
+        <!--<![endif]-->
+          <p>Alternative content</p>
+        <!--[if !IE]>-->
+        </object>
+        <!--<![endif]-->
+      </object>
+
+</div>

@@ -1,0 +1,5 @@
+
+
+unless @contract.blank?
+	page.show_popup_form('new_transaction')
+end

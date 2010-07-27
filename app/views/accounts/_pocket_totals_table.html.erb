@@ -1,0 +1,18 @@
+
+
+		<table id="account_totals_table" class="listing_table">
+	  		<thead>
+	  			<tr>
+		    		<th>Pocket</th>
+		    		<th>Amount</th>
+		    	</tr>
+	    	</thead>
+	    	<tbody>
+			<% pocket_totals.each do |pocket_id, total| %>
+				<tr>
+		    		<td><%= link_to session[:selector].pocketIdNameMap[pocket_id], account_pocket_journal_path(account.id, pocket_id), {:class => 'listing_link', :title => 'Pocket Journal'} %></td>
+		    		<td><%= total %></td>
+		    	</tr>
+	    	<% end %>
+	    	</tbody>
+	    </table>

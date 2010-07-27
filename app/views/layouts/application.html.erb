@@ -1,119 +1,50 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html>
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Stateli Personal Finance</title>
   
-  <%= javascript_include_tag :defaults %>
   <%= javascript_include_tag 'swfobject' %>
   
-  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.0r4/build/reset/reset-min.css"> 
-	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.0r4/build/fonts/fonts-min.css"> 
-	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.0r4/build/base/base-min.css"> 
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.1/build/reset-fonts-grids/reset-fonts-grids.css" />
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.1/build/base/base-min.css" />
+  <%= stylesheet_link_tag 'scaffold' %>
+  <link type="text/css" rel="stylesheet" media="screen" href="/javascripts/dataTables-1.6/media/css/demo_page.css" />
+  <link type="text/css" rel="stylesheet" media="screen" href="/javascripts/dataTables-1.6/media/css/demo_table.css" />
+  <link type="text/css" href="/javascripts/development-bundle/themes/base/jquery.ui.all.css" rel="stylesheet" />
+  
+  <%= javascript_include_tag 'dataTables-1.6/media/js/jquery.js' %>
+  <%= javascript_include_tag 'dataTables-1.6/media/js/jquery.dataTables.js' %>
+  <%= javascript_include_tag 'development-bundle/external/jquery.bgiframe-2.1.1.js' %>
+  <%= javascript_include_tag 'development-bundle/ui/jquery.ui.core.js' %>
+  <%= javascript_include_tag 'development-bundle/ui/jquery.ui.widget.js' %>
+  <%= javascript_include_tag 'development-bundle/ui/jquery.ui.mouse.js' %>
+  <%= javascript_include_tag 'development-bundle/ui/jquery.ui.draggable.js' %>
+  <%= javascript_include_tag 'development-bundle/ui/jquery.ui.position.js' %>
+  <%= javascript_include_tag 'development-bundle/ui/jquery.ui.resizable.js' %>
+  <%= javascript_include_tag 'development-bundle/ui/jquery.ui.dialog.js' %>
+  <%= javascript_include_tag 'development-bundle/ui/jquery.ui.datepicker.js' %>
+  <%= javascript_include_tag 'jquery.safeEnter.js' %>
 
   <%= stylesheet_link_tag 'bank' %>
-  <%= calendar_date_select_includes "silver" %>
   
-  <script type="text/javascript">
+  <% if protect_against_forgery? %>
+  	<script type='text/javascript'>
+  	//<![CDATA[
+	        window._auth_token_name = "#{request_forgery_protection_token}";
+	        window._auth_token = "#{form_authenticity_token}";
+    //]]>
+	</script>
+<% end %>
+  <%= javascript_include_tag 'application.js' %>
   
-  	var is_over_calendar = false;
-
-	function mouseover_calendar(){
-		is_over_calendar = true;
-	}
-	
-	function mouseout_calendar(){
-		is_over_calendar = false;
-	}
-
-  	Event.observe(document, 'mousedown', function(el) {
-  		if(!is_over_calendar){
-			$$('.popup_calendar_div').each(function (el) {
-	    		el.hide();	
-	    		post_hide_calendar();
-			});
-		}
-	});
-  	
-  	Event.observe(window, 'load',
-      	function() { 
-      		
-<% unless current_user.nil? %>
-      		if($('navigation_<%= @navkey %>')){
-					$('navigation_<%= @navkey %>').addClassName('navselected');
-			}
-			
-      		$$('li.navigation_button').each(function (el) {
-    			return $(el).observe('mouseover', function() {
-					this.addClassName('navmouseover');
-    			});	
-			});
-			
-			$$('li.navigation_button').each(function (el) {
-    			return $(el).observe('mouseout', function() {
-        			this.removeClassName('navmouseover');
-    			});	
-			});
-			
-			$$('.sub_navigation_button').each(function (el) {
-    			return $(el).observe('mouseover', function() {
-					this.addClassName('subnavmouseover');
-    			});	
-			});
-			
-			$$('.sub_navigation_button').each(function (el) {
-    			return $(el).observe('mouseout', function() {
-        			this.removeClassName('subnavmouseover');
-    			});	
-			});
-		
-<% end %>
-			
-			$$('.drop_down').each(function (el) {
-    			return $($(el).parentNode).observe('mouseout', function() {
-    				$(el).hide();
-    			});
-			});
-			
-			$$('.drop_down').each(function (el) {
-    			return $($(el).parentNode).observe('mouseover', function() {
-    				$(el).show();
-    			});
-			});
-			
-			$('main_title_div').observe('mouseover', function() {
-				this.addClassName('main_title_div_mouseover');
-			});
-			
-			$('main_title_div').observe('mouseout', function() {
-    			this.removeClassName('main_title_div_mouseover');
-			});
-			
-			
-    });
-    
-<% if @navkey == 'flex' %>
-    swfobject.registerObject("timeline_obj", "9.0.115", "expressInstall.swf");
-    //swfobject.addParam("wmode", "transparent");
-<% end %>
-    
-    
-  </script>
-
 </head>
 <body>
 
 <div id="main_div">
-
 	<div id="welcome_div">
-		<div id="welcome_left">
-			&nbsp;
-		</div>
-		<div id="welcome_right">
-			&nbsp;
-		</div>
+		
 <% unless current_user.nil? %>
 		<div style="float: left;">
 			Welcome <%= current_user.login %>
@@ -154,116 +85,104 @@
 		</div><!-- login_form_div -->
 	</div><!-- welcome_div -->
 
-	<div id="main_title_div" class="main_title" onclick="click_navigation('<%= root_path %>', false)">
+	<div id="hd" class="header">
 		StateLi Personal Finance
 	</div>
-	
-	<div id="navigation">
-		<div id="navigation_left">
-			&nbsp;
-		</div>
-		<div id="navigation_right">
-			&nbsp;
-		</div>
-		<ul id="navigation_enabled" class="navigation_tab" style="display:<%= current_user.nil? ? "none" : "block"%>">
-			<li id="navigation_accounts" class="navigation_button">
-				Accounts
-				<ul class="drop_down" style="display:none">
-					<li id="sub_navigation_account_listing" class="sub_navigation_button" onclick="click_navigation('<%= listing_path %>', <%=(current_user.nil?) %>)">
-						&nbsp;View Current
-					</li>
-					<li id="sub_navigation_new_account" <%= onclick_to_remote :url => account_new_path, :method => :get %> class="sub_navigation_button">
-						&nbsp;Create New
-					</li>
-				</ul>
-			</li>
-			<li id="navigation_pending" class="navigation_button" onclick="click_navigation('<%= transactions_pending_path %>',<%= current_user.nil? %>)">
-				Pending
-			</li>
-			<li id="navigation_expenses" class="navigation_button">
-				Expenses
-				<ul class="drop_down" style="display:none">
-					<li id="sub_navigation_expense_listing" class="sub_navigation_button" onclick="click_navigation('<%= expense_listing_path %>', <%= current_user.nil? %>)">
-						&nbsp;View Current
-					</li>
-					<li id="sub_navigation_add_expense" class="sub_navigation_button" <%= onclick_to_remote :url => contract_credit_path, :method => :get %>>
-						&nbsp;Create New
-					</li>
-				</ul>
-			</li>
-			<li id="navigation_income" class="navigation_button">
-				Income
-				<ul class="drop_down" style="display:none">
-					<li id="sub_navigation_income_listing" class="sub_navigation_button" onclick="click_navigation('<%= income_listing_path %>',<%= current_user.nil? %>)">
-						&nbsp;View Current
-					</li>
-					<li id="sub_navigation_add_income" class="sub_navigation_button" <%= onclick_to_remote :url => contract_debit_path, :method => :get %>>
-						&nbsp;Create New
-					</li>
-				</ul>
-			</li>
-			<li id="navigation_flex" class="navigation_button">
-				Flex Charts
-				<ul class="drop_down" style="display:none">
-					<li id="sub_navigation_account_journal_flex" class="sub_navigation_button" onclick="click_navigation('<%= account_journal_flex_path %>',<%= current_user.nil? %>)">
-						&nbsp;Account Journal
-					</li>
-					<li id="sub_navigation_total_journal_flex" class="sub_navigation_button" onclick="click_navigation('<%= total_journal_flex_path %>',<%= current_user.nil? %>)">
-						&nbsp;Total Journal
-					</li>
-					<li id="sub_navigation_account_pending_flex" class="sub_navigation_button" onclick="click_navigation('<%= account_pending_flex_path %>',<%= current_user.nil? %>)">
-						&nbsp;Account Pending
-					</li>
-					<li id="sub_navigation_total_pending_flex " class="sub_navigation_button" onclick="click_navigation('<%= total_pending_flex_path %>',<%= current_user.nil? %>)">
-						&nbsp;Total Pending
-					</li>
-				</ul>
-			</li>
-			<li style="clear:both;"></li>
-		</ul>
-		<ul id="navigation_disabled" class="navigation_tab" style="display:<%= current_user.nil? ? " block" : "none"%>">
-			<li class="navigation_button navigation_button_disabled">
-				Accounts
-			</li>
-			<li class="navigation_button navigation_button_disabled">
-				Pending
-			</li>
-			<li class="navigation_button navigation_button_disabled">
-				Expenses
-			</li>
-			<li class="navigation_button navigation_button_disabled">
-				Income
-			</li>
-			<li class="navigation_button navigation_button_disabled">
-				Flex Charts
-			</li>
-		</ul>
-		<div style="clear:both"></div>
-	</div>
-	
-	<div id="flashdiv"><%= flash[:notice] %></div>
-	
-	<div id="listing_form_div" class="form_div" style="display:none">
-		<%= link_to_remote 'Cancel', {:url => cancel_popup_path, :method => :get}, :class => "form_link"%>
-		<div id="listing_form">&nbsp;</div>
-	</div>
-	
-	<%= yield %>
-	
-	<div id="footer">
-		<div id="footer_left">
-			&nbsp;
-		</div>
-		<div id="footer_right">
-			&nbsp;
-		</div>
-		<div id="footer_text">
-		<a href="http://www.timothyimhof.com">Timothy Imhof</a> 2009.&nbsp;&nbsp;&nbsp;
+	<div id="bd">
+		<div> 
+			<div id="menu">
+				<div class="menu_button">
+					Accounts 
+					[<%= link_to 'List', accounts_path, {:class => 'menu_link', :title => 'New Account'} %>]
+					[<%= link_to 'New', new_account_path, {:class => 'menu_link', :title => 'New Account'} %>]
+				</div>
+			 <% 	unless current_user.nil?
+	        		Account.activeAccounts(current_user.id).each do |account| %>
+		 		<div id="account_title_div_<%= account.id %>" class="submenu_button" onclick="click_navigation('<%= account_path(account) %>',<%= current_user.nil? %>)"><%= h account.name %></div>
+		 		<div id="account_options_div_<%= account.id %>" class="account_options_div">
+			 		<div class="sub_submenu_button" onclick="click_navigation('<%= account_show_upload_path(account.id) %>',<%= current_user.nil? %>)">Upload CSV</div>
+			 		
+					<div class="sub_submenu_button" onclick="click_navigation('<%= account_path(account) %>',<%= current_user.nil? %>)">Account Details</div>
+					<div class="sub_submenu_button" onclick="click_navigation('<%= account_deposit_path(account.id) %>',<%= current_user.nil? %>)">Deposit</div>
+					<div class="sub_submenu_button" onclick="click_navigation('<%= account_withdraw_path(account.id) %>',<%= current_user.nil? %>)">Withdraw</div>
+					<div class="sub_submenu_button" onclick="click_navigation('<%= edit_account_path(account) %>',<%= current_user.nil? %>)">Edit Account</div>
+					<div class="sub_submenu_button" onclick="click_navigation('<%= account_journal_path(account.id) %>',<%= current_user.nil? %>)">Journal</div>
+					<div class="sub_submenu_button" onclick="click_navigation('<%= month_pocket_totals_path(account.id) %>',<%= current_user.nil? %>)">Pocket Totals</div>
+					<div class="sub_submenu_button" onclick="click_navigation('<%= account_remove_all_transactions_path(account.id) %>',<%= current_user.nil? %>)">Clear Transactions</div>
+					<div class="sub_submenu_button" onclick="click_navigation('<%= account_rules_path(account) %>',<%= current_user.nil? %>)">Show Rules</div>
+					<div class="sub_submenu_button" onclick="click_navigation('<%= account_apply_rules_path(account.id) %>',<%= current_user.nil? %>)">Apply Rules</div>
+					<div class="sub_submenu_button" onclick="click_navigation('<%= new_account_rule_path(account.id) %>',<%= current_user.nil? %>)">Add Rule</div>
+				</div>
+		 	<% 		end
+		 		end %>
+				
+				<div class="menu_button" onclick="click_navigation('<%= pockets_path %>',<%= current_user.nil? %>)">
+					Pockets
+					[<%= link_to 'List', pockets_path, {:class => 'menu_link', :title => 'New Account'} %>]
+					[<%= link_to 'New', new_pocket_path, {:title => 'New Pocket', :class => "get"} %>]
+				</div>
+			</div>
+	        <div style="width:80%;float:left;"> 
+				<div id="flashdiv"><%= flash[:notice] %></div>
+				<div id="template_div">
+					<%= yield %>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
-	
 
+</div>
+
+<% unless @account.nil? %>
+
+<div onclick="javascript:toggle_date_selectors();" style="display:none;">Toggle Dates</div>
+<div id="date_selectors" style="display:none;">
+	<div type="text" id="startDate" style="display:inline;float:left;margin:10px;"></div>
+	<div type="text" id="endDate" style="display:inline;float:left;margin:10px;"></div>
+</div>
+
+<% end %>
+
+
+<div id="edit_transaction_dialog" title="Edit Transaction" style="display:none;"></div>
+<div id="edit_pocket_dialog" title="Edit Pocket" style="display:none;"></div>
 
 </body>
+
+<script type="text/javascript">
+  	$(document).ready(function() {
+		$('.menu_button').mouseover(function(){
+			$(this).addClass('menu_mouseover');
+		});
+		$('.submenu_button').mouseover(function(){
+			$(this).addClass('submenu_mouseover');
+		});
+		$('.sub_submenu_button').mouseover(function(){
+			$(this).addClass('submenu_mouseover');
+		});
+		$('.menu_button').mouseout(function(){
+			$(this).removeClass('menu_mouseover');
+		});
+		$('.submenu_button').mouseout(function(){
+			$(this).removeClass('submenu_mouseover');
+		});
+		$('.sub_submenu_button').mouseout(function(){
+			$(this).removeClass('submenu_mouseover');
+		});
+		$('.button').mouseover(function(){
+			$(this).addClass('button_mouseover');
+		});
+		$('.button').mouseout(function(){
+			$(this).removeClass('button_mouseover');
+		});
+		$('.account_options_div').hide();
+	<%	unless @account.nil? %>
+		$('#account_options_div_<%= @account.id %>').show();
+		$('#account_title_div_<%= @account.id %>').addClass('account_selected');
+	<%	end %>
+  	} );
+</script>
+
 </html>
+
+

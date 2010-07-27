@@ -1,100 +1,84 @@
 class TransactionsController < ApplicationController
-	
+  
+  include StateliHelper
+  	
   before_filter :login_required
-  
-  # GET /transactions
-  # GET /transactions.xml
-  def index
-    @transactions = Transaction.user_only(@current_user.id).find(:all)
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @transactions }
+ 
+  def destroy
+  	
+  	transaction = Transaction.find(params[:id])
+  	transaction.destroy
+  	
+  	@account = Account.find(params[:account_id])
+  	@account.reload_transactions
+  	@transactions = @account.transactions
+  	respond_to do |format|
+      flash[:notice] = 'Transaction successfully deleted.'
+      format.js {render :action => 'reload_table', :layout => false}
     end
   end
   
-  # GET /transactions/1
-  # GET /transactions/1.xml
-  def show
-    @transaction = Transaction.find(params[:id])
+  def delete_checked
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @transaction }
+  	params[:transactions].each do |trans_id, value|
+  		transaction = Transaction.find(trans_id)
+  		transaction.destroy
+  	end
+  	
+  	@account = Account.find(params[:account_id])
+    @account.reload_transactions
+    @transactions = @account.transactions
+  	respond_to do |format|
+      flash[:notice] = 'Transactions successfully deleted.'
+      format.js {render :action => 'reload_table', :layout => false}
     end
   end
-
-  # GET /transactions/new
-  # GET /transactions/new.xml
-  def new
-    @transaction = Transaction.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @transaction }
-    end
-  end
-
-  # GET /transactions/1/edit
+  
   def edit
     @transaction = Transaction.find(params[:id])
-  end
-
-  # POST /transactions
-  # POST /transactions.xml
-  def create
-    @transaction = Transaction.new(params[:transaction])
-
-	transactionType = params[:transaction][:type]
-	if transactionType == 'TransactionDebit'
-		 @transaction = TransactionDebit.new(params[:transaction])
-	elsif transactionType == 'TransactionCredit'
-		 @transaction = TransactionCredit.new(params[:transaction])
-	elsif transactionType == 'TransactionTransfer'
-		 @transaction = TransactionTransfer.new(params[:transaction])
-	end
-	
-	@transaction.user_id = @current_user.id
-	
+    @account = Account.find(params[:account_id])
+	@pockets = Pocket.user_pockets(@current_user.id)
     respond_to do |format|
-      if @transaction.save
-        flash[:notice] = 'Transaction was successfully created.'
-        format.html { redirect_to(transaction_path(@transaction)) }
-        format.xml  { render :xml => @transaction, :status => :created, :location => @transaction }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @transaction.errors, :status => :unprocessable_entity }
-      end
+      format.xml  { render :xml => @transactions }
+      format.js {render :action => 'edit', :layout => false}
     end
   end
-
-  # PUT /transactions/1
-  # PUT /transactions/1.xml
-  def update
+  
+  def complete
     @transaction = Transaction.find(params[:id])
-	@transaction.user_id = @current_user.id
-									
+    @transaction.completed = true
+    @account = Account.find(params[:account_id])
+    
     respond_to do |format|
-      if @transaction.update_attributes(params[:transaction])
-        flash[:notice] = 'Transaction was successfully updated.'
-        format.html { redirect_to(transaction_path(@transaction)) }
-        format.xml  { head :ok }
-      else
+      flash[:notice] = 'Transaction was successfully updated.'
+      format.html { redirect_to(account_journal_url(@account)) }
+    end
+  end
+  
+  def update
+  	
+  	@transaction = Transaction.find(params[:id])
+    @account = Account.find(params[:account_id])
+    params[:transaction][:pocket_id] = params[:prefix][:pocket_id]
+    respond_to do |format|
+      if params[:edit_commit].eql?('update')
+      	success = @transaction.update_transaction_attributes(params[:transaction])
+   		session[:selector].confirm_pocket_data(@current_user.id)
+      end
+      if success.nil?
+      logger.info "UNSUCCESSFUL"
         format.html { render :action => "edit" }
         format.xml  { render :xml => @transaction.errors, :status => :unprocessable_entity }
-      end
+      else
+      	logger.info "UNSUCCESSFUL"
+        flash[:notice] = 'Transaction was successfully updated.'
+      	format.js {render :layout => false}
+ 	  end
     end
   end
-
-  # DELETE /transactions/1
-  # DELETE /transactions/1.xml
-  def destroy
+    
+  def show
     @transaction = Transaction.find(params[:id])
-    @transaction.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(transactions_url) }
-      format.xml  { head :ok }
-    end
   end
   
 end

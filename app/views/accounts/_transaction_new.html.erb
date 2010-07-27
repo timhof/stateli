@@ -1,0 +1,36 @@
+
+
+<% form_for(:transaction, @transaction, :url => account_execute_transaction_path(@account, transaction_type), :html => {:id => "listing_form_form"}) do |f| %>
+  
+  <div class="form_element">
+  	<div class="form_label">
+    	Name
+    </div>
+    <div class="form_value">
+    	<%= f.text_field :name %>
+    </div>
+  </div>
+  <div class="form_element">
+  	<div class="form_label">
+    	Description
+    </div>
+    <div class="form_value">
+    	<%= f.text_field :description %>
+    </div>
+  </div>
+  
+  <div class="form_element">
+  	<div class="form_label">
+    	Amount
+    </div>
+    <div class="form_value">
+    	<%= f.text_field :amount %>
+    </div>
+  </div>
+  
+  <div class="form_button_container">
+	<%= f.submit 'Create', {:id => 'submit_button', :class => 'button'} %>
+	<%= f.submit 'Cancel', {:id => 'cancel_button', :class => 'button'}  %>
+  </div>
+  
+<% end %>

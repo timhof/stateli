@@ -33,7 +33,7 @@ import mx.collections.ArrayCollection;
 			
 			for(var countTrans:int = 0; countTrans < this.transactions.length; countTrans++){
 				var trans:Transaction = this.transactions.getItemAt(countTrans, 0) as Transaction;
-				var tdate:String = trans.date_executed;
+				var tdate:String = trans.date_scheduled;
 				if(use_scheduled){
 					tdate = trans.date_scheduled;
 				}
@@ -59,12 +59,12 @@ import mx.collections.ArrayCollection;
 			}
 			
 			if(!hasTransOnStartDate){
-				var trStart:Transaction = new Transaction("start", "start", startDateStr, startDateStr, startingBalance);
+				var trStart:Transaction = new Transaction("start", "start", startDateStr, startingBalance);
 				transactionsFiltered.addItemAt(trStart, 0)
 				trace("adding trans: " + startDateStr);
 			}
 			if(!hasTransOnEndDate){
-				var trLast:Transaction = new Transaction("last", "last", endDateStr, endDateStr, endingBalance);
+				var trLast:Transaction = new Transaction("last", "last", endDateStr, endingBalance);
 				transactionsFiltered.addItem(trLast);
 				trace("adding trans: " + endDateStr);
 			}

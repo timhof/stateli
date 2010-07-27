@@ -1,0 +1,32 @@
+
+<% form_for @account  do |f| %>
+  <%= f.error_messages %>
+
+ <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Name</div>
+    	<div class="yui-u form_element_div"><%= f.text_field :name %></div>
+    </div>
+  </div>
+  
+ <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Description</div>
+    	<div class="yui-u form_element_div"><%= f.text_field :description %></div>
+    </div>
+  </div>
+  
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Balance</div>
+    	<div class="yui-u form_element_div"><%= f.text_field :balance %></div>
+    </div>
+  </div>
+  
+  <div class="form_button_container">
+	<%= f.submit 'Update', {:id => 'submit_button', :class => 'button'} %>
+	<%= f.submit 'Cancel', {:id => 'cancel_button', :class => 'button'}  %>
+  </div>
+  
+  
+<% end %>
