@@ -63,7 +63,7 @@ class TransactionUploader
 	def saveParsedTransaction(params)
 		
 		transaction = Transaction.new
-		
+		transaction.pocket_id = Pocket.unclassified.id
 		transaction.update_transaction_attributes(params, false)   
 	end
 end

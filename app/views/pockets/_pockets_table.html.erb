@@ -8,7 +8,7 @@
 			<tbody>
 <% pockets.each do |pocket| %>
 				<tr>
-  					<td><%= pocket.id %> <%= pocket.name %></td>
+  					<td class="row_header"><%= pocket.name %></td>
   					<td><%= render :partial => 'options', :locals => {:pocket => pocket} %></td>
   				</tr>
 <% end %>

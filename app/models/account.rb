@@ -5,8 +5,7 @@ class Account < ActiveRecord::Base
 
 	include StateliHelper
 	
-	has_many :transactions, :order => "trans_date desc"
-	has_many :contracts
+	has_many :transactions, :order => "trans_date desc", :conditions => {:active => true}
 	has_many :rules, :order => "rank asc"
 	before_create :initializate_previous_balance
 	after_save :reconcile_balance
@@ -18,6 +17,10 @@ class Account < ActiveRecord::Base
 	
 	validates_presence_of :name, :balance
 	validates_numericality_of :balance
+	
+	def deleted_transactions
+		return Transaction.deleted_transactions(id)
+	end
 	
 	def update_account_attributes(params)
 
@@ -66,18 +69,18 @@ class Account < ActiveRecord::Base
 		new_transactions = transactionUploader.parseTransactions(filename)
    		new_transactions.each do |trans|
    			unless has_transaction(trans)
+   				p "Adding: "#{trans.trans_date}, #{trans.name}, #{trans.amount}"
    				trans.user_id = user_id
    				trans.account_id = id
    				trans.save!
    			end
    		end
-		reload_transactions
    	end
    	
 	def has_transaction(transaction)
 		
 		return transactions.to_a.any? do |trans|
-			trans.trans_date == transaction.trans_date && trans.name == transaction.name && trans.description == transaction.description && trans.amount == transaction.amount
+			trans.trans_date == transaction.trans_date && trans.name == transaction.name && trans.amount == transaction.amount
 		end
 	end
 		
@@ -196,6 +199,7 @@ class Account < ActiveRecord::Base
 				end
 			end
 		end
+		self.reload
 	end
 	
 	def pocket_map(filtered_transactions)

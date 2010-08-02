@@ -1,26 +1,35 @@
 
+<% yrMonthNameMap = {}
+   @months.each do |yrMonth|
+	 year = yrMonth / 100
+	 month = yrMonth % 100 
+	 yrMonthNameMap[yrMonth] = "#{Date::MONTHNAMES[month]} #{year}"
+  end
+%>
 
 <div id="month_pocket_totals" class="template_div">
 	<div id="filter_dialog" title="Filters" style="display:none;">
 		<%= render :partial => 'accounts/pocket_filters', :locals => {:path => month_pocket_totals_path(@account.id)} %>
 	</div>
 	<div class="page_title_div">
-		<span class="account_name" id="account_name_<%= @account.id %>">
-			<%= @account.name%> [<a href="#" onclick="javascript:show_filters_dialog();">Filter</a>]
-		</span>
+		&nbsp;
 	</div><!-- page_title_div -->
-	
 	<div class="table_div" id="month_pocket_totals_table_div">
 	  	<%= render :partial => 'month_pocket_totals_table', :locals => {:month_pocket_totals => @month_pocket_totals, :month_totals => @month_totals, :pocket_totals => @pocket_totals, :grand_total => @grand_total, :months => @months, :pockets => @pockets, :account => @account} %>
+  	</div>
+  	
+  	<div class="chart_div" id="pocket_totals_chart_div">
+	  	<%= render :partial => 'month_pocket_totals_chart', :locals => {:total_map => @pocket_totals, :idList => @pockets, :idNameMap => session[:selector].pocketIdNameMap, :label => 'Pocket'} %>
+  	</div>
+  	
+  	<div class="chart_div" id="month_totals_chart_div">
+	  	<%= render :partial => 'month_pocket_totals_chart', :locals => {:total_map => @month_totals, :idList => @months, :idNameMap => yrMonthNameMap, :label => 'Month'} %>
   	</div>
 </div>
 
 <script type="text/javascript">
+  
   	$(document).ready(function() {
-		$('#month_pocket_totals_table').dataTable({
-			"iDisplayLength": 25
-		});
-		
 		$("#filter_dialog").dialog({
 	      	bgiframe: true, 
 	      	autoOpen: false, 
@@ -39,9 +48,9 @@
 					$('#filter_form').submit();
 				}
 			}
-	    });    
+	    }); 
   	} );
-		
+
 </script>
 
 

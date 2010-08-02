@@ -1,15 +1,10 @@
 
 
-<% form_tag (account_delete_transactions_path(account), {:class => 'ajaxForm'}) do %>
+<% form_tag (form_action_path, {:id=> 'transactions_form', :class => 'ajaxForm'}) do %>
 
 <div id="transaction_listing_table_div" class="table_div">
-    <%= render :partial => 'transactions/transactions_listing_table', :locals => {:transactions => transactions, :account => account, :show_balance => show_balance} %>
+    <%= render :partial => 'transactions/transactions_listing_table', :locals => {:transactions => transactions, :account => account, :show_balance => show_balance, :showRestore => showRestore} %>
 </div><!--table_div-->
-
-<div class="form_button_container">
-	<%= submit_tag "Delete Checked", {:id => 'submit_button', :class => 'button'} %>
-	<%= submit_tag "Filter", {:id => 'submit_button', :class => 'button', :onclick => "javascript:show_filters_dialog();"} %>
-</div>	
 
 <% end %>
 
@@ -38,23 +33,5 @@
 				}
 			}
 	    });    
-	    
-		$('#transaction_listing_table').dataTable({
-			"iDisplayLength": 15,
-			"aaSorting": [[1, "asc"]],
-			"aoColumns": [
-				null,
-				{"sType": 'date'},
-				{"sType": 'string'},
-				{"sType": 'numeric'},
-				{"sType": 'numeric'},
-			<% if show_balance %>
-				{"sType": 'numeric'},
-			<% end %>
-				{"sType": 'string'},
-				null
-				]
-		});
-		  
-  	} );
+	});
 </script>

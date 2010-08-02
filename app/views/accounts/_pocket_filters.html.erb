@@ -4,7 +4,20 @@
 		<div id="pocket_checkbox_container" class="yui-u first">
 <%=		render :partial => 'stateli/checkbox_group', :locals => {:idNameMap => session[:selector].pocketIdNameMap, :selectedKeys =>session[:selector].selectedPockets, :checkbox_container_div => 'pocket_checkbox_container', :parameterName => 'pocket_id', :title => 'Pockets'}%>
 		</div>
+		<div id="date_selectors" class="yui-u">
+			<input type="text" name="start_date_field" id="start_date_field" value="<%= session[:selector].startDate.strftime("%m/%d/%Y") %>">
+			<input type="text" name="end_date_field" id="end_date_field" value="<%= session[:selector].endDate.strftime("%m/%d/%Y") %>">
+		</div>
 	</div></div>
-	<input type="hidden" id="filter_commit" name="filter_commit" value="update" />
+
 <% 	end %>
 		
+
+
+<script type="text/javascript">
+  	$(document).ready(function() {
+		$("#start_date_field").datepicker();
+		$("#end_date_field").datepicker();
+  	} );
+		
+</script>

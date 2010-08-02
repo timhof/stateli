@@ -9,6 +9,16 @@ class ApplicationController < ActionController::Base
 
   before_filter :init_selector
   
+  helper_method :selector
+  
+  def selector
+  	@selector ||= session[:selector]
+  end
+  
+  def selector=(selector)
+  	session[:selector] = selector
+  end
+  
   def rescue_404
     rescue_action_in_public(ActionController::RoutingError)
   end

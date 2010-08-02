@@ -33,7 +33,6 @@ em{
 	line-height:50px;
 	margin: 0;
 	padding: 0;
-	margin-bottom: 5px;
 	text-align: center;
 	font-size: 197%;
 	letter-spacing:8px;
@@ -41,7 +40,7 @@ em{
 	border-style: solid;
 	background: #1a1e3b;
 	color: #ffffff;
-	border-width: 0 0 1px 0;
+	border-width: 0;
 }
 
 .footer{
@@ -53,13 +52,25 @@ em{
 	border-style: solid;
 }
 
+
+.page_title_div{
+	font-size: 150%;
+	font-weight: bold;	
+	float: left;
+	width: 50%;
+	text-align: left;
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+}
+
 #menu{
 	font-weight: bold;
 	border: 1px solid;
 	width:18%;
 	float:left;
 	background: #999CAF;
-	margin: 0 5px;
+	margin: 25px 5px;
 }
 
 .menu_link{
@@ -169,15 +180,23 @@ em{
 	white-space: nowrap;
 }
 
-  
+.table_button {  
+     width: auto;   
+     border: 0;  
+     font-size: 85%; 
+     -moz-border-radius: 5px;  
+     -webkit-border-radius: 5px;  
+     background: #25293A;
+     color: #ffffff;
+} 
    
 .button {  
      width: auto;  
-     padding: 9px 15px;   
+     padding: 2px 15px;   
      border: 0;  
      font-size: 128%; 
 	 font-weight: bold;
-     font-weigth: bold; 
+     font-weight: bold; 
      -moz-border-radius: 5px;  
      -webkit-border-radius: 5px;  
      background: #25293A;
@@ -205,8 +224,16 @@ em{
 .form_button_container{
 	width: 100%;
 	text-align: center;
-	padding-top: 5px;
 	clear: both;
+}
+
+
+
+.table_button_container{
+	width: 50%;
+	text-align: right;
+	float:right;
+	clear:right;	
 }
 
 
