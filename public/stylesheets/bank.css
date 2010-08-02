@@ -129,15 +129,35 @@ a:hover {
 	margin: 0;
 }
 
+.listing_table th{
+	background-color: #D7F73D;
+	color: #000000;
+	white-space: nowrap;
+	font-weight: bold;
+}
+
 .listing_table td{
 	white-space: nowrap;
 	text-align: right;
-	padding: 4px;
+	padding: 3px;
+	font-size: 85%;
 }
 
+.table_link{
+	font-size: 85%;
+	letter-spacing:0;
+	color: #5263AF;
+}
+
+.data_link{
+	font-size: 85%;
+	letter-spacing:0;
+	color: #1a1e3b;
+}
 .listing_table td.row_header{
 	white-space: nowrap;
 	text-align: center;
+	font-weight: bold;
 }
 
 .listing_table td.total_row_header{
@@ -149,12 +169,6 @@ a:hover {
 .listing_table td.total_row_cell{
 	white-space: nowrap;
 	font-weight: bold;
-}
-
-.page_title_div{
-	font-size: 150%;
-	font-weight: bold;	
-	text-align: center;
 }
 
 #page_options_div{

@@ -24,6 +24,17 @@ class Transaction < ActiveRecord::Base
 		end
 	end
 	
+	def activate
+		self.active = true
+		self.save!
+	end
+	
+	def deactivate
+		self.active = false
+		self.save!
+		logger.info "TRANSACTION DELELTED"
+	end
+	
 	def update_transaction_attributes(params, doSave=true)
 
  		unless(params[:name].nil?)
@@ -102,5 +113,9 @@ class Transaction < ActiveRecord::Base
        	
       end
     end
+    
+    def self.deleted_transactions(account_id)
+		Transaction.find(:all, :conditions => {:account_id => account_id, :active => false})
+	end
 
 end

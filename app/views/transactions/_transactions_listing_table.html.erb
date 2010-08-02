@@ -1,19 +1,53 @@
 
-    <table id="transaction_listing_table" class="listing_table">
-  		<thead>
-    		<tr class="header_row">
-   				<th>&nbsp;</th>
-    			<th>Date</th>
-			    <th>Name</th>
-			    <th>Credit</th>
-			    <th>Debit</th>
+<table id="transaction_listing_table" class="listing_table">
+	<thead><tr class="header_row">
+   		<th>
+   			<%= image_tag("/images/icons/funnel.png", {:onclick => "javascript:show_filters_dialog();"})%>		
+<% if showRestore %>
+   			<%= link_to image_tag("/images/icons/tick.png", {:onclick => "javascript:submitForm('transactions_form');"})%>
+<% else %>
+			<%= image_tag("/images/icons/cross-script.png", {:onclick => "javascript:submitForm('transactions_form');"})%>
+<% end %>
+   		</th>
+    	<th>Date</th>
+		<th>Name</th>
+		<th>Credit</th>
+		<th>Debit</th>
+<% if show_balance %>
+	    <th>Balance</th>
+<% end %>
+	    <th>Pocket</th>
+	 	<th>Options</th>
+	</tr></thead>
+	<tbody id="transactions">
+		<%= render :partial => 'transactions/transactions_listing', :locals => {:account => account, :show_balance => show_balance}, :collection => transactions, :as => :transaction %>
+	</tbody>
+</table>
+
+<script type="text/javascript">
+  	$(document).ready(function() { 
+	    
+		$('#transaction_listing_table').dataTable({
+			"iDisplayLength": 15,
+			"bPaginate": true,
+			"bLengthChange": false,		
+			"bFilter": true,
+			"bSort": false,
+			"sDom": 'rt<ifp><"clear">',
+			"aaSorting": [[1, "asc"]],
+			"aoColumns": [
+				null,
+				{"sType": 'date'},
+				{"sType": 'string'},
+				{"sType": 'numeric'},
+				{"sType": 'numeric'},
 			<% if show_balance %>
-			    <th>Balance</th>
+				{"sType": 'numeric'},
 			<% end %>
-			    <th>Pocket</th>
-			 	<th>Options</th>
-		</thead>
-		<tbody id="transactions">
-	  		<%= render :partial => 'transactions/transactions_listing', :locals => {:account => account, :show_balance => show_balance}, :collection => transactions, :as => :transaction %>
-		</tbody>
-	</table>
+				{"sType": 'string'},
+				null
+				]
+		});
+		  
+  	} );
+</script>

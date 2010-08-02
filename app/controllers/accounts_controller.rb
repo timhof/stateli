@@ -25,6 +25,15 @@ class AccountsController < ApplicationController
     end
   end
   
+  def delete_log
+  	
+  	@account = Account.find(params[:id])
+	@transactions = @account.deleted_transactions
+  	respond_to do |format|
+      format.html # delete_log.html.erb
+    end
+  end
+  
   def month_pocket_journal
   	@account = Account.find(params[:id])
   	set_filtered_transactions
@@ -40,7 +49,6 @@ class AccountsController < ApplicationController
   		@pocket = Pocket.find_pocket(params[:pocket_id])
   	end
   	
-  	logger.info "#{@pocket.id}, #{@yrMonth}, #{@year}, #{@month}"
   	@transactions = @filtered_transactions.select do |trans|
   		pocket_id = trans.pocket_id
   		(@pocket.nil? || pocket_id == @pocket.id) && (@month == -1 || (trans.trans_date.month == @month && trans.trans_date.year == @year))
@@ -73,7 +81,18 @@ class AccountsController < ApplicationController
 		@grand_total = @grand_total + total
 		
 	end
-	@months = months_hash.keys.sort
+	temp_months = months_hash.keys.sort
+	@months = []
+	next_yrMonth = -1
+	temp_months.each do |yrMonth|
+		
+		while next_yrMonth > 0 && next_yrMonth != yrMonth
+			@months << next_yrMonth
+			next_yrMonth = get_next_yrMonth(next_yrMonth)
+		end
+		@months << yrMonth
+		next_yrMonth = get_next_yrMonth(yrMonth)
+	end
 	@pockets = pockets_hash.keys.sort
 	p @months
 	p @pockets
@@ -84,15 +103,27 @@ class AccountsController < ApplicationController
     end
   end
   
+  def get_next_yrMonth(yrMonth)
+  	year = (yrMonth / 100)
+	month = (yrMonth % 100) + 1
+	if month > 12
+		month = 1
+		year = year + 1
+	end
+	next_yrMonth = ((year*100)+month)
+  end
+  
   def set_filtered_transactions
   	if params[:filter_commit].eql?('update')
   		reselect_filters
   	end
+  	p session[:selector].selectedPockets
   	@account = Account.find(params[:id])
-  	@filtered_transactions = @account.transactions.select {|trans| 
+  	p "#{@account.transactions.size} TRANSACTIONS"
+  	@filtered_transactions = @account.transactions.select do |trans| 
 		pocket_id = trans.pocket_id
-		session[:selector].selectedPockets[pocket_id] == '1'
-	}
+		session[:selector].selectedPockets[pocket_id] == '1' && trans.trans_date >= session[:selector].startDate && trans.trans_date <= session[:selector].endDate 
+	end
   end
   
   def reselect_filters
@@ -106,6 +137,9 @@ class AccountsController < ApplicationController
 			session[:selector].selectedPockets[pocket_id] = '0'
 		end
 	end
+	
+	session[:selector].startDate = Date.parse(params[:start_date_field])
+	session[:selector].endDate = Date.parse(params[:end_date_field])
   end
   
   #Displays popup form (Ajax)
@@ -205,6 +239,7 @@ class AccountsController < ApplicationController
   	account = Account.find(params[:id])
   	account.add_upload_transactions(params[:file], params[:upload_type])
 	account.apply_rules
+	account.reload_transactions
 	session[:selector].confirm_pocket_data
 	respond_to do |format|
         flash[:notice] = 'File successfully uploaded'
@@ -220,6 +255,7 @@ class AccountsController < ApplicationController
         format.html { redirect_to(account_journal_url(account.id)) }
     end
     session[:selector].confirm_pocket_data
+	account.reload_transactions
   end
   
   def show_upload

@@ -15,9 +15,13 @@ class Pocket < ActiveRecord::Base
 	end
 		
 	def self.unclassified
-		pocket = Pocket.new
-		pocket.id = -100
-		pocket.name = "Unclassified"
+		pocket = find_pocket(-100)
+		if pocket.nil?
+			pocket = Pocket.new
+			pocket.id = -100
+			pocket.name = "Unclassified"
+			pocket.save
+		end
 		return pocket
 	end
 end

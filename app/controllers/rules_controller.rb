@@ -74,8 +74,7 @@ class RulesController < ApplicationController
 	@account = Account.find(params[:account_id])
     params[:rule][:pocket_id] = params[:prefix][:pocket_id]
     respond_to do |format|
-      if @rule.update_attributes(params[:rule])
-        flash[:notice] = 'Rule was successfully updated.'
+      if params[:commit].eql?('Cancel') || @rule.update_attributes(params[:rule])
         format.html { redirect_to(account_rules_url(@account)) }
         format.xml  { head :ok }
       else

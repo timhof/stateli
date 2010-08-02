@@ -336,6 +336,10 @@
             <string>..\tracker\db\migrate\20100607122844_add_name_to_bugs.rb</string>
             <key>add_report</key>
             <string>..\tracker\db\migrate\20100702105831_add_report_to_task.rb</string>
+            <key>addactive</key>
+            <string>db\migrate\20100729103849_add_active_to_transactions.rb</string>
+            <key>addactiveto</key>
+            <string>db\migrate\20090624193914_add_active_to_contract.rb</string>
             <key>addman</key>
             <string>..\tracker\db\migrate\20100630005742_add_manual_to_reports.rb</string>
             <key>addpri</key>
@@ -359,7 +363,7 @@
             <key>appli</key>
             <string>app\views\layouts\application.html.erb</string>
             <key>applic</key>
-            <string>app\views\layouts\application.html.erb</string>
+            <string>public\javascripts\application.js</string>
             <key>applica</key>
             <string>public\javascripts\application.js</string>
             <key>applicat</key>
@@ -367,7 +371,7 @@
             <key>application</key>
             <string>app\views\layouts\application.html.erb</string>
             <key>application.</key>
-            <string>app\views\layouts\application.html.erb</string>
+            <string>public\javascripts\application.js</string>
             <key>application.ht</key>
             <string>app\views\layouts\application.html.erb</string>
             <key>application.html</key>
@@ -383,6 +387,8 @@
             <key>application_helper</key>
             <string>app\helpers\application_helper.rb</string>
             <key>applicationcon</key>
+            <string>app\controllers\application_controller.rb</string>
+            <key>applicationcont</key>
             <string>app\controllers\application_controller.rb</string>
             <key>applicato</key>
             <string>public\javascripts\application.js</string>
@@ -540,6 +546,8 @@
             <string>app\views\contracts\_contract_pending_header.html.erb</string>
             <key>contract_test</key>
             <string>test\unit\contract_test.rb</string>
+            <key>contractcon</key>
+            <string>app\controllers\contracts_controller.rb</string>
             <key>contractcont</key>
             <string>app\controllers\contracts_controller.rb</string>
             <key>contracts</key>
@@ -582,8 +590,12 @@
             <string>app\views\stateli\_date_selector.html.erb</string>
             <key>dateselector</key>
             <string>app\views\stateli\_date_selector.html.erb</string>
+            <key>delete</key>
+            <string>app\views\accounts\delete_log.html.erb</string>
             <key>demo</key>
             <string>..\tracker\public\javascripts\dataTables-1.6\media\css\demo_table.css</string>
+            <key>demo_t</key>
+            <string>public\javascripts\dataTables-1.6\media\css\demo_table.css</string>
             <key>demo_ta</key>
             <string>public\javascripts\dataTables-1.6\media\css\demo_table.css</string>
             <key>demot</key>
@@ -644,6 +656,8 @@
             <string>app\views\stateli\expense_listing.html.erb</string>
             <key>export</key>
             <string>..\tracker\app\controllers\export_statuses_controller.rb</string>
+            <key>filter</key>
+            <string>app\views\accounts\_pocket_filters.html.erb</string>
             <key>fle</key>
             <string>app\views\stateli\account_journal_flex.html.erb</string>
             <key>flex</key>
@@ -718,6 +732,8 @@
             <string>..\tracker\app\views\layouts\main.html.erb</string>
             <key>main.h</key>
             <string>app\views\layouts\main.html.erb</string>
+            <key>mon</key>
+            <string>app\views\accounts\month_pocket_totals.html.erb</string>
             <key>mxm</key>
             <string>app\flex\accountJournal.mxml</string>
             <key>mxml</key>
@@ -804,10 +820,16 @@
             <string>app\controllers\pockets_controller.rb</string>
             <key>pocket</key>
             <string>app\models\pocket.rb</string>
+            <key>pocket.</key>
+            <string>app\models\pocket.rb</string>
             <key>pocket.r</key>
             <string>app\models\pocket.rb</string>
             <key>pocket.rb</key>
             <string>app\models\pocket.rb</string>
+            <key>pocket_fil</key>
+            <string>app\views\accounts\_pocket_filters.html.erb</string>
+            <key>pocket_select</key>
+            <string>app\views\pockets\_pocket_select.html.erb</string>
             <key>pocketcon</key>
             <string>app\controllers\pockets_controller.rb</string>
             <key>pocketscon</key>
@@ -903,7 +925,7 @@
             <key>routess</key>
             <string>app\views\stateli\transaction_update.js.rjs</string>
             <key>rule</key>
-            <string>app\models\rule_name.rb</string>
+            <string>app\models\rule_action_type.rb</string>
             <key>rule.r</key>
             <string>app\models\rule.rb</string>
             <key>rule.rb</key>
@@ -938,12 +960,14 @@
             <string>app\controllers\rules_controller.rb</string>
             <key>ruleson</key>
             <string>app\controllers\rules_controller.rb</string>
+            <key>rulety</key>
+            <string>app\models\rule_type.rb</string>
             <key>s</key>
             <string>..\tracker\public\stylesheets\scaffold.css</string>
             <key>sc</key>
             <string>..\tracker\public\stylesheets\scaffold.css</string>
             <key>sca</key>
-            <string>..\tracker\public\stylesheets\scaffold.css</string>
+            <string>public\stylesheets\scaffold.css</string>
             <key>scaf</key>
             <string>public\stylesheets\scaffold.css</string>
             <key>scaff</key>
@@ -955,6 +979,8 @@
             <key>scaffold</key>
             <string>public\stylesheets\scaffold.css</string>
             <key>scaffold.</key>
+            <string>public\stylesheets\scaffold.css</string>
+            <key>scaffold.c</key>
             <string>public\stylesheets\scaffold.css</string>
             <key>scaffold.css</key>
             <string>public\stylesheets\scaffold.css</string>
@@ -981,7 +1007,7 @@
             <key>selector</key>
             <string>app\models\selector.rb</string>
             <key>selector.</key>
-            <string>..\tracker\app\models\selector.rb</string>
+            <string>app\models\selector.rb</string>
             <key>selector.r</key>
             <string>app\models\selector.rb</string>
             <key>sess</key>
@@ -989,6 +1015,8 @@
             <key>session_con</key>
             <string>app\controllers\sessions_controller.rb</string>
             <key>session_contr</key>
+            <string>app\controllers\sessions_controller.rb</string>
+            <key>sessions</key>
             <string>app\controllers\sessions_controller.rb</string>
             <key>sessionstore</key>
             <string>..\tracker\config\initializers\session_store.rb</string>
@@ -1204,6 +1232,8 @@
             <string>test\fixtures\transactions.yml</string>
             <key>transactions_con</key>
             <string>app\controllers\transactions_controller.rb</string>
+            <key>transactions_div</key>
+            <string>app\views\transactions\_transactions_div.html.erb</string>
             <key>transactions_pe</key>
             <string>app\views\transactions\transactions_pending.html.erb</string>
             <key>transactions_pend</key>
@@ -1226,6 +1256,8 @@
             <string>test\unit\transaction_test.rb</string>
             <key>transactionup</key>
             <string>app\models\transaction_uploader.rb</string>
+            <key>transactionuplo</key>
+            <string>app\models\transaction_uploader.rb</string>
             <key>transactionuploader.rb</key>
             <string>app\models\transaction_uploader.rb</string>
             <key>transactonscon</key>
@@ -1240,6 +1272,8 @@
             <string>app\models\transaction_uploader.rb</string>
             <key>usage</key>
             <string>..\tracker\app\controllers\usage_statuses_controller.rb</string>
+            <key>users</key>
+            <string>app\controllers\users_controller.rb</string>
             <key>users_con</key>
             <string>app\controllers\users_controller.rb</string>
             <key>xml</key>

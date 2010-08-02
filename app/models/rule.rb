@@ -52,7 +52,7 @@ class Rule < ActiveRecord::Base
 			transaction.save!
 		elsif comp_action == RuleActionType::DELETE.key
 			puts "Deleting #{transaction}"
-			transaction.destroy
+			transaction.deactivate
 		end
 	end	
 end

@@ -1,0 +1,11 @@
+
+
+<div id="delete_log" class="template_div">
+	<div class="page_title_div">
+		&nbsp;
+	</div><!-- page_title_div -->
+	<%= render :partial => 'transactions/transactions_div', :locals => {:transactions => @transactions, :account => @account, :show_balance => false, :path => account_journal_path(@account.id), :form_action_path => account_restore_transactions_path(@account), :showRestore => true} %>
+</div><!-- delete_log -->
+
+
+

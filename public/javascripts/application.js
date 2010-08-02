@@ -36,6 +36,10 @@ var toggle_checkbox = function(checkbox_obj, flag){
 	
 }
 
+function submitForm(form_id){
+	$('#'+form_id).submit();
+}
+
 var toggle_advanced_edit = function(){
 	if($('#advanced_toggle').val() == '0'){
 		$('.advanced_edit').show();

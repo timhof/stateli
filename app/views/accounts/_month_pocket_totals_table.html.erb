@@ -3,11 +3,14 @@
 		<table id="month_pocket_totals_table" class="listing_table">
 	  		<thead>
 	  			<tr>
-		    		<th>Pocket</th>
+		    		<th>
+		    			Pocket&nbsp;&nbsp;&nbsp;
+		    			<%= image_tag("/images/icons/funnel.png", {:onclick => "javascript:show_filters_dialog();"})%>
+		    		</th>
 		    	<% months.each do |yrMonth|
 		    		year = yrMonth / 100
 		    		month = yrMonth % 100 %>
-		    		<th><%= Date::MONTHNAMES[month] %><br/><%= year %></th>
+		    		<th><%= link_to "#{Date::MONTHNAMES[month][0,3]}<br/>#{year}", account_month_pocket_journal_path(account.id, -1, yrMonth), {:class => 'table_link', :title => 'Month Pocket Journal'} %></th>
 		    	<% end %>
 		    		<th>Total</th>
 		    	</tr>
@@ -15,18 +18,17 @@
 	    	<tbody>
 			<% pockets.each do |pocket_id| %>
 				<tr>
-		    		<td class="row_header"><%= link_to session[:selector].pocketIdNameMap[pocket_id], account_month_pocket_journal_path(account.id, pocket_id, -1), {:class => 'listing_link', :title => 'Pocket Journal'} %></td>
+		    		<td class="row_header"><%= link_to session[:selector].pocketIdNameMap[pocket_id], account_month_pocket_journal_path(account.id, pocket_id, -1), {:class => 'table_link', :title => 'Pocket Journal'} %></td>
 		    	<% months.each do |month| 
 		    		month_pocket_key = "#{month}_#{pocket_id}"
 		    		total = month_pocket_totals[month_pocket_key] %>
 		    		<td>
 		    		
-		    		<%= link_to real_currency(total), account_month_pocket_journal_path(account.id, pocket_id, month), {:class => 'listing_link', :title => 'Month Pocket Journal'} %>
-		    		
+		    		<%= link_to real_currency(total), account_month_pocket_journal_path(account.id, pocket_id, month), {:class => 'data_link', :title => 'Month Pocket Journal'} %>
 		    		</td>
 		    	<% end %>
 		    	<% total = pocket_totals[pocket_id] %>
-		    		<td><%= link_to real_currency(total), account_month_pocket_journal_path(account.id, pocket_id, -1), {:class => 'listing_link', :title => 'Month Pocket Journal'} %></td>
+		    		<td><%= link_to real_currency(total), account_month_pocket_journal_path(account.id, pocket_id, -1), {:class => 'table_link', :title => 'Month Pocket Journal'} %></td>
 		    	</tr>
 	    	<% end %>
 	    		<tr>
@@ -39,3 +41,20 @@
 		    	</tr>
 	    	</tbody>
 	    </table>
+	    
+	    
+<script type="text/javascript">
+  
+  	$(document).ready(function() {
+		$('#month_pocket_totals_table').dataTable({
+			"iDisplayLength": 50,
+			"bPaginate": true,
+			"bLengthChange": false,		
+			"bFilter": false,
+			"bSort": false
+		});
+  	} );
+
+</script>
+
+

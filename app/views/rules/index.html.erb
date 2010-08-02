@@ -1,6 +1,5 @@
 <% enumValue = EnumValue.new('dfs', 'adfa') %>
 <div id="rule_listing" class="template_div">
-	<%= link_to 'New Rule', new_account_rule_path(@account), :title => 'Add Rule' %>
 	<div class="table_div">
   		<table id="rule_listing_table" class="listing_table">
   			<thead>
@@ -19,13 +18,13 @@
 			<tbody>
 <% @rules.each do |rule| %>
   				<tr>
-  					<td><%= rule.name %></td>
+  					<td class="row_header"><%= rule.name %></td>
   					<td><%= RuleType.label(rule.type) %></td>
-  					<td><%= rule.comp_type %></td>
+  					<td><%= RuleCompType.label(rule.comp_type) %></td>
   					<td><%= rule.comp_string %></td>
   					<td><%= rule.comp_amount %></td>
   					<td><%= rule.comp_date %></td>
-  					<td><%= rule.comp_action %></td>
+  					<td><%= RuleActionType.label(rule.comp_action) %></td>
   					<td><%= rule.comp_action == RuleActionType::DELETE.key || rule.pocket.nil? ? "&nbsp;" : rule.pocket.name %></td>
   					<td><%= render :partial => 'options', :locals => {:acc => @account, :rule => rule} %></td>
   				</tr>

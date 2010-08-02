@@ -7,7 +7,7 @@ class TransactionsController < ApplicationController
   def destroy
   	
   	transaction = Transaction.find(params[:id])
-  	transaction.destroy
+  	transaction.deactivate
   	
   	@account = Account.find(params[:account_id])
   	@account.reload_transactions
@@ -22,7 +22,23 @@ class TransactionsController < ApplicationController
 
   	params[:transactions].each do |trans_id, value|
   		transaction = Transaction.find(trans_id)
-  		transaction.destroy
+  		transaction.deactivate
+  	end
+  	
+  	@account = Account.find(params[:account_id])
+    @account.reload_transactions
+    @transactions = @account.transactions
+  	respond_to do |format|
+      flash[:notice] = 'Transactions successfully deleted.'
+      format.js {render :action => 'reload_table', :layout => false}
+    end
+  end
+  
+  def restore_checked
+
+  	params[:transactions].each do |trans_id, value|
+  		transaction = Transaction.find(trans_id)
+  		transaction.activate
   	end
   	
   	@account = Account.find(params[:account_id])

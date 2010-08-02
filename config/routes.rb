@@ -11,6 +11,7 @@ ActionController::Routing::Routes.draw do |map|
   map.account_delete_transaction '/account/:account_id/delete_transaction/:id', :controller => "transactions", :action => "destroy"
   map.account_remove_all_transactions '/account/:id/delete_all', :controller => "accounts", :action => "delete_all_transactions"
    map.account_delete_transactions '/account/:account_id/delete_checked', :controller => "transactions", :action => "delete_checked"
+    map.account_restore_transactions '/account/:account_id/restore_checked', :controller => "transactions", :action => "restore_checked"
    
   map.resources :accounts
   
@@ -21,6 +22,7 @@ ActionController::Routing::Routes.draw do |map|
   end
   
   map.account_journal '/account/:id/journal', :controller => "accounts", :action => "journal"
+  map.account_delete_log '/account/:id/delete_log', :controller => "accounts", :action => "delete_log"
   
   map.account_month_pocket_journal '/account/:id/month_pocket_journal/:pocket_id/:yrMonth', :controller => "accounts", :action => "month_pocket_journal"
   map.account_apply_rules '/account/:id/apply_rules', :controller => "accounts", :action => "apply_rules"

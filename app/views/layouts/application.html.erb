@@ -98,17 +98,21 @@
 				</div>
 			 <% 	unless current_user.nil?
 	        		Account.activeAccounts(current_user.id).each do |account| %>
-		 		<div id="account_title_div_<%= account.id %>" class="submenu_button" onclick="click_navigation('<%= account_path(account) %>',<%= current_user.nil? %>)"><%= h account.name %></div>
+		 		<div id="account_title_div_<%= account.id %>" class="submenu_button" onclick="click_navigation('<%= month_pocket_totals_path(account) %>',<%= current_user.nil? %>)"><%= h account.name %></div>
 		 		<div id="account_options_div_<%= account.id %>" class="account_options_div">
-			 		<div class="sub_submenu_button" onclick="click_navigation('<%= account_show_upload_path(account.id) %>',<%= current_user.nil? %>)">Upload CSV</div>
-			 		
+			 		<div class="sub_submenu_button" onclick="click_navigation('<%= account_show_upload_path(account.id) %>',<%= current_user.nil? %>)">Upload CSV</div>		
+				<!--
 					<div class="sub_submenu_button" onclick="click_navigation('<%= account_path(account) %>',<%= current_user.nil? %>)">Account Details</div>
 					<div class="sub_submenu_button" onclick="click_navigation('<%= account_deposit_path(account.id) %>',<%= current_user.nil? %>)">Deposit</div>
 					<div class="sub_submenu_button" onclick="click_navigation('<%= account_withdraw_path(account.id) %>',<%= current_user.nil? %>)">Withdraw</div>
 					<div class="sub_submenu_button" onclick="click_navigation('<%= edit_account_path(account) %>',<%= current_user.nil? %>)">Edit Account</div>
+				-->
 					<div class="sub_submenu_button" onclick="click_navigation('<%= account_journal_path(account.id) %>',<%= current_user.nil? %>)">Journal</div>
+					<div class="sub_submenu_button" onclick="click_navigation('<%= account_delete_log_path(account.id) %>',<%= current_user.nil? %>)">Delete Log</div>
 					<div class="sub_submenu_button" onclick="click_navigation('<%= month_pocket_totals_path(account.id) %>',<%= current_user.nil? %>)">Pocket Totals</div>
+					<!-- 
 					<div class="sub_submenu_button" onclick="click_navigation('<%= account_remove_all_transactions_path(account.id) %>',<%= current_user.nil? %>)">Clear Transactions</div>
+					-->
 					<div class="sub_submenu_button" onclick="click_navigation('<%= account_rules_path(account) %>',<%= current_user.nil? %>)">Show Rules</div>
 					<div class="sub_submenu_button" onclick="click_navigation('<%= account_apply_rules_path(account.id) %>',<%= current_user.nil? %>)">Apply Rules</div>
 					<div class="sub_submenu_button" onclick="click_navigation('<%= new_account_rule_path(account.id) %>',<%= current_user.nil? %>)">Add Rule</div>
@@ -132,17 +136,6 @@
 	</div>
 
 </div>
-
-<% unless @account.nil? %>
-
-<div onclick="javascript:toggle_date_selectors();" style="display:none;">Toggle Dates</div>
-<div id="date_selectors" style="display:none;">
-	<div type="text" id="startDate" style="display:inline;float:left;margin:10px;"></div>
-	<div type="text" id="endDate" style="display:inline;float:left;margin:10px;"></div>
-</div>
-
-<% end %>
-
 
 <div id="edit_transaction_dialog" title="Edit Transaction" style="display:none;"></div>
 <div id="edit_pocket_dialog" title="Edit Pocket" style="display:none;"></div>
