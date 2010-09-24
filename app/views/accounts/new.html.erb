@@ -1,4 +1,12 @@
 
+<% form_for @account  do |f| %>
+  <%= f.error_messages %>
 
-	<%= render :partial => 'new' %>
-	
+  <%= render :partial => 'edit_form', :locals => {:f => f} %>
+  
+ <fieldset class="submit">   
+	<%= f.submit 'Create', {:id => 'submit_button', :class => 'button'} %>
+	<%= f.submit 'Cancel', {:id => 'cancel_button', :class => 'button'}  %>
+  </fieldset>
+  
+<% end %>

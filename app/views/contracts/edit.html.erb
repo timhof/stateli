@@ -1,6 +1,12 @@
-<h1>Editing contract</h1>
 
-<%= render :partial => 'contract_edit', :object => @contract %>
+<% form_for(@contract, :url => account_contracts_path(@account)) do |f| %>
+  <%= f.error_messages %>
 
-<%= link_to 'Show', contract_path(@contract) %> |
-<%= link_to 'Back', contracts_path %>
+  <%= render :partial => 'edit_form', :locals => {:f => f} %>
+  
+  <div class="form_button_container">
+	<%= f.submit 'Update', {:id => 'submit_button', :class => 'button'} %>
+	<%= f.submit 'Cancel', {:id => 'cancel_button', :class => 'button'}  %>
+  </div>
+	
+<% end %>

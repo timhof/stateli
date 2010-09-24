@@ -1,9 +1,9 @@
 
 
-<% form_tag (form_action_path, {:id=> 'transactions_form', :class => 'ajaxForm'}) do %>
+<% form_tag ('', {:class => 'ajaxForm', :id=> 'transactions_form'}) do %>
 
 <div id="transaction_listing_table_div" class="table_div">
-    <%= render :partial => 'transactions/transactions_listing_table', :locals => {:transactions => transactions, :account => account, :show_balance => show_balance, :showRestore => showRestore} %>
+    <%= render :partial => 'transactions/transactions_listing_table', :locals => {:transactions => transactions, :account => account, :showBalance => showBalance, :showRestore => showRestore, :showFilter => showFilter, :showDeactivate => showDeactivate} %>
 </div><!--table_div-->
 
 <% end %>
@@ -13,6 +13,8 @@
 </div>
 
 <script type="text/javascript">
+	$(document).ajaxStop($.unblockUI); 
+		
   	$(document).ready(function() {
 		$("#filter_dialog").dialog({
 	      	bgiframe: true, 
@@ -28,10 +30,11 @@
 				},
 				'OK': function() {
 					$(this).dialog('close');
+					$.blockUI({message: '<h1>processing...</h1>'}); 
 					$('#filter_commit').val('update');
 					$('#filter_form').submit();
 				}
 			}
-	    });    
+	    }); 
 	});
 </script>

@@ -16,12 +16,9 @@ class AccountsController < ApplicationController
   end
   
   def journal
-  	
-  	set_filtered_transactions
-	@transactions = @filtered_transactions
+  	@account = Account.find(params[:id])
   	respond_to do |format|
       format.html # journal.html.erb
-      format.js {render :action =>'update_filter', :layout => false}
     end
   end
   
@@ -29,6 +26,8 @@ class AccountsController < ApplicationController
   	
   	@account = Account.find(params[:id])
 	@transactions = @account.deleted_transactions
+	
+	@showBalance = true
   	respond_to do |format|
       format.html # delete_log.html.erb
     end
@@ -117,13 +116,8 @@ class AccountsController < ApplicationController
   	if params[:filter_commit].eql?('update')
   		reselect_filters
   	end
-  	p session[:selector].selectedPockets
   	@account = Account.find(params[:id])
-  	p "#{@account.transactions.size} TRANSACTIONS"
-  	@filtered_transactions = @account.transactions.select do |trans| 
-		pocket_id = trans.pocket_id
-		session[:selector].selectedPockets[pocket_id] == '1' && trans.trans_date >= session[:selector].startDate && trans.trans_date <= session[:selector].endDate 
-	end
+  	@filtered_transactions = @account.filtered_transactions(session[:selector])
   end
   
   def reselect_filters
@@ -139,7 +133,8 @@ class AccountsController < ApplicationController
 	end
 	
 	session[:selector].startDate = Date.parse(params[:start_date_field])
-	session[:selector].endDate = Date.parse(params[:end_date_field])
+	session[:selector].endDate = Date.parse(params[:end_date_field]) + 1
+	session[:selector].show_incomplete = params[:show_incomplete]
   end
   
   #Displays popup form (Ajax)
@@ -250,12 +245,12 @@ class AccountsController < ApplicationController
   def apply_rules
   	account = Account.find(params[:id])
   	account.apply_rules
+	account.reload_transactions
+    session[:selector].confirm_pocket_data
   	respond_to do |format|
         flash[:notice] = 'Rules applied'
         format.html { redirect_to(account_journal_url(account.id)) }
     end
-    session[:selector].confirm_pocket_data
-	account.reload_transactions
   end
   
   def show_upload

@@ -1,0 +1,64 @@
+
+<fieldset>
+	<legend>Contract Properties</legend>
+	<ul>
+		<li>  
+			<label for="file[name]">Name:</label>  
+			<%= f.text_field :name %>
+		</li>
+    	
+  		<li>  
+			<label for="file[name]">Description:</label>  
+			<%= f.text_field :description %>
+		</li>
+    	
+  		<li>  
+			<label for="file[name]">Amount:</label>  
+			<%= f.text_field :amount, :size => 6 %>
+		</li>
+    	
+  		<li>  
+			<label for="file[name]">Type:</label>  
+			<%= f.select(:type, [['One-Time', 'ContractOnce'], ['Weekly', 'ContractWeekly'], ['Bi-Monthly', 'ContractBimonthly'], ['Monthly', 'ContractMonthly'], ['Yearly', 'ContractYearly']], {}, {:onchange => "changeContractType()", :class => "base_form_field"})%>
+		</li>
+    	
+  		<li id="new_contract_date_start">  
+			<label for="date_start">Start Date:</label>  
+			<input type="text" name="contract[date_start]" id="date_start" value="<%= @contract.date_start.strftime("%m/%d/%Y") %>">
+		</li>
+    	
+  		<li id="new_contract_date_end">  
+			<label for="file[name]">End Date:</label>  
+			<input type="text" name="contract[date_end]" id="date_end" value="<%= @contract.date_end.strftime("%m/%d/%Y") %>">
+		</li>
+    	
+  		<li id="new_contract_full_date">  
+			<label for="file[name]">Date:</label>  
+			<input type="text" name="contract[full_date]" id="full_date" value="<%= @contract.full_date.strftime("%m/%d/%Y") %>">
+		</li>
+    	
+  		<li id="new_contract_day_of_month" style="display:none">  
+			<label for="file[name]">First Day of Month:</label>  
+			<%= f.select(:day_of_month, [[1,1],[2,2],[3,3],[4,4],[5,5],[6,6],[7,7],[8,8],[9,9],[10,10],[11,11],[12,12],[13,13],[14,14],[15,15],[16,16],[17,17],[18,18],[19,19],[20,20],[21,21],[22,22],[23,23],[24,24],[25,25],[26,26],[27,27],[28,28],[29,29],[30,30],[31,31]], {}, :class => "base_form_field")%>
+		</li>
+    	
+  		<li id="new_contract_day_of_month_alt" style="display:none">  
+			<label for="file[name]">Second Day of Month:</label>  
+			<%= f.select(:day_of_month_alt, [[1,1],[2,2],[3,3],[4,4],[5,5],[6,6],[7,7],[8,8],[9,9],[10,10],[11,11],[12,12],[13,13],[14,14],[15,15],[16,16],[17,17],[18,18],[19,19],[20,20],[21,21],[22,22],[23,23],[24,24],[25,25],[26,26],[27,27],[28,28],[29,29],[30,30],[31,31]], {}, :class => "base_form_field")%>
+		</li>
+    	
+  		<li id="new_contract_weekday" style="display:none">  
+			<label for="file[name]">Weekday:</label>  
+			<%= f.select (:weekday, [['Monday', '0'], ['Tuesday', '1'], ['Wednesday', '2'], ['Thursday', '3'], ['Friday', '4'], ['Saturday', '5'], ['Sunday', '6']], {}, :class => "base_form_field" )%>
+		</li>
+	</ul>
+</fieldset>
+	  
+<script type="text/javascript">
+  	$(document).ready(function() {
+		$("#date_start").datepicker();
+		$("#date_end").datepicker();
+		$("#full_date").datepicker();
+  	} );
+		
+</script>

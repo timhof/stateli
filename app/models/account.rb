@@ -5,7 +5,7 @@ class Account < ActiveRecord::Base
 
 	include StateliHelper
 	
-	has_many :transactions, :order => "trans_date desc", :conditions => {:active => true}
+	has_many :transactions, :order => "completed, trans_date desc", :conditions => {:active => true}
 	has_many :rules, :order => "rank asc"
 	before_create :initializate_previous_balance
 	after_save :reconcile_balance
@@ -13,7 +13,7 @@ class Account < ActiveRecord::Base
 	named_scope :active_only, :conditions => { :active => true } 
 	named_scope :user_only, lambda { |user_id| { :conditions => { :user_id => user_id } }}
 	
-	attr_accessor :previous_balance, :has_overdue_transactions, :has_pending_transactions
+	attr_accessor :previous_balance, :has_overdue_transactions, :has_pending_transactions, :filtered_transactions
 	
 	validates_presence_of :name, :balance
 	validates_numericality_of :balance
@@ -22,6 +22,14 @@ class Account < ActiveRecord::Base
 		return Transaction.deleted_transactions(id)
 	end
 	
+	def filtered_transactions(selector)
+	  	@filtered_transactions = transactions.select do |trans| 
+			pocket_id = trans.pocket_id
+			include = selector.selectedPockets[pocket_id] == '1' && trans.trans_date >= selector.startDate && trans.trans_date < selector.endDate && (trans.completed || selector.show_incomplete)
+			
+		end
+  	end
+  
 	def update_account_attributes(params)
 
 		self.previous_balance = self.balance
@@ -72,9 +80,11 @@ class Account < ActiveRecord::Base
    				p "Adding: "#{trans.trans_date}, #{trans.name}, #{trans.amount}"
    				trans.user_id = user_id
    				trans.account_id = id
+   				trans.completed = true
    				trans.save!
    			end
    		end
+   		reload
    	end
    	
 	def has_transaction(transaction)
@@ -90,19 +100,22 @@ class Account < ActiveRecord::Base
 		puts "RELOADING TRANSACTIONS"
 		self.reload
 		
-		account_balance = 0.0.to_d
-		
+		projected_account_balance = 0.0.to_d
+		actual_account_balance = 0.0.to_d
 		#get list of completed transactions
-		completed_transactions = self.completed_transactions
+		active_transactions = self.active_transactions
 		
-		completed_transactions.reverse_each do |trans|
+		active_transactions.reverse_each do |trans|
 			next if trans.amount.nil?
-			account_balance = account_balance + trans.amount.to_d
-			trans.account_balance = account_balance
+			if trans.completed 
+				actual_account_balance = actual_account_balance + trans.amount.to_d
+			end
+			projected_account_balance = projected_account_balance + trans.amount.to_d
+			trans.account_balance = projected_account_balance
 			trans.save
 		end
 		
-		self.update_balance(account_balance)
+		self.update_balance(actual_account_balance)
 		self.save
 	end
 	
@@ -127,6 +140,17 @@ class Account < ActiveRecord::Base
 			end
 		end
 		return completed_transactions
+	end
+	
+	def active_transactions
+		
+		active_transactions = []
+		transactions.each do |trans|
+			if trans.active
+				active_transactions << trans
+			end
+		end
+		return active_transactions
 	end
 	
 	def uncompleted_transactions

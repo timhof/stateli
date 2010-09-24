@@ -1,4 +1,3 @@
 
-
-page.show_popup_form('signup')
+<%= render :partial => 'signup' %>
 	

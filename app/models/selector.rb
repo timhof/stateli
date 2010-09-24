@@ -2,13 +2,15 @@ class Selector
 		attr_accessor :selectedPockets, 
 					  :pocketIdNameMap,
 					  :startDate,
-					  :endDate
+					  :endDate,
+					  :show_incomplete
 					  
 					  
 	def initialize
 		initialize_pockets
 		@startDate = Date.today << 12
 		@endDate = Date.today
+		@show_incomplete = true
 	end
 	
 	def initialize_pockets(select_all=true, user_id=nil)

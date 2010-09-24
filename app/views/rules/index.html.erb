@@ -36,6 +36,10 @@
 
 <script type="text/javascript">
   	$(document).ready(function() {
-		$('#rule_listing_table').dataTable({"iDisplayLength": 15});
+		$('#rule_listing_table').dataTable({
+			"iDisplayLength": 15,
+			"sDom": 'rt<ifp><"clear">'
+		});
+		$('#menu_rules_<%= @account.id %>').addClass('sub_submenu_selected');
   	} );
 </script>

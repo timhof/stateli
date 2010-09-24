@@ -27,7 +27,7 @@ class RulesController < ApplicationController
   # GET /rules/new
   # GET /rules/new.xml
   def new
-    @rule = Rule.new
+    @rule = RuleName.new
 	@account = Account.find(params[:account_id])
 	@pockets = Pocket.user_pockets(@current_user.id)
     respond_to do |format|

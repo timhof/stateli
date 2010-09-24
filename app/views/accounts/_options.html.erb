@@ -6,14 +6,6 @@
 		<%= link_to image_tag("/images/icons/edit-signiture.png"), edit_account_path(acc), {:class => "listing_link", :title => "Edit Account Info"} %>
     	<%= link_to image_tag("/images/icons/notebook.png"), account_journal_path(acc.id), {:class => 'listing_link', :title => 'Journal'} %>
 
-<% if acc.has_pending_transactions %>
-	<% if acc.has_overdue_transactions %>
-   			<span class="overdue"><%= link_to image_tag("/images/icons/notebook--pencil.png"), account_pending_path(acc.id), {:class => 'listing_link', :title => 'View Pending Transactions'} %></span>
-   		<% else %>
-    	<%= link_to image_tag("/images/icons/notebook--pencil.png"), account_pending_path(acc.id), {:class => 'listing_link', :title => 'View Pending Transactions'} %>
-    <% end%>
-<% else %>
-<% end %>
 		<%= link_to '[Clr All]', account_remove_all_transactions_url(acc.id), {:method => 'delete'}, {:class => 'listing_link', :title => 'Delete All Transactions'} %>
 
 <%= link_to image_tag("/images/icons/cross-script.png"), account_path(acc), :confirm => 'Are you sure?', :method => :delete %>

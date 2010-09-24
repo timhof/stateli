@@ -2,8 +2,7 @@
 $('#pocket_checkbox_container').html("<%= escape_javascript(render :partial => 'stateli/checkbox_group', :locals => {:idNameMap => session[:selector].pocketIdNameMap, :selectedKeys =>session[:selector].selectedPockets, :checkbox_container_div => 'pocket_checkbox_container', :parameterName => 'pocket_id', :title => 'Pockets'})%>");
 
 <% unless @transactions.nil? %>
-$('#transaction_listing_table_div').html("<%= escape_javascript(render :partial => 'transactions/transactions_listing_table', :locals => {:transactions => @transactions, :account => @account, :show_balance => true, :showRestore => false})%>");
-
+$('#transaction_listing_table_div').html("<%= escape_javascript(render :partial => 'transactions/transactions_listing_table', :locals => {:transactions => @transactions, :account => @account, :showBalance => true, :showRestore => false})%>");
 
 
 <% end%>
@@ -11,11 +10,6 @@ $('#transaction_listing_table_div').html("<%= escape_javascript(render :partial 
 <% unless @month_pocket_totals.nil? %>
 	
 $('#month_pocket_totals_table_div').html("<%= escape_javascript(render :partial => 'month_pocket_totals_table', :locals => {:month_pocket_totals => @month_pocket_totals, :month_totals => @month_totals, :pocket_totals => @pocket_totals, :grand_total => @grand_total, :months => @months, :pockets => @pockets, :account => @account})%>");
-
-$('#month_pocket_totals_table_div').html("<%= escape_javascript(render :partial => 'month_pocket_totals_table', :locals => {:month_pocket_totals => @month_pocket_totals, :month_totals => @month_totals, :pocket_totals => @pocket_totals, :grand_total => @grand_total, :months => @months, :pockets => @pockets, :account => @account})%>");
-
-$('#month_pocket_totals_table_div').html("<%= escape_javascript(render :partial => 'month_pocket_totals_table', :locals => {:month_pocket_totals => @month_pocket_totals, :month_totals => @month_totals, :pocket_totals => @pocket_totals, :grand_total => @grand_total, :months => @months, :pockets => @pockets, :account => @account})%>");
-
 
 <% end %>
 

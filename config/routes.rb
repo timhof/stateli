@@ -8,9 +8,10 @@ ActionController::Routing::Routes.draw do |map|
   map.register '/register', :controller => 'users', :action => 'register'
   map.signup '/signup', :controller => 'users', :action => 'signup'
  
-  map.account_delete_transaction '/account/:account_id/delete_transaction/:id', :controller => "transactions", :action => "destroy"
+  map.account_deactivate_transaction '/account/:account_id/deactivate_transaction/:id', :controller => "transactions", :action => "deactivate"
   map.account_remove_all_transactions '/account/:id/delete_all', :controller => "accounts", :action => "delete_all_transactions"
-   map.account_delete_transactions '/account/:account_id/delete_checked', :controller => "transactions", :action => "delete_checked"
+   map.account_deactivate_transactions '/account/:account_id/deactivate_checked', :controller => "transactions", :action => "deactivate_checked"
+   map.account_destroy_transactions '/account/:account_id/destroy_checked', :controller => "transactions", :action => "destroy_checked"
     map.account_restore_transactions '/account/:account_id/restore_checked', :controller => "transactions", :action => "restore_checked"
    
   map.resources :accounts
@@ -34,7 +35,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.month_pocket_totals '/account/:id/month_pocket_totals', :controller => "accounts", :action => "month_pocket_totals"
   
-  map.contract_journal '/contract/:id/journal', :controller => "contracts", :action => "journal"
+  map.contract_journal '/contract/:id/journal/:account_id', :controller => "contracts", :action => "journal"
   
   map.transaction_autopay '/transaction/:id/autopay', :controller => "transactions", :action => "autopay"
   map.transaction_complete '/transaction/:id/complete', :controller => "transactions", :action => "complete", :conditions => {:method => :get}

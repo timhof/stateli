@@ -6,6 +6,10 @@
 
 <script type="text/javascript">
   	$(document).ready(function() {
-		$('#pockets_table').dataTable({"iDisplayLength": 25});
+		$('#pockets_table').dataTable({
+			"iDisplayLength": 25,
+			"sDom": 'rt<ifp><"clear">',
+			"bSort": false,
+		});
   	} );
 </script>
