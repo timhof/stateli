@@ -4,49 +4,68 @@ class TransactionsController < ApplicationController
   	
   before_filter :login_required
  
-  def destroy
+  def deactivate
   	
   	transaction = Transaction.find(params[:id])
   	transaction.deactivate
   	
   	@account = Account.find(params[:account_id])
   	@account.reload_transactions
-  	@transactions = @account.transactions
+    
+    @removed_transactions = []
+    @removed_transactions << transaction
   	respond_to do |format|
-      flash[:notice] = 'Transaction successfully deleted.'
-      format.js {render :action => 'reload_table', :layout => false}
+      format.js {render :action => 'remove_transactions', :layout => false}
     end
   end
   
-  def delete_checked
+  def deactivate_checked
 
+	@removed_transactions = []
   	params[:transactions].each do |trans_id, value|
   		transaction = Transaction.find(trans_id)
   		transaction.deactivate
+    	@removed_transactions << transaction
   	end
   	
+  	#Set up for Journal display
   	@account = Account.find(params[:account_id])
-    @account.reload_transactions
-    @transactions = @account.transactions
+  	@account.reload_transactions
+  	
   	respond_to do |format|
-      flash[:notice] = 'Transactions successfully deleted.'
-      format.js {render :action => 'reload_table', :layout => false}
+      format.js {render :action => 'remove_transactions', :layout => false}
+    end
+  end
+  
+  def destroy_checked
+
+	@removed_transactions = []
+  	params[:transactions].each do |trans_id, value|
+  		transaction = Transaction.find(trans_id)
+  		transaction.destroy
+    	@removed_transactions << transaction
+  	end
+  	
+  	#Set up for Journal display
+  	@account = Account.find(params[:account_id])
+    respond_to do |format|
+      format.js {render :action => 'remove_transactions', :layout => false}
     end
   end
   
   def restore_checked
 
+	@removed_transactions = []
   	params[:transactions].each do |trans_id, value|
   		transaction = Transaction.find(trans_id)
   		transaction.activate
+    	@removed_transactions << transaction
   	end
   	
   	@account = Account.find(params[:account_id])
     @account.reload_transactions
-    @transactions = @account.transactions
-  	respond_to do |format|
-      flash[:notice] = 'Transactions successfully deleted.'
-      format.js {render :action => 'reload_table', :layout => false}
+	respond_to do |format|
+      format.js {render :action => 'remove_transactions', :layout => false}
     end
   end
   

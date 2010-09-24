@@ -60,21 +60,23 @@
 }
 
 .dataTables_filter {
-	width: 50%;
-	float: right;
-	text-align: right;
+	float: left;
+	width: 33%;
+	text-align: left;
+	margin-top: 3px;
 }
 
 .dataTables_info {
-	width: 60%;
-	float: left;
+	float: right;
+	margin-top: 3px;
+	padding-right: 5px;
 }
 
 .dataTables_paginate {
-	width: 44px;
-	* width: 50px;
 	float: right;
 	text-align: right;
+	padding-right: 15px;
+	margin-top: 3px;
 }
 
 /* Pagination nested */

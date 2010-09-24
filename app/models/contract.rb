@@ -8,15 +8,12 @@ class Contract < ActiveRecord::Base
 	
 	belongs_to :user
 	belongs_to :account	
-	has_many :transactions
+	has_many :transactions, :dependent => :destroy
 	
 	named_scope :user_only, lambda { |user_id| { :conditions => { :user_id => user_id } }}
-	named_scope :active_only, :conditions => { :active => true } 
-	named_scope :credit_only, :conditions => { :transaction_type => 'TransactionCredit' } 
-	named_scope :debit_only, :conditions => { :transaction_type => 'TransactionDebit' } 
 
 	def update_contract_attributes(params)
-
+		p params
  		unless(params[:name].nil?)
  			self.name = params[:name]
  		end
@@ -24,10 +21,10 @@ class Contract < ActiveRecord::Base
  			self.description = params[:description]
  		end
  		unless(params[:date_start].nil?)
- 			self.date_start = params[:date_start]
+ 			self.date_start = Date.parse(params[:date_start])
  		end
  		unless(params[:date_end].nil?)
- 			self.date_end = params[:date_end]
+ 			self.date_end = Date.parse(params[:date_end])
  		end
  		unless(params[:autopay].nil?)
  			self.autopay = params[:autopay]
@@ -36,7 +33,7 @@ class Contract < ActiveRecord::Base
  			self.autopay_account_id = params[:autopay_account_id]
  		end
  		unless(params[:full_date].nil?)
- 			self.full_date = params[:full_date]
+ 			self.full_date = Date.parse(params[:full_date])
  		end
  		unless(params[:day_of_month].nil?)
  			self.day_of_month = params[:day_of_month]
@@ -47,27 +44,21 @@ class Contract < ActiveRecord::Base
  		unless(params[:weekday].nil?)
  			self.weekday = params[:weekday]
  		end
- 		unless(params[:active].nil?)
- 			self.active = params[:active]
- 		end
  		unless(params[:amount].nil?)
  			self.amount = params[:amount].to_d
- 		end
- 		unless(params[:transaction_type].nil?)
- 			self.transaction_type = params[:transaction_type]
  		end
  	end
  	
 	def self.activeCreditContracts(userId)
-		contracts = user_only(userId).active_only.credit_only.find(:all)
+		contracts = user_only(userId).credit_only.find(:all)
 	end
 	
 	def self.activeDebitContracts(userId)
-		contracts = user_only(userId).active_only.debit_only.find(:all)
+		contracts = user_only(userId).debit_only.find(:all)
 	end
 	
 	def self.activeContracts(userId)
-		contracts = user_only(userId).active_only.find(:all)
+		contracts = user_only(userId).find(:all)
 	end
 	
 	def addTransactions
@@ -78,11 +69,7 @@ class Contract < ActiveRecord::Base
 	
 	def addTransaction(params)
 		
-		if self.transaction_type == 'TransactionCredit'
-			transaction = TransactionCredit.new()
-		elsif self.transaction_type == 'TransactionDebit'
-			transaction = TransactionDebit.new()
-		end
+		transaction = Transaction.new()
 		
 		params[:contract_id]  = self.id
 		params[:autopay] = false
@@ -152,7 +139,7 @@ class Contract < ActiveRecord::Base
 	end
 	
 	protected
-		def addTransactionsMode(date_start, date_end, day_of_month, mode, transaction_type)
+		def addTransactionsMode(date_start, date_end, day_of_month, mode)
 			
 			contract_start_date = Date.new(date_start.year, date_start.mon, date_start.mday)
 			logger.info "START DATE: #{contract_start_date.to_s}"
@@ -169,11 +156,7 @@ class Contract < ActiveRecord::Base
 			
 			while this_date > 0 && this_date <= date_end do
 				logger.info "ADDING #{this_date}"
-				if transaction_type == 'TransactionCredit'
-					create_transactions_credit(this_date)
-				elsif transaction_type == 'TransactionDebit'
-					create_transactions_debit(this_date)
-				end
+				create_transaction(this_date)
 				this_date = Contract.get_next_date(mode, this_date, day_of_month)
 			end
 		end
@@ -184,10 +167,6 @@ class Contract < ActiveRecord::Base
 			if self.type == 'ContractOnce'
 				self.date_start = self.full_date
 				self.date_end = self.full_date
-			end
-			
-			unless self.autopay
-				self.autopay_account_id = -1
 			end
 			logger.info "FINISHED SETTING DATE FIELDS"
 		end
@@ -249,25 +228,14 @@ class Contract < ActiveRecord::Base
 	
 		end
 		
-		def create_transactions_credit(date)
-			
-			transaction = TransactionCredit.new
-			set_transaction_fields(transaction, date)
-		end
-		
-		def create_transactions_debit(date)
-			
-			transaction = TransactionDebit.new
+		def create_transaction(date)
+			transaction = Transaction.new
 			set_transaction_fields(transaction, date)
 		end
 		
 		def set_transaction_fields(transaction, date)
 			
-			params = {:name => self.name + " Contract Transaction", :description => self.description + " Contract Transaction", :trans_date => date, :amount => self.amount, :contract_id => self.id, :user_id => self.user_id, :autopay => self.autopay}
-			
-			if self.autopay
-	    		params[:account_id] = self.autopay_account_id
-	    	end
+			params = {:name => self.name + " Contract Transaction", :description => self.description + " Contract Transaction", :trans_date => date, :amount => self.amount, :contract_id => self.id, :user_id => self.user_id, :account_id => self.account_id, :pocket_id => Pocket.unclassified.id}
 	    	
 			transaction.update_transaction_attributes(params)
 		end

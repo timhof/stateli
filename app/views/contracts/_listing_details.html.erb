@@ -4,10 +4,10 @@
 		<span id="contract_name_<%=contract.id%>"><%=h contract.name %></span>
 	</td>
    	<td>
-   		<span id="contract_date_start_<%=contract.id%>"><%=h contract.date_start %></span>
+   		<span id="contract_date_start_<%=contract.id%>"><%=h contract.date_start.strftime("%m/%d/%Y") %></span>
    	</td>
    	<td>
-   		<span id="contract_date_end_<%=contract.id%>"><%=h contract.date_end %></span>
+   		<span id="contract_date_end_<%=contract.id%>"><%=h contract.date_end.strftime("%m/%d/%Y") %></span>
    	</td>
    	<td>
    		<span id="contract_type_<%=contract.id%>"><%=h contract.type_display %></span>
@@ -16,6 +16,6 @@
    		<span id="contract_amount_<%=contract.id%>"><%=h real_currency contract.amount %></span>
    	</td>
    	<td>
-   		<%= render :partial => 'options', :locals => {:contract => contract} %>
+   		<%= render :partial => 'options', :locals => {:contract => contract, :account => account} %>
     </td>
 </tr>

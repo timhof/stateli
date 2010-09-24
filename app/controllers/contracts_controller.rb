@@ -5,10 +5,8 @@ class ContractsController < ApplicationController
   
   def index
 
+    @contracts = Contract.activeContracts(@current_user.id)
   	@account = Account.find(params[:account_id])
-    @contracts = @account.contracts
-	
-	session[SESSION_MAIN_PAGE] = MAIN_PAGE_LISTING_CONTRACTS
     respond_to do |format|
       format.html
     end
@@ -16,17 +14,20 @@ class ContractsController < ApplicationController
  
   def new
   	@contract = Contract.new
+  	@contract.date_start = Date.today
+  	@contract.date_end = Date.today >> 12
+  	@contract.full_date = Date.today
   	@account = Account.find(params[:account_id])
   end
   
   def create
-  	
-  	@account = Account.find(params[:account_id])
 	@contract = Contract.build_new_contract(params[:contract], @current_user.id)
-	@contract.account = @account
-	
+  	@account = Account.find(params[:account_id])
+	@contract.account_id = @account.id
+	success = @contract.save
+	logger.info "ACCOUNT ID: #{@contract.account_id}"
     respond_to do |format|
-      if @contract.save
+      if success
         flash[:notice] = 'Contract was successfully created.'
        	format.html { redirect_to(account_contracts_url(@account)) }
       else
@@ -36,10 +37,24 @@ class ContractsController < ApplicationController
   end
   
   def show
-  	@account = Account.find(params[:account_id])
-    @contract = Contract.find(params[:id])
-	@title = @contract.name
+    @contract = Contract.find(params[:id])	
   end
   
+  def journal
+  	@contract = Contract.find(params[:id])
+  	@account = Account.find(params[:account_id])
+	@transactions = @contract.transactions
+end
+  
+ def destroy
+    @contract = Contract.find(params[:id])
+	@account = Account.find(params[:account_id])
+    @contract.destroy
+
+    respond_to do |format|
+      format.html { redirect_to(account_contracts_url(@account)) }
+      format.xml  { head :ok }
+    end
+  end
   
 end

@@ -1,0 +1,11 @@
+
+<%	unless @removed_transactions.nil?
+		@removed_transactions.each do |trans| %>
+		
+$('#transaction_<%= trans.id %>').hide();
+$('#transactions_<%= trans.id %>').attr('checked', false);
+
+<% 		end
+	end %>
+
+ajaxLinks();

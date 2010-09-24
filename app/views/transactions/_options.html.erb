@@ -1,6 +1,5 @@
   <span class="option_link_span">
 	<%= link_to image_tag("/images/icons/magnifier.png"), account_transaction_path(account, transaction), {:class => "listing_link", :title => "View Transaction Details"} %>
 	<%= link_to image_tag("/images/icons/edit-signiture.png"), edit_account_transaction_path(account, transaction), {:title => "Edit Transaction Details", :class => "get"} %>
-	
-    <%= link_to image_tag("/images/icons/cross-script.png"), account_delete_transaction_path(account, transaction), :class => "get" %>
+    <%= image_tag("/images/icons/cross-script.png", {:onclick => "javascript:post_form('#{account_deactivate_transaction_path(account, transaction)}', 'transactions_form', 'DELETE');"})%>
   </span>

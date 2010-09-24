@@ -1,9 +1,16 @@
+
 <% form_for(@rule, :url => account_rules_path(@account)) do |f| %>
 	  <%= f.error_messages %>
   <%= render :partial => 'edit_form', :locals => {:f => f} %>
-  
-  <div class="form_button_container">
+ 
+   <fieldset class="submit">   
 	<%= f.submit 'Create', {:id => 'submit_button', :class => 'button'} %>
 	<%= f.submit 'Cancel', {:id => 'cancel_button', :class => 'button'}  %>
-  </div>
+  </fieldset>
 <% end %>
+
+<script type="text/javascript">
+  	$(document).ready(function() {
+		$('#menu_new_rule_<%= @account.id %>').addClass('sub_submenu_selected');
+  	} );
+</script>

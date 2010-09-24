@@ -6,10 +6,33 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 
+var change_rule_type = function(){
+	var rule_type = $('#rule_type').val();
+	if('RuleDate' == rule_type){
+		$('#rule_comp_string').hide();
+		$('#rule_date').show();
+		//$('#rule_comp_type').attr('options', []);
+	}
+	else if('RuleAmount' == rule_type){
+		$('#rule_comp_string').show();
+		$('#rule_date').hide();
+	}
+	else if('RuleName' == rule_type){
+		$('#rule_comp_string').show();
+		$('#rule_date').hide();
+	}
+	
+}
 
 var show_filters_dialog = function(){
 	$('#filter_dialog').dialog('open');
 	return false;
+}
+
+var post_form = function(url, form_id, method){
+	$.blockUI({message: '<h1>processing...</h1>'}); 
+	$('#'+form_id).attr('action', url);
+	submitForm(form_id);
 }
 
 var toggle_date_selectors = function(){
@@ -100,7 +123,7 @@ jQuery.ajaxSetup({ 'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "
 	        return _ajax_request(url, data, callback, type, 'DELETE');
 	    }
 	});
-	 
+	
 	jQuery.fn.submitWithAjax = function() {
 	  	this.unbind('submit', false);
   		this.submit(function() {
@@ -187,38 +210,38 @@ function click_navigation_ajax(button_url, current_user){
 
 function changeContractType(){
 	
-	var contractType = $F('contract_type');
+	var contractType = $('#contract_type').val();
 	
-	$('new_contract_full_date').hide();
-	$('new_contract_day_of_month').hide();
-	$('new_contract_day_of_month_alt').hide();
-	$('new_contract_weekday').hide();
-	$('new_contract_date_start').hide();
-	$('new_contract_date_end').hide();
+	$('#new_contract_full_date').hide();
+	$('#new_contract_day_of_month').hide();
+	$('#new_contract_day_of_month_alt').hide();
+	$('#new_contract_weekday').hide();
+	$('#new_contract_date_start').hide();
+	$('#new_contract_date_end').hide();
 	
 	if(contractType == 'ContractYearly'){
-		$('new_contract_full_date').show();
-		$('new_contract_date_start').show();
-		$('new_contract_date_end').show();
+		$('#new_contract_full_date').show();
+		$('#new_contract_date_start').show();
+		$('#new_contract_date_end').show();
 	}
 	else if(contractType == 'ContractMonthly'){
-		$('new_contract_day_of_month').show();
-		$('new_contract_date_start').show();
-		$('new_contract_date_end').show();
+		$('#new_contract_day_of_month').show();
+		$('#new_contract_date_start').show();
+		$('#new_contract_date_end').show();
 	}
 	else if(contractType == 'ContractBimonthly'){
-		$('new_contract_day_of_month').show();
-		$('new_contract_day_of_month_alt').show();
-		$('new_contract_date_start').show();
-		$('new_contract_date_end').show();
+		$('#new_contract_day_of_month').show();
+		$('#new_contract_day_of_month_alt').show();
+		$('#new_contract_date_start').show();
+		$('#new_contract_date_end').show();
 	}
 	else if(contractType == 'ContractWeekly'){
-		$('new_contract_weekday').show();
-		$('new_contract_date_start').show();
-		$('new_contract_date_end').show();
+		$('#new_contract_weekday').show();
+		$('#new_contract_date_start').show();
+		$('#new_contract_date_end').show();
 	}
 	else if(contractType == 'ContractOnce'){
-		$('new_contract_full_date').show();
+		$('#new_contract_full_date').show();
 	}
 }
 

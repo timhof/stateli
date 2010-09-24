@@ -4,28 +4,33 @@
  	amount = transaction.amount 
  	
  	isCredit = transaction.amount <= 0
- 	isDebit = transaction.amount >= 0 %>
+ 	isDebit = transaction.amount >= 0 
  	
-	<tr class="<%= overdue ? "overdue" : "" %>" id="transaction_detail_<%= transaction.id%>">
+ 	amountColor = transaction.completed ? "#000000" : "#009E8E"%>
+ 	
+	<tr id="transaction_<%= transaction.id %>">
+<% if showCheckboxes %>
 		<td class="row_header"><%= check_box_tag "transactions[#{transaction.id}]" %></td>
+<% end %>
 	 	<td><span id="transaction_date_<%=transaction.id%>">
     		<%=h transaction.trans_date.strftime("%m/%d/%Y") %>
     	</span></td>
     	<td><span id="transaction_name_<%=transaction.id%>" title="<%=transaction.description%>" >
     		<%=transaction.description[0,40]%>
     	</span></td>
-    	<td>
+    	<td style="color:<%= amountColor %>;">
     <% if isCredit %>
     			<%= h real_currency (0-amount) %>
     <% end %>
     	</td>
-    	<td>
+    	<td style="color:<%= amountColor %>;">
     <% if isDebit %>
     		<%= h real_currency amount %>
     <% end %>
    	 	</td>
-   	<% if show_balance %>
-   		<td><%= h real_currency transaction.account_balance %></td>
+   	<% if showBalance %>
+   		<td style="color:<%= amountColor %>;">
+    	<%= h real_currency transaction.account_balance %></td>
     <% end %>
     	<td><span id="transaction_pocket_name_<%=transaction.id%>">
     		<%= transaction.pocket.blank? ? "&nbsp;" : transaction.pocket.name%>

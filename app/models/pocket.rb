@@ -2,7 +2,7 @@ class Pocket < ActiveRecord::Base
 	has_many :transactions
 	
 	def self.user_pockets(user_id)
-		pockets = self.find(:all, :conditions => "user_id = #{user_id} or user_id = 0")
+		pockets = self.find(:all, :conditions => "user_id = #{user_id} or user_id = 0", :order => "name asc")
 		pockets << Pocket.unclassified
 	end
 	

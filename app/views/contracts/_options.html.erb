@@ -1,10 +1,6 @@
 
-	<%= link_to image_tag("/images/icons/magnifier.png"), contract_show_path(contract.id), {:class => "listing_link", :title => "View Contract Details"} %>	
-	<%= link_to_remote image_tag("/images/icons/plus.png"), {:url => contract_new_transaction_path(contract.id)}, {:class => "listing_link", :title => "Add New Transaction"} %>
-	<%= link_to image_tag("/images/icons/notebook.png"), contract_journal_path(contract.id), {:class => "listing_link", :title => "View Contract Trasactions"} %>
-<% if contract.has_pending_transactions %>
-	<%= link_to image_tag("/images/icons/notebook--pencil.png"), contract_pending_path(contract.id), {:class => "listing_link", :title => "View Pending Transactions"} %>
-<% else %>
-	&nbsp;&nbsp;
-<% end %>
+	<%= link_to image_tag("/images/icons/magnifier.png"), account_contract_path(account.id, contract.id), {:class => "listing_link", :title => "View Contract Details"} %>	
+	<%= link_to image_tag("/images/icons/notebook.png"), contract_journal_path(contract.id, account.id), {:class => "listing_link", :title => "View Contract Trasactions"} %>
+	<%= link_to 'del', account_contract_path(account.id, contract.id), {:class => "listing_link", :title => "View Contract Trasactions", :method => :delete} %>
+
   

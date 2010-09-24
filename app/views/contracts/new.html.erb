@@ -1,5 +1,18 @@
-<h1>New contract</h1>
 
-<%= render :partial => 'contract_new', :object => @account %>
+<% form_for(@contract, :url => account_contracts_path(@account)) do |f| %>
+  <%= f.error_messages %>
 
-<%= link_to 'Back', contracts_path %>
+  <%= render :partial => 'edit_form', :locals => {:f => f} %>
+  
+  <fieldset class="submit">   
+	<%= f.submit 'Create', {:id => 'submit_button', :class => 'button'} %>
+	<%= f.submit 'Cancel', {:id => 'cancel_button', :class => 'button'}  %>
+  </fieldset>
+<% end %>
+
+
+<script type="text/javascript">
+  	$(document).ready(function() {
+		$('#menu_new_contract_<%= @account.id %>').addClass('sub_submenu_selected');
+  	} );
+</script>

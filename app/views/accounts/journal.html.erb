@@ -1,11 +1,14 @@
 
 
 <div id="journal" class="template_div">
-	<div class="page_title_div">
-		&nbsp;
-	</div><!-- page_title_div -->
-	<%= render :partial => 'transactions/transactions_div', :locals => {:transactions => @transactions, :account => @account, :show_balance => true, :path => account_journal_path(@account.id), :form_action_path => account_delete_transactions_path(@account), :showRestore => false} %>
+	<%= render :partial => 'transactions/transactions_div', :locals => {:transactions => @account.transactions, :account => @account, :showBalance => true, :path => account_journal_path(@account.id), :showRestore => false, :showFilter => false, :showDeactivate => true} %>
 </div><!-- account_journal -->
+
+<script type="text/javascript">
+  	$(document).ready(function() {
+		$('#menu_journal_<%= @account.id %>').addClass('sub_submenu_selected');
+  	} );
+</script>
 
 
 

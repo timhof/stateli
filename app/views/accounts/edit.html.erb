@@ -1,3 +1,13 @@
 
+<% form_for @account  do |f| %>
+  <%= f.error_messages %>
 
-<%= render :partial => 'edit' %>
+  <%= render :partial => 'edit_form', :locals => {:f => f} %>
+  
+  <div class="form_button_container">
+	<%= f.submit 'Update', {:id => 'submit_button', :class => 'button'} %>
+	<%= f.submit 'Cancel', {:id => 'cancel_button', :class => 'button'}  %>
+  </div>
+  
+  
+<% end %>

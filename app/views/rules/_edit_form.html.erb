@@ -1,59 +1,54 @@
 
-  <div class="yui-b selection_div">
-    <div class="yui-gf">
-        <div class="yui-u first">Name</div>
-    	<div class="yui-u"><%= f.text_field :name %></div>
-    </div>
-  </div>
+
+
+
+
+<fieldset>
+	<legend>Upload Transactions</legend>
+	<ul>
+		<li>  
+			<label for="file[name]">File:</label>  
+			<%= f.text_field :name %>
+		</li>
   
   <% enumValue = EnumValue.new('dfs', 'adfa') %>
   <% if @rule.new_record? %>
   
-  <div class="yui-b selection_div">
-    <div class="yui-gf">
-        <div class="yui-u first">Rule</div>
-    	<div class="yui-u">	
-    		<%= collection_select(:rule, :type, RuleType.values, :key, :label) %>
-    	</div>
-    </div>
-  </div>
-  
+  		<li>  
+			<label for="file[name]">File:</label>  
+			<%= collection_select(:rule, :type, RuleType.values, :key, :label, {}, {:onchange => 'change_rule_type()'}) %>
+    	</li>
   <% end %>
   
-  <div class="yui-b selection_div">
-    <div class="yui-gf">
-        <div class="yui-u first">Rule</div>
-    	<div class="yui-u">	
-    		<%= collection_select(:rule, :comp_type, RuleCompType.values, :key, :label) %>
+  		<li>  
+			<label for="file[name]">Rule:</label>  
+			<%= collection_select(:rule, :comp_type, RuleCompType.values, :key, :label) %>
     		<%= f.text_field :comp_string %>
-    	</div>
-    </div>
-  </div>
-  
-  <div class="yui-b selection_div">
-    <div class="yui-gf">
-        <div class="yui-u first">Action</div>
-    	<div class="yui-u">
-    		<%= collection_select(:rule, :comp_action, RuleActionType.values, :key, :label) %>
-    	</div>
-    </div>
-  </div>
-  
-  <div class="yui-b selection_div">
-    <div class="yui-gf">
-        <div class="yui-u first">Pocket</div>
-    	<div class="yui-u" id="pocket_select_div">
+    		<input type="text" name="rule_date" id="rule_date" value="<%= session[:selector].startDate.strftime("%m/%d/%Y") %>" style="display:none;">
+    	</li>
+    	
+  		<li>  
+			<label for="file[name]">Action:</label>  
+			<%= collection_select(:rule, :comp_action, RuleActionType.values, :key, :label) %>
+    	</li>
+    	
+  		<li>  
+			<label for="file[name]">Pocket:</label>  
 			<%= render :partial => 'pockets/pocket_select', :locals => {:pockets => @pockets} %>	
-    	</div>
-    </div>
-  </div>
+    	</li>
+    	
+  		<li>  
+			<label for="file[name]">Rank:</label>  
+			<div class="yui-u"><%= f.text_field :rank %>
+		</li>
+	</ul>
+</fieldset>
   
-  <div class="yui-b selection_div">
-    <div class="yui-gf">
-        <div class="yui-u first">Rank</div>
-    	<div class="yui-u"><%= f.text_field :rank %></div>
-    </div>
-  </div>
-  
+  <script type="text/javascript">
+  	$(document).ready(function() {
+		$("#rule_date").datepicker();
+  	} );
+		
+</script>
   
  

@@ -1,50 +1,24 @@
 
-
-<h1>Sign up as a new user</h1>
-<% @user.password = @user.password_confirmation = nil %>
-
-<%= error_messages_for :user %>
-<% remote_form_for(@user, :url => register_path) do |f| %>
-
-
- 	<div class="form_element">
-	  	<div class="form_label">
-	   		Login
-	    </div>
-	    <div class="form_value">
-	    	<%= f.text_field :login, :class => "base_form_field" %>
-	  	</div>
-	</div>
-	
-	<div class="form_element">
-	  	<div class="form_label">
-	   		Email
-	    </div>
-	    <div class="form_value">
-	    	<%= f.text_field :email, :class => "base_form_field" %>
-	  	</div>
-	</div>
-	
-	<div class="form_element">
-	  	<div class="form_label">
-	   		Password
-	    </div>
-	    <div class="form_value">
-	    	<%= f.password_field :password, :class => "base_form_field" %>
-	  	</div>
-	</div>
-	
-	<div class="form_element">
-	  	<div class="form_label">
-	   		Confirm Password
-	    </div>
-	    <div class="form_value">
-	    	<%= f.password_field :password_confirmation, :class => "base_form_field" %>
-	  	</div>
-	</div>
-
-	<div id="new_contract_submit" class="submit_button_div">
-	    <%= submit_tag 'Sign up', :class => "submit_button base_form_field"%>
-	</div>
-	
-<% end -%>
+<fieldset>
+	<legend>Registration</legend>
+	<ul>
+		<li>  
+			<label for="file[name]">Username:</label>  
+			<%= f.text_field :login, :class => "base_form_field" %>
+		</li>
+    	
+  		<li>  
+			<label for="file[name]">Email:</label>  
+			<%= f.text_field :email, :class => "base_form_field" %>
+		</li>
+    	
+  		<li>  
+			<label for="file[name]">Password:</label>  
+			<%= f.password_field :password, :class => "base_form_field" %>
+		</li>
+		<li>
+			<label for="file[name]">Confirm Password:</label>  
+			<%= f.password_field :password_confirmation, :class => "base_form_field" %>
+		</li>
+	</ul>
+</fieldset>

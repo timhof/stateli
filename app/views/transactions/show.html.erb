@@ -44,23 +44,13 @@
 		  <%=h real_currency @transaction.amount %>
 		</div>
 
-    	<% unless @transaction.account.blank? %>
-		<div class="detail_label">
-		  <b>Account
-		</div>
-		<div class="detail_value">
-		  <span id="account_name_<%= @transaction.account.id %>" class="account_name"><%=h @transaction.account.name %></span>
-		  <%= render :partial => 'accounts/options', :locals => {:acc => @transaction.account} %>
-		</div>
-		<% end %>
-		
 		<% unless @transaction.contract.blank? %>
 		<div class="detail_label">
 		  Contract
 		</div>
 		<div class="detail_value">
 		  <span id="contract_name_<%= @transaction.contract.id %>" class="contract_name"><%=h @transaction.contract.name %></span>
-		  <%= render :partial => 'contracts/options', :locals => {:contract => @transaction.contract} %>
+		  <%= render :partial => 'contracts/options', :locals => {:contract => @transaction.contract, :account => @transaction.account} %>
 		</div>
 		<% end %>
 	

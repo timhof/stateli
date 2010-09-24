@@ -1,7 +1,4 @@
 
-* {
-	margin: 0;
-}
 
 ol {
 	padding-left: 20px;
@@ -20,42 +17,7 @@ a:hover {
 	background: #FFFFFF;
 }
 
-#main_div {
-	width: 100%;
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-	margin: 0 auto -4em;
-}
 
-#main_image_div img {
-	border-width: 2px;
-	border-style: solid;
-}
-
-
-#welcome_div {
-	height: 25px;
-	line-height: 25px;
-	clear: both;
-	text-align: left;
-	color: #000066;
-	font-weight: bold;
-	overflow: hidden;
-	background-image: url(../images/bank_header_navigation.gif);
-	margin: 0;
-}
-
-#welcome_left {
-	float: left;
-	background-image: url(../images/bank_header_navigation_left.gif);
-}
-
-#welcome_right {
-	float: right;
-	width: 10px;
-	background-image: url(../images/bank_header_navigation_right.gif);
-}
 
 #new_session_login {
 	float:left;
@@ -70,6 +32,12 @@ a:hover {
 #logout_div {
 	float:right;
 	overflow: hidden;
+	padding-right: .5em;
+}
+
+.welcome_message{
+	padding-left: .5em;
+	float: left;
 }
 
 #login_form_div {
@@ -77,6 +45,7 @@ a:hover {
 	height: 25px;
 	line-height: 25px;
 	overflow: hidden;
+	padding: 0 .1em 0 0;
 }
 
 .login_form_label {
@@ -94,28 +63,23 @@ a:hover {
 	float: left;
 	padding-left: 5px;
 }
-.login_button {
-	height: 20px;
-	margin-right: 5px;
-	font-size: 85%;
-	margin-bottom: 2px;
+
+
+.login_form_label_b {
+	padding-right: 5px;
+	font-weight: bold;
+	float: left;
 }
 
-.main_title {
-	min-width: 600px;
-	text-align:center;
-	height: 50px;
-	line-height: 47px;
-	background-image: url(../images/bank_header_navigation.gif);
-	background-position: 0 -26px;
-	color: #000066;
-	font-size: 200%;
-	letter-spacing: 2px;
-	overflow: hidden;
+.login_form_value_b {
+	padding-right: 5px;
+	float: right;
 }
 
-.main_title_div_mouseover {
-	cursor: pointer;
+#login_button_div_b {
+	clear: both;
+	float: left;
+	padding-left: 5px;
 }
 
 .table_div {
@@ -123,7 +87,6 @@ a:hover {
 }
 
 .listing_table{
-
 	border: 1px solid;
 	width: 100%;
 	margin: 0;
@@ -237,30 +200,10 @@ a:hover {
 	width: 200px;
 }
 
-#new_contract_active {
-  display: none;
-}
-#new_contract_amount {
-  clear: both;
-}
-#new_contract_submit {
-}
-
-.overdue {
-	font-weight: bold;
-	background-color: #D7F73D;
-}
-
-.overdue div{
-	font-weight: bold;
-	background-color: #D7F73D;
-}
-
 .listing_link {
 	font-size: 85%;
 	letter-spacing: 1px;
 }
-
 .detail_label {
 	font-weight: bold;
 	text-align: right;

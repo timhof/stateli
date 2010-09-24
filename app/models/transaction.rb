@@ -68,7 +68,9 @@ class Transaction < ActiveRecord::Base
     	unless(params[:user_id].nil?)
     		self.user_id = params[:user_id]
     	end
-    	
+    	unless(params[:contract_id].nil?)
+    		self.contract_id = params[:contract_id]
+    	end
     	if doSave
  			return self.save!
  		else

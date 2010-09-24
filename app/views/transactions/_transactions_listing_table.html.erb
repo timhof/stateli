@@ -1,26 +1,42 @@
 
+<% showCheckboxes = showRestore.nil? || showRestore || showDeactivate.nil? || showDeactivate %>
+
 <table id="transaction_listing_table" class="listing_table">
 	<thead><tr class="header_row">
+	
+<%	if showCheckboxes %>
+
    		<th>
-   			<%= image_tag("/images/icons/funnel.png", {:onclick => "javascript:show_filters_dialog();"})%>		
-<% if showRestore %>
-   			<%= link_to image_tag("/images/icons/tick.png", {:onclick => "javascript:submitForm('transactions_form');"})%>
-<% else %>
-			<%= image_tag("/images/icons/cross-script.png", {:onclick => "javascript:submitForm('transactions_form');"})%>
-<% end %>
+   		
+<% 		if showFilter.nil? || showFilter %>
+
+   			<%= image_tag("/images/icons/funnel.png", {:onclick => "javascript:show_filters_dialog();"})%>	
+   			
+<% 		end %>	
+<% 		if showRestore %>
+
+   			<%= image_tag("/images/icons/tick.png", {:onclick => "javascript:post_form('#{account_restore_transactions_path(account)}', 'transactions_form', 'POST');"})%>
+   			<%= image_tag("/images/icons/cross-script.png", {:onclick => "javascript:post_form('#{account_destroy_transactions_path(account)}', 'transactions_form', 'DELETE');"})%>
+<% elsif showDeactivate.nil? || showDeactivate %>
+			<%= image_tag("/images/icons/cross-script.png", {:onclick => "javascript:post_form('#{account_deactivate_transactions_path(account)}', 'transactions_form', 'DELETE');"})%>
+			
+<% 		end %>
+
    		</th>
+ 
+<%	end %>
     	<th>Date</th>
 		<th>Name</th>
 		<th>Credit</th>
 		<th>Debit</th>
-<% if show_balance %>
+<% if showBalance %>
 	    <th>Balance</th>
 <% end %>
 	    <th>Pocket</th>
 	 	<th>Options</th>
 	</tr></thead>
 	<tbody id="transactions">
-		<%= render :partial => 'transactions/transactions_listing', :locals => {:account => account, :show_balance => show_balance}, :collection => transactions, :as => :transaction %>
+		<%= render :partial => 'transactions/transactions_listing', :locals => {:account => account, :showBalance => showBalance, :showCheckboxes => showCheckboxes}, :collection => transactions, :as => :transaction %>
 	</tbody>
 </table>
 
@@ -33,15 +49,16 @@
 			"bLengthChange": false,		
 			"bFilter": true,
 			"bSort": false,
-			"sDom": 'rt<ifp><"clear">',
-			"aaSorting": [[1, "asc"]],
+			"sDom": 'rt<fpi><"clear">',
 			"aoColumns": [
+<% if showCheckboxes %>
 				null,
+<% end %>
 				{"sType": 'date'},
 				{"sType": 'string'},
 				{"sType": 'numeric'},
 				{"sType": 'numeric'},
-			<% if show_balance %>
+			<% if showBalance %>
 				{"sType": 'numeric'},
 			<% end %>
 				{"sType": 'string'},

@@ -11,9 +11,6 @@
 	<div id="filter_dialog" title="Filters" style="display:none;">
 		<%= render :partial => 'accounts/pocket_filters', :locals => {:path => month_pocket_totals_path(@account.id)} %>
 	</div>
-	<div class="page_title_div">
-		&nbsp;
-	</div><!-- page_title_div -->
 	<div class="table_div" id="month_pocket_totals_table_div">
 	  	<%= render :partial => 'month_pocket_totals_table', :locals => {:month_pocket_totals => @month_pocket_totals, :month_totals => @month_totals, :pocket_totals => @pocket_totals, :grand_total => @grand_total, :months => @months, :pockets => @pockets, :account => @account} %>
   	</div>
@@ -28,6 +25,8 @@
 </div>
 
 <script type="text/javascript">
+
+	$(document).ajaxStop($.unblockUI); 
   
   	$(document).ready(function() {
 		$("#filter_dialog").dialog({
@@ -44,11 +43,14 @@
 				},
 				'OK': function() {
 					$(this).dialog('close');
+					$.blockUI({message: '<h1>processing...</h1>'}); 
 					$('#filter_commit').val('update');
 					$('#filter_form').submit();
 				}
 			}
 	    }); 
+	    
+		$('#menu_pocket_totals_<%= @account.id %>').addClass('sub_submenu_selected');
   	} );
 
 </script>

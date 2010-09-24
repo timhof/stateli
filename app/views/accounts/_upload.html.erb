@@ -1,8 +1,22 @@
 
 
 <% form_tag account_upload_file_path(@account), :id => "listing_form_form", :method => 'post', :multipart => true do %>
-	Upload your XML file: <%= file_field_tag 'file', :class => 'upload' %><br/>
-<%= submit_tag("Upload file" ) %>
-	<%= radio_button_tag "upload_type", 'Chase', true %>Chase
-	<%= radio_button_tag "upload_type", 'BOA', false %>BOA
+
+<fieldset>
+	<legend>Upload Transactions</legend>
+	<ul>
+		<li>  
+			<label for="file[name]">File:</label>  
+			<%= file_field_tag 'file', :class => 'upload' %>
+		</li>
+		<li>
+			<label for="file[name]">Type:</label>  
+			<%= radio_button_tag "upload_type", 'Chase', true %>Chase
+			<%= radio_button_tag "upload_type", 'BOA', false %>BOA
+		</li>
+	</ul>
+</fieldset>
+<fieldset class="submit">   
+	<%= submit_tag "Upload file", {:class => 'button'} %>
+</fieldset>
 <% end %>

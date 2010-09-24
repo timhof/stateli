@@ -1,16 +1,7 @@
 
 
 <div id="journal" class="template_div">
-	<div class="page_title_div">
-		<% unless @pocket.nil? %>
-			<%= @pocket.name %>&nbsp;-&nbsp;
-		<% end %>
-		<% if @month == -1 %>
-			Total
-		<% else %>
-			<%= Date::MONTHNAMES[@month] %> <%= @year %>
-		<% end %>
-	</div><!-- page_title_div -->
-	<%= render :partial => 'transactions/transactions_div', :locals => {:transactions => @transactions, :account => @account, :show_balance => false, :path => '', :form_action_path => account_delete_transactions_path(@account), :showRestore => false} %>
+	
+	<%= render :partial => 'transactions/transactions_div', :locals => {:transactions => @transactions, :account => @account, :showBalance => false, :path => '', :showRestore => false, :showFilter => true, :showDeactivate => true} %>
 </div><!-- account_journal -->
 

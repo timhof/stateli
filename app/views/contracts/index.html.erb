@@ -1,12 +1,13 @@
+
 <div class="template_div">
-	<div><%= link_to 'Create New', new_account_contract_path(@account), {:class => 'listing_link', :title => 'Create New Contract'} %></div>
+
   	<div id="contract_listing" class="table_div contracts_listing">
   		<table id="contract_listing_table" class="listing_table">
   			<thead>
     			<%= render :partial => 'listing_header' %>
     		</thead>
     		<tbody>
-    			<%= render :partial => 'listing_details', :collection => @contracts, :as => :contract %>
+    			<%= render :partial => 'listing_details', :collection => @contracts, :as => :contract, :locals => {:account => @account} %>
     		</tbody>
     	</table>
   </div>
@@ -14,6 +15,24 @@
 
 <script type="text/javascript">
   	$(document).ready(function() {
-		$('#contract_listing_table').dataTable({"iDisplayLength": 15});
+		$('#contract_listing_table').dataTable({
+			"iDisplayLength": 15,
+			"bPaginate": true,
+			"bLengthChange": false,		
+			"bFilter": true,
+			"bSort": false,
+			"sDom": 'rt<ifp><"clear">',
+			"aaSorting": [[1, "asc"]],
+			"aoColumns": [
+				{"sType": 'string'},
+				{"sType": 'date'},
+				{"sType": 'date'},
+				{"sType": 'string'},
+				{"sType": 'numeric'},
+				{"sType": 'html'},
+			]
+		});
+		
+		$('#menu_contracts_<%= @account.id %>').addClass('sub_submenu_selected');
   	} );
 </script>

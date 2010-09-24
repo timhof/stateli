@@ -5,14 +5,12 @@
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Stateli Personal Finance</title>
   
-  <%= javascript_include_tag 'swfobject' %>
-  
   <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.1/build/reset-fonts-grids/reset-fonts-grids.css" />
   <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.1/build/base/base-min.css" />
   <%= stylesheet_link_tag 'scaffold' %>
   <link type="text/css" rel="stylesheet" media="screen" href="/javascripts/dataTables-1.6/media/css/demo_page.css" />
   <link type="text/css" rel="stylesheet" media="screen" href="/javascripts/dataTables-1.6/media/css/demo_table.css" />
-  <link type="text/css" href="/javascripts/development-bundle/themes/base/jquery.ui.all.css" rel="stylesheet" />
+  <link type="text/css" href="/javascripts/development-bundle/themes/trontastic/jquery.ui.all.css" rel="stylesheet" />
   
   <%= javascript_include_tag 'dataTables-1.6/media/js/jquery.js' %>
   <%= javascript_include_tag 'dataTables-1.6/media/js/jquery.dataTables.js' %>
@@ -26,7 +24,8 @@
   <%= javascript_include_tag 'development-bundle/ui/jquery.ui.dialog.js' %>
   <%= javascript_include_tag 'development-bundle/ui/jquery.ui.datepicker.js' %>
   <%= javascript_include_tag 'jquery.safeEnter.js' %>
-
+  <%= javascript_include_tag 'jquery.blockUI.js' %>
+  
   <%= stylesheet_link_tag 'bank' %>
   
   <% if protect_against_forgery? %>
@@ -44,13 +43,12 @@
 
 <div id="main_div">
 	<div id="welcome_div">
-		
 <% unless current_user.nil? %>
-		<div style="float: left;">
+		<div class="welcome_message">
 			Welcome <%= current_user.login %>
 		</div>
 <% end %>
-		<div id="login_form_div">
+		<div id="hd">
 <% if current_user.nil? %>
 			<% form_tag session_path do -%>
 	 			<div id="new_session_login">
@@ -75,7 +73,7 @@
 				<div id="login_button_div">
 					<%= submit_tag 'Log in', :class=> 'login_button'%>
 				</div>
-				<%= link_to_remote 'sign up', {:url => signup_path, :method => :get}, :class => 'listing_link' %>
+				<%= link_to 'sign up', signup_path, :class => 'listing_link' %>
 				<div style="clear: both;"><!-- clearing div --></div>
 					
 			<% end -%>
@@ -86,53 +84,55 @@
 	</div><!-- welcome_div -->
 
 	<div id="hd" class="header">
-		StateLi Personal Finance
+		Stateli Personal Finance
 	</div>
 	<div id="bd">
-		<div> 
-			<div id="menu">
-				<div class="menu_button">
-					Accounts 
-					[<%= link_to 'List', accounts_path, {:class => 'menu_link', :title => 'New Account'} %>]
-					[<%= link_to 'New', new_account_path, {:class => 'menu_link', :title => 'New Account'} %>]
-				</div>
-			 <% 	unless current_user.nil?
-	        		Account.activeAccounts(current_user.id).each do |account| %>
+		<div id="menu">
+<%	unless current_user.nil? %>
+			<div class="menu_button">
+				Accounts 
+				[<%= link_to 'New', new_account_path, {:class => 'menu_link', :title => 'New Account'} %>]
+			</div>
+<%		Account.activeAccounts(current_user.id).each do |account| %>
 		 		<div id="account_title_div_<%= account.id %>" class="submenu_button" onclick="click_navigation('<%= month_pocket_totals_path(account) %>',<%= current_user.nil? %>)"><%= h account.name %></div>
 		 		<div id="account_options_div_<%= account.id %>" class="account_options_div">
-			 		<div class="sub_submenu_button" onclick="click_navigation('<%= account_show_upload_path(account.id) %>',<%= current_user.nil? %>)">Upload CSV</div>		
-				<!--
-					<div class="sub_submenu_button" onclick="click_navigation('<%= account_path(account) %>',<%= current_user.nil? %>)">Account Details</div>
-					<div class="sub_submenu_button" onclick="click_navigation('<%= account_deposit_path(account.id) %>',<%= current_user.nil? %>)">Deposit</div>
-					<div class="sub_submenu_button" onclick="click_navigation('<%= account_withdraw_path(account.id) %>',<%= current_user.nil? %>)">Withdraw</div>
-					<div class="sub_submenu_button" onclick="click_navigation('<%= edit_account_path(account) %>',<%= current_user.nil? %>)">Edit Account</div>
-				-->
-					<div class="sub_submenu_button" onclick="click_navigation('<%= account_journal_path(account.id) %>',<%= current_user.nil? %>)">Journal</div>
-					<div class="sub_submenu_button" onclick="click_navigation('<%= account_delete_log_path(account.id) %>',<%= current_user.nil? %>)">Delete Log</div>
-					<div class="sub_submenu_button" onclick="click_navigation('<%= month_pocket_totals_path(account.id) %>',<%= current_user.nil? %>)">Pocket Totals</div>
-					<!-- 
-					<div class="sub_submenu_button" onclick="click_navigation('<%= account_remove_all_transactions_path(account.id) %>',<%= current_user.nil? %>)">Clear Transactions</div>
-					-->
-					<div class="sub_submenu_button" onclick="click_navigation('<%= account_rules_path(account) %>',<%= current_user.nil? %>)">Show Rules</div>
+			 		<div id="menu_upload_<%= account.id %>" class="sub_submenu_button" onclick="click_navigation('<%= account_show_upload_path(account.id) %>',<%= current_user.nil? %>)">Upload CSV</div>		
+				
+					<div id="menu_journal_<%= account.id %>" class="sub_submenu_button" onclick="click_navigation('<%= account_journal_path(account.id) %>',<%= current_user.nil? %>)">Journal</div>
+					<div id="menu_delete_log_<%= account.id %>" class="sub_submenu_button" onclick="click_navigation('<%= account_delete_log_path(account.id) %>',<%= current_user.nil? %>)">Delete Log</div>
+					<div id="menu_pocket_totals_<%= account.id %>" class="sub_submenu_button" onclick="click_navigation('<%= month_pocket_totals_path(account.id) %>',<%= current_user.nil? %>)">Pocket Totals</div>
+					
+					<div id="menu_rules_<%= account.id %>" class="sub_submenu_button" onclick="click_navigation('<%= account_rules_path(account) %>',<%= current_user.nil? %>)">Show Rules</div>
 					<div class="sub_submenu_button" onclick="click_navigation('<%= account_apply_rules_path(account.id) %>',<%= current_user.nil? %>)">Apply Rules</div>
-					<div class="sub_submenu_button" onclick="click_navigation('<%= new_account_rule_path(account.id) %>',<%= current_user.nil? %>)">Add Rule</div>
+					<div id="menu_new_rule_<%= account.id %>" class="sub_submenu_button" onclick="click_navigation('<%= new_account_rule_path(account.id) %>',<%= current_user.nil? %>)">Add Rule</div>
+					<div id="menu_contracts_<%= account.id %>" class="sub_submenu_button" onclick="click_navigation('<%= account_contracts_path(account.id) %>',<%= current_user.nil? %>)">Contracts</div>
+					<div id="menu_new_contract_<%= account.id %>" class="sub_submenu_button" onclick="click_navigation('<%= new_account_contract_path(account.id) %>',<%= current_user.nil? %>)">New Contract</div>
 				</div>
-		 	<% 		end
-		 		end %>
+				
+<%		end %>
 				
 				<div class="menu_button" onclick="click_navigation('<%= pockets_path %>',<%= current_user.nil? %>)">
 					Pockets
-					[<%= link_to 'List', pockets_path, {:class => 'menu_link', :title => 'New Account'} %>]
+					[<%= link_to 'List', pockets_path, {:class => 'menu_link', :title => 'Pockets'} %>]
 					[<%= link_to 'New', new_pocket_path, {:title => 'New Pocket', :class => "get"} %>]
 				</div>
+<% 	else %>
+				<div>
+					<div class="instructions">
+						If you already have an account, sign in to manage and track accounts and transactions.
+					</div>
+					<div class="instructions">
+						If you don't already have an account, <%= link_to 'sign up', signup_path, :class => 'listing_link' %> and start managing your banking and credit accounts.
+					</div>
+				</div>
+<%	end %>				
 			</div>
-	        <div style="width:80%;float:left;"> 
+	        <div id="content_div"> 
 				<div id="flashdiv"><%= flash[:notice] %></div>
 				<div id="template_div">
 					<%= yield %>
 				</div>
 			</div>
-		</div>
 	</div>
 
 </div>

@@ -8,8 +8,11 @@
 			<input type="text" name="start_date_field" id="start_date_field" value="<%= session[:selector].startDate.strftime("%m/%d/%Y") %>">
 			<input type="text" name="end_date_field" id="end_date_field" value="<%= session[:selector].endDate.strftime("%m/%d/%Y") %>">
 		</div>
+		<div id="completed_selectors" class="yui-u">
+			<span class="filter_checkbox"><%= check_box_tag 'show_incomplete', '1', {:checked => session[:selector].show_incomplete} %><%=link_to_function 'Show Incomplete', "click_checkbox_label('completed_selectors', 'show_incomplete')" %></span>
+		</div>
 	</div></div>
-
+	<input type="hidden" id="filter_commit" name="filter_commit" value="update" />
 <% 	end %>
 		
 

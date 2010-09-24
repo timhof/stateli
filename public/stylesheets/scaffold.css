@@ -2,8 +2,8 @@
 html, body {
 	margin: 0;
 	height: 100%;
-	background: #EDEDED;
 	#font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+	background-color: #eeeeee;
 }
 
 a{
@@ -13,26 +13,31 @@ a{
 	letter-spacing: 1.5px;
 }
 
+
 img{
 	border-width: 0;
 }
 
-strong{
-	font-weight: bold;
-}
-
-em{
-	font-style: italic; 
-}
-
-
 #doc3 {margin:auto;}
 
+#welcome_div {
+	height: 25px;
+	line-height: 25px;
+	clear: both;
+	text-align: left;
+	color: #000066;
+	font-weight: bold;
+	overflow: hidden;
+	background-image: url(../images/bank_header_navigation.gif);
+	margin: 0.2em 0.5em 0.2em 0.5em;
+	-moz-border-radius: 5px;  
+    -webkit-border-radius: 5px;  
+} 
+
 .header{
-	height: 50px;
+	height: 55px;
 	line-height:50px;
-	margin: 0;
-	padding: 0;
+	margin: 0.1em 0.2em;
 	text-align: center;
 	font-size: 197%;
 	letter-spacing:8px;
@@ -41,27 +46,25 @@ em{
 	background: #1a1e3b;
 	color: #ffffff;
 	border-width: 0;
+	-moz-border-radius: 5px;  
+    -webkit-border-radius: 5px;  
 }
 
-.footer{
-	height: 25px;
-	line-height:25px;
+	
+#main_div {
+	width: 100%;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
 	margin: 0;
-	padding: 0;
-	border-width: 1px 1px 0 0;
-	border-style: solid;
 }
 
-
-.page_title_div{
-	font-size: 150%;
-	font-weight: bold;	
-	float: left;
-	width: 50%;
-	text-align: left;
-	height: 20px;
-	line-height: 20px;
-	overflow: hidden;
+#main_image_div img {
+	border-width: 2px;
+	border-style: solid;
+	-moz-border-radius: 5px;  
+    -webkit-border-radius: 5px;  
+    width: 100%;
 }
 
 #menu{
@@ -70,7 +73,9 @@ em{
 	width:18%;
 	float:left;
 	background: #999CAF;
-	margin: 25px 5px;
+	margin: 0 5px 0 5px;
+	-moz-border-radius: 5px;  
+    -webkit-border-radius: 5px;  
 }
 
 .menu_link{
@@ -79,6 +84,12 @@ em{
 
 .menu_link visited{
 	color: #D7F73D;	
+}
+
+.unavailable{
+	color: red;
+	font-weight: bold;
+	letter-spacing: 1.5px;
 }
 
 .menu_button{
@@ -117,6 +128,9 @@ em{
 	text-align: left;
 }
 
+.sub_submenu_selected{
+	background: #fba593;
+}
 
 .menu_button_selected{
 }
@@ -137,11 +151,6 @@ em{
 	color: #4C5275;
 }
 
-#template_div{
-	padding: 5px;
-	
-}
-
 .filter_checkbox{
 	font-size: 85%;
 }
@@ -151,15 +160,12 @@ em{
 	text-align: center;
 }
 
-#report_table_wrapper{
+#content_div{
+	width: 80%;
+	float: left;
 	
 }
-#report_table_length{
-	
-}
-#report_table_filter{
-	
-}
+
 #report_table td{
 	white-space: nowrap;
 	font-size: 90%;
@@ -203,15 +209,23 @@ em{
      color: #ffffff;
 }
   
-.selection_div{
-	min-height: 25px;
-	line-height: 25px;
-	clear: both;
-	text-align: left;
+.login_button {  
+	height: 20px;
+	margin-right: 5px;
+	font-size: 85%;
+	margin-bottom: 2px;
+    width: auto;  
+    padding: 2px 15px;   
+    border: 0;  
+    font-size: 100%; 
+	font-weight: bold;
+    font-weight: bold; 
+    -moz-border-radius: 2px;  
+    -webkit-border-radius: 1px;  
+    background: #25293A;
+    color: #ffffff;
 }
-.advanced_edit{
- 	display: none;
- }
+	
 .filter_title_div{
 	font-weight: bold;
 	font-size: 135%;
@@ -241,79 +255,112 @@ em{
 	padding: 5px 5px 5px 0;
 }
 
-.has_bugs{
-	color: #F80012;
-	font-weight: bold;
-}
-
-.status_OPEN{
-	color: #1DD300;
-	font-weight: bold;
-}
-
-.status_PLANNING{
-	color: #1DD300;
-	font-weight: bold;
-}
-
-.status_QUEUED{
-	color: #009E8E;
-	font-weight: bold;
-}
-
-
-.status_INPROGRESS{
-	color: #009E8E;
-	font-weight: bold;
-}
-
-.status_CLOSED{
+.transaction_incomplete{
 	color: #999999;
 	font-weight: bold;
 }
 
-.status_COMPLETE{
-	color: #999999;
+label {    
+	float: left;    
+	width: 10em;    
+	margin-right: 1em;  
 	font-weight: bold;
 }
 
-.status_RESOLVED{
-	color: #999999;
-	font-weight: bold;
+fieldset {  
+	margin: 0.5em 0 0 0;  
+	padding: 0;  
+	text-align: left;
+	clear: both;
+	border: 1px solid;
+	border-color: #999999;
+}  
+
+fieldset.submit {  
+	border-style: none; 
+	margin: 0.5em 0 0 0; 
 }
 
-.fieldWithErrors {
-  padding: 2px;
-  background-color: red;
-  display: table;
-}
+legend {  
+	margin-left: 1em;  
+	font-weight: bold;  
+	font-weight:700;
+	padding:0.3em;
+}  
 
-#errorExplanation {
-  width: 400px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-}
+fieldset ul {  
+	padding: .1em 1em 0 1em;  
+	list-style: none;  
+}  
+fieldset li {  
+	padding-bottom: 0.5em;  
+}  
 
-#errorExplanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px;
-  background-color: #c00;
-  color: #fff;
-}
-
-#errorExplanation p {
-  color: #333;
-  margin-bottom: 0;
-  padding: 5px;
-}
-
-#errorExplanation ul li {
-  font-size: 12px;
-  list-style: square;
-}
+ .clear {clear:both}   
+ /* remove the list style */  
+ #nav {  
+     margin:0;   
+     padding:0;   
+     list-style:none;  
+ }     
+       
+     /* make the LI display inline */  
+     /* it's position relative so that position absolute */  
+     /* can be used in submenu */  
+     #nav li {   
+         display:block;   
+         background:#ccc;   
+         position:relative;  
+         z-index:50;   
+         margin:0 1px;  
+       	padding: 0px;
+     }  
+           
+     /* this is the parent menu */  
+     #nav li a {  
+         display:block;   
+         padding:8px 5px 0 5px;   
+         font-weight:700;   
+         text-decoration:none;   
+         color:#fff;   
+         text-align:center;   
+	     color:#333;  
+     }  
+   
+       
+     /* you can make a different style for default selected value */  
+     #nav a.selected {  
+         color:#f00;  
+     }  
+       
+         /* submenu, it's hidden by default */  
+         #nav ul {  
+             position:absolute;   
+             left:10em;   
+             top: 0em;
+             display:none;   
+             margin:0;   
+             padding:0;   
+             list-style:none;  
+             z-index:500;
+         }  
+         
+           
+         #nav ul li {  
+             width:100%;   
+             float:left;   
+             border-top:1px solid #fff;  
+         }  
+           
+         /* display block will make the link fill the whole area of LI */  
+         #nav ul a {  
+             display:block;    
+             width: 100%;
+             height:15px;  
+             padding: 8px 0;   
+             color:#666;  
+         }  
+           
+         #nav ul a:hover {  
+             text-decoration:underline;    
+         }  
