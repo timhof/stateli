@@ -6,7 +6,7 @@ set :domain, 'stateli.com'
 set :application, 'stateli'
 
 # the rest should be good
-set :repository,  "#{user}@orientedobjects.com:git/#{application}.git" 
+set :repository,  "#{user}@timothyimhof.com:git/#{application}.git" 
 set :deploy_to, "/home/#{user}/#{domain}" 
 set :deploy_via, :remote_cache
 set :scm, 'git'
