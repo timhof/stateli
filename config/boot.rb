@@ -3,7 +3,6 @@
 
 require 'thread'
 require File.join(File.dirname(__FILE__), 'boot')
-
 RAILS_ROOT = "#{File.dirname(__FILE__)}/.." unless defined?(RAILS_ROOT)
 
 module Rails
