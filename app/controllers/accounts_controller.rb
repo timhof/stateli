@@ -118,6 +118,8 @@ class AccountsController < ApplicationController
   	end
   	@account = Account.find(params[:id])
   	@filtered_transactions = @account.filtered_transactions(session[:selector])
+	p "#{@filtered_transactions.length} TRANSACTIONS" 
+	
   end
   
   def reselect_filters

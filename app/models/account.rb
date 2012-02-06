@@ -26,7 +26,6 @@ class Account < ActiveRecord::Base
 	  	@filtered_transactions = transactions.select do |trans| 
 			pocket_id = trans.pocket_id
 			include = selector.selectedPockets[pocket_id] == '1' && trans.trans_date >= selector.startDate && trans.trans_date < selector.endDate && (trans.completed || selector.show_incomplete)
-			
 		end
   	end
   

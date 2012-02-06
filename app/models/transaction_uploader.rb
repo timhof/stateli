@@ -23,7 +23,8 @@ class TransactionUploader
 		
 		## parse file, add transactions to transactions
 		parsed_file=CSV::Reader.parse(tempfile)
-		parsed_file.each  do |row| 
+		parsed_file.shift
+		parsed_file.each  do |row|
 			next if row[1].include? 'Pending'
 	        
 			params = {}
